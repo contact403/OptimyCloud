@@ -4,11 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="./favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-    <link rel="shortcut icon" href="/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png" />
-    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
     <title>Ingénieur Cloud certifié – AWS, Azure, GCP | Infrastructure & FinOps | OptimyCloud</title>
     <meta name="description" content="OptimyCloud - Votre partenaire Cloud pour la migration, l'optimisation et la sécurisation de vos infrastructures. Ingénieur certifié AWS basé à l'île Maurice.">
     <meta name="keywords" content="freelance cloud engineer, migration AWS, FinOps cloud, ingénieur cloud Maurice, containerisation EKS">
@@ -34,7 +34,25 @@
         .toast.error {
             background: #ef4444;
         }
-        </style>
+        
+        @keyframes scroll {
+            0% {
+                transform: translateX(0);
+            }
+            100% {
+                transform: translateX(-50%);
+            }
+        }
+
+        .animate-scroll {
+            animation: scroll 40s linear infinite;
+            width: 200%;
+        }
+
+        .animate-scroll:hover {
+            animation-play-state: paused;
+        }
+    </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
@@ -43,8 +61,8 @@
             <div class="flex justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
-                        <a href="#home" class="flex items-center hover:opacity-80 transition-opacity">
-                            <img src="optimycloud-logo.png" 
+                        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.png" 
                                  alt="OptimyCloud" 
                                  class="h-20 w-auto"
                                  style="mix-blend-mode: multiply;">
@@ -52,16 +70,16 @@
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="#home" class="nav-link text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium">Accueil</a>
-                    <a href="#finops" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">FinOps</a>
-                    <a href="#containers" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Containerisation</a>
-                    <a href="#why-cloud" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Pourquoi le Cloud</a>
-                    <a href="#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
-                    <a href="#contact" class="nav-link bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Contact</a>
+                    <a href="index.html" class="nav-link text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium">Accueil</a>
+                    <a href="finops.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">FinOps</a>
+                    <a href="kubernetes.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Containerisation</a>
+                    <a href="migration.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Pourquoi le Cloud</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
+                    <a href="contact.html" class="nav-link bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Contact</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-cloud-blue">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -70,1066 +88,318 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="#home" class="block px-3 py-2 text-blue-600 font-medium">Accueil</a>
-                <a href="#finops" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FinOps</a>
-                <a href="#containers" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Containerisation</a>
-                <a href="#why-cloud" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Pourquoi le Cloud</a>
-                <a href="#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
-                <a href="#contact" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
+                <a href="index.html" class="block px-3 py-2 text-blue-600 font-medium">Accueil</a>
+                <a href="finops.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FinOps</a>
+                <a href="kubernetes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Containerisation</a>
+                <a href="migration.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Pourquoi le Cloud</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Page d'accueil -->
-    <section id="home" class="page-section active">
-        <!-- Hero Section -->
-        <div class="bg-gradient-to-br from-cloud-light to-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                            Votre partenaire <span class="text-cloud-blue">Cloud</span> de confiance
-                        </h1>
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Bienvenue sur OptimyCloud, votre partenaire Cloud pour la migration, l'optimisation et la sécurisation de vos infrastructures. Je suis ingénieur Cloud basé à l'île Maurice, certifié AWS, et j'accompagne PME et startups dans la transformation de leur IT grâce à des solutions fiables, performantes et économiques.
-                        </p>
-                        <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                            <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
-                                Demander un devis gratuit
-                            </a>
-                            <a href="#about" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
-                                En savoir plus
-                            </a>
-                        </div>
-                        <!-- Certifications -->
-                        <div class="flex flex-wrap gap-6 items-center">
-                            <a href="https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                <div class="flex items-center">
-                                    <i class="fab fa-aws text-3xl text-orange-500 mr-3"></i>
-                                    <div>
-                                        <p class="text-sm font-medium">AWS Solutions</p>
-                                        <p class="text-sm font-medium">Architect Associate</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <a href="https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                <div class="flex items-center">
-                                    <i class="fas fa-dharmachakra text-3xl text-blue-600 mr-3"></i>
-                                    <div>
-                                        <p class="text-sm font-medium">Kubernetes Certified</p>
-                                        <p class="text-sm font-medium">Administrator (CKA)</p>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="bg-white p-4 rounded-lg shadow-md">
-                                <div class="flex items-center">
-                                    <i class="fas fa-cogs text-3xl text-purple-600 mr-3"></i>
-                                    <div>
-                                        <p class="text-sm font-medium">ITIL Foundation</p>
-                                        <p class="text-sm font-medium">v3 Certified</p>
-                                    </div>
-                                </div>
-                            </div>
-                            <a href="https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                                <div class="flex items-center">
-                                    <i class="fab fa-aws text-3xl text-green-600 mr-3"></i>
-                                    <div>
-                                        <p class="text-sm font-medium">AWS Cloud</p>
-                                        <p class="text-sm font-medium">Practitioner</p>
-                                    </div>
-                                </div>
-                            </a>                            
-                        </div>
-                    </div>
-                    <div class="relative">
-                        <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" 
-                             alt="Cloud Infrastructure" 
-                             class="rounded-lg shadow-xl">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Services Overview -->
-        <div class="py-16 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold text-gray-900 mb-4">Mes prestations Cloud</h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Migration, automatisation et optimisation : je vous accompagne dans toutes les étapes de votre transformation digitale
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        Votre partenaire <span class="text-blue-600">Cloud</span> de confiance
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Bienvenue sur OptimyCloud, votre partenaire Cloud pour la migration, l'optimisation et la sécurisation de vos infrastructures. Je suis ingénieur Cloud basé à l'île Maurice, certifié AWS, et j'accompagne PME et startups dans la transformation de leur IT grâce à des solutions fiables, performantes et économiques.
                     </p>
-                </div>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                        <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-3">FinOps & Optimisation</h3>
-                        <p class="text-gray-600 text-sm">Réduction des coûts cloud grâce à l'approche FinOps et automatisation</p>
+                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
+                        <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
+                            Demander un devis gratuit
+                        </a>
+                        <a href="about.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
+                            En savoir plus
+                        </a>
                     </div>
-                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                        <i class="fab fa-docker text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-3">Kubernetes EKS</h3>
-                        <p class="text-gray-600 text-sm">Déploiement maîtrisé sur AWS avec EKS Auto Mode et Karpenter</p>
+                    <!-- Certifications -->
+                    <div class="flex flex-wrap gap-6 items-center">
+                        <a href="https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-center">
+                                <i class="fab fa-aws text-3xl text-orange-500 mr-3"></i>
+                                <div>
+                                    <p class="text-sm font-medium">AWS Solutions</p>
+                                    <p class="text-sm font-medium">Architect Associate</p>
+                                </div>
+                            </div>
+                        </a>
+                        <a href="https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-center">
+                                <i class="fas fa-dharmachakra text-3xl text-blue-600 mr-3"></i>
+                                <div>
+                                    <p class="text-sm font-medium">Kubernetes Certified</p>
+                                    <p class="text-sm font-medium">Administrator (CKA)</p>
+                                </div>
+                            </div>
+                        </a>
+                        <div class="bg-white p-4 rounded-lg shadow-md">
+                            <div class="flex items-center">
+                                <i class="fas fa-cogs text-3xl text-purple-600 mr-3"></i>
+                                <div>
+                                    <p class="text-sm font-medium">ITIL Foundation</p>
+                                    <p class="text-sm font-medium">v3 Certified</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
+                            <div class="flex items-center">
+                                <i class="fab fa-aws text-3xl text-green-600 mr-3"></i>
+                                <div>
+                                    <p class="text-sm font-medium">AWS Cloud</p>
+                                    <p class="text-sm font-medium">Practitioner</p>
+                                </div>
+                            </div>
+                        </a>                            
                     </div>
-                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                        <i class="fas fa-cloud-upload-alt text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-3">Migration Sécurisée</h3>
-                        <p class="text-gray-600 text-sm">Migration d'infrastructures vers le Cloud avec bonnes pratiques ITIL</p>
-                    </div>
-                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                        <i class="fas fa-code-branch text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-3">CI/CD & IaC</h3>
-                        <p class="text-gray-600 text-sm">Infrastructure as Code avec Terraform, GitLab et GitHub Actions</p>
-                    </div>
-                    <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                        <i class="fas fa-drafting-compass text-4xl text-blue-600 mb-4"></i>
-                        <h3 class="text-lg font-semibold mb-3">Architecture sur-mesure</h3>
-                        <p class="text-gray-600 text-sm">Design d'architectures Cloud adaptées à votre métier</p>
-                    </div>
                 </div>
-            </div>
-        </div>
-<!-- Section Clients avec défilement automatique -->
-<div class="py-16 bg-gradient-to-br from-blue-50 to-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
-                ILS M'ONT FAIT <span class="text-blue-600">CONFIANCE</span>
-            </h2>
-            <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                Grâce à mes expériences passées en tant que salarié ou prestataire, j'ai pu intervenir sur des projets stratégiques pour des entreprises de premier plan
-            </p>
-        </div>
-
-        <!-- Bande de défilement -->
-        <div class="overflow-hidden mb-12">
-            <div class="flex animate-scroll space-x-12 items-center">
-                <!-- Première série -->
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                
-                <!-- Duplication pour effet infini -->
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-                <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                </div>
-            </div>
-        </div>
-
-        <!-- Détails des missions -->
-        <div class="bg-white rounded-xl shadow-lg p-8">
-            <div class="space-y-6">
-                <div class="border-l-4 border-purple-600 pl-4">
-                    <h3 class="font-bold text-lg text-gray-900 mb-1">Valeo, Witekio, Culligan, TopTex</h3>
-                    <p class="text-purple-600 font-medium text-sm mb-2">Consultant Cloud & DevOps</p>
-                    <p class="text-gray-600 text-sm">Projets Cloud & DevOps (AWS, Kubernetes, Terraform, CI/CD).</p>
-                </div>
-
-                <div class="border-l-4 border-blue-600 pl-4">
-                    <h3 class="font-bold text-lg text-gray-900 mb-1">Ubisoft</h3>
-                    <p class="text-blue-600 font-medium text-sm mb-2">Ingénieur SRE / DevOps</p>
-                    <p class="text-gray-600 text-sm">Supervision et automatisation des environnements applicatifs (serveurs, clusters, CI/CD).</p>
-                </div>
-                
-                <div class="border-l-4 border-green-600 pl-4">
-                    <h3 class="font-bold text-lg text-gray-900 mb-1">Linkeo</h3>
-                    <p class="text-green-600 font-medium text-sm mb-2">Ingénieur Infrastructure</p>
-                    <p class="text-gray-600 text-sm">Refonte du monitoring et gestion de l'infrastructure on-premise.</p>
-                </div>
-                
-                <div class="border-l-4 border-orange-600 pl-4">
-                    <h3 class="font-bold text-lg text-gray-900 mb-1">Châteauform'</h3>
-                    <p class="text-orange-600 font-medium text-sm mb-2">Administrateur Systèmes</p>
-                    <p class="text-gray-600 text-sm">Gestion des serveurs dans un environnement multisite.</p>
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" 
+                         alt="Cloud Infrastructure" 
+                         class="rounded-lg shadow-xl">
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<!-- CSS Animation à ajouter dans le <style> -->
-<style>
-@keyframes scroll {
-    0% {
-        transform: translateX(0);
-    }
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-.animate-scroll {
-    animation: scroll 40s linear infinite;
-    width: 200%;
-}
-
-.animate-scroll:hover {
-    animation-play-state: paused;
-}
-</style>
-
-        <!-- Section Compétences - à ajouter avant le Calendly -->
-<div class="py-16 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="text-center mb-12">
-            <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                EXPERT TECHNIQUE <span class="text-blue-600">AVEC UNE EXPERTISE MULTI-PLATEFORME</span>
-            </h2>
-        </div>
-        
-        <!-- Grid des logos -->
-        <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-8 items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-            <!-- Cloud Providers -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+    <!-- Services Overview -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mes prestations Cloud</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Migration, automatisation et optimisation : je vous accompagne dans toutes les étapes de votre transformation digitale
+                </p>
             </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="Google Cloud" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            
-            <!-- Containerisation -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            
-            <!-- Infrastructure as Code -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Terraform_Logo.svg" alt="Terraform" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg" alt="Ansible" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            
-            <!-- CI/CD -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/GitLab_logo.svg" alt="GitLab" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            
-            <!-- OS & Virtualization -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" alt="VMware" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" alt="Windows Server" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            
-            <!-- Monitoring -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg" alt="Prometheus" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Grafana_logo.svg" alt="Grafana" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            
-            <!-- OpenStack -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/OpenStack%C2%AE_Logo_2016.svg" alt="OpenStack" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
-            </div>
-            
-            <!-- Proxmox (logo custom) -->
-            <div class="flex justify-center">
-                <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Proxmox-VE-logo.svg" alt="Proxmox" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                    <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-3">FinOps & Optimisation</h3>
+                    <p class="text-gray-600 text-sm">Réduction des coûts cloud grâce à l'approche FinOps et automatisation</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                    <i class="fab fa-docker text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-3">Kubernetes EKS</h3>
+                    <p class="text-gray-600 text-sm">Déploiement maîtrisé sur AWS avec EKS Auto Mode et Karpenter</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                    <i class="fas fa-cloud-upload-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-3">Migration Sécurisée</h3>
+                    <p class="text-gray-600 text-sm">Migration d'infrastructures vers le Cloud avec bonnes pratiques ITIL</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                    <i class="fas fa-code-branch text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-3">CI/CD & IaC</h3>
+                    <p class="text-gray-600 text-sm">Infrastructure as Code avec Terraform, GitLab et GitHub Actions</p>
+                </div>
+                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
+                    <i class="fas fa-drafting-compass text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg font-semibold mb-3">Architecture sur-mesure</h3>
+                    <p class="text-gray-600 text-sm">Design d'architectures Cloud adaptées à votre métier</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-        <!-- Boutons de contact -->
-        <div class="flex flex-col sm:flex-row gap-4 justify-center mt-12 mb-8">
-            <a href="mailto:contact@optimycloud.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-center flex items-center justify-center">
-                <i class="fas fa-envelope mr-2"></i>
-                contact@optimycloud.com
-            </a>
-            <a href="#contact" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
-                Formulaire de contact
-            </a>
+
+    <!-- Section Clients avec défilement automatique -->
+    <div class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
+                    ILS M'ONT FAIT <span class="text-blue-600">CONFIANCE</span>
+                </h2>
+                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
+                    Grâce à mes expériences passées en tant que salarié ou prestataire, j'ai pu intervenir sur des projets stratégiques pour des entreprises de premier plan
+                </p>
+            </div>
+
+            <!-- Bande de défilement -->
+            <div class="overflow-hidden mb-12">
+                <div class="flex animate-scroll space-x-12 items-center">
+                    <!-- Première série -->
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="/assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="/assets/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    
+                    <!-- Duplication pour effet infini -->
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="/assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="/assets/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Détails des missions -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <div class="space-y-6">
+                    <div class="border-l-4 border-purple-600 pl-4">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Valeo, Witekio, Culligan, TopTex</h3>
+                        <p class="text-purple-600 font-medium text-sm mb-2">Consultant Cloud & DevOps</p>
+                        <p class="text-gray-600 text-sm">Projets Cloud & DevOps (AWS, Kubernetes, Terraform, CI/CD).</p>
+                    </div>
+
+                    <div class="border-l-4 border-blue-600 pl-4">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Ubisoft</h3>
+                        <p class="text-blue-600 font-medium text-sm mb-2">Ingénieur SRE / DevOps</p>
+                        <p class="text-gray-600 text-sm">Supervision et automatisation des environnements applicatifs (serveurs, clusters, CI/CD).</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-green-600 pl-4">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Linkeo</h3>
+                        <p class="text-green-600 font-medium text-sm mb-2">Ingénieur Infrastructure</p>
+                        <p class="text-gray-600 text-sm">Refonte du monitoring et gestion de l'infrastructure on-premise.</p>
+                    </div>
+                    
+                    <div class="border-l-4 border-orange-600 pl-4">
+                        <h3 class="font-bold text-lg text-gray-900 mb-1">Châteauform'</h3>
+                        <p class="text-orange-600 font-medium text-sm mb-2">Administrateur Systèmes</p>
+                        <p class="text-gray-600 text-sm">Gestion des serveurs dans un environnement multisite.</p>
+                    </div>
+                </div>
+            </div>
         </div>
-        <!-- Calendly Widget -->
-        <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Planifier un appel</h3>
+    </div>
+
+    <!-- Section Compétences -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                    EXPERT TECHNIQUE <span class="text-blue-600">AVEC UNE EXPERTISE MULTI-PLATEFORME</span>
+                </h2>
+            </div>
             
-            <div class="text-center mb-8">
-                <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg">
-                    <i class="fas fa-calendar-alt mr-3"></i>
-                    Réserver un audit gratuit
+            <!-- Grid des logos -->
+            <div class="grid grid-cols-3 md:grid-cols-6 lg:grid-cols-8 gap-8 items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
+                <!-- Cloud Providers -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" alt="AWS" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Microsoft_Azure.svg" alt="Azure" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/5/51/Google_Cloud_logo.svg" alt="Google Cloud" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <!-- Containerisation -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Docker_%28container_engine%29_logo.svg" alt="Docker" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/39/Kubernetes_logo_without_workmark.svg" alt="Kubernetes" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <!-- Infrastructure as Code -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/0/04/Terraform_Logo.svg" alt="Terraform" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/2/24/Ansible_logo.svg" alt="Ansible" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <!-- CI/CD -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/GitLab_logo.svg" alt="GitLab" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <!-- OS & Virtualization -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/35/Tux.svg" alt="Linux" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg" alt="VMware" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/8/87/Windows_logo_-_2021.svg" alt="Windows Server" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <!-- Monitoring -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/3/38/Prometheus_software_logo.svg" alt="Prometheus" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a1/Grafana_logo.svg" alt="Grafana" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <!-- OpenStack -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/e/e6/OpenStack%C2%AE_Logo_2016.svg" alt="OpenStack" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+                
+                <!-- Proxmox -->
+                <div class="flex justify-center">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/2/25/Proxmox-VE-logo.svg" alt="Proxmox" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Boutons de contact -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="mailto:contact@optimycloud.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-center flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    contact@optimycloud.com
                 </a>
-            </div>
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-    </section>
-
-    <!-- FinOps Section -->
-    <section id="finops" class="page-section hidden">
-        <div class="py-16 bg-gradient-to-br from-green-50 to-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
-                            FinOps & Optimisation des coûts Cloud
-                        </h2>
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Le Cloud est puissant, mais mal maîtrisé, il peut vite coûter cher. Grâce à mon expertise FinOps, je vous aide à optimiser vos dépenses et maximiser votre ROI.
-                        </p>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <i class="fas fa-search text-green-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Audit des ressources</h3>
-                                    <p class="text-gray-600">Identifier les ressources inutilisées ou surdimensionnées</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-piggy-bank text-green-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Plans d'économies</h3>
-                                    <p class="text-gray-600">Savings Plans, Reserved Instances, Spot Instances</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-chart-bar text-green-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Reporting avancé</h3>
-                                    <p class="text-gray-600">Cost Explorer, Budgets, outils tiers comme Grafana</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-expand-arrows-alt text-green-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Auto Scaling</h3>
-                                    <p class="text-gray-600">Automatisation de l'échelle des ressources, extinction automatique des instances hors heures ouvrées</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <a href="#contact" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
-                                Discutons de vos objectifs
-                            </a>
-                        </div>
-                    </div>
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
-                             alt="Financial Optimization" 
-                             class="rounded-lg shadow-xl">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- Info supplémentaire -->
-        <div class="mt-16 bg-white rounded-xl shadow-lg p-8 max-w-4xl mx-auto">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Tous les projets sont :</h3>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <i class="fab fa-git-alt text-4xl text-green-600 mb-4"></i>
-                    <h4 class="font-semibold text-lg mb-2">Versionnés dans Git</h4>
-                    <p class="text-gray-600">Suivi des modifications et historique complet</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-rocket text-4xl text-green-600 mb-4"></i>
-                    <h4 class="font-semibold text-lg mb-2">Déployés via CI/CD</h4>
-                    <p class="text-gray-600">Automatisation et déploiements fiables</p>
-                </div>
-                <div class="text-center">
-                    <i class="fas fa-file-alt text-4xl text-green-600 mb-4"></i>
-                    <h4 class="font-semibold text-lg mb-2">Documentés</h4>
-                    <p class="text-gray-600">Traçabilité et conformité garanties</p>
-                </div>
-            </div>
-        </div>
-
-        <!-- Email et boutons -->
-        <div class="text-center mt-12">
-            <a href="mailto:contact@optimycloud.com" class="text-green-600 hover:underline text-lg flex items-center justify-center">
-                <i class="fas fa-envelope text-green-600 text-xl mr-3"></i>
-                Discutons de vos objectifs FinOps
-            </a>
-        </div>
-
-        <!-- Calendly Widget -->
-        <div class="mt-16 bg-white rounded-xl shadow-lg p-8 max-w-7xl mx-auto">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Planifier un appel</h3>
-            
-            <div class="text-center mb-8">
-                <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-green-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-green-700 transition-colors duration-200 shadow-lg">
-                    <i class="fas fa-calendar-alt mr-3"></i>
-                    Réserver un audit gratuit
+                <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
+                    Formulaire de contact
                 </a>
             </div>
             
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-    </div>
-</div>
-    </section>
-
-    <!-- Containers Section -->
-    <section id="containers" class="page-section hidden">
-        <div class="py-16 bg-gradient-to-br from-blue-50 to-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                        <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" 
-                             alt="Container Technology" 
-                             class="rounded-lg shadow-xl">
-                    </div>
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
-                            Containerisation sur AWS avec EKS Auto Mode
-                        </h2>
-                        <p class="text-xl text-gray-600 mb-8 leading-relaxed">
-                            Vous avez besoin de scalabilité, mais sans la complexité ? EKS Auto Mode permet de déployer vos conteneurs avec gestion automatique des nodes, intégration IAM, observabilité native.
-                        </p>
-                        <div class="space-y-6">
-                            <div class="flex items-start">
-                                <i class="fab fa-docker text-blue-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Infrastructure container-native</h3>
-                                    <p class="text-gray-600">CI/CD, GitOps, Helm pour un déploiement moderne</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-sync-alt text-blue-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Migration vers Kubernetes</h3>
-                                    <p class="text-gray-600">Transition en douceur de vos workloads existants</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-dollar-sign text-blue-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Optimisation des coûts</h3>
-                                    <p class="text-gray-600">Karpenter et Auto Mode pour une gestion intelligente</p>
-                                </div>
-                            </div>
-                            <div class="flex items-start">
-                                <i class="fas fa-lock text-blue-600 text-xl mt-1 mr-4"></i>
-                                <div>
-                                    <h3 class="font-semibold text-lg mb-2">Sécurité intégrée</h3>
-                                    <p class="text-gray-600">RBAC, IAM, Network Policies</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-8">
-                            <a href="https://docs.aws.amazon.com/eks/latest/userguide/automode.html" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
-                                Découvrir EKS Auto Mode
-                            </a>
-                        </div>
-            </div>
-        </div>
-        <div class="mt-12 bg-blue-50 rounded-xl p-6">
-            <h4 class="font-semibold text-lg mb-2 text-blue-900">💡 Cas client</h4>
-            <p class="text-blue-800">
-                Déploiement d'un cluster EKS Auto Mode avec gestion des coûts par Karpenter et politique de sécurité centralisée → <strong>-35% de coûts</strong> & montée en charge automatique.
-            </p>
-        </div>
-        <div class="text-center mt-12">
-            <a href="mailto:contact@optimycloud.com" class="text-blue-600 hover:underline text-lg flex items-center justify-center">
-                <i class="fas fa-envelope text-blue-600 text-xl mr-3"></i>
-                Discutons de vos besoins Kubernetes
-            </a>
-        </div>
-        <!-- Calendly Widget -->
-        <div class="mt-16 bg-white rounded-xl shadow-lg p-8">
-            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Planifier un appel</h3>
-            
-            <div class="text-center mb-8">
-                <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg">
-                    <i class="fas fa-calendar-alt mr-3"></i>
-                    Réserver un audit gratuit
-                </a>
-            </div>
-            <!-- Calendly inline widget begin -->
-            <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-            <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-            <!-- Calendly inline widget end -->
-        </div>
-    </section>
-
-    <!-- Why Cloud Section -->
-    <section id="why-cloud" class="page-section hidden">
-        <div class="py-16 bg-gradient-to-br from-purple-50 to-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-4xl font-bold text-gray-900 mb-6">
-                        Pourquoi migrer vers le Cloud ?
-                    </h2>
-                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                        Le Cloud transforme votre IT en vous offrant agilité, sécurité, résilience et scalabilité
-                    </p>
-                </div>
+            <!-- Calendly Widget -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Planifier un appel</h3>
                 
-                <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
-                    <div class="text-center p-6">
-                        <i class="fas fa-rocket text-4xl text-purple-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3">Agilité</h3>
-                        <p class="text-gray-600">Déploiement rapide de services comme RDS (base de données managée)</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <i class="fas fa-shield-alt text-4xl text-purple-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3">Sécurité</h3>
-                        <p class="text-gray-600">Solutions intégrées de chiffrement, audit, MFA</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <i class="fas fa-heart text-4xl text-purple-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3">Résilience</h3>
-                        <p class="text-gray-600">Haute disponibilité et sauvegarde intégrée</p>
-                    </div>
-                    <div class="text-center p-6">
-                        <i class="fas fa-expand-arrows-alt text-4xl text-purple-600 mb-4"></i>
-                        <h3 class="text-xl font-semibold mb-3">Scalabilité</h3>
-                        <p class="text-gray-600">S'adapte à votre trafic, sans surcoût inutile</p>
-                    </div>
-                </div>
-
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Cas concrets de migration</h3>
-                    <div class="grid md:grid-cols-3 gap-8">
-                        <div class="text-center p-6 border rounded-lg">
-                            <i class="fas fa-database text-3xl text-purple-600 mb-4"></i>
-                            <h4 class="font-semibold text-lg mb-2">Base de données</h4>
-                            <p class="text-gray-600">RDS/Aurora pour remplacer un SQL Server sur VM</p>
-                        </div>
-                        <div class="text-center p-6 border rounded-lg">
-                            <i class="fas fa-code text-3xl text-purple-600 mb-4"></i>
-                            <h4 class="font-semibold text-lg mb-2">API Serverless</h4>
-                            <p class="text-gray-600">Lambda + API Gateway pour des API économiques</p>
-                        </div>
-                        <div class="text-center p-6 border rounded-lg">
-                            <i class="fas fa-globe text-3xl text-purple-600 mb-4"></i>
-                            <h4 class="font-semibold text-lg mb-2">Site Web</h4>
-                            <p class="text-gray-600">Migration vers S3 + CloudFront + Route53</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-<!-- Email link -->
-<div class="text-center mt-12">
-    <a href="mailto:contact@optimycloud.com" class="text-purple-600 hover:underline text-lg flex items-center justify-center">
-        <i class="fas fa-envelope text-purple-600 text-xl mr-3"></i>
-        Discutons de votre migration Cloud
-    </a>
-</div>
-
-<!-- Calendly Widget -->
-<div class="mt-16 bg-white rounded-xl shadow-lg p-8 max-w-7xl mx-auto">
-    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Planifier une consultation migration</h3>
-    
-    <div class="text-center mb-8">
-        <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-purple-700 transition-colors duration-200 shadow-lg">
-            <i class="fas fa-calendar-alt mr-3"></i>
-            Réserver une consultation gratuite
-        </a>
-    </div>
-    
-    <!-- Calendly inline widget begin -->
-    <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    <!-- Calendly inline widget end -->
-</div> 
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="page-section hidden">
-        <div class="py-16 bg-gradient-to-br from-gray-50 to-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 items-center">
-                    <div>
-                    <img src="./optimycloud-logo.png" 
-                         alt="Alexandre Gillon - Ingénieur Cloud" 
-                         class="w-full h-auto"
-                         style="mask: radial-gradient(ellipse at center, black 60%, transparent 90%); 
-                                    -webkit-mask: radial-gradient(ellipse at center, black 60%, transparent 90%);
-                                    mix-blend-mode: multiply;">
-                    </div>
-                    <div>
-                        <h2 class="text-4xl font-bold text-gray-900 mb-6">
-                            Ingénieur Cloud Freelance basé à l'île Maurice
-                        </h2>
-                        <div class="space-y-6 text-lg text-gray-600 leading-relaxed">
-                            <p>
-                                Je suis <strong>Alexandre Gillon</strong>, <strong>Cloud Engineer français</strong> basé à <strong>l'île Maurice</strong>, avec plus de <strong>12 ans d'expérience en infrastructure et cloud computing</strong>.
-                            </p>
-                            <p>
-                                Je propose des prestations <strong>de haute qualité à coût optimisé</strong>, sans compromis technique, en accompagnant les entreprises dans leur transformation digitale.
-                            </p>
-                            <p>
-                                Je travaille avec des clients du monde entier sur <strong>AWS, Azure, GCP</strong> ainsi que sur des <strong>infrastructures on-premise</strong>, en mode mission courte ou accompagnement long terme.
-                            </p>
-                            <p>
-                                Mon expertise vous aide à <strong>optimiser vos infrastructures, réduire vos coûts et améliorer votre sécurité</strong>, quel que soit votre environnement technique.
-                            </p>
-                        </div>
-                        
-                        <div class="mt-8 space-y-4">
-                            <h3 class="text-xl font-semibold">Mes certifications</h3>
-                            <div class="flex flex-wrap gap-4">
-                                <a href="https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile" target="_blank" class="bg-orange-100 text-orange-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-orange-200 transition-colors">AWS Solutions Architect</a>
-                                <a href="https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc" target="_blank" class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-blue-200 transition-colors">Certified Kubernetes Administrator</a>
-                                <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full text-sm font-medium">ITIL Foundation v3</span>
-                                <a href="https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile" target="_blank" class="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium hover:bg-green-200 transition-colors">AWS Cloud Practitioner</a>
-                            </div>
-                        </div>
-
-                        <div class="mt-8 flex gap-4">
-                            <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 flex items-center">
-                                <i class="fab fa-linkedin mr-2"></i> LinkedIn
-                            </a>
-                            <a href="#contact" class="border-2 border-cloud-blue text-cloud-blue px-6 py-3 rounded-lg hover:bg-cloud-blue hover:text-white transition-colors duration-200">
-                                Me contacter
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-                <!-- Email et contact -->
-                <div class="text-center mt-12">
-                    <a href="mailto:contact@optimycloud.com" class="text-blue-600 hover:underline text-lg flex items-center justify-center">
-                        <i class="fas fa-envelope text-blue-600 text-xl mr-3"></i>
-                        Prenons contact pour votre projet
+                <div class="text-center mb-8">
+                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg">
+                        <i class="fas fa-calendar-alt mr-3"></i>
+                        Réserver un audit gratuit
                     </a>
                 </div>
-
-                <!-- Calendly Widget -->
-                <div class="mt-16 bg-white rounded-xl shadow-lg p-8 max-w-7xl mx-auto">
-                    <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Planifier un appel</h3>
-                    
-                    <div class="text-center mb-8">
-                        <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg">
-                            <i class="fas fa-calendar-alt mr-3"></i>
-                            Réserver un appel découverte
-                        </a>
-                    </div>
-                    
-                    <!-- Calendly inline widget begin -->
-                    <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-                    <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                    <!-- Calendly inline widget end -->
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="page-section hidden">
-        <div class="py-16 bg-gradient-to-br from-blue-50 to-white">
-            <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 class="text-4xl font-bold text-gray-900 mb-6 text-center">
-                    Contactez-moi – Parlons de votre projet Cloud
-                </h2>
-                <p class="text-xl text-gray-600 mb-8 text-center">
-                    Remplissez le formulaire ci-dessous, je vous réponds sous 24h.
-                </p>
-                <p class="text-lg text-gray-600 mb-12 text-center">
-                    Vous pouvez aussi m'envoyer un email à : 
-                    <a href="mailto:contact@optimycloud.com" class="text-blue-600 hover:underline">contact@optimycloud.com</a>
-                </p>
-
-                <div class="bg-white rounded-xl shadow-lg p-8">
-                    <form action="https://formspree.io/f/xjkoqpoe" method="POST" class="space-y-6">
-                        <div>
-                            <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom <span class="text-red-500">*</span></label>
-                            <input type="text" id="name" name="name" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label for="email" class="block text-sm font-medium text-gray-700 mb-2">Email <span class="text-red-500">*</span></label>
-                            <input type="email" id="email" name="email" required 
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                        </div>
-                        <div>
-                            <label for="message" class="block text-sm font-medium text-gray-700 mb-2">Message <span class="text-red-500">*</span></label>
-                            <textarea id="message" name="message" rows="6" required 
-                                      class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"
-                                      placeholder="Décrivez votre projet, vos besoins ou vos défis actuels..."></textarea>
-                        </div>
-                        
-                        <!-- Protection anti-spam -->
-                        <div>
-                            <label for="captcha" class="block text-sm font-medium text-gray-700 mb-2">
-                                Vérification anti-robot : Combien font 2 + 3 ? <span class="text-red-500">*</span>
-                            </label>
-                            <input type="text" id="captcha" name="_captcha" required 
-                                   pattern="5" title="La réponse doit être 5"
-                                   placeholder="Tapez votre réponse ici"
-                                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                        </div>
-                        
-                        <!-- Champs cachés -->
-                        <input type="hidden" name="_replyto" value="contact@optimycloud.com">
-                        <input type="hidden" name="_subject" value="Nouveau message depuis OptimyCloud">
-                        <input type="text" name="_gotcha" style="display:none" />
-                        
-                        <button type="submit" 
-                                class="w-full bg-blue-600 text-white py-3 px-6 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
-                            <i class="fas fa-paper-plane mr-2"></i>
-                            Envoyer
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="col-span-2">
-                    <div class="flex items-center mb-4">
-                        <i class="fas fa-cloud text-cloud-blue text-2xl mr-3"></i>
-                        <h3 class="text-xl font-bold">OptimyCloud</h3>
-                    </div>
-                    <p class="text-gray-400 mb-4 max-w-md">
-                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures.
-                    </p>
-                    <div class="flex space-x-4">
-                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
-                            <i class="fab fa-linkedin text-xl"></i>
-                        </a>
-                        <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
-                            <i class="fab fa-github text-xl"></i>
-                        </a>
-                    </div>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Services</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="#finops" class="hover:text-white transition-colors duration-200">FinOps</a></li>
-                        <li><a href="#containers" class="hover:text-white transition-colors duration-200">Containerisation</a></li>
-                        <li><a href="#why-cloud" class="hover:text-white transition-colors duration-200">Migration Cloud</a></li>
-                        <li><a href="#contact" class="hover:text-white transition-colors duration-200">Consultation</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-semibold mb-4">Contact</h4>
-                    <ul class="space-y-2 text-gray-400">
-                        <li><a href="mailto:contact@optimycloud.com" class="hover:text-white transition-colors duration-200">contact@optimycloud.com</a></li>
-                        <li>Île Maurice</li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
-                <p>&copy; 2025 OptimyCloud. Tous droits réservés. | Ingénieur Cloud Freelance - Alexandre Gillon</p>
-                <div class="mt-4 space-x-4">
-                    <a href="mentions-legales.html" class="hover:text-white transition-colors duration-200">Mentions Légales</a>
-                    <span>•</span>
-                    <a href="politique-confidentialite.html" class="hover:text-white transition-colors duration-200">Politique de Confidentialité</a>
-                    <span>•</span>
-                    <a href="politique-cookies.html" class="hover:text-white transition-colors duration-200">Politique des Cookies</a>
-                </div>
-            </div>
-            <div class="text-center text-xs text-gray-500 mt-4">
-                * Les projets listés ci-dessus ont été menés dans le cadre de mes fonctions chez Ubisoft, Chateauform', Teamwork, Linkeo. Je ne représente pas officiellement ces entreprises.
-            </div>
-    </footer>
-
-    <div id="toast" class="toast">
-        <span id="toast-message"></span>
-    </div>
-
-    <script>
-        // Wait for DOM to be fully loaded
-        document.addEventListener('DOMContentLoaded', function() {
-            // Navigation functionality
-            const navLinks = document.querySelectorAll('.nav-link');
-            const sections = document.querySelectorAll('.page-section');
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-    
-            // Check if elements exist before adding event listeners
-            if (!mobileMenuBtn || !mobileMenu) {
-                console.warn('Mobile menu elements not found');
-            }
-    
-            // Show/hide sections
-            function showSection(targetId) {
-                sections.forEach(section => {
-                    if (section.id === targetId) {
-                        section.classList.remove('hidden');
-                        section.classList.add('active');
-                    } else {
-                        section.classList.add('hidden');
-                        section.classList.remove('active');
-                    }
-                });
-    
-                // Update active nav link
-                navLinks.forEach(link => {
-                    const href = link.getAttribute('href');
-                    if (href === `#${targetId}`) {
-                        link.classList.add('text-blue-600');
-                        if (!link.classList.contains('bg-blue-600')) {
-                            link.classList.remove('text-gray-700');
-                        }
-                    } else {
-                        if (!link.classList.contains('bg-blue-600')) {
-                            link.classList.remove('text-blue-600');
-                            link.classList.add('text-gray-700');
-                        }
-                    }
-                });
-            }
-    
-            // Handle navigation clicks
-            navLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href').substring(1);
-                    showSection(targetId);
-                    
-                    // Close mobile menu if open
-                    if (mobileMenu) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                });
-            });
-    
-            // Mobile menu toggle
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
-                });
-            }
-    
-            // Handle mobile menu links
-            const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
-            mobileNavLinks.forEach(link => {
-                link.addEventListener('click', (e) => {
-                    e.preventDefault();
-                    const targetId = link.getAttribute('href').substring(1);
-                    showSection(targetId);
-                    if (mobileMenu) {
-                        mobileMenu.classList.add('hidden');
-                    }
-                });
-            });
-    
-            // Fonction toast
-            function showToast(message, type = 'success') {
-                const toast = document.getElementById('toast');
-                const toastMessage = document.getElementById('toast-message');
-                
-                if (toast && toastMessage) {
-                    toastMessage.textContent = message;
-                    toast.className = `toast ${type}`;
-                    toast.classList.add('show');
-                    
-                    setTimeout(() => {
-                        toast.classList.remove('show');
-                    }, 4000);
-                }
-            }
-    
-            // Contact form handling AVEC TOAST
-            const contactForm = document.getElementById('contact-form');
-            if (contactForm) {
-                contactForm.addEventListener('submit', (e) => {
-                    e.preventDefault();
-                    
-                    const form = contactForm;
-                    const formData = new FormData(form);
-                    const data = Object.fromEntries(formData);
-                    
-                    // Simple validation
-                    if (!data.name || !data.email || !data.message) {
-                        showToast('❌ Veuillez remplir tous les champs obligatoires.', 'error');
-                        return;
-                    }
-    
-                    // Validation captcha
-                    if (data._captcha !== '5') {
-                        showToast('❌ Réponse incorrecte. 2 + 3 = ?', 'error');
-                        return;
-                    }
-                    
-                    // Envoie réel à Formspree
-                    fetch('https://formspree.io/f/xjkoqpoe', {
-                        method: 'POST',
-                        body: formData,
-                        headers: { 'Accept': 'application/json' }
-                    }).then(response => {
-                        if (response.ok) {
-                            showToast('✅ Merci ! Votre message a bien été envoyé.', 'success');
-                            form.reset();
-                        } else {
-                            showToast('❌ Erreur lors de l\'envoi. Veuillez réessayer.', 'error');
-                        }
-                    }).catch(error => {
-                        showToast('❌ Erreur réseau. Vérifiez votre connexion.', 'error');
-                    });
-                });
-            }
-    
-            // Show home section by default
-            showSection('home');
-    
-            // Handle hash changes (browser back/forward)
-            window.addEventListener('hashchange', () => {
-                const hash = window.location.hash.substring(1);
-                if (hash && document.getElementById(hash)) {
-                    showSection(hash);
-                }
-            });
-    
-            // Check for hash on page load
-            if (window.location.hash) {
-                const hash = window.location.hash.substring(1);
-                if (document.getElementById(hash)) {
-                    showSection(hash);
-                }
-            }
-        });
-    </script>
-
-    <style>
-        .page-section {
-            min-height: 100vh;
-        }
-        
-        #home {
-            min-height: auto;
-        }
-
-        .nav-link {
-            transition: all 0.2s ease;
-        }
-        
-        .nav-link:hover {
-            transform: translateY(-1px);
-        }
-
-        @media (max-width: 768px) {
-            .page-section {
-                min-height: auto;
-            }
-        }
-
-        /* Animation for smooth transitions */
-        .page-section {
-            opacity: 0;
-            transition: opacity 0.3s ease-in-out;
-        }
-        
-        .page-section.active {
-            opacity: 1;
-        }
-        
-        .page-section.hidden {
-            display: none !important;
-        }
-    </style>
-
-<!-- Cookie Consent Banner -->
-<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="text-sm">
-            <p>Ce site utilise des cookies pour améliorer votre expérience et analyser le trafic. En continuant, vous acceptez notre utilisation des cookies.</p>
-        </div>
-        <div class="flex gap-3">
-            <button id="accept-cookies" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                Accepter
-            </button>
-            <button id="reject-cookies" class="border border-gray-400 text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-medium">
-                Refuser
-            </button>
-        </div>
-    </div>
-</div>
-
-<!-- Cookie Script -->
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const rejectBtn = document.getElementById('reject-cookies');
-    
-    // Check if user already made a choice
-    if (localStorage.getItem('cookieConsent')) {
-        banner.style.display = 'none';
-        if (localStorage.getItem('cookieConsent') === 'accepted') {
-            loadAnalytics();
-        }
-    }
-    
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        banner.style.display = 'none';
-        loadAnalytics();
-    });
-    
-    rejectBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        banner.style.display = 'none';
-    });
-    
-    function loadAnalytics() {
-        // Google Analytics
-        const script = document.createElement('script');
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-        script.async = true;
-        document.head.appendChild(script);
-        
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
-        
-        // Google Ads (si nécessaire)
-        gtag('config', 'AW-XXXXXXXXX');
-    }
-});
-</script>
-</body>
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>Migration Cloud - Pourquoi migrer vers AWS, Azure, GCP | OptimyCloud</title>
+    <meta name="description" content="Découvrez les avantages de la migration Cloud : agilité, sécurité, résilience, scalabilité. Migration sécurisée vers AWS, Azure, GCP.">
+    <meta name="keywords" content="migration cloud, AWS migration, azure migration, transformation digitale, infrastructure cloud">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.png" 
+                                 alt="OptimyCloud" 
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Accueil</a>
+                    <a href="finops.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">FinOps</a>
+                    <a href="kubernetes.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Containerisation</a>
+                    <a href="migration.html" class="nav-link text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium">Pourquoi le Cloud</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
+                    <a href="contact.html" class="nav-link bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="finops.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FinOps</a>
+                <a href="kubernetes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Containerisation</a>
+                <a href="migration.html" class="block px-3 py-2 text-blue-600 font-medium">Pourquoi le Cloud</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Migration -->
+    <div class="py-16 bg-gradient-to-br from-purple-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h1 class="text-4xl font-bold text-gray-900 mb-6">
+                    Pourquoi migrer vers le Cloud ?
+                </h1>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Le Cloud transforme votre IT en vous offrant agilité, sécurité, résilience et scalabilité
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center p-6">
+                    <i class="fas fa-rocket text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Agilité</h3>
+                    <p class="text-gray-600">Déploiement rapide de services comme RDS (base de données managée)</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-shield-alt text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Sécurité</h3>
+                    <p class="text-gray-600">Solutions intégrées de chiffrement, audit, MFA</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-heart text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Résilience</h3>
+                    <p class="text-gray-600">Haute disponibilité et sauvegarde intégrée</p>
+                </div>
+                <div class="text-center p-6">
+                    <i class="fas fa-expand-arrows-alt text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Scalabilité</h3>
+                    <p class="text-gray-600">S'adapte à votre trafic, sans surcoût inutile</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Comparaison On-Premise vs Cloud -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">On-Premise vs Cloud : La différence</h2>
+                <p class="text-xl text-gray-600">Comparez les deux approches pour comprendre les avantages du Cloud</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mb-16">
+                <!-- On-Premise -->
+                <div class="bg-red-50 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-server text-4xl text-red-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Infrastructure On-Premise</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-times text-red-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Investissement initial élevé</h4>
+                                <p class="text-gray-600 text-sm">Achat de serveurs, licences, infrastructure réseau</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-times text-red-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Maintenance complexe</h4>
+                                <p class="text-gray-600 text-sm">Équipe IT dédiée, mises à jour manuelles</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-times text-red-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Scalabilité limitée</h4>
+                                <p class="text-gray-600 text-sm">Provisioning lent, sur-dimensionnement</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-times text-red-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Sécurité à votre charge</h4>
+                                <p class="text-gray-600 text-sm">Gestion complète des vulnérabilités</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Cloud -->
+                <div class="bg-green-50 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cloud text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-2xl font-bold text-gray-900">Infrastructure Cloud</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Coûts prévisibles</h4>
+                                <p class="text-gray-600 text-sm">Pay-as-you-use, pas d'investissement initial</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Maintenance automatisée</h4>
+                                <p class="text-gray-600 text-sm">Mises à jour transparentes, services managés</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Scalabilité illimitée</h4>
+                                <p class="text-gray-600 text-sm">Auto-scaling, provisioning instantané</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-check text-green-600 mr-3 mt-1"></i>
+                            <div>
+                                <h4 class="font-semibold">Sécurité de niveau entreprise</h4>
+                                <p class="text-gray-600 text-sm">Chiffrement, conformité, audits intégrés</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Cas concrets de migration -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Cas concrets de migration</h2>
+                <p class="text-xl text-gray-600">Exemples de migrations réussies vers le Cloud</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-database text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Base de données</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Avant :</h4>
+                            <p class="text-gray-600 text-sm">SQL Server sur VM Windows, maintenance manuelle, sauvegardes complexes</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Après :</h4>
+                            <p class="text-gray-600 text-sm">AWS RDS/Aurora - Sauvegardes automatiques, haute disponibilité, monitoring intégré</p>
+                        </div>
+                        <div class="bg-purple-50 p-3 rounded-lg">
+                            <p class="text-purple-800 font-semibold">Résultat : -60% de maintenance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-code text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900">API Serverless</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Avant :</h4>
+                            <p class="text-gray-600 text-sm">API sur serveurs dédiés, coûts fixes élevés, scaling manuel</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Après :</h4>
+                            <p class="text-gray-600 text-sm">AWS Lambda + API Gateway - Facturation à l'usage, scaling automatique</p>
+                        </div>
+                        <div class="bg-blue-50 p-3 rounded-lg">
+                            <p class="text-blue-800 font-semibold">Résultat : -80% de coûts</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-globe text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Site Web</h3>
+                    </div>
+                    <div class="space-y-4">
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Avant :</h4>
+                            <p class="text-gray-600 text-sm">Hébergement traditionnel, performances variables, pas de CDN</p>
+                        </div>
+                        <div>
+                            <h4 class="font-semibold text-gray-800">Après :</h4>
+                            <p class="text-gray-600 text-sm">S3 + CloudFront + Route53 - Global, rapide, sécurisé</p>
+                        </div>
+                        <div class="bg-green-50 p-3 rounded-lg">
+                            <p class="text-green-800 font-semibold">Résultat : 3x plus rapide</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Processus de migration -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ma méthode de migration</h2>
+                <p class="text-xl text-gray-600">Une approche structurée pour une migration sans risque</p>
+            </div>
+
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="text-center p-6">
+                    <div class="bg-blue-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-blue-600">1</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Audit & Planification</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Inventaire des applications</li>
+                        <li>• Analyse des dépendances</li>
+                        <li>• Stratégie de migration</li>
+                        <li>• Plan de rollback</li>
+                    </ul>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="bg-green-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-green-600">2</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Préparation</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Setup environnement Cloud</li>
+                        <li>• Configuration réseau</li>
+                        <li>• Sécurité et accès</li>
+                        <li>• Tests de connectivité</li>
+                    </ul>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="bg-purple-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-purple-600">3</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Migration</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Migration par phases</li>
+                        <li>• Tests fonctionnels</li>
+                        <li>• Validation performance</li>
+                        <li>• Formation équipes</li>
+                    </ul>
+                </div>
+
+                <div class="text-center p-6">
+                    <div class="bg-orange-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl font-bold text-orange-600">4</span>
+                    </div>
+                    <h3 class="text-lg font-semibold mb-3">Optimisation</h3>
+                    <ul class="text-sm text-gray-600 space-y-1">
+                        <li>• Monitoring avancé</li>
+                        <li>• Optimisation coûts</li>
+                        <li>• Automatisation</li>
+                        <li>• Documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section CTA -->
+    <div class="py-16 bg-gradient-to-br from-purple-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Prêt pour votre transformation Cloud ?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Commençons par un audit de votre infrastructure actuelle pour définir la meilleure stratégie de migration.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="mailto:contact@optimycloud.com" class="bg-purple-600 text-white px-8 py-3 rounded-lg hover:bg-purple-700 transition-colors duration-200 font-medium text-center flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    contact@optimycloud.com
+                </a>
+                <a href="contact.html" class="border-2 border-purple-600 text-purple-600 px-8 py-3 rounded-lg hover:bg-purple-600 hover:text-white transition-colors duration-200 text-center font-medium">
+                    Formulaire de contact
+                </a>
+            </div>
+
+            <!-- Calendly Widget -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Planifier une consultation migration</h3>
+                
+                <div class="text-center mb-8">
+                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-purple-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-purple-700 transition-colors duration-200 shadow-lg">
+                        <i class="fas fa-calendar-alt mr-3"></i>
+                        Réserver une consultation gratuite
+                    </a>
+                </div>
+                
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="finops.html" class="hover:text-white transition-colors duration-200">FinOps</a></li>
+                        <li><a href="kubernetes.html" class="hover:text-white transition-colors duration-200">Containerisation</a></li>
+                        <li><a href="migration.html" class="hover:text-white transition-colors duration-200">Migration Cloud</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-200">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:contact@optimycloud.com" class="hover:text-white transition-colors duration-200">contact@optimycloud.com</a></li>
+                        <li>Île Maurice</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OptimyCloud. Tous droits réservés. | Ingénieur Cloud Freelance - Alexandre Gillon</p>
+                <div class="mt-4 space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-white transition-colors duration-200">Mentions Légales</a>
+                    <span>•</span>
+                    <a href="politique-confidentialite.html" class="hover:text-white transition-colors duration-200">Politique de Confidentialité</a>
+                    <span>•</span>
+                    <a href="politique-cookies.html" class="hover:text-white transition-colors duration-200">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

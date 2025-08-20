@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>FinOps & Optimisation des coûts Cloud | OptimyCloud</title>
+    <meta name="description" content="Optimisez vos coûts Cloud avec l'approche FinOps. Audit, économies, reporting avancé et auto-scaling pour maximiser votre ROI.">
+    <meta name="keywords" content="FinOps, optimisation coûts cloud, AWS savings plans, reserved instances, audit cloud">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.png" 
+                                 alt="OptimyCloud" 
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Accueil</a>
+                    <a href="finops.html" class="nav-link text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium">FinOps</a>
+                    <a href="kubernetes.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Containerisation</a>
+                    <a href="migration.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Pourquoi le Cloud</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
+                    <a href="contact.html" class="nav-link bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="finops.html" class="block px-3 py-2 text-blue-600 font-medium">FinOps</a>
+                <a href="kubernetes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Containerisation</a>
+                <a href="migration.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Pourquoi le Cloud</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section FinOps -->
+    <div class="py-16 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-6">
+                        FinOps & Optimisation des coûts Cloud
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Le Cloud est puissant, mais mal maîtrisé, il peut vite coûter cher. Grâce à mon expertise FinOps, je vous aide à optimiser vos dépenses et maximiser votre ROI.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fas fa-search text-green-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Audit des ressources</h3>
+                                <p class="text-gray-600">Identifier les ressources inutilisées ou surdimensionnées</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-piggy-bank text-green-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Plans d'économies</h3>
+                                <p class="text-gray-600">Savings Plans, Reserved Instances, Spot Instances</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-chart-bar text-green-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Reporting avancé</h3>
+                                <p class="text-gray-600">Cost Explorer, Budgets, outils tiers comme Grafana</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-expand-arrows-alt text-green-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Auto Scaling</h3>
+                                <p class="text-gray-600">Automatisation de l'échelle des ressources, extinction automatique des instances hors heures ouvrées</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="contact.html" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
+                            Discutons de vos objectifs
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" 
+                         alt="Financial Optimization" 
+                         class="rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section détaillée FinOps -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ma méthode FinOps</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Une approche structurée pour réduire vos coûts Cloud de 20% à 50%
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="bg-green-50 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-analytics text-4xl text-green-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900">1. Analyse</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1"></i>Audit complet des ressources</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1"></i>Identification des gaspillages</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1"></i>Analyse des patterns d'usage</li>
+                        <li class="flex items-start"><i class="fas fa-check text-green-600 mr-2 mt-1"></i>Benchmark avec les best practices</li>
+                    </ul>
+                </div>
+
+                <div class="bg-blue-50 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-cogs text-4xl text-blue-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900">2. Optimisation</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Right-sizing des instances</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Mise en place d'Reserved Instances</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Configuration de l'Auto Scaling</li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Optimisation du stockage</li>
+                    </ul>
+                </div>
+
+                <div class="bg-purple-50 p-8 rounded-xl">
+                    <div class="text-center mb-6">
+                        <i class="fas fa-chart-line text-4xl text-purple-600 mb-4"></i>
+                        <h3 class="text-xl font-bold text-gray-900">3. Monitoring</h3>
+                    </div>
+                    <ul class="space-y-3 text-gray-600">
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mr-2 mt-1"></i>Dashboards temps réel</li>
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mr-2 mt-1"></i>Alertes budgétaires</li>
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mr-2 mt-1"></i>Rapports mensuels</li>
+                        <li class="flex items-start"><i class="fas fa-check text-purple-600 mr-2 mt-1"></i>Recommandations continues</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Cas client -->
+            <div class="bg-green-50 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">💡 Étude de cas client</h3>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 text-green-900">Startup SaaS - 150 utilisateurs</h4>
+                        <div class="space-y-3">
+                            <p class="text-green-800"><strong>Problème :</strong> Facture AWS de 8 000€/mois avec des pics inexpliqués</p>
+                            <p class="text-green-800"><strong>Solution :</strong> Audit complet, right-sizing, Reserved Instances, arrêt automatique des environnements de dev</p>
+                            <p class="text-green-800"><strong>Résultat :</strong> <span class="font-bold text-green-900">Réduction de 45% des coûts</span> (4 400€/mois économisés)</p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-3xl font-bold text-red-600 mb-2">8 000€</div>
+                            <div class="text-gray-600 mb-4">Avant optimisation</div>
+                            <i class="fas fa-arrow-down text-green-600 text-2xl mb-4"></i>
+                            <div class="text-3xl font-bold text-green-600 mb-2">4 400€</div>
+                            <div class="text-gray-600">Après optimisation</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Info supplémentaire -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Tous les projets sont :</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <i class="fab fa-git-alt text-4xl text-green-600 mb-4"></i>
+                        <h4 class="font-semibold text-lg mb-2">Versionnés dans Git</h4>
+                        <p class="text-gray-600">Suivi des modifications et historique complet</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-rocket text-4xl text-green-600 mb-4"></i>
+                        <h4 class="font-semibold text-lg mb-2">Déployés via CI/CD</h4>
+                        <p class="text-gray-600">Automatisation et déploiements fiables</p>
+                    </div>
+                    <div class="text-center">
+                        <i class="fas fa-file-alt text-4xl text-green-600 mb-4"></i>
+                        <h4 class="font-semibold text-lg mb-2">Documentés</h4>
+                        <p class="text-gray-600">Traçabilité et conformité garanties</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section CTA -->
+    <div class="py-16 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Prêt à optimiser vos coûts Cloud ?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Planifions un audit gratuit de votre infrastructure pour identifier les premières économies possibles.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="mailto:contact@optimycloud.com" class="bg-green-600 text-white px-8 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium text-center flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    contact@optimycloud.com
+                </a>
+                <a href="contact.html" class="border-2 border-green-600 text-green-600 px-8 py-3 rounded-lg hover:bg-green-600 hover:text-white transition-colors duration-200 text-center font-medium">
+                    Formulaire de contact
+                </a>
+            </div>
+
+            <!-- Calendly Widget -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Planifier un audit FinOps gratuit</h3>
+                
+                <div class="text-center mb-8">
+                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-green-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-green-700 transition-colors duration-200 shadow-lg">
+                        <i class="fas fa-calendar-alt mr-3"></i>
+                        Réserver un audit gratuit
+                    </a>
+                </div>
+                
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="finops.html" class="hover:text-white transition-colors duration-200">FinOps</a></li>
+                        <li><a href="kubernetes.html" class="hover:text-white transition-colors duration-200">Containerisation</a></li>
+                        <li><a href="migration.html" class="hover:text-white transition-colors duration-200">Migration Cloud</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-200">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:contact@optimycloud.com" class="hover:text-white transition-colors duration-200">contact@optimycloud.com</a></li>
+                        <li>Île Maurice</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OptimyCloud. Tous droits réservés. | Ingénieur Cloud Freelance - Alexandre Gillon</p>
+                <div class="mt-4 space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-white transition-colors duration-200">Mentions Légales</a>
+                    <span>•</span>
+                    <a href="politique-confidentialite.html" class="hover:text-white transition-colors duration-200">Politique de Confidentialité</a>
+                    <span>•</span>
+                    <a href="politique-cookies.html" class="hover:text-white transition-colors duration-200">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>

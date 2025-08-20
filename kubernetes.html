@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>Containerisation Kubernetes EKS | AWS Auto Mode | OptimyCloud</title>
+    <meta name="description" content="Déployez vos conteneurs sur AWS avec EKS Auto Mode. Migration Kubernetes, CI/CD, GitOps, optimisation des coûts avec Karpenter.">
+    <meta name="keywords" content="kubernetes EKS, containerisation AWS, docker, helm, gitops, karpenter, auto mode">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.png" 
+                                 alt="OptimyCloud" 
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Accueil</a>
+                    <a href="finops.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">FinOps</a>
+                    <a href="kubernetes.html" class="nav-link text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium">Containerisation</a>
+                    <a href="migration.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Pourquoi le Cloud</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
+                    <a href="contact.html" class="nav-link bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="finops.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FinOps</a>
+                <a href="kubernetes.html" class="block px-3 py-2 text-blue-600 font-medium">Containerisation</a>
+                <a href="migration.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Pourquoi le Cloud</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Kubernetes -->
+    <div class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <div>
+                    <img src="https://images.unsplash.com/photo-1605745341112-85968b19335b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2071&q=80" 
+                         alt="Container Technology" 
+                         class="rounded-lg shadow-xl">
+                </div>
+                <div>
+                    <h1 class="text-4xl font-bold text-gray-900 mb-6">
+                        Containerisation sur AWS avec EKS Auto Mode
+                    </h1>
+                    <p class="text-xl text-gray-600 mb-8 leading-relaxed">
+                        Vous avez besoin de scalabilité, mais sans la complexité ? EKS Auto Mode permet de déployer vos conteneurs avec gestion automatique des nodes, intégration IAM, observabilité native.
+                    </p>
+                    <div class="space-y-6">
+                        <div class="flex items-start">
+                            <i class="fab fa-docker text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Infrastructure container-native</h3>
+                                <p class="text-gray-600">CI/CD, GitOps, Helm pour un déploiement moderne</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-sync-alt text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Migration vers Kubernetes</h3>
+                                <p class="text-gray-600">Transition en douceur de vos workloads existants</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-dollar-sign text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Optimisation des coûts</h3>
+                                <p class="text-gray-600">Karpenter et Auto Mode pour une gestion intelligente</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start">
+                            <i class="fas fa-lock text-blue-600 text-xl mt-1 mr-4"></i>
+                            <div>
+                                <h3 class="font-semibold text-lg mb-2">Sécurité intégrée</h3>
+                                <p class="text-gray-600">RBAC, IAM, Network Policies</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8">
+                        <a href="https://docs.aws.amazon.com/eks/latest/userguide/automode.html" target="_blank" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                            Découvrir EKS Auto Mode
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section détaillée Kubernetes -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Ma démarche Kubernetes</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    De la containerisation de vos applications à la production Kubernetes sur AWS
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="bg-blue-50 p-6 rounded-xl text-center">
+                    <i class="fab fa-docker text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">1. Containerisation</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Audit de l'existant</li>
+                        <li>• Dockerfiles optimisés</li>
+                        <li>• Multi-stage builds</li>
+                        <li>• Registries privés (ECR)</li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-dharmachakra text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">2. Cluster EKS</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• EKS Auto Mode</li>
+                        <li>• Karpenter pour le scaling</li>
+                        <li>• Load Balancer Controller</li>
+                        <li>• Intégration IAM</li>
+                    </ul>
+                </div>
+
+                <div class="bg-purple-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-code-branch text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">3. CI/CD GitOps</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• GitHub Actions</li>
+                        <li>• ArgoCD/Flux</li>
+                        <li>• Helm Charts</li>
+                        <li>• Tests automatisés</li>
+                    </ul>
+                </div>
+
+                <div class="bg-orange-50 p-6 rounded-xl text-center">
+                    <i class="fas fa-eye text-4xl text-orange-600 mb-4"></i>
+                    <h3 class="text-lg font-bold text-gray-900 mb-3">4. Observabilité</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Prometheus + Grafana</li>
+                        <li>• AWS CloudWatch</li>
+                        <li>• Logging centralisé</li>
+                        <li>• Alerting intelligent</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Avantages EKS Auto Mode -->
+            <div class="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-xl p-8 mb-12">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">🚀 Pourquoi EKS Auto Mode ?</h3>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 text-blue-900">Simplicité opérationnelle</h4>
+                        <ul class="space-y-2 text-blue-800">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Gestion automatique des nodes</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Pas de gestion d'EC2 instances</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Mise à jour automatique</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Intégration native AWS</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 text-blue-900">Optimisation des coûts</h4>
+                        <ul class="space-y-2 text-blue-800">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Scaling intelligent avec Karpenter</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Support Spot Instances</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Pas de surprovisioning</li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1"></i>Facturation au pod</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Cas client -->
+            <div class="bg-blue-50 rounded-xl p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">💡 Étude de cas client</h3>
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div>
+                        <h4 class="font-semibold text-lg mb-4 text-blue-900">E-commerce - API microservices</h4>
+                        <div class="space-y-3">
+                            <p class="text-blue-800"><strong>Défi :</strong> 15 microservices sur VMs, difficultés de déploiement et scaling</p>
+                            <p class="text-blue-800"><strong>Solution :</strong> Migration vers EKS Auto Mode avec GitOps, CI/CD automatisé</p>
+                            <p class="text-blue-800"><strong>Résultat :</strong> <span class="font-bold text-blue-900">Déploiements 10x plus rapides</span> et <span class="font-bold text-blue-900">-35% de coûts</span></p>
+                        </div>
+                    </div>
+                    <div class="text-center">
+                        <div class="bg-white p-6 rounded-lg shadow-md">
+                            <div class="text-2xl font-bold text-red-600 mb-2">45 minutes</div>
+                            <div class="text-gray-600 mb-4">Déploiement avant</div>
+                            <i class="fas fa-arrow-down text-blue-600 text-2xl mb-4"></i>
+                            <div class="text-2xl font-bold text-blue-600 mb-2">4 minutes</div>
+                            <div class="text-gray-600">Déploiement après</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Technologies utilisées -->
+    <div class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-900 mb-4">Stack technologique Kubernetes</h2>
+                <p class="text-xl text-gray-600">Les outils que j'utilise pour vos projets containerisés</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fab fa-aws text-4xl text-orange-500 mb-4"></i>
+                    <h3 class="font-semibold text-lg">AWS EKS</h3>
+                    <p class="text-gray-600 text-sm">Auto Mode, Fargate</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-dharmachakra text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Kubernetes</h3>
+                    <p class="text-gray-600 text-sm">Orchestration native</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fab fa-docker text-4xl text-blue-500 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Docker</h3>
+                    <p class="text-gray-600 text-sm">Containerisation</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-ship text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Helm</h3>
+                    <p class="text-gray-600 text-sm">Package manager</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-sync text-4xl text-green-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">ArgoCD</h3>
+                    <p class="text-gray-600 text-sm">GitOps</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-expand-arrows-alt text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Karpenter</h3>
+                    <p class="text-gray-600 text-sm">Auto-scaling</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-chart-line text-4xl text-orange-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Prometheus</h3>
+                    <p class="text-gray-600 text-sm">Monitoring</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-tachometer-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="font-semibold text-lg">Grafana</h3>
+                    <p class="text-gray-600 text-sm">Dashboards</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section CTA -->
+    <div class="py-16 bg-gradient-to-br from-blue-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl font-bold text-gray-900 mb-6">
+                Prêt pour la containerisation ?
+            </h2>
+            <p class="text-xl text-gray-600 mb-8">
+                Discutons de votre architecture actuelle et planifions votre migration vers Kubernetes.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+                <a href="mailto:contact@optimycloud.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-center flex items-center justify-center">
+                    <i class="fas fa-envelope mr-2"></i>
+                    contact@optimycloud.com
+                </a>
+                <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
+                    Formulaire de contact
+                </a>
+            </div>
+
+            <!-- Calendly Widget -->
+            <div class="bg-white rounded-xl shadow-lg p-8">
+                <h3 class="text-2xl font-bold text-gray-900 mb-6">Planifier une consultation Kubernetes</h3>
+                
+                <div class="text-center mb-8">
+                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg">
+                        <i class="fas fa-calendar-alt mr-3"></i>
+                        Réserver une consultation
+                    </a>
+                </div>
+                
+                <!-- Calendly inline widget begin -->
+                <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
+                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="finops.html" class="hover:text-white transition-colors duration-200">FinOps</a></li>
+                        <li><a href="kubernetes.html" class="hover:text-white transition-colors duration-200">Containerisation</a></li>
+                        <li><a href="migration.html" class="hover:text-white transition-colors duration-200">Migration Cloud</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-200">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:contact@optimycloud.com" class="hover:text-white transition-colors duration-200">contact@optimycloud.com</a></li>
+                        <li>Île Maurice</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OptimyCloud. Tous droits réservés. | Ingénieur Cloud Freelance - Alexandre Gillon</p>
+                <div class="mt-4 space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-white transition-colors duration-200">Mentions Légales</a>
+                    <span>•</span>
+                    <a href="politique-confidentialite.html" class="hover:text-white transition-colors duration-200">Politique de Confidentialité</a>
+                    <span>•</span>
+                    <a href="politique-cookies.html" class="hover:text-white transition-colors duration-200">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
