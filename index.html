@@ -473,5 +473,66 @@
         });
     </script>
 
+<!-- Cookie Consent Banner -->
+<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 shadow-lg">
+    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+        <div class="text-sm">
+            <p>Ce site utilise des cookies pour améliorer votre expérience et analyser le trafic. En continuant, vous acceptez notre utilisation des cookies.</p>
+        </div>
+        <div class="flex gap-3">
+            <button id="accept-cookies" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
+                Accepter
+            </button>
+            <button id="reject-cookies" class="border border-gray-400 text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-medium">
+                Refuser
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- Cookie Script -->
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const banner = document.getElementById('cookie-banner');
+    const acceptBtn = document.getElementById('accept-cookies');
+    const rejectBtn = document.getElementById('reject-cookies');
+    
+    // Check if user already made a choice
+    if (localStorage.getItem('cookieConsent')) {
+        banner.style.display = 'none';
+        if (localStorage.getItem('cookieConsent') === 'accepted') {
+            loadAnalytics();
+        }
+    }
+    
+    acceptBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'accepted');
+        banner.style.display = 'none';
+        loadAnalytics();
+    });
+    
+    rejectBtn.addEventListener('click', function() {
+        localStorage.setItem('cookieConsent', 'rejected');
+        banner.style.display = 'none';
+    });
+    
+    function loadAnalytics() {
+        // Google Analytics
+        const script = document.createElement('script');
+        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
+        script.async = true;
+        document.head.appendChild(script);
+        
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+        
+        // Google Ads (si nécessaire)
+        gtag('config', 'AW-XXXXXXXXX');
+    }
+});
+</script>
+
 </body>
 </html>
