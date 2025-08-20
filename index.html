@@ -14,6 +14,27 @@
     <meta name="keywords" content="freelance cloud engineer, migration AWS, FinOps cloud, ingénieur cloud Maurice, containerisation EKS">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        .toast {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #10b981;
+            color: white;
+            padding: 16px 24px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transform: translateX(400px);
+            transition: transform 0.3s ease;
+            z-index: 1000;
+        }
+        .toast.show {
+            transform: translateX(0);
+        }
+        .toast.error {
+            background: #ef4444;
+        }
+        </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Navigation -->
@@ -187,7 +208,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="/Users/gillonalexandre/Documents/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div class="flex items-center justify-center min-w-[120px]">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
@@ -202,7 +223,7 @@
                     <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="/Users/gillonalexandre/Documents/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 
                 <!-- Duplication pour effet infini -->
@@ -210,7 +231,7 @@
                     <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="/Users/gillonalexandre/Documents/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div class="flex items-center justify-center min-w-[120px]">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
@@ -225,7 +246,7 @@
                     <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
                 <div class="flex items-center justify-center min-w-[120px]">
-                    <img src="./chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
+                    <img src="/Users/gillonalexandre/Documents/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
                 </div>
             </div>
         </div>
@@ -863,13 +884,12 @@
             const sections = document.querySelectorAll('.page-section');
             const mobileMenuBtn = document.getElementById('mobile-menu-btn');
             const mobileMenu = document.getElementById('mobile-menu');
-
+    
             // Check if elements exist before adding event listeners
             if (!mobileMenuBtn || !mobileMenu) {
                 console.warn('Mobile menu elements not found');
-                return;
             }
-
+    
             // Show/hide sections
             function showSection(targetId) {
                 sections.forEach(section => {
@@ -881,7 +901,7 @@
                         section.classList.remove('active');
                     }
                 });
-
+    
                 // Update active nav link
                 navLinks.forEach(link => {
                     const href = link.getAttribute('href');
@@ -898,7 +918,7 @@
                     }
                 });
             }
-
+    
             // Handle navigation clicks
             navLinks.forEach(link => {
                 link.addEventListener('click', (e) => {
@@ -912,14 +932,14 @@
                     }
                 });
             });
-
+    
             // Mobile menu toggle
             if (mobileMenuBtn && mobileMenu) {
                 mobileMenuBtn.addEventListener('click', () => {
                     mobileMenu.classList.toggle('hidden');
                 });
             }
-
+    
             // Handle mobile menu links
             const mobileNavLinks = document.querySelectorAll('#mobile-menu a');
             mobileNavLinks.forEach(link => {
@@ -932,32 +952,66 @@
                     }
                 });
             });
-
-            // Contact form handling
+    
+            // Fonction toast
+            function showToast(message, type = 'success') {
+                const toast = document.getElementById('toast');
+                const toastMessage = document.getElementById('toast-message');
+                
+                if (toast && toastMessage) {
+                    toastMessage.textContent = message;
+                    toast.className = `toast ${type}`;
+                    toast.classList.add('show');
+                    
+                    setTimeout(() => {
+                        toast.classList.remove('show');
+                    }, 4000);
+                }
+            }
+    
+            // Contact form handling AVEC TOAST
             const contactForm = document.getElementById('contact-form');
             if (contactForm) {
                 contactForm.addEventListener('submit', (e) => {
                     e.preventDefault();
                     
-                    // Get form data
-                    const formData = new FormData(contactForm);
+                    const form = contactForm;
+                    const formData = new FormData(form);
                     const data = Object.fromEntries(formData);
                     
                     // Simple validation
-                    if (!data.name || !data.email || !data.project) {
-                        alert('Veuillez remplir tous les champs obligatoires.');
+                    if (!data.name || !data.email || !data.message) {
+                        showToast('❌ Veuillez remplir tous les champs obligatoires.', 'error');
                         return;
                     }
-
-                    // Simulate form submission
-                    alert('Merci pour votre message ! Je vous recontacterai dans les plus brefs délais.');
-                    contactForm.reset();
+    
+                    // Validation captcha
+                    if (data._captcha !== '5') {
+                        showToast('❌ Réponse incorrecte. 2 + 3 = ?', 'error');
+                        return;
+                    }
+                    
+                    // Envoie réel à Formspree
+                    fetch('https://formspree.io/f/mayzvrrl', {
+                        method: 'POST',
+                        body: formData,
+                        headers: { 'Accept': 'application/json' }
+                    }).then(response => {
+                        if (response.ok) {
+                            showToast('✅ Merci ! Votre message a bien été envoyé.', 'success');
+                            form.reset();
+                        } else {
+                            showToast('❌ Erreur lors de l\'envoi. Veuillez réessayer.', 'error');
+                        }
+                    }).catch(error => {
+                        showToast('❌ Erreur réseau. Vérifiez votre connexion.', 'error');
+                    });
                 });
             }
-
+    
             // Show home section by default
             showSection('home');
-
+    
             // Handle hash changes (browser back/forward)
             window.addEventListener('hashchange', () => {
                 const hash = window.location.hash.substring(1);
@@ -965,7 +1019,7 @@
                     showSection(hash);
                 }
             });
-
+    
             // Check for hash on page load
             if (window.location.hash) {
                 const hash = window.location.hash.substring(1);
