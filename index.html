@@ -403,3 +403,75 @@
                 <!-- Calendly inline widget begin -->
                 <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
                 <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+                <!-- Calendly inline widget end -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-8">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-blue-600 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4 max-w-md">
+                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                            <i class="fab fa-github text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Services</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="finops.html" class="hover:text-white transition-colors duration-200">FinOps</a></li>
+                        <li><a href="kubernetes.html" class="hover:text-white transition-colors duration-200">Containerisation</a></li>
+                        <li><a href="migration.html" class="hover:text-white transition-colors duration-200">Migration Cloud</a></li>
+                        <li><a href="contact.html" class="hover:text-white transition-colors duration-200">Consultation</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="mailto:contact@optimycloud.com" class="hover:text-white transition-colors duration-200">contact@optimycloud.com</a></li>
+                        <li>Île Maurice</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+                <p>&copy; 2025 OptimyCloud. Tous droits réservés. | Ingénieur Cloud Freelance - Alexandre Gillon</p>
+                <div class="mt-4 space-x-4">
+                    <a href="mentions-legales.html" class="hover:text-white transition-colors duration-200">Mentions Légales</a>
+                    <span>•</span>
+                    <a href="politique-confidentialite.html" class="hover:text-white transition-colors duration-200">Politique de Confidentialité</a>
+                    <span>•</span>
+                    <a href="politique-cookies.html" class="hover:text-white transition-colors duration-200">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+
+</body>
+</html>
