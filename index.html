@@ -778,7 +778,7 @@
                 </p>
 
                 <div class="bg-white rounded-xl shadow-lg p-8">
-                    <form action="https://formspree.io/f/mayzvrrl" method="POST" class="space-y-6">
+                    <form action="https://formspree.io/f/xjkoqpoe" method="POST" class="space-y-6">
                         <div>
                             <label for="name" class="block text-sm font-medium text-gray-700 mb-2">Nom <span class="text-red-500">*</span></label>
                             <input type="text" id="name" name="name" required 
@@ -875,6 +875,10 @@
                 * Les projets listés ci-dessus ont été menés dans le cadre de mes fonctions chez Ubisoft, Chateauform', Teamwork, Linkeo. Je ne représente pas officiellement ces entreprises.
             </div>
     </footer>
+
+    <div id="toast" class="toast">
+        <span id="toast-message"></span>
+    </div>
 
     <script>
         // Wait for DOM to be fully loaded
@@ -992,7 +996,7 @@
                     }
                     
                     // Envoie réel à Formspree
-                    fetch('https://formspree.io/f/mayzvrrl', {
+                    fetch('https://formspree.io/f/xjkoqpoe', {
                         method: 'POST',
                         body: formData,
                         headers: { 'Accept': 'application/json' }
