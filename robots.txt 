@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Interdire l'indexation des fichiers techniques
+Disallow: /assets/
+Disallow: /*.css
+Disallow: /*.js
+
+# Sitemap
+Sitemap: https://optimycloud.com/sitemap.xml
