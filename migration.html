@@ -478,48 +478,49 @@
     </div>
 </div>
 
-<!-- Cookie Script -->
+<!-- Cookie Script avec Google Ads -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const banner = document.getElementById('cookie-banner');
-    const acceptBtn = document.getElementById('accept-cookies');
-    const rejectBtn = document.getElementById('reject-cookies');
-    
-    // Check if user already made a choice
-    if (localStorage.getItem('cookieConsent')) {
-        banner.style.display = 'none';
-        if (localStorage.getItem('cookieConsent') === 'accepted') {
-            loadAnalytics();
+    document.addEventListener('DOMContentLoaded', function() {
+        const banner = document.getElementById('cookie-banner');
+        const acceptBtn = document.getElementById('accept-cookies');
+        const rejectBtn = document.getElementById('reject-cookies');
+        
+        // Check if user already made a choice
+        if (localStorage.getItem('cookieConsent')) {
+            banner.style.display = 'none';
+            if (localStorage.getItem('cookieConsent') === 'accepted') {
+                loadAnalytics();
+            }
         }
-    }
-    
-    acceptBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'accepted');
-        banner.style.display = 'none';
-        loadAnalytics();
-    });
-    
-    rejectBtn.addEventListener('click', function() {
-        localStorage.setItem('cookieConsent', 'rejected');
-        banner.style.display = 'none';
-    });
-    
-    function loadAnalytics() {
-        // Google Analytics
-        const script = document.createElement('script');
-        script.src = 'https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX';
-        script.async = true;
-        document.head.appendChild(script);
         
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-        gtag('config', 'G-XXXXXXXXXX');
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.style.display = 'none';
+            loadAnalytics();
+        });
         
-        // Google Ads (si nécessaire)
-        gtag('config', 'AW-XXXXXXXXX');
-    }
-});
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            banner.style.display = 'none';
+        });
+        
+        function loadAnalytics() {
+            // Google Ads (gtag.js) - VOTRE ID RÉEL
+            const script = document.createElement('script');
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=AW-17497157647';
+            script.async = true;
+            document.head.appendChild(script);
+            
+            // Configuration Google Ads
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'AW-17497157647');
+            
+            // Si vous avez Google Analytics, ajoutez aussi :
+            // gtag('config', 'G-XXXXXXXXXX');
+        }
+    });
 </script>
 
 </body>
