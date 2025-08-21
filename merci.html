@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <title>Merci ! Votre demande a été envoyée | OptimyCloud</title>
+    <meta name="description" content="Merci pour votre demande. Je vous réponds sous 24h. Découvrez nos autres services en attendant.">
+    <meta name="robots" content="noindex, nofollow">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="./assets/optimycloud-logo.png" 
+                                 alt="OptimyCloud" 
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Accueil</a>
+                    <a href="finops.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">FinOps</a>
+                    <a href="kubernetes.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Containerisation</a>
+                    <a href="migration.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Pourquoi le Cloud</a>
+                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
+                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Accueil</a>
+                <a href="finops.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FinOps</a>
+                <a href="kubernetes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Containerisation</a>
+                <a href="migration.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Pourquoi le Cloud</a>
+                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section Merci -->
+    <div class="py-16 bg-gradient-to-br from-green-50 to-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="mb-8">
+                <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <i class="fas fa-check text-4xl text-green-600"></i>
+                </div>
+                <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">
+                    Merci ! Votre demande a bien été envoyée
+                </h1>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-600 mb-4">
+                    <i class="fas fa-envelope text-blue-600 mr-2"></i> <strong>Je vous réponds sous 24h</strong> avec une première analyse de vos besoins
+                </p>
+                <p class="text-base sm:text-lg text-gray-600 mb-8">
+                    <i class="fas text-green-600 mr-2"></i> En cas d'urgence : <a href="mailto:contact@optimycloud.com" class="text-blue-600 hover:underline font-medium">contact@optimycloud.com</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Actions suggérées -->
+    <div class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-4">En attendant ma réponse</h2>
+                <p class="text-base sm:text-lg lg:text-xl text-gray-600">Découvrez mes services ou planifiez un appel</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <!-- Calendly -->
+                <div class="bg-blue-50 p-8 rounded-xl text-center">
+                    <i class="fas fa-calendar-alt text-4xl text-blue-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Planifier un appel</h3>
+                    <p class="text-gray-600 mb-6">30 minutes pour discuter de votre projet directement</p>
+                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                        Réserver un créneau
+                    </a>
+                </div>
+
+                <!-- FinOps -->
+                <div class="bg-green-50 p-8 rounded-xl text-center">
+                    <i class="fas fa-piggy-bank text-4xl text-green-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Optimisation FinOps</h3>
+                    <p class="text-gray-600 mb-6">Réduisez vos coûts Cloud de 20% à 50%</p>
+                    <a href="finops.html" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
+                        Découvrir FinOps
+                    </a>
+                </div>
+
+                <!-- Kubernetes -->
+                <div class="bg-purple-50 p-8 rounded-xl text-center">
+                    <i class="fas fa-dharmachakra text-4xl text-purple-600 mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4">Containerisation</h3>
+                    <p class="text-gray-600 mb-6">Migration vers Kubernetes EKS Auto Mode</p>
+                    <a href="kubernetes.html" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors duration-200 font-medium">
+                        Voir Kubernetes
+                    </a>
+                </div>
+            </div>
+
+            <!-- Retour navigation -->
+            <div class="text-center">
+                <a href="index.html" class="inline-flex items-center text-gray-600 hover:text-blue-600 transition-colors duration-200">
+                    <i class="fas fa-arrow-left mr-2"></i>
+                    Retour à l'accueil
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+<footer class="bg-gray-900 text-white py-8 sm:py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-4 gap-6 sm:gap-8">
+            <div class="col-span-2">
+                <div class="flex items-center mb-4">
+                    <i class="fas fa-cloud text-blue-600 text-2xl mr-3"></i>
+                    <h3 class="text-lg sm:text-xl font-bold">OptimyCloud</h3>
+                </div>
+                <p class="text-gray-400 mb-4 max-w-md">
+                    Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures.
+                </p>
+                <div class="flex space-x-4">
+                    <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="https://github.com" target="_blank" class="text-gray-400 hover:text-blue-600 transition-colors duration-200">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Services</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="finops.html" class="hover:text-white transition-colors duration-200">FinOps</a></li>
+                    <li><a href="kubernetes.html" class="hover:text-white transition-colors duration-200">Containerisation</a></li>
+                    <li><a href="migration.html" class="hover:text-white transition-colors duration-200">Migration Cloud</a></li>
+                    <li><a href="contact.html" class="hover:text-white transition-colors duration-200">Consultation</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-semibold mb-4">Contact</h4>
+                <ul class="space-y-2 text-gray-400">
+                    <li><a href="mailto:contact@optimycloud.com" class="hover:text-white transition-colors duration-200">contact@optimycloud.com</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400">
+            <p>&copy; 2025 OptimyCloud. Tous droits réservés. | Ingénieur Cloud Freelance - Alexandre Gillon</p>
+            <div class="mt-4 space-x-4">
+                <a href="mentions-legales.html" class="hover:text-white transition-colors duration-200">Mentions Légales</a>
+                <span>•</span>
+                <a href="politique-confidentialite.html" class="hover:text-white transition-colors duration-200">Politique de Confidentialité</a>
+                <span>•</span>
+                <a href="politique-cookies.html" class="hover:text-white transition-colors duration-200">Politique des Cookies</a>
+            </div>
+        </div>
+        <div class="text-center text-xs text-gray-500 mt-4">
+            * Les projets listés ci-dessus ont été menés dans le cadre de mes fonctions chez Ubisoft, Chateauform', Teamwork, Linkeo. Je ne représente pas officiellement ces entreprises.
+        </div>
+    </div>
+</footer>
+
+    <script>
+        // Mobile menu functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+            
+            if (mobileMenuBtn && mobileMenu) {
+                mobileMenuBtn.addEventListener('click', () => {
+                    mobileMenu.classList.toggle('hidden');
+                });
+            }
+        });
+    </script>
+</body>
+</html>
