@@ -473,17 +473,18 @@
         });
     </script>
 <!-- Cookie Consent Banner -->
-<div id="cookie-banner" class="fixed bottom-0 left-0 right-0 bg-gray-900 text-white p-4 z-50 shadow-lg">
-    <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-        <div class="text-sm">
-            <p>Ce site utilise des cookies pour améliorer votre expérience et analyser le trafic. En continuant, vous acceptez notre utilisation des cookies.</p>
+<div id="cookie-banner" class="fixed top-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 z-50 shadow-xl">
+    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between text-sm">
+        <div class="flex items-center gap-2">
+            <span>🍪</span>
+            <span>Cookies pour optimiser votre expérience</span>
         </div>
-        <div class="flex gap-3">
-            <button id="accept-cookies" class="bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700 transition-colors font-medium">
-                Accepter
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="px-3 py-1 border border-white/30 rounded text-sm hover:bg-white/10">
+                Non
             </button>
-            <button id="reject-cookies" class="border border-gray-400 text-gray-300 px-6 py-2 rounded-lg hover:bg-gray-800 transition-colors font-medium">
-                Refuser
+            <button id="accept-cookies" class="px-4 py-1 bg-white text-blue-600 rounded text-sm font-semibold hover:bg-gray-100">
+                OK
             </button>
         </div>
     </div>
