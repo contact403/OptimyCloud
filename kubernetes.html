@@ -479,7 +479,7 @@
     </script>
 
 <!-- Cookie Consent Banner -->
-<div id="cookie-banner" class="fixed top-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 z-50 shadow-xl">
+<div id="cookie-banner" class="fixed top-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 z-50 shadow-xl" style="display: none;">
     <div class="max-w-7xl mx-auto px-4 flex items-center justify-between text-sm">
         <div class="flex items-center gap-2">
             <span>🍪</span>
@@ -503,25 +503,24 @@
         const acceptBtn = document.getElementById('accept-cookies');
         const rejectBtn = document.getElementById('reject-cookies');
         
-        // Check if user already made a choice
-        if (localStorage.getItem('cookieConsent')) {
-            banner.style.display = 'none';
-            if (localStorage.getItem('cookieConsent') === 'accepted') {
-                // Push consent to GTM
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'cookie_consent_granted',
-                    'consent_analytics': true,
-                    'consent_ads': true
-                });
-            }
+        // Show banner only if no choice was made
+        if (!localStorage.getItem('cookieConsent')) {
+            banner.style.display = 'block';
+        } else if (localStorage.getItem('cookieConsent') === 'accepted') {
+            // Push consent to GTM for returning users
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'cookie_consent_granted',
+                'consent_analytics': true,
+                'consent_ads': true
+            });
         }
         
+        // Rest of your code stays the same
         acceptBtn.addEventListener('click', function() {
             localStorage.setItem('cookieConsent', 'accepted');
             banner.style.display = 'none';
             
-            // Push consent to GTM
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'cookie_consent_granted',
@@ -534,7 +533,6 @@
             localStorage.setItem('cookieConsent', 'rejected');
             banner.style.display = 'none';
             
-            // Push rejection to GTM
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'cookie_consent_denied',
