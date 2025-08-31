@@ -397,10 +397,7 @@
                     Évaluons votre infrastructure actuelle et définissons votre stratégie Cloud sous 24h.
                 </p>
                 
-                <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST" id="migration-form">
-                    <input type="hidden" name="_subject" value="Demande audit migration depuis la page Migration Cloud">
-                    <input type="hidden" name="_next" value="https://optimycloud.com/merci.html">
-                    
+                <form class="space-y-4 max-w-md mx-auto" id="migration-form">
                     <input type="text" 
                         name="name"
                         placeholder="Votre nom *" 
@@ -451,21 +448,53 @@
                 </form>
                 
                 <script>
-                // Validation JavaScript pour le formulaire Migration
                 document.addEventListener('DOMContentLoaded', function() {
                     const migrationForm = document.getElementById('migration-form');
                     if (migrationForm) {
                         migrationForm.addEventListener('submit', function(e) {
+                            e.preventDefault(); // Empêche la soumission normale
+                            
                             const captchaValue = this.querySelector('input[name="_captcha"]').value;
                             
+                            // Validation captcha
                             if (captchaValue !== '9') {
-                                e.preventDefault();
-                                alert('Erreur de vérification. 7 + 2 = ?');
-                                return false;
+                                showToast('Erreur de vérification. 7 + 2 = ?', 'error');
+                                return;
                             }
                             
-                            // Si captcha correct, le formulaire se soumet normalement vers Formspree
+                            // Envoi via fetch pour éviter la redirection
+                            const formData = new FormData(this);
+                            formData.append('_subject', 'Demande audit migration depuis la page Migration Cloud');
+                            
+                            fetch('https://formspree.io/f/xjkoqpoe', {
+                                method: 'POST',
+                                body: formData,
+                                headers: { 'Accept': 'application/json' }
+                            }).then(response => {
+                                if (response.ok) {
+                                    showToast('Message envoyé ! Je vous réponds sous 24h.', 'success');
+                                    this.reset();
+                                } else {
+                                    showToast('Erreur lors de l\'envoi. Réessayez ou contactez-moi directement.', 'error');
+                                }
+                            }).catch(() => {
+                                showToast('Erreur de connexion. Réessayez plus tard.', 'error');
+                            });
                         });
+                    }
+                    
+                    // Fonction toast
+                    function showToast(message, type = 'success') {
+                        const toast = document.createElement('div');
+                        toast.className = `fixed bottom-5 right-5 px-6 py-3 rounded-lg text-white z-50 transform translate-x-full transition-transform duration-300 ${type === 'error' ? 'bg-red-500' : 'bg-green-500'}`;
+                        toast.textContent = message;
+                        document.body.appendChild(toast);
+                        
+                        setTimeout(() => toast.classList.remove('translate-x-full'), 100);
+                        setTimeout(() => {
+                            toast.classList.add('translate-x-full');
+                            setTimeout(() => document.body.removeChild(toast), 300);
+                        }, 3000);
                     }
                 });
                 </script>
