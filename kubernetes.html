@@ -400,7 +400,7 @@
                 Analysons votre architecture actuelle et définissons votre stratégie Kubernetes sous 24h.
             </p>
             
-            <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST">
+            <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST" id="kubernetes-form">
                 <input type="hidden" name="_subject" value="Demande audit Kubernetes depuis la page Containerisation">
                 <input type="hidden" name="_next" value="https://optimycloud.com/merci.html">
                 
@@ -440,8 +440,9 @@
                     <input type="text" 
                         name="_captcha"
                         required 
-                        min="9" 
-                        max="9"
+                        pattern="9"
+                        maxlength="1"
+                        title="La réponse doit être 9"
                         class="w-16 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                 </div>
                 
@@ -451,6 +452,26 @@
                     Analyser mon architecture
                 </button>
             </form>
+            
+            <script>
+            // Validation JavaScript pour le formulaire Kubernetes
+            document.addEventListener('DOMContentLoaded', function() {
+                const kubernetesForm = document.getElementById('kubernetes-form');
+                if (kubernetesForm) {
+                    kubernetesForm.addEventListener('submit', function(e) {
+                        const captchaValue = this.querySelector('input[name="_captcha"]').value;
+                        
+                        if (captchaValue !== '9') {
+                            e.preventDefault();
+                            alert('Erreur de vérification. 5 + 4 = ?');
+                            return false;
+                        }
+                        
+                        // Si captcha correct, le formulaire se soumet normalement vers Formspree
+                    });
+                }
+            });
+            </script>
             
             <p class="text-center text-sm text-gray-500 mt-4">
                 Projet complexe ? <a href="contact.html" class="text-blue-600 hover:underline">Demande de devis détaillé</a>

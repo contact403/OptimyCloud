@@ -329,7 +329,7 @@
                         Obtenez une analyse de vos coûts Cloud et un plan d'optimisation personnalisé sous 24h.
                     </p>
                     
-                    <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST">
+                    <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST" id="finops-form">
                         <input type="hidden" name="_subject" value="Demande audit FinOps depuis la page FinOps">
                         <input type="hidden" name="_next" value="https://optimycloud.com/merci.html">
                         
@@ -369,8 +369,9 @@
                             <input type="text" 
                                 name="_captcha"
                                 required 
-                                min="8" 
-                                max="8"
+                                pattern="8"
+                                maxlength="1"
+                                title="La réponse doit être 8"
                                 class="w-16 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-green-600 focus:border-transparent">
                         </div>
                         
@@ -380,6 +381,26 @@
                             Recevoir mon audit gratuit
                         </button>
                     </form>
+                    
+                    <script>
+                    // Validation JavaScript pour le formulaire FinOps
+                    document.addEventListener('DOMContentLoaded', function() {
+                        const finopsForm = document.getElementById('finops-form');
+                        if (finopsForm) {
+                            finopsForm.addEventListener('submit', function(e) {
+                                const captchaValue = this.querySelector('input[name="_captcha"]').value;
+                                
+                                if (captchaValue !== '8') {
+                                    e.preventDefault();
+                                    alert('Erreur de vérification. 6 + 2 = ?');
+                                    return false;
+                                }
+                                
+                                // Si captcha correct, le formulaire se soumet normalement vers Formspree
+                            });
+                        }
+                    });
+                    </script>
                     
                     <p class="text-center text-sm text-gray-500 mt-4">
                         Projet complexe ? <a href="contact.html" class="text-green-600 hover:underline">Demande de devis détaillé</a>

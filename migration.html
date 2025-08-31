@@ -397,7 +397,7 @@
                     Évaluons votre infrastructure actuelle et définissons votre stratégie Cloud sous 24h.
                 </p>
                 
-                <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST">
+                <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST" id="migration-form">
                     <input type="hidden" name="_subject" value="Demande audit migration depuis la page Migration Cloud">
                     <input type="hidden" name="_next" value="https://optimycloud.com/merci.html">
                     
@@ -439,6 +439,7 @@
                             required 
                             pattern="9"
                             maxlength="1"
+                            title="La réponse doit être 9"
                             class="w-16 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-purple-600 focus:border-transparent">
                     </div>
                     
@@ -448,6 +449,26 @@
                         Planifier ma migration
                     </button>
                 </form>
+                
+                <script>
+                // Validation JavaScript pour le formulaire Migration
+                document.addEventListener('DOMContentLoaded', function() {
+                    const migrationForm = document.getElementById('migration-form');
+                    if (migrationForm) {
+                        migrationForm.addEventListener('submit', function(e) {
+                            const captchaValue = this.querySelector('input[name="_captcha"]').value;
+                            
+                            if (captchaValue !== '9') {
+                                e.preventDefault();
+                                alert('Erreur de vérification. 7 + 2 = ?');
+                                return false;
+                            }
+                            
+                            // Si captcha correct, le formulaire se soumet normalement vers Formspree
+                        });
+                    }
+                });
+                </script>
                 
                 <p class="text-center text-sm text-gray-500 mt-4">
                     Projet complexe ? <a href="contact.html" class="text-purple-600 hover:underline">Demande de devis détaillé</a>
