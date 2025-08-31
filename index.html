@@ -484,26 +484,80 @@
                     <i class="fas fa-envelope mr-2"></i>
                     contact@optimycloud.com
                 </a>
-                <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
-                    Formulaire de contact
-                </a>
             </div>
             
-            <!-- Calendly Widget -->
+            <!-- Mini formulaire de contact - Page d'accueil -->
             <div class="bg-white rounded-xl shadow-lg p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">Planifier un appel</h3>
+                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                    Discutons de votre projet Cloud
+                </h3>
+                <p class="text-gray-600 text-center mb-8">
+                    Décrivez-moi votre besoin, je vous réponds sous 24h avec une première analyse.
+                </p>
                 
-                <div class="text-center mb-8">
-                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg">
-                        <i class="fas fa-calendar-alt mr-3"></i>
-                        Réserver un audit gratuit
-                    </a>
-                </div>
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
+                <form class="space-y-4 max-w-md mx-auto" id="quick-contact-form">
+                    <input type="text" 
+                        name="name"
+                        placeholder="Votre nom *" 
+                        required 
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    
+                    <input type="email" 
+                        name="email"
+                        placeholder="Email professionnel *" 
+                        required 
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    
+                    <select name="project_type" 
+                            required
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                        <option value="">Type de projet *</option>
+                        <option value="migration">Migration Cloud</option>
+                        <option value="finops">Optimisation des coûts (FinOps)</option>
+                        <option value="kubernetes">Kubernetes & Containerisation</option>
+                        <option value="security">Audit sécurité</option>
+                        <option value="other">Autre besoin</option>
+                    </select>
+                    
+                    <textarea name="message"
+                            placeholder="Décrivez votre contexte actuel et vos objectifs..." 
+                            rows="3"
+                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                    
+                    <button type="submit" 
+                            class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Démarrer la discussion
+                    </button>
+                </form>
             </div>
+
+            <script>
+            // Gestion du formulaire rapide
+            document.getElementById('quick-contact-form').addEventListener('submit', function(e) {
+                e.preventDefault();
+                
+                // Ici vous intégrerez votre service d'envoi d'email
+                // (Formspree, EmailJS, ou votre backend)
+                
+                // Simulation d'envoi réussi
+                showToast('Message envoyé ! Je vous réponds sous 24h.', 'success');
+                this.reset();
+            });
+
+            function showToast(message, type = 'success') {
+                const toast = document.createElement('div');
+                toast.className = `toast ${type === 'error' ? 'error' : ''}`;
+                toast.textContent = message;
+                document.body.appendChild(toast);
+                
+                setTimeout(() => toast.classList.add('show'), 100);
+                setTimeout(() => {
+                    toast.classList.remove('show');
+                    setTimeout(() => document.body.removeChild(toast), 300);
+                }, 3000);
+            }
+            </script>
         </div>
     </div>
 

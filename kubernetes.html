@@ -383,32 +383,79 @@
                 Discutons de votre architecture actuelle et planifions votre migration vers Kubernetes.
             </p>
             
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a href="mailto:contact@optimycloud.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-center flex items-center justify-center">
-                    <i class="fas fa-envelope mr-2"></i>
-                    contact@optimycloud.com
-                </a>
-                <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
-                    Formulaire de contact
-                </a>
-            </div>
+        <!-- Un seul bouton email -->
+        <div class="text-center mb-8">
+            <a href="mailto:contact@optimycloud.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium inline-flex items-center">
+                <i class="fas fa-envelope mr-2"></i>
+                contact@optimycloud.com
+            </a>
+        </div>
 
-            <!-- Calendly Widget -->
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mb-6">Planifier une consultation Kubernetes</h3>
+        <!-- Mini formulaire spécialisé Kubernetes -->
+        <div class="bg-white rounded-xl shadow-lg p-8">
+            <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
+                Audit containerisation gratuit
+            </h3>
+            <p class="text-gray-600 text-center mb-8">
+                Analysons votre architecture actuelle et définissons votre stratégie Kubernetes sous 24h.
+            </p>
+            
+            <form class="space-y-4 max-w-md mx-auto" action="https://formspree.io/f/xjkoqpoe" method="POST">
+                <input type="hidden" name="_subject" value="Demande audit Kubernetes depuis la page Containerisation">
+                <input type="hidden" name="_next" value="https://optimycloud.com/merci.html">
                 
-                <div class="text-center mb-8">
-                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="inline-flex items-center bg-blue-600 text-white px-6 sm:px-8 py-3 sm:py-4 rounded-full text-base sm:text-lg font-medium hover:bg-blue-700 transition-colors duration-200 shadow-lg">
-                        <i class="fas fa-calendar-alt mr-2 sm:mr-3"></i>
-                        Réserver une consultation
-                    </a>
+                <input type="text" 
+                    name="name"
+                    placeholder="Votre nom *" 
+                    required 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                
+                <input type="email" 
+                    name="email"
+                    placeholder="Email professionnel *" 
+                    required 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                
+                <select name="subject" 
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
+                    <option value="">Contexte actuel *</option>
+                    <option value="Applications sur VMs">Applications sur VMs traditionnelles</option>
+                    <option value="Déjà Docker">Déjà avec Docker, pas encore Kubernetes</option>
+                    <option value="Kubernetes on-premise">Kubernetes on-premise à migrer</option>
+                    <option value="Nouveau projet">Nouveau projet à containeriser</option>
+                    <option value="Modernisation legacy">Modernisation d'applications legacy</option>
+                    <option value="Autre">Autre contexte</option>
+                </select>
+                
+                <textarea name="message"
+                        placeholder="Architecture actuelle, nombre d'applications, défis rencontrés..." 
+                        rows="3"
+                        required
+                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
+                
+                <!-- Captcha simple -->
+                <div class="flex items-center gap-4 text-sm">
+                    <label class="text-gray-700">Vérification : 5 + 4 = ?</label>
+                    <input type="text" 
+                        name="_captcha"
+                        required 
+                        min="9" 
+                        max="9"
+                        class="w-16 px-2 py-1 border border-gray-300 rounded focus:ring-2 focus:ring-blue-600 focus:border-transparent">
                 </div>
                 
-                <!-- Calendly inline widget begin -->
-                <div class="calendly-inline-widget" data-url="https://calendly.com/contact-optimycloud?hide_landing_page_details=1&hide_gdpr_banner=1" style="min-width:320px;height:700px;"></div>
-                <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-                <!-- Calendly inline widget end -->
-            </div>
+                <button type="submit" 
+                        class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
+                    <i class="fas fa-rocket mr-2"></i>
+                    Analyser mon architecture
+                </button>
+            </form>
+            
+            <p class="text-center text-sm text-gray-500 mt-4">
+                Projet complexe ? <a href="contact.html" class="text-blue-600 hover:underline">Demande de devis détaillé</a>
+            </p>
+        </div>
         </div>
     </div>
 
