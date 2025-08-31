@@ -261,56 +261,111 @@
                 </p>
             </div>
 
-            <!-- Bande de défilement -->
-            <div class="overflow-hidden mb-12">
-                <div class="flex animate-scroll space-x-12 items-center">
-                    <!-- Première série -->
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    
-                    <!-- Duplication pour effet infini -->
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                    <div class="flex items-center justify-center min-w-[120px]">
-                        <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity">
-                    </div>
-                </div>
-            </div>
+<!-- Bande de défilement avec masque CSS (solution propre) -->
+<div class="relative overflow-hidden logos-mask mb-12">
+    <div class="flex animate-scroll space-x-12 items-center py-8">
+        <!-- Première série -->
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        
+        <!-- Duplication pour effet infini -->
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Ubisoft_logo.svg" alt="Ubisoft" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/2/2b/Valeo_Logo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://witekio.com/wp-content/uploads/2024/07/witekio.svg" alt="Witekio" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://www.culligan.fr/build/site/images/logo.01d15397.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="https://www.toptex.fr/skin/frontend/rwd/toptex_2020/images/logo.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+        <div class="flex items-center justify-center min-w-[120px]">
+            <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+        </div>
+    </div>
+</div>
+
+<style>
+/* Animation de défilement */
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.animate-scroll {
+    animation: scroll 30s linear infinite;
+}
+
+.animate-scroll:hover {
+    animation-play-state: paused;
+}
+
+/* Fondu bordures via mask CSS - SOLUTION PROPRE */
+.logos-mask {
+    -webkit-mask-image: linear-gradient(to right, 
+        transparent 0, 
+        black 50px, 
+        black calc(100% - 50px), 
+        transparent 100%
+    );
+    mask-image: linear-gradient(to right, 
+        transparent 0, 
+        black 50px, 
+        black calc(100% - 50px), 
+        transparent 100%
+    );
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+}
+
+/* Alternative avec votre couleur pour les overlays (si vous préférez) */
+.overlay-solution .fade-left {
+    background: linear-gradient(to right,
+        rgba(247,251,254,1) 0%,
+        rgba(247,251,254,0.75) 25%,
+        rgba(247,251,254,0.4) 55%,
+        rgba(247,251,254,0.15) 80%,
+        rgba(247,251,254,0) 100%
+    );
+}
+
+.overlay-solution .fade-right {
+    background: linear-gradient(to left,
+        rgba(247,251,254,1) 0%,
+        rgba(247,251,254,0.75) 25%,
+        rgba(247,251,254,0.4) 55%,
+        rgba(247,251,254,0.15) 80%,
+        rgba(247,251,254,0) 100%
+    );
+}
+</style>
 
             <!-- Détails des missions -->
             <div class="bg-white rounded-xl shadow-lg p-8">
