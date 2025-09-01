@@ -5,6 +5,10 @@ Allow: /
 Disallow: /assets/
 Disallow: /*.css
 Disallow: /*.js
+Disallow: /merci.html
+Disallow: /mentions-legales.html
+Disallow: /politique-confidentialite.html
+Disallow: /politique-cookies.html
 
 # Sitemap
 Sitemap: https://optimycloud.com/sitemap.xml
