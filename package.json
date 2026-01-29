@@ -1,0 +1,12 @@
+{
+  "name": "optimycloud",
+  "version": "1.0.0",
+  "description": "OptimyCloud - Site vitrine",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/style.css --minify",
+    "watch": "npx @tailwindcss/cli -i ./src/input.css -o ./assets/style.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4"
+  }
+}
