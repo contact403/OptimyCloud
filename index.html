@@ -22,665 +22,717 @@
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
     <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
-    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png"> 
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
     <meta name="twitter:title" content="OptimyCloud – Ingénieur Cloud AWS certifié">
     <meta name="twitter:description" content="Votre partenaire Cloud pour la migration, la sécurisation et l'optimisation de vos infrastructures.">
     <meta property="og:title" content="OptimyCloud – Ingénieur Cloud AWS certifié">
-    <meta property="og:description" content="Votre partenaire Cloud pour la migration, la sécurisation et l’optimisation de vos infrastructures.">
+    <meta property="og:description" content="Votre partenaire Cloud pour la migration, la sécurisation et l'optimisation de vos infrastructures.">
     <meta property="og:url" content="https://optimycloud.com/">
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
     <link rel="canonical" href="https://optimycloud.com/" />
     <script type="application/ld+json">
-        {
-          "@context": "https://schema.org",
-          "@type": "ProfessionalService",
-          "name": "OptimyCloud",
-          "description": "Ingénieur Cloud AWS certifié spécialisé en FinOps, Kubernetes et migration Cloud",
-          "url": "https://optimycloud.com",
-          "founder": {
-            "@type": "Person",
-            "name": "Alexandre Gillon",
-            "jobTitle": "Ingénieur Cloud AWS certifié"
-          },
-          "address": {
-            "@type": "PostalAddress",
-            "addressCountry": "FR",
-            "addressLocality": "Epinay-sur-Seine"
-          },
-          "areaServed": "Worldwide",
-          "serviceType": ["Cloud Migration", "FinOps", "FinOps Consulting", "Kubernetes", "Infrastructure as Code"]
-        }
-        </script>
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "OptimyCloud",
+      "description": "Ingénieur Cloud AWS certifié spécialisé en FinOps, Kubernetes et migration Cloud",
+      "url": "https://optimycloud.com",
+      "founder": {
+        "@type": "Person",
+        "name": "Alexandre Gillon",
+        "jobTitle": "Ingénieur Cloud AWS certifié"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "addressCountry": "FR",
+        "addressLocality": "Epinay-sur-Seine"
+      },
+      "areaServed": "Worldwide",
+      "serviceType": ["Cloud Migration", "FinOps", "FinOps Consulting", "Kubernetes", "Infrastructure as Code"]
+    }
+    </script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./assets/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-    <style>
-        .toast {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #10b981;
-            color: white;
-            padding: 16px 24px;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-            transform: translateX(400px);
-            transition: transform 0.3s ease;
-            z-index: 1000;
-        }
-        .toast.show {
-            transform: translateX(0);
-        }
-        .toast.error {
-            background: #ef4444;
-        }
-        
-        @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
-        }
-
-        .animate-scroll {
-            animation: scroll 40s linear infinite;
-            width: 200%;
-        }
-
-        .animate-scroll:hover {
-            animation-play-state: paused;
-        }
-
-    </style>
 </head>
-<body class="bg-gray-50 text-gray-800">
+<body class="bg-white text-gray-800">
     <!-- Google Tag Manager (noscript) -->
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
-    <!-- Navigation -->
-    <nav class="bg-white shadow-lg sticky top-0 z-50">
+
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav id="main-nav" class="nav-main fixed top-0 left-0 right-0 z-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between h-16">
-                <div class="flex items-center">
-                    <div class="flex-shrink-0 flex items-center">
-                        <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
-                            <img src="./assets/optimycloud-logo.png" 
-                                 alt="OptimyCloud" 
-                                 class="h-20 w-auto"
-                                 style="mix-blend-mode: multiply;">
-                        </a>
-                    </div>
-                </div>
+            <div class="flex justify-between h-16 items-center">
+                <!-- Logo -->
+                <a href="#hero" class="flex items-center">
+                    <img src="./assets/optimycloud-logo.png"
+                         alt="OptimyCloud"
+                         class="nav-logo h-16 w-auto"
+                         style="mix-blend-mode: multiply;">
+                </a>
+                <!-- Desktop links -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html" class="nav-link text-blue-600 hover:text-blue-800 transition-colors duration-200 font-medium">Accueil</a>
-                    <a href="finops.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">FinOps</a>
-                    <a href="kubernetes.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Containerisation</a>
-                    <a href="migration.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Pourquoi le Cloud</a>
-                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
-                    <a href="contact.html" class="nav-link bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200">Contact</a>
+                    <a href="#hero" class="nav-link-dynamic text-sm tracking-wide" data-section="hero">Accueil</a>
+                    <a href="#services" class="nav-link-dynamic text-sm tracking-wide" data-section="services">Services</a>
+                    <a href="#clients" class="nav-link-dynamic text-sm tracking-wide" data-section="clients">Clients</a>
+                    <a href="#about" class="nav-link-dynamic text-sm tracking-wide" data-section="about">A propos</a>
+                    <a href="#contact" class="nav-cta px-5 py-2 rounded-lg text-sm font-medium">Contact</a>
                 </div>
                 <!-- Mobile menu button -->
-                <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-blue-600">
-                        <i class="fas fa-bars text-xl"></i>
-                    </button>
-                </div>
+                <button id="mobile-menu-btn" class="md:hidden flex flex-col justify-center items-center w-8 h-8 space-y-1.5" aria-label="Menu">
+                    <span class="hamburger-line block w-6 h-0.5 bg-white rounded"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-white rounded"></span>
+                    <span class="hamburger-line block w-6 h-0.5 bg-white rounded"></span>
+                </button>
             </div>
         </div>
         <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="index.html" class="block px-3 py-2 text-blue-600 font-medium">Accueil</a>
-                <a href="finops.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FinOps</a>
-                <a href="kubernetes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Containerisation</a>
-                <a href="migration.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Pourquoi le Cloud</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
-                <a href="contact.html" class="block px-3 py-2 text-blue-600 font-medium">Contact</a>
+        <div id="mobile-menu" class="mobile-menu-enter md:hidden">
+            <div class="bg-white/95 backdrop-blur-md border-t border-gray-100 px-4 py-4 space-y-1">
+                <a href="#hero" class="block px-3 py-2.5 text-gray-700 hover:text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition-colors">Accueil</a>
+                <a href="#services" class="block px-3 py-2.5 text-gray-700 hover:text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition-colors">Services</a>
+                <a href="#clients" class="block px-3 py-2.5 text-gray-700 hover:text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition-colors">Clients</a>
+                <a href="#about" class="block px-3 py-2.5 text-gray-700 hover:text-indigo-600 font-medium rounded-lg hover:bg-indigo-50 transition-colors">A propos</a>
+                <a href="#contact" class="block px-3 py-2.5 text-indigo-600 font-semibold rounded-lg hover:bg-indigo-50 transition-colors">Contact</a>
             </div>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <div class="bg-gradient-to-br from-blue-50 to-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-            <div class="grid lg:grid-cols-2 gap-12 items-center">
-                <div>
-                    <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-gray-900 mb-6">
-                        Votre partenaire <span class="text-blue-600">Cloud</span> de confiance
-                    </h1>
-                    <p class="text-base sm:text-lg lg:text-xl text-gray-600 mb-8 leading-relaxed">
-                        Ingénieur Cloud AWS certifié spécialisé en migration, FinOps et Kubernetes. J'accompagne PME et startups dans leur transformation Cloud avec des solutions sur-mesure : audit gratuit, réduction des coûts jusqu'à 40%, infrastructure sécurisée et automatisée. Interventions mondiales.
-                    </p>
-                    <div class="flex flex-col sm:flex-row gap-4 mb-8">
-                        <a href="contact.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
-                            Demander un devis gratuit
-                        </a>
-                        <a href="about.html" class="border-2 border-blue-600 text-blue-600 px-8 py-3 rounded-lg hover:bg-blue-600 hover:text-white transition-colors duration-200 text-center font-medium">
-                            En savoir plus
-                        </a>
-                    </div>
-                    <!-- Certifications -->
-                    <div class="flex flex-wrap gap-4 sm:gap-6 items-center justify-center sm:justify-start">
-                        <a href="https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div class="flex items-center">
-                                <img src="https://images.credly.com/size/110x110/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png" 
-                                     alt="AWS Solutions Architect Associate Badge" 
-                                     class="w-12 h-12 mr-3">
-                                <div>
-                                    <p class="text-sm font-medium">AWS Solutions</p>
-                                    <p class="text-sm font-medium">Architect Associate</p>
-                                </div>
-                            </div>
-                        </a>
-                        <a href="https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div class="flex items-center">
-                                <img src="https://images.credly.com/size/110x110/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png" 
-                                     alt="Kubernetes CKA Badge" 
-                                     class="w-12 h-12 mr-3">
-                                <div>
-                                    <p class="text-sm font-medium">Certified Kubernetes</p>
-                                    <p class="text-sm font-medium">Administrator (CKA)</p>
-                                </div>
-                            </div>
-                        </a>
-                        <!-- ITIL PNG badge (no Credly) -->
-                        <a href="/assets/ITIL_Foundation.png" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div class="flex items-center">
-                            <img src="./assets/ITIL_Foundation.png"
-                                alt="ITIL Foundation v3 Certified"
-                                class="w-12 h-12 mr-3 object-contain" loading="lazy">
-                            <div>
-                                <p class="text-sm font-medium">ITIL Foundation</p>
-                                <p class="text-sm font-medium">v3 Certified</p>
-                            </div>
-                            </div>
-                        </a>
-                        <a href="https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile" target="_blank" class="bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition-shadow">
-                            <div class="flex items-center">
-                                <img src="https://images.credly.com/size/110x110/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png" 
-                                     alt="AWS Cloud Practitioner Badge" 
-                                     class="w-12 h-12 mr-3">
-                                <div>
-                                    <p class="text-sm font-medium">AWS Cloud</p>
-                                    <p class="text-sm font-medium">Practitioner</p>
-                                </div>
-                            </div>
-                        </a>                        
-                    </div>
-                </div>
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2072&q=80" 
-                         alt="Cloud Infrastructure"
-                         class="rounded-lg shadow-xl"
-                         fetchpriority="high">
-                </div>
-            </div>
+    <!-- ==================== HERO ==================== -->
+    <section id="hero" class="hero-gradient min-h-screen flex items-center relative overflow-hidden">
+        <!-- Decorative elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute -top-40 -right-40 w-80 h-80 bg-indigo-500/10 rounded-full blur-3xl"></div>
+            <div class="absolute -bottom-40 -left-40 w-96 h-96 bg-indigo-400/10 rounded-full blur-3xl"></div>
         </div>
-    </div>
 
-    <!-- Services Overview -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-3xl font-bold text-gray-900 mb-4">Mes prestations Cloud</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Migration AWS, Kubernetes et FinOps : réduisez vos coûts Cloud de 30-50% avec un ingénieur certifié AWS
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative z-10">
+            <div class="max-w-3xl">
+                <p class="text-indigo-400 font-medium text-sm sm:text-base mb-4 tracking-wide uppercase">Ingénieur Cloud Certifié AWS</p>
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white mb-6 leading-tight">
+                    Optimisez votre<br>
+                    <span class="bg-gradient-to-r from-indigo-400 to-emerald-400 bg-clip-text text-transparent">infrastructure Cloud</span>
+                </h1>
+                <p class="text-lg sm:text-xl text-slate-300 mb-10 leading-relaxed max-w-2xl">
+                    Migration, FinOps et Kubernetes. J'accompagne PME et startups dans leur transformation Cloud avec des solutions sur-mesure et un ROI mesurable.
                 </p>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                    <i class="fas fa-chart-line text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-3">FinOps & Optimisation</h3>
-                    <p class="text-gray-600 text-sm">Consultant FinOps freelance : audit gratuit et réduction de 30 à 60% de vos coûts AWS</p>
+                <div class="flex flex-col sm:flex-row gap-4 mb-14">
+                    <a href="#contact" class="bg-indigo-600 text-white px-8 py-3.5 rounded-lg hover:bg-indigo-500 transition-colors duration-200 text-center font-semibold text-sm sm:text-base">
+                        Demander un audit gratuit
+                    </a>
+                    <a href="#services" class="border border-slate-500 text-slate-300 px-8 py-3.5 rounded-lg hover:border-white hover:text-white transition-colors duration-200 text-center font-medium text-sm sm:text-base">
+                        Découvrir mes services
+                    </a>
                 </div>
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                    <i class="fab fa-docker text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-3">Kubernetes EKS</h3>
-                    <p class="text-gray-600 text-sm">Déploiement maîtrisé sur AWS avec EKS Auto Mode et Karpenter</p>
-                </div>
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                    <i class="fas fa-cloud-upload-alt text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-3">Migration Sécurisée</h3>
-                    <p class="text-gray-600 text-sm">Migration d'infrastructures vers le Cloud avec bonnes pratiques ITIL</p>
-                </div>
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                    <i class="fas fa-code-branch text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-3">CI/CD & IaC</h3>
-                    <p class="text-gray-600 text-sm">Infrastructure as Code avec Terraform, GitLab et GitHub Actions</p>
-                </div>
-                <div class="text-center p-6 rounded-lg hover:shadow-lg transition-shadow duration-200">
-                    <i class="fas fa-drafting-compass text-4xl text-blue-600 mb-4"></i>
-                    <h3 class="text-lg font-semibold mb-3">Architecture sur-mesure</h3>
-                    <p class="text-gray-600 text-sm">Design d'architectures Cloud adaptées à votre métier</p>
+
+                <!-- Certifications -->
+                <div class="flex flex-wrap gap-3 sm:gap-4">
+                    <a href="https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile" target="_blank" rel="noopener noreferrer" class="flex items-center bg-white/5 border border-white/10 backdrop-blur-sm px-4 py-2.5 rounded-lg hover:bg-white/10 transition-colors">
+                        <img src="https://images.credly.com/size/110x110/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+                             alt="AWS Solutions Architect Associate"
+                             class="w-8 h-8 mr-2.5">
+                        <span class="text-white text-xs font-medium">AWS Solutions<br>Architect</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc" target="_blank" rel="noopener noreferrer" class="flex items-center bg-white/5 border border-white/10 backdrop-blur-sm px-4 py-2.5 rounded-lg hover:bg-white/10 transition-colors">
+                        <img src="https://images.credly.com/size/110x110/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png"
+                             alt="Kubernetes CKA"
+                             class="w-8 h-8 mr-2.5">
+                        <span class="text-white text-xs font-medium">Kubernetes<br>CKA</span>
+                    </a>
+                    <a href="/assets/ITIL_Foundation.png" target="_blank" rel="noopener noreferrer" class="flex items-center bg-white/5 border border-white/10 backdrop-blur-sm px-4 py-2.5 rounded-lg hover:bg-white/10 transition-colors">
+                        <img src="./assets/ITIL_Foundation.png"
+                             alt="ITIL Foundation v3"
+                             class="w-8 h-8 mr-2.5 object-contain" loading="lazy">
+                        <span class="text-white text-xs font-medium">ITIL<br>Foundation v3</span>
+                    </a>
+                    <a href="https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile" target="_blank" rel="noopener noreferrer" class="flex items-center bg-white/5 border border-white/10 backdrop-blur-sm px-4 py-2.5 rounded-lg hover:bg-white/10 transition-colors">
+                        <img src="https://images.credly.com/size/110x110/images/00634f82-b07f-4bbd-a6bb-53de397fc3a6/image.png"
+                             alt="AWS Cloud Practitioner"
+                             class="w-8 h-8 mr-2.5">
+                        <span class="text-white text-xs font-medium">AWS Cloud<br>Practitioner</span>
+                    </a>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Section Clients avec défilement automatique -->
-    <div class="py-16 bg-gradient-to-br from-blue-50 to-white">
+    <!-- ==================== SERVICES ==================== -->
+    <section id="services" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-6">
-                    ILS M'ONT FAIT <span class="text-blue-600">CONFIANCE</span>
-                </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto mb-8">
-                    Grâce à mes expériences passées en tant que salarié ou prestataire, j'ai pu intervenir sur des projets stratégiques pour des entreprises de premier plan
+            <div class="text-center mb-16 reveal">
+                <p class="text-indigo-600 font-semibold text-sm uppercase tracking-wide mb-2">Ce que je propose</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Mes prestations Cloud</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Des solutions adaptées pour migrer, sécuriser et optimiser votre infrastructure.
                 </p>
             </div>
 
-<!-- Bande de défilement avec masque CSS (solution propre) -->
-<div class="relative overflow-hidden logos-mask mb-12">
-    <div class="flex animate-scroll space-x-12 items-center py-8">
-        <!-- Première série -->
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/ubisoft.svg" alt="Ubisoft" class="h-14 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/valeo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/Logo_SamBoat_2.png" alt="Samboat" class="h-auto w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/culligan.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/toptex.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-auto w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        
-        <!-- Duplication pour effet infini -->
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/ubisoft.svg" alt="Ubisoft" class="h-14 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/valeo.svg" alt="Valeo" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/Logo_SamBoat_2.png" alt="Samboat" class="h-auto w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/culligan.svg" alt="Culligan" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/logos/toptex.svg" alt="TopTex" class="h-12 w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-        <div class="flex items-center justify-center min-w-[120px]">
-            <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-auto w-auto opacity-60 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
-        </div>
-    </div>
-</div>
-
-<style>
-/* Animation de défilement */
-@keyframes scroll {
-    0% { transform: translateX(0); }
-    100% { transform: translateX(-50%); }
-}
-
-.animate-scroll {
-    animation: scroll 30s linear infinite;
-}
-
-.animate-scroll:hover {
-    animation-play-state: paused;
-}
-
-/* Fondu bordures via mask CSS - SOLUTION PROPRE */
-.logos-mask {
-    -webkit-mask-image: linear-gradient(to right, 
-        transparent 0, 
-        black 50px, 
-        black calc(100% - 50px), 
-        transparent 100%
-    );
-    mask-image: linear-gradient(to right, 
-        transparent 0, 
-        black 50px, 
-        black calc(100% - 50px), 
-        transparent 100%
-    );
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-}
-
-/* Alternative avec votre couleur pour les overlays (si vous préférez) */
-.overlay-solution .fade-left {
-    background: linear-gradient(to right,
-        rgba(247,251,254,1) 0%,
-        rgba(247,251,254,0.75) 25%,
-        rgba(247,251,254,0.4) 55%,
-        rgba(247,251,254,0.15) 80%,
-        rgba(247,251,254,0) 100%
-    );
-}
-
-.overlay-solution .fade-right {
-    background: linear-gradient(to left,
-        rgba(247,251,254,1) 0%,
-        rgba(247,251,254,0.75) 25%,
-        rgba(247,251,254,0.4) 55%,
-        rgba(247,251,254,0.15) 80%,
-        rgba(247,251,254,0) 100%
-    );
-}
-</style>
-
-            <!-- Détails des missions -->
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <div class="space-y-6">
-                    <div class="border-l-4 border-purple-600 pl-4">
-                        <h3 class="font-bold text-lg text-gray-900 mb-1">Valeo, Culligan, TopTex, Samboat</h3>
-                        <p class="text-purple-600 font-medium text-sm mb-2">Consultant Cloud & DevOps</p>
-                        <p class="text-gray-600 text-sm">Projets Cloud & DevOps (AWS, Kubernetes, Terraform, CI/CD, Elastic Beanstalk).</p>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- FinOps -->
+                <a href="finops.html" class="reveal stagger-1 group block bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center mb-5 group-hover:bg-emerald-100 transition-colors">
+                        <i class="fas fa-chart-line text-emerald-600 text-xl"></i>
                     </div>
-
-                    <div class="border-l-4 border-blue-600 pl-4">
-                        <h3 class="font-bold text-lg text-gray-900 mb-1">Ubisoft</h3>
-                        <p class="text-blue-600 font-medium text-sm mb-2">Ingénieur SRE / DevOps</p>
-                        <p class="text-gray-600 text-sm">Supervision et automatisation des environnements applicatifs (serveurs, clusters, CI/CD).</p>
-                    </div>
-                    
-                    <div class="border-l-4 border-green-600 pl-4">
-                        <h3 class="font-bold text-lg text-gray-900 mb-1">Linkeo</h3>
-                        <p class="text-green-600 font-medium text-sm mb-2">Ingénieur Infrastructure</p>
-                        <p class="text-gray-600 text-sm">Refonte du monitoring et gestion de l'infrastructure on-premise.</p>
-                    </div>
-                    
-                    <div class="border-l-4 border-orange-600 pl-4">
-                        <h3 class="font-bold text-lg text-gray-900 mb-1">Châteauform'</h3>
-                        <p class="text-orange-600 font-medium text-sm mb-2">Administrateur Systèmes</p>
-                        <p class="text-gray-600 text-sm">Gestion des serveurs dans un environnement multisite.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Section Compétences -->
-    <div class="py-16 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
-                    EXPERT TECHNIQUE <span class="text-blue-600">AVEC UNE EXPERTISE MULTI-PLATEFORME</span>
-                </h2>
-                <p class="text-lg text-gray-600 max-w-3xl mx-auto">
-                    Expertise FinOps AWS approfondie : Savings Plans, Reserved Instances, Cost Explorer et optimisation continue de vos dépenses Cloud.
-                </p>
-            </div>
-            
-            <!-- Grid des logos -->
-            <div class="grid grid-cols-2 sm:grid-cols-4 md:grid-cols-6 lg:grid-cols-8 gap-4 sm:gap-8 items-center opacity-70 hover:opacity-100 transition-opacity duration-300">
-                <!-- Cloud Providers -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/aws.svg" alt="AWS" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/azure.svg" alt="Azure" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/google-cloud.svg" alt="Google Cloud" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                
-                <!-- Containerisation -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/docker.svg" alt="Docker" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/kubernetes.svg" alt="Kubernetes" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                
-                <!-- Infrastructure as Code -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/terraform.svg" alt="Terraform" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/ansible.svg" alt="Ansible" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                
-                <!-- CI/CD -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/gitlab.svg" alt="GitLab" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/github.svg" alt="GitHub" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                
-                <!-- OS & Virtualization -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/linux-tux.svg" alt="Linux" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/vmware.svg" alt="VMware" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/windows.svg" alt="Windows Server" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                
-                <!-- Monitoring -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/prometheus.svg" alt="Prometheus" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                <div class="flex justify-center">
-                    <img src="./assets/logos/grafana.svg" alt="Grafana" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                
-                <!-- OpenStack -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/openstack.svg" alt="OpenStack" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-                
-                <!-- Proxmox -->
-                <div class="flex justify-center">
-                    <img src="./assets/logos/proxmox.svg" alt="Proxmox" class="h-6 sm:h-8 w-auto grayscale hover:grayscale-0 transition-all">
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Boutons de contact -->
-    <div class="py-16 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col sm:flex-row gap-4 justify-center mb-8">
-                <a href="mailto:contact@optimycloud.com" class="bg-blue-600 text-white px-8 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium text-center flex items-center justify-center">
-                    <i class="fas fa-envelope mr-2"></i>
-                    contact@optimycloud.com
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">FinOps & Optimisation</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Audit gratuit et réduction de 30 à 60% de vos coûts AWS. Savings Plans, Reserved Instances, right-sizing.</p>
+                    <span class="text-indigo-600 text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
+                        En savoir plus <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                    </span>
                 </a>
-            </div>
-            
-            <!-- Mini formulaire de contact - Page d'accueil -->
-            <div class="bg-white rounded-xl shadow-lg p-8">
-                <h3 class="text-2xl font-bold text-gray-900 mb-6 text-center">
-                    Discutons de votre projet Cloud
-                </h3>
-                <p class="text-gray-600 text-center mb-8">
-                    Décrivez-moi votre besoin, je vous réponds sous 24h avec une première analyse.
-                </p>
-                
-                <form class="space-y-4 max-w-md mx-auto" id="quick-contact-form">
-                    <input type="text" 
-                        name="name"
-                        placeholder="Votre nom *" 
-                        required 
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                    
-                    <input type="email" 
-                        name="email"
-                        placeholder="Email professionnel *" 
-                        required 
-                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                    
-                    <select name="project_type" 
-                            required
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent">
-                        <option value="">Type de projet *</option>
-                        <option value="migration">Migration Cloud</option>
-                        <option value="finops">Optimisation des coûts (FinOps)</option>
-                        <option value="kubernetes">Kubernetes & Containerisation</option>
-                        <option value="security">Audit sécurité</option>
-                        <option value="other">Autre besoin</option>
-                    </select>
-                    
-                    <textarea name="message"
-                            placeholder="Décrivez votre contexte actuel et vos objectifs..." 
-                            rows="3"
-                            class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent"></textarea>
-                    
-                    <button type="submit" 
-                            class="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors font-medium flex items-center justify-center">
-                        <i class="fas fa-paper-plane mr-2"></i>
-                        Démarrer la discussion
-                    </button>
-                </form>
-            </div>
 
-            <script>
-            // Gestion du formulaire rapide
-            document.getElementById('quick-contact-form').addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Ici vous intégrerez votre service d'envoi d'email
-                // (Formspree, EmailJS, ou votre backend)
-                
-                // Simulation d'envoi réussi
-                showToast('Message envoyé ! Je vous réponds sous 24h.', 'success');
-                this.reset();
-            });
+                <!-- Kubernetes -->
+                <a href="kubernetes.html" class="reveal stagger-2 group block bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-5 group-hover:bg-blue-100 transition-colors">
+                        <i class="fab fa-docker text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Kubernetes & EKS</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Déploiement sur AWS EKS avec Auto Mode et Karpenter. CI/CD, GitOps, Helm.</p>
+                    <span class="text-indigo-600 text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
+                        En savoir plus <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                    </span>
+                </a>
 
-            function showToast(message, type = 'success') {
-                const toast = document.createElement('div');
-                toast.className = `toast ${type === 'error' ? 'error' : ''}`;
-                toast.textContent = message;
-                document.body.appendChild(toast);
-                
-                setTimeout(() => toast.classList.add('show'), 100);
-                setTimeout(() => {
-                    toast.classList.remove('show');
-                    setTimeout(() => document.body.removeChild(toast), 300);
-                }, 3000);
-            }
-            </script>
-        </div>
-    </div>
+                <!-- Migration -->
+                <a href="migration.html" class="reveal stagger-3 group block bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mb-5 group-hover:bg-purple-100 transition-colors">
+                        <i class="fas fa-cloud-upload-alt text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Migration Cloud</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Migration sécurisée de vos infrastructures on-premise vers AWS avec méthodologie ITIL.</p>
+                    <span class="text-indigo-600 text-sm font-medium group-hover:translate-x-1 transition-transform inline-block">
+                        En savoir plus <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                    </span>
+                </a>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-white py-12">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="grid md:grid-cols-4 gap-8">
-            <div class="col-span-2">
-                <div class="flex items-center mb-4">
-                    <i class="fas fa-cloud text-blue-600 text-2xl mr-3"></i>
-                    <h3 class="text-xl font-bold">OptimyCloud</h3>
-                </div>
-                <p class="text-gray-400 mb-4 max-w-md">
-                    Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures AWS et on-premise.
-                </p>
-                <div class="flex space-x-4">
-                    <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                        <i class="fab fa-linkedin text-2xl"></i>
-                    </a>
-                    <a href="https://github.com/contact403" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors duration-200">
-                        <i class="fab fa-github text-2xl"></i>
+                <!-- CI/CD & IaC -->
+                <div class="reveal stagger-4 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-code-branch text-orange-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">CI/CD & IaC</h3>
+                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Terraform, Ansible, CloudFormation. Automatisation complète avec GitHub Actions et GitLab CI.</p>
+                    <a href="#contact" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
+                        Me contacter <i class="fas fa-arrow-right ml-1 text-xs"></i>
                     </a>
                 </div>
             </div>
-            <div>
-                <h4 class="font-semibold mb-4 text-white">Services</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li><a href="finops.html" class="hover:text-blue-500 transition-colors duration-200">FinOps & Optimisation</a></li>
-                    <li><a href="kubernetes.html" class="hover:text-blue-500 transition-colors duration-200">Containerisation K8s</a></li>
-                    <li><a href="migration.html" class="hover:text-blue-500 transition-colors duration-200">Migration Cloud</a></li>
-                    <li><a href="#services" class="hover:text-blue-500 transition-colors duration-200">Infrastructure AWS</a></li>
-                    <li><a href="contact.html" class="hover:text-blue-500 transition-colors duration-200">Consultation</a></li>
-                </ul>
+        </div>
+    </section>
+
+    <!-- ==================== CLIENTS ==================== -->
+    <section id="clients" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 reveal">
+                <p class="text-indigo-600 font-semibold text-sm uppercase tracking-wide mb-2">Références</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ils m'ont fait confiance</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Des projets stratégiques pour des entreprises de premier plan, en tant que salarié ou prestataire.
+                </p>
             </div>
-            <div>
-                <h4 class="font-semibold mb-4 text-white">Contact</h4>
-                <ul class="space-y-2 text-gray-400">
-                    <li>
-                        <i class="fas fa-envelope mr-2"></i>
-                        <a href="mailto:contact@optimycloud.com" class="hover:text-blue-500 transition-colors duration-200">contact@optimycloud.com</a>
-                    </li>
-                    <li>
-                        <i class="fas fa-map-marker-alt mr-2"></i>
-                        <span>France</span>
-                    </li>
-                </ul>
+
+            <!-- Logo carousel -->
+            <div class="relative overflow-hidden logos-mask mb-14 reveal">
+                <div class="flex animate-scroll space-x-16 items-center py-6" style="width: 200%;">
+                    <!-- First set -->
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/ubisoft.svg" alt="Ubisoft" class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/valeo.svg" alt="Valeo" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/Logo_SamBoat_2.png" alt="Samboat" class="h-auto w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/culligan.svg" alt="Culligan" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/toptex.svg" alt="TopTex" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-auto w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <!-- Duplicate for infinite effect -->
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/ubisoft.svg" alt="Ubisoft" class="h-12 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/linkeo-logo.svg" alt="Linkeo" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/valeo.svg" alt="Valeo" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/Logo_SamBoat_2.png" alt="Samboat" class="h-auto w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/culligan.svg" alt="Culligan" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/logos/toptex.svg" alt="TopTex" class="h-10 w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                    <div class="flex items-center justify-center min-w-[120px]">
+                        <img src="./assets/chateauform-logo.svg" alt="Châteauform'" class="h-auto w-auto opacity-50 hover:opacity-100 transition-opacity grayscale hover:grayscale-0">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mission details -->
+            <div class="grid md:grid-cols-2 gap-4 reveal">
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-1 h-full min-h-[60px] bg-purple-500 rounded-full flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-0.5">Valeo, Culligan, TopTex, Samboat</h3>
+                            <p class="text-purple-600 text-sm font-medium mb-1">Consultant Cloud & DevOps</p>
+                            <p class="text-gray-500 text-sm">AWS, Kubernetes, Terraform, CI/CD, Elastic Beanstalk.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-1 h-full min-h-[60px] bg-indigo-500 rounded-full flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-0.5">Ubisoft</h3>
+                            <p class="text-indigo-600 text-sm font-medium mb-1">Ingénieur SRE / DevOps</p>
+                            <p class="text-gray-500 text-sm">Supervision et automatisation (serveurs, clusters, CI/CD).</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-1 h-full min-h-[60px] bg-emerald-500 rounded-full flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-0.5">Linkeo</h3>
+                            <p class="text-emerald-600 text-sm font-medium mb-1">Ingénieur Infrastructure</p>
+                            <p class="text-gray-500 text-sm">Refonte du monitoring et gestion de l'infrastructure on-premise.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-xl p-5 border border-gray-100 hover:shadow-md transition-shadow">
+                    <div class="flex items-start gap-4">
+                        <div class="w-1 h-full min-h-[60px] bg-orange-500 rounded-full flex-shrink-0"></div>
+                        <div>
+                            <h3 class="font-bold text-gray-900 mb-0.5">Châteauform'</h3>
+                            <p class="text-orange-600 text-sm font-medium mb-1">Administrateur Systèmes</p>
+                            <p class="text-gray-500 text-sm">Gestion des serveurs dans un environnement multisite.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="border-t border-gray-800 mt-8 pt-8">
-            <p class="text-center text-gray-400 mb-4">
-                &copy; 2026 OptimyCloud - Ingénieur Cloud Freelance - Alexandre Gillon
-            </p>
-            <div class="text-center space-x-4 text-sm text-gray-500">
-                <a href="mentions-legales.html" class="hover:text-blue-500 transition-colors duration-200">Mentions Légales</a>
-                <span>•</span>
-                <a href="politique-confidentialite.html" class="hover:text-blue-500 transition-colors duration-200">Politique de Confidentialité</a>
-                <span>•</span>
-                <a href="politique-cookies.html" class="hover:text-blue-500 transition-colors duration-200">Politique des Cookies</a>
+    </section>
+
+    <!-- ==================== A PROPOS ==================== -->
+    <section id="about" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Bio -->
+                <div class="reveal">
+                    <p class="text-indigo-600 font-semibold text-sm uppercase tracking-wide mb-2">A propos</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-6">Alexandre Gillon</h2>
+                    <div class="space-y-4 text-gray-600 leading-relaxed">
+                        <p>
+                            Ingénieur diplômé de l'ESIEA et certifié AWS, avec plus de <strong class="text-gray-900">10 ans d'expérience</strong> en infrastructure et transformation Cloud.
+                        </p>
+                        <p>
+                            Spécialisé en <strong class="text-gray-900">AWS et Kubernetes</strong>, j'aide les entreprises à réduire leurs coûts Cloud de 30 à 60% grâce aux bonnes pratiques FinOps et à l'automatisation.
+                        </p>
+                        <p>
+                            Mes prestations incluent audits gratuits, migrations sécurisées et optimisation continue de vos infrastructures, avec un <strong class="text-gray-900">ROI mesurable dès les premiers mois</strong>.
+                        </p>
+                    </div>
+                    <div class="mt-8 flex flex-wrap gap-3">
+                        <a href="https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile" target="_blank" rel="noopener noreferrer" class="bg-orange-50 text-orange-700 px-4 py-1.5 rounded-full text-sm font-medium hover:bg-orange-100 transition-colors">AWS Solutions Architect</a>
+                        <a href="https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc" target="_blank" rel="noopener noreferrer" class="bg-blue-50 text-blue-700 px-4 py-1.5 rounded-full text-sm font-medium hover:bg-blue-100 transition-colors">Kubernetes CKA</a>
+                        <span class="bg-purple-50 text-purple-700 px-4 py-1.5 rounded-full text-sm font-medium">ITIL Foundation v3</span>
+                        <a href="https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile" target="_blank" rel="noopener noreferrer" class="bg-green-50 text-green-700 px-4 py-1.5 rounded-full text-sm font-medium hover:bg-green-100 transition-colors">AWS Cloud Practitioner</a>
+                    </div>
+                    <div class="mt-8 flex gap-3">
+                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="bg-indigo-600 text-white px-5 py-2.5 rounded-lg hover:bg-indigo-500 transition-colors text-sm font-medium flex items-center">
+                            <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Tech stack grid -->
+                <div class="reveal">
+                    <h3 class="text-lg font-bold text-gray-900 mb-6">Expertise technique</h3>
+                    <div class="grid grid-cols-4 sm:grid-cols-4 gap-6 items-center">
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/aws.svg" alt="AWS" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">AWS</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/azure.svg" alt="Azure" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Azure</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/google-cloud.svg" alt="GCP" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">GCP</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/docker.svg" alt="Docker" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Docker</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/kubernetes.svg" alt="Kubernetes" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Kubernetes</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/terraform.svg" alt="Terraform" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Terraform</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/ansible.svg" alt="Ansible" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Ansible</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/gitlab.svg" alt="GitLab" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">GitLab</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/github.svg" alt="GitHub" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">GitHub</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/prometheus.svg" alt="Prometheus" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Prometheus</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/grafana.svg" alt="Grafana" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Grafana</span>
+                        </div>
+                        <div class="flex flex-col items-center gap-2">
+                            <img src="./assets/logos/linux-tux.svg" alt="Linux" class="h-8 w-auto grayscale hover:grayscale-0 transition-all">
+                            <span class="text-xs text-gray-400">Linux</span>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <p class="text-center text-xs text-gray-500 mt-4 max-w-4xl mx-auto">
-                * Les projets et réalisations mentionnés ont été menés dans le cadre de mes fonctions chez Ubisoft, Chateauform', Teamwork et Linkeo. Je ne représente pas officiellement ces entreprises.
-            </p>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT ==================== -->
+    <section id="contact" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-xl mx-auto">
+                <div class="text-center mb-10 reveal">
+                    <p class="text-indigo-600 font-semibold text-sm uppercase tracking-wide mb-2">Contact</p>
+                    <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Discutons de votre projet</h2>
+                    <p class="text-gray-500">
+                        Décrivez-moi votre besoin, je vous réponds sous 24h avec une première analyse.
+                    </p>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 reveal">
+                    <form id="contact-form" class="space-y-5">
+                        <!-- Honeypot -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+
+                        <div>
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                            <input type="text"
+                                id="name"
+                                name="name"
+                                placeholder="Votre nom"
+                                required
+                                class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition-shadow">
+                        </div>
+
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Email</label>
+                            <input type="email"
+                                id="email"
+                                name="email"
+                                placeholder="votre@email.com"
+                                required
+                                class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition-shadow">
+                        </div>
+
+                        <div>
+                            <label for="project_type" class="block text-sm font-medium text-gray-700 mb-1">Type de projet</label>
+                            <select id="project_type"
+                                    name="project_type"
+                                    required
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition-shadow">
+                                <option value="">Sélectionnez...</option>
+                                <option value="migration">Migration Cloud</option>
+                                <option value="finops">Optimisation des coûts (FinOps)</option>
+                                <option value="kubernetes">Kubernetes & Containerisation</option>
+                                <option value="security">Audit sécurité</option>
+                                <option value="other">Autre besoin</option>
+                            </select>
+                        </div>
+
+                        <div>
+                            <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Message</label>
+                            <textarea id="message"
+                                    name="message"
+                                    placeholder="Décrivez votre contexte actuel et vos objectifs..."
+                                    rows="4"
+                                    class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition-shadow resize-none"></textarea>
+                        </div>
+
+                        <!-- Captcha -->
+                        <div id="captcha-container">
+                            <label class="block text-sm font-medium text-gray-700 mb-1">Vérification : <span id="captcha-question"></span></label>
+                            <input type="text"
+                                id="captcha-answer"
+                                placeholder="Votre réponse"
+                                required
+                                class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-transparent text-sm transition-shadow">
+                        </div>
+
+                        <button type="submit"
+                                class="w-full bg-indigo-600 text-white px-6 py-3.5 rounded-lg hover:bg-indigo-500 transition-colors font-semibold text-sm flex items-center justify-center">
+                            <i class="fas fa-paper-plane mr-2"></i>
+                            Envoyer mon message
+                        </button>
+                    </form>
+
+                    <div class="mt-6 pt-6 border-t border-gray-100 text-center">
+                        <a href="mailto:contact@optimycloud.com" class="text-gray-500 hover:text-indigo-600 transition-colors text-sm">
+                            <i class="fas fa-envelope mr-1"></i> contact@optimycloud.com
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures AWS et on-premise.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="finops.html" class="hover:text-indigo-400 transition-colors text-sm">FinOps & Optimisation</a></li>
+                        <li><a href="kubernetes.html" class="hover:text-indigo-400 transition-colors text-sm">Containerisation K8s</a></li>
+                        <li><a href="migration.html" class="hover:text-indigo-400 transition-colors text-sm">Migration Cloud</a></li>
+                        <li><a href="#services" class="hover:text-indigo-400 transition-colors text-sm">Infrastructure AWS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:contact@optimycloud.com" class="hover:text-indigo-400 transition-colors">contact@optimycloud.com</a>
+                        </li>
+                        <li class="text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-500 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Ingénieur Cloud Freelance - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-600">
+                    <a href="mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Légales</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                </div>
+                <p class="text-center text-xs text-slate-600 mt-4 max-w-3xl mx-auto">
+                    * Les projets et réalisations mentionnés ont été menés dans le cadre de mes fonctions chez Ubisoft, Chateauform', Teamwork et Linkeo. Je ne représente pas officiellement ces entreprises.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== COOKIE BANNER ==================== -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
+        <p class="text-sm text-gray-600 mb-3">Nous utilisons des cookies pour optimiser votre expérience.</p>
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">
+                Refuser
+            </button>
+            <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">
+                Accepter
+            </button>
         </div>
     </div>
-</footer>
 
+    <!-- ==================== SCRIPTS ==================== -->
     <script>
-        // Mobile menu functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-            const mobileMenu = document.getElementById('mobile-menu');
-            
-            if (mobileMenuBtn && mobileMenu) {
-                mobileMenuBtn.addEventListener('click', () => {
-                    mobileMenu.classList.toggle('hidden');
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // ===== Reveal on scroll (IntersectionObserver) =====
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal--visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+
+        // ===== Nav scroll effect =====
+        const nav = document.getElementById('main-nav');
+        const hamburgerLines = document.querySelectorAll('.hamburger-line');
+
+        function updateNav() {
+            if (window.scrollY > 80) {
+                nav.classList.add('nav-scrolled');
+                hamburgerLines.forEach(function(line) {
+                    line.classList.remove('bg-white');
+                    line.classList.add('bg-gray-700');
+                });
+            } else {
+                nav.classList.remove('nav-scrolled');
+                hamburgerLines.forEach(function(line) {
+                    line.classList.remove('bg-gray-700');
+                    line.classList.add('bg-white');
                 });
             }
+        }
+
+        window.addEventListener('scroll', updateNav, { passive: true });
+        updateNav();
+
+        // ===== Active nav link highlight =====
+        const sections = document.querySelectorAll('section[id]');
+        const navLinks = document.querySelectorAll('[data-section]');
+
+        const sectionObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    navLinks.forEach(function(link) {
+                        link.classList.remove('nav-link-active');
+                    });
+                    const activeLink = document.querySelector('[data-section="' + entry.target.id + '"]');
+                    if (activeLink) {
+                        activeLink.classList.add('nav-link-active');
+                    }
+                }
+            });
+        }, { threshold: 0.3, rootMargin: '-80px 0px 0px 0px' });
+
+        sections.forEach(function(section) {
+            sectionObserver.observe(section);
         });
-    </script>
 
-<!-- Cookie Consent Banner -->
-<div id="cookie-banner" class="fixed top-0 left-0 right-0 bg-gradient-to-r from-blue-600 to-blue-800 text-white py-2 z-50 shadow-xl" style="display: none;">
-    <div class="max-w-7xl mx-auto px-4 flex items-center justify-between text-sm">
-        <div class="flex items-center gap-2">
-            <span>🍪</span>
-            <span>Cookies pour optimiser votre expérience</span>
-        </div>
-        <div class="flex gap-2">
-            <button id="reject-cookies" class="px-3 py-1 border border-white/30 rounded text-sm hover:bg-white/10">
-                Non
-            </button>
-            <button id="accept-cookies" class="px-4 py-1 bg-white text-blue-600 rounded text-sm font-semibold hover:bg-gray-100">
-                OK
-            </button>
-        </div>
-    </div>
-</div>
+        // ===== Mobile menu =====
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
 
-<!-- Cookie Script avec Google GTM -->
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const banner = document.getElementById('cookie-banner');
-        const acceptBtn = document.getElementById('accept-cookies');
-        const rejectBtn = document.getElementById('reject-cookies');
-        
-        // Show banner only if no choice was made
+        mobileMenuBtn.addEventListener('click', function() {
+            mobileMenu.classList.toggle('open');
+            mobileMenuBtn.classList.toggle('hamburger-active');
+        });
+
+        // Close mobile menu on anchor click
+        mobileMenu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                mobileMenu.classList.remove('open');
+                mobileMenuBtn.classList.remove('hamburger-active');
+            });
+        });
+
+        // ===== Captcha =====
+        var captchaA = Math.floor(Math.random() * 10) + 1;
+        var captchaB = Math.floor(Math.random() * 10) + 1;
+        var captchaExpected = captchaA + captchaB;
+        document.getElementById('captcha-question').textContent = 'Combien font ' + captchaA + ' + ' + captchaB + ' ?';
+
+        // ===== Contact form =====
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            var answer = parseInt(document.getElementById('captcha-answer').value);
+            if (answer !== captchaExpected) {
+                showToast('Mauvaise réponse au captcha.', 'error');
+                return;
+            }
+
+            var formData = new FormData(this);
+            var form = this;
+            var submitBtn = form.querySelector('button[type="submit"]');
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Envoi en cours...';
+
+            fetch('https://formspree.io/f/xjkoqpoe', {
+                method: 'POST',
+                body: formData,
+                headers: { 'Accept': 'application/json' }
+            })
+            .then(function(response) {
+                if (response.ok) {
+                    showToast('Message envoyé ! Je vous réponds sous 24h.', 'success');
+                    form.reset();
+                    // Regenerate captcha
+                    captchaA = Math.floor(Math.random() * 10) + 1;
+                    captchaB = Math.floor(Math.random() * 10) + 1;
+                    captchaExpected = captchaA + captchaB;
+                    document.getElementById('captcha-question').textContent = 'Combien font ' + captchaA + ' + ' + captchaB + ' ?';
+                } else {
+                    showToast('Erreur lors de l\'envoi. Réessayez.', 'error');
+                }
+            })
+            .catch(function() {
+                showToast('Erreur réseau. Réessayez.', 'error');
+            })
+            .finally(function() {
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-paper-plane mr-2"></i>Envoyer mon message';
+            });
+        });
+
+        // ===== Toast =====
+        function showToast(message, type) {
+            var toast = document.createElement('div');
+            toast.className = 'toast' + (type === 'error' ? ' error' : '');
+            toast.textContent = message;
+            document.body.appendChild(toast);
+            setTimeout(function() { toast.classList.add('show'); }, 100);
+            setTimeout(function() {
+                toast.classList.remove('show');
+                setTimeout(function() { document.body.removeChild(toast); }, 300);
+            }, 3000);
+        }
+
+        // ===== Cookie consent =====
+        var banner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('accept-cookies');
+        var rejectBtn = document.getElementById('reject-cookies');
+
         if (!localStorage.getItem('cookieConsent')) {
             banner.style.display = 'block';
         } else if (localStorage.getItem('cookieConsent') === 'accepted') {
-            // Push consent to GTM for returning users
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'cookie_consent_granted',
@@ -688,12 +740,10 @@
                 'consent_ads': true
             });
         }
-        
-        // Rest of your code stays the same
+
         acceptBtn.addEventListener('click', function() {
             localStorage.setItem('cookieConsent', 'accepted');
             banner.style.display = 'none';
-            
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'cookie_consent_granted',
@@ -701,11 +751,10 @@
                 'consent_ads': true
             });
         });
-        
+
         rejectBtn.addEventListener('click', function() {
             localStorage.setItem('cookieConsent', 'rejected');
             banner.style.display = 'none';
-            
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
                 'event': 'cookie_consent_denied',
@@ -713,8 +762,8 @@
                 'consent_ads': false
             });
         });
-    });
-</script>
 
+    });
+    </script>
 </body>
 </html>
