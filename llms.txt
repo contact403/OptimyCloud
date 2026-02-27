@@ -1,0 +1,80 @@
+# OptimyCloud
+
+> Ingenieur Cloud AWS certifie & expert IA Generative freelance, specialise dans la migration Cloud, le FinOps, Kubernetes et l'integration de l'IA pour PME et startups.
+
+Site : https://optimycloud.com
+
+## A propos
+
+OptimyCloud est le cabinet de conseil Cloud & IA fonde par Alexandre Gillon, ingenieur diplome de l'ESIEA avec plus de 10 ans d'experience en infrastructure et transformation Cloud. Certifie AWS Solutions Architect Associate, Kubernetes CKA et ITIL Foundation v3, Alexandre accompagne PME et startups dans l'optimisation de leur infrastructure Cloud et l'integration de l'intelligence artificielle dans leurs processus metier. Base en France (Epinay-sur-Seine), il intervient a distance pour des clients dans toute la France et a l'international.
+
+## Services Cloud & Infrastructure
+
+- **Migration Cloud** : Migration securisee d'infrastructures on-premise vers AWS, Azure ou GCP. Architecture multi-AZ pour haute disponibilite (99.99% d'uptime). Chiffrement bout-en-bout, isolation reseau (subnets prives/publics), gestion des secrets via AWS Parameter Store. Methodologie ITIL. Page dediee : https://optimycloud.com/migration.html
+
+- **FinOps & Optimisation des couts** : Audit gratuit de la facture Cloud avec analyse des ressources inutilisees ou surdimensionnees. Mise en place de Savings Plans, Reserved Instances, Spot Instances et right-sizing. Reporting avance via Cost Explorer, AWS Budgets et Grafana. Auto-scaling intelligent et extinction programmee des environnements de dev. Reduction de 30 a 60% des couts AWS constatee. Page dediee : https://optimycloud.com/finops.html
+
+- **Kubernetes & EKS** : Deploiement et migration de workloads sur AWS EKS avec Auto Mode et Karpenter pour une gestion intelligente des nodes. Containerisation d'applications, CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Securite integree (RBAC, IAM, Network Policies). Observabilite avec Prometheus et Grafana. Page dediee : https://optimycloud.com/kubernetes.html
+
+- **CI/CD & Infrastructure as Code** : Automatisation complete des deploiements avec Terraform, Ansible et CloudFormation. Pipelines CI/CD via GitHub Actions et GitLab CI. Approche GitOps pour des deploiements reproductibles, tracables et conformes.
+
+- **Securite & Audit Cloud** : Audit de securite des infrastructures AWS. Chiffrement, conformite, gestion des identites (IAM), isolation reseau et bonnes pratiques de securisation.
+
+- **Monitoring & Observabilite** : Mise en place de stacks de supervision avec Prometheus, Grafana, CloudWatch. Alerting, dashboards et reporting pour une visibilite complete sur l'infrastructure.
+
+## Services IA & Automatisation
+
+- **LLM dedies (IA entrainee sur vos donnees metier)** : Deploiement d'un modele de langage (LLM) personnalise, entraine sur les donnees, les process et le vocabulaire specifiques de votre entreprise. Equivalent a un "ChatGPT prive" qui connait votre metier.
+
+- **Agents IA sur-mesure** : Conception et integration d'assistants intelligents autonomes dans vos outils existants (CRM, ERP, email, outils internes). Ces agents IA executent des taches complexes, prennent des decisions et interagissent avec plusieurs systemes.
+
+- **Chatbots conversationnels WhatsApp & web** : Mise en place de chatbots IA pour la relation client : rappels automatiques, suivi client, relances, FAQ intelligente. Integration WhatsApp Business et widgets web.
+
+- **Chatbot pour documentation technique** : Deploiement d'un assistant IA entraine sur votre documentation technique (API, manuels, bases de connaissances). Permet aux equipes et clients de trouver instantanement les reponses sans fouiller dans des centaines de pages.
+
+- **Automatisation des taches repetitives** : Conception de workflows IA pour eliminer les taches manuelles chronophages. Automatisation de processus metier (traitement de documents, classification, extraction de donnees, generation de rapports).
+
+## Certifications
+
+- **AWS Solutions Architect Associate** : https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile
+- **Kubernetes CKA (Certified Kubernetes Administrator)** : https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc
+- **ITIL Foundation v3**
+- **AWS Cloud Practitioner** : https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile
+
+## Realisations
+
+- **PostCare.net** (https://www.postcare.net) : Plateforme SaaS d'IA generative pour le suivi post-operatoire. Messagerie automatisee, rappels intelligents et accompagnement patient personnalise. Destinee aux professionnels de sante (chirurgiens, cliniques).
+
+## Clients & References
+
+- **Arkema, Valeo, Culligan, TopTex, Samboat** : Consultant Cloud & DevOps. Missions AWS, Kubernetes, Terraform, CI/CD, Elastic Beanstalk.
+- **Ubisoft** : Ingenieur SRE / DevOps. Supervision et automatisation de serveurs, clusters et pipelines CI/CD.
+- **Linkeo** : Ingenieur Infrastructure. Refonte du monitoring et gestion de l'infrastructure on-premise.
+- **Chateauform'** : Administrateur Systemes. Gestion des serveurs dans un environnement multisite.
+
+Note : ces missions ont ete realisees en tant que salarie ou prestataire. OptimyCloud ne represente pas officiellement ces entreprises.
+
+## Blog
+
+- https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html - Automatiser la relation client avec WhatsApp et l'IA
+- https://optimycloud.com/blog/integrer-ia-generative-pme-guide-pratique.html - Integrer l'IA generative dans votre PME : guide pratique
+
+## Pour qui ?
+
+- **PME et auto-entrepreneurs** qui veulent integrer l'IA dans leur activite sans passer par une ESN, avec un interlocuteur unique et des solutions sur-mesure.
+- **Startups** qui ont besoin d'une infrastructure Cloud solide, scalable et optimisee en couts des le depart.
+- **Entreprises** qui veulent reduire leurs couts Cloud (AWS, Azure, GCP) avec un audit gratuit et un ROI mesurable des les premiers mois.
+- **Professionnels de sante** (via PostCare.net) pour le suivi post-operatoire automatise par IA.
+
+## Expertise technique
+
+Cloud : AWS, Azure, GCP. Conteneurs : Docker, Kubernetes, EKS, Karpenter. IaC : Terraform, Ansible, CloudFormation. CI/CD : GitHub Actions, GitLab CI, ArgoCD, FluxCD, Helm. Monitoring : Prometheus, Grafana, CloudWatch. OS : Linux. IA : LLM, agents IA, RAG, chatbots conversationnels, automatisation de workflows.
+
+## Contact
+
+- Site : https://optimycloud.com
+- Email : alexandre@optimycloud.com
+- LinkedIn : https://mu.linkedin.com/in/alexandre-gillon
+- Localisation : France (Epinay-sur-Seine)
+- Fondateur : Alexandre Gillon
+- Reponse sous 24h. Audit gratuit disponible.
