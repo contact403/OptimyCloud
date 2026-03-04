@@ -172,10 +172,10 @@
     </nav>
 
     <!-- Hero Banner -->
-    <div class="bg-gradient-to-br from-amber-700 to-orange-700 py-16 sm:py-24">
+    <div class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 sm:py-24">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <!-- Breadcrumb -->
-            <nav class="mb-8 text-sm text-amber-100">
+            <nav class="mb-8 text-sm text-indigo-100">
                 <a href="../index.html" class="hover:text-white transition-colors">OptimyCloud</a>
                 <span class="mx-2">/</span>
                 <span>Blog</span>
@@ -186,7 +186,7 @@
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
                     Construire un assistant IA WhatsApp prive avec Amazon Bedrock et AWS
                 </h1>
-                <div class="flex flex-wrap items-center gap-4 text-amber-100 text-sm">
+                <div class="flex flex-wrap items-center gap-4 text-indigo-100 text-sm">
                     <span class="flex items-center">
                         <i class="fas fa-calendar-alt mr-2"></i> 4 mars 2026
                     </span>
@@ -221,7 +221,7 @@
             <!-- Section 1 : Pourquoi un assistant prive -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
-                    <i class="fas fa-shield-alt text-amber-600 mr-2"></i>
+                    <i class="fas fa-shield-alt text-orange-600 mr-2"></i>
                     Pourquoi un assistant WhatsApp prive sur AWS ?
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-4">
@@ -232,19 +232,19 @@
                 </p>
                 <ul class="space-y-3 mb-8">
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-amber-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
                         <span class="text-gray-600"><strong class="text-gray-900">Souverainete des donnees</strong> : tout reste dans votre compte AWS, dans la region de votre choix (eu-west-1 pour la France). Amazon Bedrock ne stocke pas et n'utilise pas vos donnees pour entrainer ses modeles.</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-amber-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
                         <span class="text-gray-600"><strong class="text-gray-900">Cout maitrise</strong> : architecture serverless = vous ne payez que ce que vous consommez. Pas de serveur qui tourne a vide, pas d'abonnement mensuel fixe.</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-amber-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
                         <span class="text-gray-600"><strong class="text-gray-900">Personnalisation totale</strong> : vous controlez le modele IA, les instructions de l'agent, le traitement des medias et la logique metier. Aucune limitation imposee par un SaaS.</span>
                     </li>
                     <li class="flex items-start">
-                        <i class="fas fa-check-circle text-amber-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
                         <span class="text-gray-600"><strong class="text-gray-900">Multimodal natif</strong> : texte, images, videos, documents et notes vocales. Le modele Amazon Nova comprend tous ces formats.</span>
                     </li>
                 </ul>
@@ -253,7 +253,7 @@
             <!-- Section 2 : Architecture -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
-                    <i class="fas fa-project-diagram text-amber-600 mr-2"></i>
+                    <i class="fas fa-project-diagram text-orange-600 mr-2"></i>
                     Architecture serverless : comment ca marche
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
@@ -294,7 +294,7 @@
                             <div class="text-xs font-medium text-purple-800">Image / Video / PDF</div>
                             <div class="text-xs text-purple-600 mt-1">S3 &rarr; Bedrock Converse</div>
                         </div>
-                        <div class="bg-orange-50 rounded-lg p-3 border border-orange-200 text-center">
+                        <div class="bg-orange-50 rounded-lg p-3 border border-orange-500 text-center">
                             <i class="fas fa-microphone text-orange-600 text-lg mb-1"></i>
                             <div class="text-xs font-medium text-orange-800">Note vocale</div>
                             <div class="text-xs text-orange-600 mt-1">S3 &rarr; Transcribe &rarr; Agent</div>
@@ -304,9 +304,9 @@
 
                     <!-- Step 4 -->
                     <div class="flex items-center mb-4">
-                        <div class="flex-shrink-0 w-10 h-10 bg-amber-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">4</div>
-                        <div class="ml-3 flex-1 bg-amber-50 rounded-lg p-3 border border-amber-200">
-                            <span class="text-sm font-medium text-amber-800"><i class="fas fa-brain mr-1"></i> Amazon Bedrock Agent (Nova) &rarr; generation de la reponse</span>
+                        <div class="flex-shrink-0 w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">4</div>
+                        <div class="ml-3 flex-1 bg-orange-50 rounded-lg p-3 border border-orange-500">
+                            <span class="text-sm font-medium text-orange-800"><i class="fas fa-brain mr-1"></i> Amazon Bedrock Agent (Nova) &rarr; generation de la reponse</span>
                         </div>
                     </div>
                     <div class="flex justify-center mb-4"><i class="fas fa-arrow-down text-gray-400"></i></div>
@@ -324,7 +324,7 @@
             <!-- Section 3 : Services AWS en detail -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
-                    <i class="fab fa-aws text-amber-600 mr-2"></i>
+                    <i class="fab fa-aws text-orange-600 mr-2"></i>
                     Les 7 services AWS au coeur de l'architecture
                 </h2>
 
@@ -418,7 +418,7 @@
             <!-- Section 4 : Deploiement -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
-                    <i class="fas fa-terminal text-amber-600 mr-2"></i>
+                    <i class="fas fa-terminal text-orange-600 mr-2"></i>
                     Deployer en 5 etapes avec AWS CDK
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
@@ -427,8 +427,8 @@
 
                 <div class="space-y-4 mb-8">
                     <!-- Prerequisites -->
-                    <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-exclamation-triangle text-amber-600 mr-2"></i>Pre-requis</h4>
+                    <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg">
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-exclamation-triangle text-orange-600 mr-2"></i>Pre-requis</h3>
                         <ul class="text-gray-600 text-sm space-y-1">
                             <li>&bull; Compte AWS avec CLI configuree</li>
                             <li>&bull; Python 3.8+</li>
@@ -440,19 +440,19 @@
                     <!-- Steps -->
                     <div class="bg-gray-900 rounded-xl p-6 text-sm font-mono overflow-x-auto">
                         <div class="text-gray-400 mb-3"># 1. Cloner le repo</div>
-                        <div class="text-green-400 mb-4">git clone https://github.com/build-on-aws/building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python.git<br>cd private-assistant-v2</div>
+                        <div class="text-green-500 mb-4">git clone https://github.com/build-on-aws/building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python.git<br>cd private-assistant-v2</div>
 
                         <div class="text-gray-400 mb-3"># 2. Creer l'environnement virtuel</div>
-                        <div class="text-green-400 mb-4">python3 -m venv .venv<br>source .venv/bin/activate</div>
+                        <div class="text-green-500 mb-4">python3 -m venv .venv<br>source .venv/bin/activate</div>
 
                         <div class="text-gray-400 mb-3"># 3. Installer les dependances</div>
-                        <div class="text-green-400 mb-4">pip install -r requirements.txt</div>
+                        <div class="text-green-500 mb-4">pip install -r requirements.txt</div>
 
                         <div class="text-gray-400 mb-3"># 4. Synthetiser le template CloudFormation</div>
-                        <div class="text-green-400 mb-4">cdk synth</div>
+                        <div class="text-green-500 mb-4">cdk synth</div>
 
                         <div class="text-gray-400 mb-3"># 5. Deployer toute l'infrastructure</div>
-                        <div class="text-green-400">cdk deploy</div>
+                        <div class="text-green-500">cdk deploy</div>
                     </div>
 
                     <p class="text-base text-gray-600 leading-relaxed mt-4">
@@ -464,7 +464,7 @@
             <!-- Section 5 : Le code en detail -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
-                    <i class="fas fa-code text-amber-600 mr-2"></i>
+                    <i class="fas fa-code text-orange-600 mr-2"></i>
                     Sous le capot : comment le code traite chaque message
                 </h2>
 
@@ -474,15 +474,15 @@
 
                 <div class="space-y-4 mb-8">
                     <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-comment text-blue-600 mr-2"></i>Message texte</h4>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-comment text-blue-600 mr-2"></i>Message texte</h3>
                         <p class="text-gray-600 text-sm">Le texte est extrait du payload WhatsApp et transmis directement a la Lambda <code class="text-xs bg-blue-100 px-1 rounded">bedrock_agent</code> via un appel Lambda asynchrone (<code class="text-xs bg-blue-100 px-1 rounded">InvocationType: Event</code>). L'agent Bedrock genere la reponse en s'appuyant sur ses instructions et l'historique de conversation.</p>
                     </div>
                     <div class="bg-purple-50 border-l-4 border-purple-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-image text-purple-600 mr-2"></i>Image, video ou document</h4>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-image text-purple-600 mr-2"></i>Image, video ou document</h3>
                         <p class="text-gray-600 text-sm">Le media est telecharge depuis WhatsApp et stocke dans S3. Le chemin S3 est transmis a la Lambda <code class="text-xs bg-purple-100 px-1 rounded">bedrock_agent</code>, qui utilise l'API Bedrock Converse pour analyser visuellement le contenu (description d'image, extraction de texte d'un PDF, analyse de video). Le resultat est ensuite injecte dans la conversation de l'agent comme contexte.</p>
                     </div>
                     <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-microphone text-orange-600 mr-2"></i>Note vocale</h4>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-microphone text-orange-600 mr-2"></i>Note vocale</h3>
                         <p class="text-gray-600 text-sm">L'audio est stocke dans S3, puis un job Amazon Transcribe est lance avec detection automatique de la langue. Une fois la transcription terminee, un evenement declenche la Lambda <code class="text-xs bg-orange-100 px-1 rounded">transcriber_done</code> qui recupere le texte et le transmet a l'agent Bedrock. Le client peut donc parler a l'assistant comme il parlerait a un humain.</p>
                     </div>
                 </div>
@@ -498,7 +498,7 @@
             <!-- Section 6 : Couts -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
-                    <i class="fas fa-calculator text-amber-600 mr-2"></i>
+                    <i class="fas fa-calculator text-orange-600 mr-2"></i>
                     Estimation des couts : combien ca coute vraiment ?
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
@@ -508,7 +508,7 @@
                 <div class="overflow-x-auto mb-8">
                     <table class="min-w-full bg-white rounded-xl shadow-md overflow-hidden">
                         <thead>
-                            <tr class="bg-amber-600 text-white">
+                            <tr class="bg-indigo-600 text-white">
                                 <th class="px-6 py-4 text-left text-sm font-semibold">Service</th>
                                 <th class="px-6 py-4 text-center text-sm font-semibold">Cout estime / mois</th>
                                 <th class="px-6 py-4 text-left text-sm font-semibold">Details</th>
@@ -545,9 +545,9 @@
                                 <td class="px-6 py-4 text-center text-sm text-green-600 font-semibold">< 1 USD</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">+ frais WhatsApp Business par conversation</td>
                             </tr>
-                            <tr class="bg-amber-50">
+                            <tr class="bg-orange-50">
                                 <td class="px-6 py-4 text-sm text-gray-900 font-bold">Total estime</td>
-                                <td class="px-6 py-4 text-center text-sm text-amber-700 font-bold">20 - 50 USD</td>
+                                <td class="px-6 py-4 text-center text-sm text-orange-700 font-bold">20 - 50 USD</td>
                                 <td class="px-6 py-4 text-sm text-gray-500">Pour 1 000 messages/mois</td>
                             </tr>
                         </tbody>
@@ -565,7 +565,7 @@
             <!-- Section 7 : Cas d'usage -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
-                    <i class="fas fa-lightbulb text-amber-600 mr-2"></i>
+                    <i class="fas fa-lightbulb text-orange-600 mr-2"></i>
                     Cas d'usage concrets
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
@@ -607,7 +607,7 @@
             <!-- Section 8 : FAQ -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
-                    <i class="fas fa-question-circle text-amber-600 mr-2"></i>
+                    <i class="fas fa-question-circle text-orange-600 mr-2"></i>
                     Questions frequentes
                 </h2>
 
@@ -670,18 +670,18 @@
 
             <!-- CTA Box -->
             <div class="reveal">
-                <div class="bg-amber-600 rounded-2xl p-8 sm:p-10 mt-12 text-center">
+                <div class="bg-indigo-600 rounded-2xl p-8 sm:p-10 mt-12 text-center">
                     <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
                         Envie de deployer votre assistant IA WhatsApp ?
                     </h2>
-                    <p class="text-amber-100 mb-8 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+                    <p class="text-indigo-100 mb-8 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
                         Je vous accompagne dans le deploiement, la personnalisation et l'integration de votre assistant IA WhatsApp sur AWS. Architecture serverless, securisee et optimisee en couts.
                     </p>
-                    <a href="../index.html#contact" class="inline-flex items-center bg-white text-amber-600 px-8 py-3 rounded-lg font-semibold hover:bg-amber-50 transition-colors duration-200">
+                    <a href="../index.html#contact" class="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-200">
                         <i class="fas fa-paper-plane mr-2"></i>
                         Discutons de votre projet
                     </a>
-                    <p class="text-amber-200 text-sm mt-4">Reponse sous 24h - Premier echange gratuit et sans engagement</p>
+                    <p class="text-indigo-200 text-sm mt-4">Reponse sous 24h - Premier echange gratuit et sans engagement</p>
                 </div>
             </div>
 
