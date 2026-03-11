@@ -10,5 +10,12 @@ Disallow: /mentions-legales.html
 Disallow: /politique-confidentialite.html
 Disallow: /politique-cookies.html
 
+# Pages redirigées vers la homepage (noindex déjà en place)
+Disallow: /finops.html
+Disallow: /kubernetes.html
+Disallow: /migration.html
+Disallow: /about.html
+Disallow: /contact.html
+
 # Sitemap
 Sitemap: https://optimycloud.com/sitemap.xml
