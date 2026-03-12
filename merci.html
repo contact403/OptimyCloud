@@ -12,7 +12,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="./assets/favicon.svg" />
     <link rel="shortcut icon" href="./assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
     <link rel="manifest" href="./assets/site.webmanifest" />
@@ -34,8 +33,9 @@
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
-                            <img src="./assets/optimycloud-logo.png" 
-                                 alt="OptimyCloud" 
+                            <img src="./assets/optimycloud-logo.png"
+                                 alt="OptimyCloud"
+                                 width="200" height="64"
                                  class="h-20 w-auto"
                                  style="mix-blend-mode: multiply;">
                         </a>
@@ -43,11 +43,11 @@
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Accueil</a>
-                    <a href="finops.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">FinOps</a>
-                    <a href="kubernetes.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Containerisation</a>
-                    <a href="migration.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Pourquoi le Cloud</a>
-                    <a href="about.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
-                    <a href="contact.html" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Contact</a>
+                    <a href="index.html#services" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Services</a>
+                    <a href="index.html#clients" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Clients</a>
+                    <a href="index.html#blog" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Blog</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">À propos</a>
+                    <a href="index.html#contact" class="nav-link text-gray-700 hover:text-blue-600 transition-colors duration-200">Contact</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
@@ -61,11 +61,11 @@
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
                 <a href="index.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Accueil</a>
-                <a href="finops.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">FinOps</a>
-                <a href="kubernetes.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Containerisation</a>
-                <a href="migration.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Pourquoi le Cloud</a>
-                <a href="about.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
-                <a href="contact.html" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
+                <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Services</a>
+                <a href="index.html#clients" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Clients</a>
+                <a href="index.html#blog" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Blog</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-blue-600">À propos</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-gray-700 hover:text-blue-600">Contact</a>
             </div>
         </div>
     </nav>
@@ -114,7 +114,7 @@
                     <i class="fas fa-piggy-bank text-4xl text-green-600 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Optimisation FinOps</h3>
                     <p class="text-gray-600 mb-6">Réduisez vos coûts Cloud de 20% à 50%</p>
-                    <a href="finops.html" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
+                    <a href="index.html#services" class="bg-green-600 text-white px-6 py-3 rounded-lg hover:bg-green-700 transition-colors duration-200 font-medium">
                         Découvrir FinOps
                     </a>
                 </div>
@@ -124,7 +124,7 @@
                     <i class="fas fa-dharmachakra text-4xl text-purple-600 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Containerisation</h3>
                     <p class="text-gray-600 mb-6">Migration vers Kubernetes EKS Auto Mode</p>
-                    <a href="kubernetes.html" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors duration-200 font-medium">
+                    <a href="index.html#services" class="bg-purple-600 text-white px-6 py-3 rounded-lg hover:bg-purple-700 transition-colors duration-200 font-medium">
                         Voir Kubernetes
                     </a>
                 </div>
@@ -161,11 +161,11 @@
             <div>
                 <h4 class="font-semibold mb-4 text-white">Services</h4>
                 <ul class="space-y-2 text-gray-400">
-                    <li><a href="finops.html" class="hover:text-blue-500 transition-colors duration-200">FinOps & Optimisation</a></li>
-                    <li><a href="kubernetes.html" class="hover:text-blue-500 transition-colors duration-200">Containerisation K8s</a></li>
-                    <li><a href="migration.html" class="hover:text-blue-500 transition-colors duration-200">Migration Cloud</a></li>
-                    <li><a href="#services" class="hover:text-blue-500 transition-colors duration-200">Infrastructure AWS</a></li>
-                    <li><a href="contact.html" class="hover:text-blue-500 transition-colors duration-200">Consultation</a></li>
+                    <li><a href="index.html#services" class="hover:text-blue-500 transition-colors duration-200">FinOps & Optimisation</a></li>
+                    <li><a href="index.html#services" class="hover:text-blue-500 transition-colors duration-200">Containerisation K8s</a></li>
+                    <li><a href="index.html#services" class="hover:text-blue-500 transition-colors duration-200">Migration Cloud</a></li>
+                    <li><a href="index.html#services" class="hover:text-blue-500 transition-colors duration-200">Infrastructure AWS</a></li>
+                    <li><a href="index.html#contact" class="hover:text-blue-500 transition-colors duration-200">Consultation</a></li>
                 </ul>
             </div>
             <div>

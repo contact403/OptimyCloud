@@ -2,32 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://optimycloud.com/</loc>
-        <lastmod>2026-03-11</lastmod>
-        <changefreq>weekly</changefreq>
-        <priority>1.0</priority>
+        <lastmod>2026-03-12</lastmod>
     </url>
     <url>
         <loc>https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html</loc>
         <lastmod>2026-03-11</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html</loc>
         <lastmod>2026-03-04</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html</loc>
         <lastmod>2026-02-27</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
     <url>
         <loc>https://optimycloud.com/blog/integrer-ia-generative-pme-guide-pratique.html</loc>
         <lastmod>2026-02-27</lastmod>
-        <changefreq>monthly</changefreq>
-        <priority>0.7</priority>
     </url>
 </urlset>

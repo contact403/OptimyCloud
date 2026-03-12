@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
@@ -41,86 +41,38 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous">
 
-    <!-- Schema.org BlogPosting -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Automatiser la relation client avec WhatsApp et l'IA en 2026",
-      "description": "Comment automatiser vos messages WhatsApp avec l'IA : chatbot WhatsApp Business, rappels automatiques, suivi client. Guide pratique pour PME et commerces.",
-      "url": "https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html",
-      "datePublished": "2026-02-27",
-      "dateModified": "2026-02-27",
-      "author": {
-        "@type": "Person",
-        "name": "Alexandre Gillon",
-        "url": "https://optimycloud.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "OptimyCloud",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://optimycloud.com/assets/optimycloud-logo.png"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html"
-      },
-      "image": "https://optimycloud.com/assets/optimycloud-logo.png",
-      "wordCount": 1800,
-      "inLanguage": "fr"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Est-ce que l'automatisation WhatsApp fonctionne avec WhatsApp Business gratuit ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "L'application WhatsApp Business gratuite offre des fonctions basiques : messages d'absence, reponses rapides et catalogue produits. Pour une veritable automatisation avec IA, il faut passer par l'API WhatsApp Business, accessible via des fournisseurs agrees comme Twilio, 360dialog ou Meta directement. Les couts debutent a quelques centimes par conversation."
-          }
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/#blog" },
+            { "@type": "ListItem", "position": 3, "name": "Automatiser la relation client avec WhatsApp et l'IA en 2026" }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Est-ce que mes clients vont savoir que c'est un robot qui repond ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Avec les LLM modernes, les reponses sont naturelles et personnalisees. La plupart des clients ne font pas la difference pour les questions courantes. Bonne pratique : indiquer que le premier contact est automatise et proposer un transfert vers un humain si necessaire. La transparence renforce la confiance."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "L'automatisation WhatsApp est-elle conforme au RGPD ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, a condition de respecter les regles : consentement explicite du client (opt-in), possibilite de se desinscrire a tout moment, stockage securise des donnees et information claire sur l'utilisation des donnees. L'API WhatsApp Business impose elle-meme un opt-in obligatoire."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Combien coute l'automatisation WhatsApp avec IA ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Les couts varient selon le volume. Comptez environ 50 a 200 euros par mois pour une PME moyenne, incluant l'API WhatsApp Business (quelques centimes par conversation), l'hebergement du chatbot IA et la maintenance. C'est 5 a 10 fois moins cher qu'un assistant a temps partiel."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Est-ce que je peux personnaliser les messages automatiques ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolument. C'est meme la force de l'IA par rapport aux templates classiques. Le chatbot peut adapter son ton, utiliser le prenom du client, faire reference a ses achats precedents et adapter ses recommandations. Vous definissez la personnalite du bot, ses limites et les scenarios de reponse."
-          }
+          "@type": "BlogPosting",
+          "headline": "Automatiser la relation client avec WhatsApp et l'IA en 2026",
+          "description": "Comment automatiser vos messages WhatsApp avec l'IA : chatbot WhatsApp Business, rappels automatiques, suivi client. Guide pratique pour PME et commerces.",
+          "url": "https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html",
+          "datePublished": "2026-02-27",
+          "dateModified": "2026-02-27",
+          "author": { "@type": "Person", "name": "Alexandre Gillon", "url": "https://optimycloud.com/" },
+          "publisher": { "@type": "Organization", "name": "OptimyCloud", "url": "https://optimycloud.com/", "logo": { "@type": "ImageObject", "url": "https://optimycloud.com/assets/optimycloud-logo.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html" },
+          "image": "https://optimycloud.com/assets/optimycloud-logo.png",
+          "wordCount": 1800,
+          "inLanguage": "fr",
+          "articleSection": "IA & WhatsApp",
+          "keywords": ["automatisation WhatsApp", "chatbot WhatsApp business", "WhatsApp Business API", "IA relation client", "messagerie automatique entreprise"]
         }
       ]
     }

@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
@@ -41,86 +41,38 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous">
 
-    <!-- Schema.org BlogPosting -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "Construire un assistant IA WhatsApp prive avec Amazon Bedrock et AWS",
-      "description": "Guide technique pour deployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK. Architecture serverless, traitement d'images, videos, documents et notes vocales.",
-      "url": "https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html",
-      "datePublished": "2026-03-04",
-      "dateModified": "2026-03-04",
-      "author": {
-        "@type": "Person",
-        "name": "Alexandre Gillon",
-        "url": "https://optimycloud.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "OptimyCloud",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://optimycloud.com/assets/optimycloud-logo.png"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html"
-      },
-      "image": "https://optimycloud.com/assets/optimycloud-logo.png",
-      "wordCount": 2200,
-      "inLanguage": "fr"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Combien coute un assistant IA WhatsApp sur AWS ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Grace a l'architecture serverless, les couts sont proportionnels a l'usage. Pour un volume de 1 000 messages par mois, comptez environ 20 a 50 USD : Lambda (quelques centimes), Bedrock (environ 0.003 USD par requete avec Nova Lite), S3 et DynamoDB (negligeables), Transcribe (0.024 USD/min) et les frais WhatsApp Business (variables selon le pays). Le cout augmente lineairement avec le volume."
-          }
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/#blog" },
+            { "@type": "ListItem", "position": 3, "name": "Construire un assistant IA WhatsApp prive avec Amazon Bedrock et AWS" }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Quels types de fichiers l'assistant peut-il traiter ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "L'assistant traite les messages texte, les images (JPEG, PNG), les videos (MP4), les documents (PDF, Word, etc.) et les notes vocales. Les images, videos et documents sont analyses par le modele Amazon Nova via l'API Bedrock Converse. Les notes vocales sont d'abord transcrites par Amazon Transcribe avant d'etre envoyees a l'agent Bedrock."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Les donnees sont-elles securisees ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Toutes les donnees restent dans votre compte AWS. Amazon Bedrock ne stocke pas et n'utilise pas vos donnees pour entrainer ses modeles. Les fichiers sont chiffres dans S3 avec SSE, et DynamoDB chiffre les donnees au repos. Cependant, les messages transitent par WhatsApp, qui a ses propres politiques de confidentialite. Pour des donnees hautement sensibles, envisagez un canal de communication complementaire."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Peut-on personnaliser les reponses de l'agent ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Absolument. L'agent Bedrock est configurable via des instructions personnalisees qui definissent son comportement, son ton et son perimetre. Vous pouvez lui donner une personnalite specifique, limiter les sujets qu'il aborde et definir des regles de reponse. L'historique de conversation stocke dans DynamoDB permet des reponses contextuelles et personnalisees."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Faut-il un Meta Business Account ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui. Pour utiliser l'API WhatsApp Business via AWS End User Messaging, un Meta Business Account verifie est necessaire. C'est gratuit a creer mais la verification prend quelques jours. C'est le meme compte que pour Facebook Ads ou Instagram Business."
-          }
+          "@type": "BlogPosting",
+          "headline": "Construire un assistant IA WhatsApp prive avec Amazon Bedrock et AWS",
+          "description": "Guide technique pour deployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK. Architecture serverless, traitement d'images, videos, documents et notes vocales.",
+          "url": "https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html",
+          "datePublished": "2026-03-04",
+          "dateModified": "2026-03-04",
+          "author": { "@type": "Person", "name": "Alexandre Gillon", "url": "https://optimycloud.com/" },
+          "publisher": { "@type": "Organization", "name": "OptimyCloud", "url": "https://optimycloud.com/", "logo": { "@type": "ImageObject", "url": "https://optimycloud.com/assets/optimycloud-logo.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" },
+          "image": "https://optimycloud.com/assets/optimycloud-logo.png",
+          "wordCount": 2200,
+          "inLanguage": "fr",
+          "articleSection": "IA & WhatsApp",
+          "keywords": ["Amazon Bedrock", "WhatsApp assistant IA", "AWS Lambda", "serverless", "chatbot WhatsApp AWS", "Amazon Nova"]
         }
       ]
     }

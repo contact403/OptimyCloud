@@ -12,7 +12,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
@@ -41,86 +41,38 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../assets/style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous">
 
-    <!-- Schema.org BlogPosting -->
+    <!-- Schema.org -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "BlogPosting",
-      "headline": "EKS Auto Mode : Kubernetes n'a jamais ete aussi simple sur AWS",
-      "description": "Decouvrez EKS Auto Mode : AWS gere vos nodes, scaling, networking et stockage Kubernetes automatiquement. Guide complet, comparatif et migration.",
-      "url": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html",
-      "datePublished": "2026-03-11",
-      "dateModified": "2026-03-11",
-      "author": {
-        "@type": "Person",
-        "name": "Alexandre Gillon",
-        "url": "https://optimycloud.com"
-      },
-      "publisher": {
-        "@type": "Organization",
-        "name": "OptimyCloud",
-        "logo": {
-          "@type": "ImageObject",
-          "url": "https://optimycloud.com/assets/optimycloud-logo.png"
-        }
-      },
-      "mainEntityOfPage": {
-        "@type": "WebPage",
-        "@id": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html"
-      },
-      "image": "https://optimycloud.com/assets/optimycloud-logo.png",
-      "wordCount": 2500,
-      "inLanguage": "fr"
-    }
-    </script>
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
+      "@graph": [
         {
-          "@type": "Question",
-          "name": "Qu'est-ce que EKS Auto Mode ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "EKS Auto Mode est une fonctionnalite d'Amazon EKS qui automatise entierement la gestion des nodes, du scaling, du networking (VPC CNI) et du stockage (EBS CSI). AWS gere l'infrastructure Kubernetes pour vous — vous ne deployez que vos applications."
-          }
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/#blog" },
+            { "@type": "ListItem", "position": 3, "name": "EKS Auto Mode : Kubernetes n'a jamais ete aussi simple sur AWS" }
+          ]
         },
         {
-          "@type": "Question",
-          "name": "Combien coute EKS Auto Mode ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "EKS Auto Mode facture 0,0842 USD par vCPU/heure pour les pods, contre environ 0,05 USD pour EC2 on-demand equivalent. Le surcout de ~40% est compense par l'elimination du temps d'ingenierie consacre a la gestion des nodes, aux mises a jour AMI et au tuning Karpenter."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Peut-on migrer un cluster EKS existant vers Auto Mode ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui, la migration est possible en activant Auto Mode sur un cluster existant et en migrant progressivement les workloads. Les managed node groups et Karpenter NodePools continuent de fonctionner en parallele pendant la transition."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "EKS Auto Mode remplace-t-il Karpenter ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Oui et non. EKS Auto Mode utilise la technologie Karpenter sous le capot pour le scaling, mais vous n'avez plus a installer, configurer ou maintenir Karpenter vous-meme. Le comportement est similaire mais entierement manage par AWS."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Quelles sont les limites de EKS Auto Mode ?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "EKS Auto Mode ne supporte pas les DaemonSets personnalises sur ses nodes manages, ne permet pas le SSH direct sur les nodes, et ne supporte pas encore les GPU (support prevu). Pour les cas d'usage avancés avec besoin de controle fin sur les nodes, le mode classique reste recommande."
-          }
+          "@type": "BlogPosting",
+          "headline": "EKS Auto Mode : Kubernetes n'a jamais ete aussi simple sur AWS",
+          "description": "Decouvrez EKS Auto Mode : AWS gere vos nodes, scaling, networking et stockage Kubernetes automatiquement. Guide complet, comparatif et migration.",
+          "url": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html",
+          "datePublished": "2026-03-11",
+          "dateModified": "2026-03-11",
+          "author": { "@type": "Person", "name": "Alexandre Gillon", "url": "https://optimycloud.com/" },
+          "publisher": { "@type": "Organization", "name": "OptimyCloud", "url": "https://optimycloud.com/", "logo": { "@type": "ImageObject", "url": "https://optimycloud.com/assets/optimycloud-logo.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html" },
+          "image": "https://optimycloud.com/assets/optimycloud-logo.png",
+          "wordCount": 2500,
+          "inLanguage": "fr",
+          "articleSection": "Cloud & Kubernetes",
+          "keywords": ["EKS Auto Mode", "Amazon EKS", "Kubernetes AWS", "Karpenter", "AWS Kubernetes 2026"]
         }
       ]
     }
