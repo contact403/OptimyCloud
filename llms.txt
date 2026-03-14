@@ -50,6 +50,7 @@ Note : ces missions ont ete realisees en tant que salarie ou prestataire. Optimy
 
 ## Blog
 
+- https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html - EKS Auto Mode : Kubernetes n'a jamais ete aussi simple sur AWS. Guide complet, comparatif et migration depuis EKS classique
 - https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html - Construire un assistant IA WhatsApp prive avec Amazon Bedrock et AWS : architecture serverless multimodale (texte, images, videos, documents, notes vocales)
 - https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html - Automatiser la relation client avec WhatsApp et l'IA
 - https://optimycloud.com/blog/integrer-ia-generative-pme-guide-pratique.html - Integrer l'IA generative dans votre PME : guide pratique

@@ -19,7 +19,7 @@
     <meta name="description" content="Merci pour votre demande. Je vous réponds sous 24h. Découvrez nos autres services en attendant.">
     <meta name="robots" content="noindex, nofollow">
     <link rel="stylesheet" href="./assets/style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" media="print" onload="this.media='all'">
 </head>
 <body class="bg-gray-50 text-gray-800">
     <!-- Google Tag Manager (noscript) -->
@@ -84,7 +84,7 @@
                     <i class="fas fa-envelope text-blue-600 mr-2"></i> <strong>Je vous réponds sous 24h</strong> avec une première analyse de vos besoins
                 </p>
                 <p class="text-base sm:text-lg text-gray-600 mb-8">
-                    <i class="fas text-green-600 mr-2"></i> En cas d'urgence : <a href="mailto:alexandre@optimycloud.com" class="text-blue-600 hover:underline font-medium">alexandre@optimycloud.com</a>
+                    <i class="fas fa-phone text-green-600 mr-2"></i> En cas d'urgence : <a href="mailto:alexandre@optimycloud.com" class="text-blue-600 hover:underline font-medium">alexandre@optimycloud.com</a>
                 </p>
             </div>
         </div>
@@ -104,7 +104,7 @@
                     <i class="fas fa-calendar-alt text-4xl text-blue-600 mb-4"></i>
                     <h3 class="text-xl font-bold text-gray-900 mb-4">Planifier un appel</h3>
                     <p class="text-gray-600 mb-6">30 minutes pour discuter de votre projet directement</p>
-                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
+                    <a href="https://calendly.com/contact-optimycloud/30min" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium">
                         Réserver un créneau
                     </a>
                 </div>
@@ -153,7 +153,7 @@
                     Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures AWS et on-premise.
                 </p>
                 <div class="flex space-x-4">
-                    <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" class="text-gray-400 hover:text-blue-500 transition-colors duration-200">
+                    <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-blue-500 transition-colors duration-200">
                         <i class="fab fa-linkedin text-2xl"></i>
                     </a>
                 </div>
@@ -215,54 +215,6 @@
                     mobileMenu.classList.toggle('hidden');
                 });
             }
-        });
-    </script>
-    <!-- Cookie Script avec Google GTM -->
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const banner = document.getElementById('cookie-banner');
-            const acceptBtn = document.getElementById('accept-cookies');
-            const rejectBtn = document.getElementById('reject-cookies');
-            
-            // Check if user already made a choice
-            if (localStorage.getItem('cookieConsent')) {
-                banner.style.display = 'none';
-                if (localStorage.getItem('cookieConsent') === 'accepted') {
-                    // Push consent to GTM
-                    window.dataLayer = window.dataLayer || [];
-                    window.dataLayer.push({
-                        'event': 'cookie_consent_granted',
-                        'consent_analytics': true,
-                        'consent_ads': true
-                    });
-                }
-            }
-            
-            acceptBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'accepted');
-                banner.style.display = 'none';
-                
-                // Push consent to GTM
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'cookie_consent_granted',
-                    'consent_analytics': true,
-                    'consent_ads': true
-                });
-            });
-            
-            rejectBtn.addEventListener('click', function() {
-                localStorage.setItem('cookieConsent', 'rejected');
-                banner.style.display = 'none';
-                
-                // Push rejection to GTM
-                window.dataLayer = window.dataLayer || [];
-                window.dataLayer.push({
-                    'event': 'cookie_consent_denied',
-                    'consent_analytics': false,
-                    'consent_ads': false
-                });
-            });
         });
     </script>
 
