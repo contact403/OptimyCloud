@@ -161,13 +161,13 @@
             <!-- Introduction -->
             <div class="reveal">
                 <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
-                    Imaginez un assistant qui répond a vos clients sur WhatsApp, analyse les photos qu'ils envoient, lit leurs documents PDF, écoute leurs notes vocales et maintient le fil de la conversation. Le tout hébergé sur votre propre compte AWS, sans que vos données ne quittent votre infrastructure.
+                    Un client nous a demande un assistant WhatsApp capable de lire des PDF, analyser des photos et repondre en langage naturel. Contrainte non negociable : toutes les donnees devaient rester sur son propre compte AWS, sans transiter par un service tiers. On a deploye une architecture serverless basee sur Amazon Bedrock, et le resultat gere aujourd'hui plusieurs centaines de conversations par mois.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    C'est exactement ce que permet le projet open-source <strong class="text-gray-900">building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python</strong> publié par AWS. Une architecture 100% serverless qui combine Amazon Bedrock, Lambda, DynamoDB et l'intégration native WhatsApp d'AWS pour créer un assistant IA multimodal.
+                    L'architecture s'appuie sur le projet open-source <strong class="text-gray-900">building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python</strong> publie par AWS. Elle combine Amazon Bedrock, Lambda, DynamoDB et l'integration native WhatsApp d'AWS pour creer un assistant IA multimodal 100% serverless.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    Dans cet article, je décortique cette architecture, j'explique comment chaque brique s'assemble, et je vous donne les clés pour déployer votre propre assistant IA WhatsApp privé en quelques commandes CDK.
+                    Dans cet article, je detaille cette architecture telle qu'on l'a deployee, j'explique comment chaque brique s'assemble, et je vous donne les cles pour lancer votre propre assistant IA WhatsApp prive en quelques commandes CDK.
                 </p>
             </div>
 
@@ -178,7 +178,7 @@
                     Pourquoi un assistant WhatsApp privé sur AWS ?
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-4">
-                    Les solutions SaaS de chatbot WhatsApp ne manquent pas. Mais elles posent un problème majeur : <strong class="text-gray-900">vos données transitent par des serveurs tiers</strong>. Messages clients, documents sensibles, informations métier... tout est stocké chez un fournisseur que vous ne contrôlez pas.
+                    Les solutions SaaS de chatbot WhatsApp ne manquent pas (on detaille les cas d'usage metier dans notre article sur <a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 underline hover:text-indigo-800">l'automatisation de la relation client par WhatsApp et IA</a>). Mais elles posent un problème majeur : <strong class="text-gray-900">vos données transitent par des serveurs tiers</strong>. Messages clients, documents sensibles, informations métier... tout est stocké chez un fournisseur que vous ne contrôlez pas.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-4">
                     Avec une architecture hébergée sur votre propre compte AWS :
@@ -411,6 +411,9 @@
                     <p class="text-base text-gray-600 leading-relaxed mt-4">
                         Le <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">cdk deploy</code> crée automatiquement : les 3 fonctions Lambda, le bucket S3, les 2 tables DynamoDB, l'agent Bedrock, le topic SNS, les roles IAM et la configuration End User Messaging. Comptez environ 5 minutes pour le déploiement complet.
                     </p>
+                    <p class="text-base text-gray-600 leading-relaxed mt-4">
+                        En production, on a constate que le point qui prend le plus de temps n'est pas le deploiement AWS mais la verification du Meta Business Account (comptez 2 a 5 jours ouvrés). Notre conseil : lancez cette etape en parallele du developpement pour ne pas bloquer la mise en service.
+                    </p>
                 </div>
             </div>
 
@@ -522,7 +525,7 @@
                     Cas d'usage concrets
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Cette architecture ouvre la porte a de nombreux cas d'usage grâce a sa capacité multimodale :
+                    Cette architecture ouvre la porte a de nombreux cas d'usage grâce a sa capacité multimodale. Si vous cherchez une vision plus large de l'integration de l'IA en entreprise, consultez notre <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">guide pratique pour integrer l'IA generative en PME</a>.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">

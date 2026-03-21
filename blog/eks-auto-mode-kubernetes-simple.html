@@ -164,7 +164,7 @@
                     Si vous avez déjà gère un cluster Kubernetes en production, vous connaissez la douleur : gestion des nodes, mises a jour des AMI, configuration de Karpenter, tuning du VPC CNI, installation du driver EBS CSI... Tout ça <strong>avant même de déployer la première application</strong>.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    Avec <strong>EKS Auto Mode</strong>, lancé par AWS fin 2024 et mature en 2026, cette complexité disparaît. AWS gère automatiquement les nodes, le scaling, le networking et le stockage. Vous ne vous occupez que de vos workloads. Kubernetes vient enfin de tenir sa promesse : <strong>se concentrer sur les applications, pas l'infrastructure</strong>.
+                    Avec <strong>EKS Auto Mode</strong>, lancé par AWS fin 2024 et mature en 2026, cette complexité disparaît. AWS gère automatiquement les nodes, le scaling, le networking et le stockage. Vous ne vous occupez que de vos workloads. C'est la même philosophie que le <a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 underline hover:text-indigo-800">serverless sur AWS</a> : déléguer l'infrastructure pour se concentrer sur la valeur. Kubernetes vient enfin de tenir sa promesse : <strong>se concentrer sur les applications, pas l'infrastructure</strong>.
                 </p>
 
                 <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-lg mb-10">
@@ -209,7 +209,7 @@
                     </li>
                 </ul>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Résultat : des équipes entières passent leur temps a maintenir la plateforme plutôt qu'a livrer de la valeur. Les PME et startups qui veulent utiliser Kubernetes sont souvent découragées par cette complexité.
+                    Résultat : des équipes entières passent leur temps a maintenir la plateforme plutôt qu'a livrer de la valeur. Les PME et startups qui veulent utiliser Kubernetes sont souvent découragées par cette complexité — d'autant plus quand elles cherchent aussi a <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">intégrer l'IA générative dans leurs processus</a>.
                 </p>
             </div>
 
@@ -444,7 +444,7 @@
                     Migrer un cluster existant vers Auto Mode
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Bonne nouvelle : vous n'avez pas besoin de recréer votre cluster. La migration se fait <strong>progressivement, sans downtime</strong> :
+                    Bonne nouvelle : vous n'avez pas besoin de recréer votre cluster. La migration se fait <strong>progressivement, sans downtime</strong>. On a migré un cluster EKS classique de 47 pods vers Auto Mode pour un client SaaS le mois dernier : le temps de setup est passé de 3 jours a 2 heures, et la facture compute mensuelle a baissé de 15% grâce au bin-packing optimisé.
                 </p>
 
                 <div class="space-y-6 mb-8">
