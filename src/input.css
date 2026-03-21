@@ -113,7 +113,7 @@ body {
 }
 
 .animate-scroll {
-    animation: scroll-logos 30s linear infinite;
+    animation: scroll-logos 50s linear infinite;
 }
 
 .animate-scroll:hover {
