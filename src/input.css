@@ -116,9 +116,6 @@ body {
     animation: scroll-logos 50s linear infinite;
 }
 
-.animate-scroll:hover {
-    animation-play-state: paused;
-}
 
 .logos-mask {
     -webkit-mask-image: linear-gradient(to right,
