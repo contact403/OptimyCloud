@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="../assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <title>Erreur 500 WordPress : diagnostic et causes reelles (cas client) | OptimyCloud</title>
+    <meta name="description" content="L'erreur 500 WordPress cache toujours une cause precise. Retour d'experience apres 50+ interventions : memoire PHP, .htaccess, plugins. Methode de diagnostic etape par etape.">
+    <meta name="keywords" content="erreur 500 WordPress, internal server error WordPress, WordPress ecran blanc, debug WordPress, WP_DEBUG, erreur 500 Elementor, erreur 500 OVH, WordPress plante, depannage WordPress">
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Erreur 500 WordPress : diagnostic et causes reelles (cas client)">
+    <meta property="og:description" content="L'erreur 500 WordPress cache toujours une cause precise. Methode de diagnostic et causes reelles apres 50+ interventions.">
+    <meta property="og:url" content="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+    <meta property="article:published_time" content="2026-03-21">
+    <meta property="article:author" content="Alexandre Gillon">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Erreur 500 WordPress : diagnostic et causes reelles (cas client)">
+    <meta name="twitter:description" content="L'erreur 500 WordPress cache toujours une cause precise. Methode de diagnostic apres 50+ interventions.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/#blog" },
+            { "@type": "ListItem", "position": 3, "name": "Erreur 500 WordPress : diagnostic et causes reelles" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Erreur 500 WordPress : diagnostic et causes reelles (cas client)",
+          "description": "L'erreur 500 WordPress cache toujours une cause precise. Retour d'experience apres 50+ interventions : memoire PHP, .htaccess, plugins. Methode de diagnostic.",
+          "url": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html",
+          "datePublished": "2026-03-21",
+          "dateModified": "2026-03-21",
+          "author": { "@type": "Person", "name": "Alexandre Gillon", "url": "https://optimycloud.com/" },
+          "publisher": { "@type": "Organization", "name": "OptimyCloud", "url": "https://optimycloud.com/", "logo": { "@type": "ImageObject", "url": "https://optimycloud.com/assets/optimycloud-logo.png" } },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html" },
+          "image": "https://optimycloud.com/assets/optimycloud-logo.png",
+          "wordCount": 2400,
+          "inLanguage": "fr",
+          "articleSection": "WordPress",
+          "keywords": ["erreur 500 WordPress", "internal server error", "depannage WordPress", "WP_DEBUG", "memoire PHP", "Elementor erreur 500"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Pourquoi mon site WordPress affiche une erreur 500 ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "L'erreur 500 sur WordPress est generalement causee par une limite de memoire PHP atteinte, un fichier .htaccess corrompu, un conflit de plugins ou un theme incompatible. Dans 90% des cas, la cause est identifiable en activant les logs d'erreur WordPress via WP_DEBUG_LOG."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment diagnostiquer une erreur 500 WordPress ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Trois etapes : 1) Activer WP_DEBUG et WP_DEBUG_LOG dans wp-config.php pour enregistrer les erreurs dans wp-content/debug.log. 2) Lire le fichier debug.log et chercher les lignes 'Fatal error' ou 'Allowed memory size exhausted'. 3) Verifier le fichier .htaccess pour des directives incompatibles avec votre hebergement."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L'erreur 500 WordPress peut-elle venir d'Elementor ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, c'est frequent. Elementor est gourmand en memoire PHP et necessite au minimum 256M de memory_limit et 5000 pour max_input_vars. Sur les hebergements mutualises avec des limites basses, la sauvegarde de pages complexes dans Elementor provoque regulierement des erreurs 500."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelle est la difference entre erreur 500 et ecran blanc WordPress ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "C'est souvent la meme chose. L'ecran blanc (White Screen of Death) est la version WordPress de l'erreur 500 : PHP crashe silencieusement et le serveur renvoie une page blanche au lieu du contenu. Les causes et le diagnostic sont identiques."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de plugins WordPress peut-on avoir avant de risquer une erreur 500 ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il n'y a pas de nombre magique, mais au-dela de 20 plugins actifs, les risques de conflits et de depassement memoire augmentent significativement. Le vrai probleme n'est pas le nombre mais la qualite : 3 plugins qui font le meme travail posent plus de problemes que 25 plugins bien choisis."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="../assets/optimycloud-logo.png"
+                                 alt="OptimyCloud"
+                                 width="200" height="64"
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Accueil</a>
+                    <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">A propos</a>
+                    <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">A propos</a>
+                <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-br from-orange-500 to-red-700 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm text-orange-100">
+                <a href="../index.html" class="hover:text-white transition-colors">OptimyCloud</a>
+                <span class="mx-2">/</span>
+                <span>Blog</span>
+                <span class="mx-2">/</span>
+                <span class="text-white">Erreur 500 WordPress</span>
+            </nav>
+            <div class="max-w-3xl">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                    Erreur 500 WordPress : pourquoi votre site plante et comment trouver la cause
+                </h1>
+                <p class="text-lg text-orange-100 mb-6 max-w-2xl">Sur nos 50 dernieres interventions WordPress, 34 concernaient une erreur 500. La cause etait identifiable en moins de 5 minutes dans 9 cas sur 10.</p>
+                <div class="flex flex-wrap items-center gap-4 text-orange-100 text-sm">
+                    <span class="flex items-center">
+                        <i class="fas fa-calendar-alt mr-2"></i> 21 mars 2026
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i> 10 min de lecture
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-user mr-2"></i> Alexandre Gillon
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <main class="py-12 sm:py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Introduction -->
+            <div class="reveal">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Ecran blanc. Aucun message. Le back-office ne repond plus. Le client appelle en panique parce que son site "ne marche plus". C'est le quotidien de l'<strong>erreur 500 sur WordPress</strong>, et c'est probablement ce qui vous amene ici.
+                </p>
+                <p class="text-lg text-gray-600 leading-relaxed mb-8">
+                    La bonne nouvelle : ce n'est presque jamais grave. La mauvaise : WordPress ne vous dit rien d'utile. Il faut aller chercher l'information vous-meme. Cet article vous montre exactement ou regarder, base sur un cas reel qu'on a traite sur un hebergement OVH mutualise avec Elementor.
+                </p>
+
+                <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg mb-10">
+                    <h3 class="font-semibold text-gray-900 mb-2">Ce que vous allez apprendre</h3>
+                    <ul class="space-y-1 text-gray-600 text-sm">
+                        <li><strong>Diagnostiquer</strong> l'erreur en 3 etapes sans toucher au code</li>
+                        <li><strong>Identifier</strong> les 5 causes reelles (classees par frequence)</li>
+                        <li><strong>Comprendre</strong> pourquoi Elementor, Divi et les page builders sont souvent impliques</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Section 1: Ce que l'erreur 500 vous dit -->
+            <div class="reveal mt-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-triangle-exclamation text-orange-500 mr-2"></i>
+                    Ce que l'erreur 500 vous dit (et ce qu'elle cache)
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    L'erreur 500 signifie "Internal Server Error". En clair : <strong>PHP a crashe</strong> et le serveur n'a pas su quoi repondre. C'est un message generique qui ne donne aucun indice sur la cause reelle.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    WordPress est particulierement concerne parce qu'il empile des couches : le coeur WordPress, le theme, les plugins, le page builder. Chaque couche consomme de la memoire et du temps serveur. Quand la limite est atteinte, tout s'arrete.
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <div class="bg-red-50 p-5 rounded-xl border border-red-100">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-eye text-red-500 mr-2"></i>
+                            <h3 class="font-semibold text-gray-900">Ce que vous voyez</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-xmark text-red-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Page blanche ou message "500 Internal Server Error"</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-xmark text-red-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Le site fonctionne en lecture mais plante en ecriture</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-xmark text-red-400 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Elementor sauvegarde echoue sans explication</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-green-50 p-5 rounded-xl border border-green-100">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-microscope text-green-600 mr-2"></i>
+                            <h3 class="font-semibold text-gray-900">Ce qui se passe vraiment</h3>
+                        </div>
+                        <ul class="space-y-2 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>PHP depasse sa limite memoire (128M par defaut)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Le .htaccess contient une directive incompatible</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Un plugin crashe silencieusement en arriere-plan</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg mb-8">
+                    <h3 class="font-semibold text-gray-900 mb-2">Ecran blanc = erreur 500</h3>
+                    <p class="text-gray-600 text-sm">Le fameux <strong>"White Screen of Death"</strong> (WSOD) de WordPress est la meme chose qu'une erreur 500. PHP crashe avant de pouvoir generer la page, donc le navigateur affiche une page vide. Le diagnostic et les causes sont identiques.</p>
+                </div>
+            </div>
+
+            <!-- Section 2: Diagnostic -->
+            <div class="reveal mt-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-stethoscope text-indigo-600 mr-2"></i>
+                    Diagnostic en 3 etapes : trouver la cause reelle
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Inutile de deviner. WordPress a un systeme de logs integre, mais il est <strong>desactive par defaut</strong>. C'est la premiere chose a activer.
+                </p>
+
+                <!-- Etape 1 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-6">
+                    <h3 class="font-bold text-gray-900 mb-3">
+                        <span class="bg-indigo-600 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-2">1</span>
+                        Activer les logs d'erreur
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Ouvrez le fichier <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-config.php</code> a la racine de votre site (via FTP ou le gestionnaire de fichiers de votre hebergeur) et ajoutez ces 3 lignes <strong>avant</strong> le commentaire "C'est tout" :
+                    </p>
+                    <div class="bg-gray-900 rounded-xl p-5 text-sm font-mono overflow-x-auto">
+                        <div class="text-gray-400 mb-2">// Activer les logs WordPress</div>
+                        <div class="text-green-400">define( 'WP_DEBUG', true );</div>
+                        <div class="text-green-400">define( 'WP_DEBUG_LOG', true );</div>
+                        <div class="text-green-400">define( 'WP_DEBUG_DISPLAY', false );</div>
+                    </div>
+                    <p class="text-xs text-gray-500 mt-3"><strong>WP_DEBUG_DISPLAY a false</strong> : les erreurs sont enregistrees dans un fichier, pas affichees aux visiteurs. Votre site reste propre.</p>
+                </div>
+
+                <!-- Etape 2 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-6">
+                    <h3 class="font-bold text-gray-900 mb-3">
+                        <span class="bg-indigo-600 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-2">2</span>
+                        Lire le fichier debug.log
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Reproduisez l'erreur (rechargez la page, sauvegardez dans Elementor, etc.). Puis telechargez le fichier <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/debug.log</code> via FTP. Cherchez les lignes qui contiennent <strong>Fatal error</strong>.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl p-5 text-sm font-mono overflow-x-auto mb-3">
+                        <div class="text-gray-400 mb-2"># Exemple typique : depassement memoire</div>
+                        <div class="text-red-400">Fatal error: Allowed memory size of 134217728 bytes exhausted</div>
+                        <div class="text-red-400">(tried to allocate 65536 bytes) in</div>
+                        <div class="text-red-400">/home/www/wp-includes/class-wpdb.php on line 2357</div>
+                    </div>
+                    <p class="text-xs text-gray-500">134 217 728 bytes = <strong>128 Mo</strong>. Cette ligne vous dit que PHP a atteint sa limite de memoire. C'est la cause numero 1.</p>
+                </div>
+
+                <!-- Etape 3 -->
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-6">
+                    <h3 class="font-bold text-gray-900 mb-3">
+                        <span class="bg-indigo-600 text-white w-7 h-7 rounded-full inline-flex items-center justify-center text-sm mr-2">3</span>
+                        Verifier le .htaccess
+                    </h3>
+                    <p class="text-sm text-gray-600 mb-4">
+                        Si le debug.log ne montre rien, le probleme vient souvent du fichier <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">.htaccess</code> a la racine. Comparez-le avec la version par defaut de WordPress :
+                    </p>
+                    <div class="bg-gray-900 rounded-xl p-5 text-sm font-mono overflow-x-auto mb-3">
+                        <div class="text-gray-400 mb-2"># .htaccess WordPress par defaut (version propre)</div>
+                        <div class="text-green-400"># BEGIN WordPress</div>
+                        <div class="text-gray-300">&lt;IfModule mod_rewrite.c&gt;</div>
+                        <div class="text-gray-300">RewriteEngine On</div>
+                        <div class="text-gray-300">RewriteBase /</div>
+                        <div class="text-gray-300">RewriteRule ^index\.php$ - [L]</div>
+                        <div class="text-gray-300">RewriteCond %{REQUEST_FILENAME} !-f</div>
+                        <div class="text-gray-300">RewriteCond %{REQUEST_FILENAME} !-d</div>
+                        <div class="text-gray-300">RewriteRule . /index.php [L]</div>
+                        <div class="text-gray-300">&lt;/IfModule&gt;</div>
+                        <div class="text-green-400"># END WordPress</div>
+                    </div>
+                    <p class="text-xs text-gray-500"><strong>Toute ligne en dehors de ce bloc</strong> a ete ajoutee par un plugin (cache, SEO, securite) ou manuellement. C'est la qu'il faut chercher.</p>
+                </div>
+            </div>
+
+            <!-- Section 3: Les 5 causes -->
+            <div class="reveal mt-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-ranking-star text-orange-500 mr-2"></i>
+                    Les 5 causes reelles, classees par frequence
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    Apres des dizaines d'interventions sur des sites WordPress en production, voici les causes qu'on retrouve dans l'ordre. La premiere represente a elle seule <strong>plus de la moitie des cas</strong>.
+                </p>
+
+                <!-- Cause 1 -->
+                <div class="border-l-4 border-red-500 pl-6 mb-10">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">
+                        <span class="text-red-500 mr-2">#1</span> Memoire PHP insuffisante
+                    </h3>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        C'est la cause la plus courante et la plus sournoise. Par defaut, PHP alloue <strong>128 Mo de memoire</strong> a chaque requete. Ca peut sembler suffisant, mais faites le calcul :
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-red-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>WordPress core : ~40 Mo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-red-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Theme premium (Avada, OceanWP, Divi) : 20-50 Mo</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-red-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>20 plugins actifs : 30-80 Mo selon les plugins</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-caret-right text-red-400 mr-2 mt-1 flex-shrink-0"></i>
+                            <span>Elementor en mode edition : 60-120 Mo supplementaires</span>
+                        </li>
+                    </ul>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        <strong>Total : 150 a 290 Mo pour une seule requete.</strong> Avec une limite a 128 Mo, PHP crashe. Le serveur renvoie une erreur 500. Rien dans WordPress ne vous previent.
+                    </p>
+
+                    <div class="bg-orange-50 border border-orange-200 p-4 rounded-lg">
+                        <p class="text-sm text-gray-700"><strong>Symptome revelateur :</strong> le site fonctionne en lecture (pages front-end) mais plante quand vous sauvegardez dans Elementor, modifiez une image ou accedez a certaines pages du back-office. C'est le signe classique d'un depassement memoire.</p>
+                    </div>
+                </div>
+
+                <!-- Cause 2 -->
+                <div class="border-l-4 border-orange-500 pl-6 mb-10">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">
+                        <span class="text-orange-500 mr-2">#2</span> Fichier .htaccess corrompu
+                    </h3>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        Le <code class="bg-gray-100 px-1.5 py-0.5 rounded text-gray-800 text-xs">.htaccess</code> est un fichier de configuration Apache que WordPress, les plugins de cache et les plugins SEO modifient en permanence. Une mauvaise directive et c'est l'erreur 500 instantanee.
+                    </p>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        Le piege classique : utiliser des directives <code class="bg-gray-100 px-1.5 py-0.5 rounded text-gray-800 text-xs">php_value</code> sur un hebergement qui tourne en <strong>PHP-FPM</strong>. Ces directives ne fonctionnent qu'avec mod_php, et la majorite des hebergeurs modernes (OVH, o2switch, Ionos) utilisent PHP-FPM.
+                    </p>
+                    <div class="bg-gray-900 rounded-xl p-5 text-sm font-mono overflow-x-auto mb-3">
+                        <div class="text-red-400 mb-2"># PROVOQUE une erreur 500 sur PHP-FPM</div>
+                        <div class="text-red-400">php_value memory_limit 512M</div>
+                        <div class="text-red-400">php_value max_input_vars 5000</div>
+                        <div class="text-gray-300 mt-3"># Ces lignes doivent aller dans .user.ini, pas dans .htaccess</div>
+                    </div>
+                </div>
+
+                <!-- Cause 3 -->
+                <div class="border-l-4 border-yellow-500 pl-6 mb-10">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">
+                        <span class="text-yellow-600 mr-2">#3</span> Conflit de plugins
+                    </h3>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        Plus il y a de plugins actifs, plus le risque de conflit augmente. Sur le dernier site qu'on a audite, il y avait <strong>3 plugins de consentement cookies actifs en meme temps</strong>. Chacun chargeait son propre code JavaScript et PHP. Resultat : conflit, crash, erreur 500.
+                    </p>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        Les cas les plus frequents :
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-600 mb-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-xmark text-yellow-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Plusieurs plugins qui font le meme travail (SEO, cache, cookies, securite)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-xmark text-yellow-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Un plugin d'optimisation d'images (EWWW, ShortPixel) qui consomme toute la memoire en traitant des lots</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-xmark text-yellow-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Des plugins desactives qui laissent du bloat en base de donnees</span>
+                        </li>
+                    </ul>
+
+                    <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
+                        <p class="text-sm text-gray-700"><strong>Regle empirique :</strong> au-dela de 20 plugins actifs, faites un audit. Pas pour en supprimer aveuglément, mais pour eliminer les doublons fonctionnels et les plugins qui n'ont pas ete mis a jour depuis plus d'un an.</p>
+                    </div>
+                </div>
+
+                <!-- Cause 4 -->
+                <div class="border-l-4 border-blue-500 pl-6 mb-10">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">
+                        <span class="text-blue-500 mr-2">#4</span> Theme incompatible
+                    </h3>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        Un theme mal code ou incompatible avec la version de PHP peut provoquer des erreurs 500. Les themes premium avec beaucoup d'options (OceanWP, Avada, Divi) chargent davantage de code et de dependances.
+                    </p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        <strong>Test rapide :</strong> basculer temporairement sur le theme par defaut (Twenty Twenty-Four) via FTP en renommant le dossier du theme actif dans <code class="bg-gray-100 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/themes/</code>. Si l'erreur disparait, le theme est en cause.
+                    </p>
+                </div>
+
+                <!-- Cause 5 -->
+                <div class="border-l-4 border-purple-500 pl-6 mb-10">
+                    <h3 class="text-xl font-bold text-gray-900 mb-3">
+                        <span class="text-purple-500 mr-2">#5</span> Version PHP obsolete
+                    </h3>
+                    <p class="text-base text-gray-600 leading-relaxed mb-4">
+                        WordPress 6.x necessite PHP 7.4 minimum et recommande <strong>PHP 8.1 ou superieur</strong>. On voit encore des sites tourner sur PHP 7.2, voire PHP 7.0. Les fonctions depreciees provoquent des erreurs fatales que le serveur traduit en erreur 500.
+                    </p>
+                    <p class="text-base text-gray-600 leading-relaxed">
+                        Verifiez votre version PHP depuis le panel de votre hebergeur (OVH Manager, cPanel). Si vous etes en dessous de PHP 8.0, il est temps de migrer.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 4: Cas client -->
+            <div class="reveal mt-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-briefcase text-gray-800 mr-2"></i>
+                    Cas reel : erreur 500 Elementor sur OVH mutualise
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Site vitrine WordPress avec Elementor Pro. Hebergement OVH mutualise. <strong>30 plugins actifs</strong>. L'erreur 500 apparaissait uniquement lors de la modification d'images dans Elementor. Le front-end fonctionnait parfaitement.
+                </p>
+
+                <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-6">
+                    <h3 class="font-bold text-gray-900 mb-4">Ce qu'on a trouve en activant WP_DEBUG_LOG :</h3>
+                    <div class="bg-gray-900 rounded-xl p-5 text-sm font-mono overflow-x-auto mb-4">
+                        <div class="text-red-400">Allowed memory size of 536870912 bytes exhausted</div>
+                    </div>
+                    <p class="text-sm text-gray-600 mb-4">
+                        536 870 912 bytes = <strong>512 Mo</strong>. Le site avait deja une limite de memoire elevee, et ca ne suffisait toujours pas. Pourquoi ?
+                    </p>
+                    <ul class="space-y-3 text-sm text-gray-600">
+                        <li class="flex items-start">
+                            <i class="fas fa-magnifying-glass text-indigo-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span><strong>58% des donnees Elementor</strong> etaient du bloat laisse par des plugins desactives (Happy Addons, Elementor Addon Elements)</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-magnifying-glass text-indigo-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span><strong>3 plugins de cookies actifs</strong> pour le meme travail</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-magnifying-glass text-indigo-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span><strong>7 extensions OceanWP</strong> activees mais inutilisees sur le site</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-magnifying-glass text-indigo-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                            <span>Des scripts PHP orphelins a la racine du serveur</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-green-50 border-l-4 border-green-500 p-5 rounded-lg mb-6">
+                    <h3 class="font-semibold text-gray-900 mb-2">Resultat apres intervention</h3>
+                    <p class="text-sm text-gray-600"><strong>6 890 parametres bloat supprimes</strong> sur 45 pages Elementor. Passage de 30 a 24 plugins actifs. Plus aucune erreur 500. Les sauvegardes Elementor fonctionnent instantanement.</p>
+                </div>
+
+                <p class="text-base text-gray-600 leading-relaxed">
+                    Ce cas illustre bien le probleme : augmenter la memoire ne suffit pas si la cause profonde est un <strong>empilement de plugins inutiles et de donnees mortes</strong> qui saturent PHP a chaque requete. Il faut auditer, nettoyer, puis ajuster.
+                </p>
+            </div>
+
+            <!-- Section 5: Checklist rapide -->
+            <div class="reveal mt-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-clipboard-check text-green-600 mr-2"></i>
+                    Les reflexes a prendre maintenant
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Meme si votre site ne plante pas encore, ces points permettent d'eviter la plupart des erreurs 500 avant qu'elles n'arrivent :
+                </p>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>WP_DEBUG_LOG</strong> active en permanence</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>memory_limit</strong> a 256M minimum</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>max_input_vars</strong> a 5000 (Elementor/Divi)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Moins de <strong>20 plugins actifs</strong></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-xl border border-gray-100">
+                        <ul class="space-y-3 text-sm text-gray-600">
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span>Aucun <strong>doublon fonctionnel</strong> entre plugins</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>Mises a jour</strong> regulieres (WP, plugins, theme)</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>PHP 8.1+</strong> sur l'hebergeur</span>
+                            </li>
+                            <li class="flex items-start">
+                                <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
+                                <span><strong>Sauvegardes automatiques</strong> configurees</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQ -->
+            <div class="reveal mt-12">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-question-circle text-indigo-600 mr-2"></i>
+                    Questions frequentes
+                </h2>
+                <div class="space-y-4 mb-10">
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">Pourquoi mon site affiche une erreur 500 uniquement dans Elementor ?</h3>
+                        <p class="text-sm text-gray-600">Elementor est gourmand en memoire PHP. En mode edition, il charge l'ensemble de la page, les widgets, les CSS dynamiques et les previews en temps reel. Si votre memory_limit est trop bas ou si trop de plugins sont actifs simultanement, PHP depasse sa limite et crashe. C'est la cause numero 1 des erreurs 500 liees a Elementor.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">L'erreur 500 peut-elle venir de mon hebergement ?</h3>
+                        <p class="text-sm text-gray-600">Oui. Les hebergements mutualises imposent des limites strictes sur la memoire PHP, le temps d'execution et le nombre de requetes. Si vous avez optimise WordPress et que les erreurs 500 persistent, votre hebergement est probablement le facteur limitant. Un VPS ou un hebergement WordPress manage offre davantage de marge.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">Combien de plugins puis-je avoir avant de risquer une erreur 500 ?</h3>
+                        <p class="text-sm text-gray-600">Il n'y a pas de nombre magique. Le vrai probleme n'est pas la quantite mais la qualite : 3 plugins qui font le meme travail posent plus de problemes que 25 plugins bien choisis. Au-dela de 20 plugins actifs, un audit s'impose pour identifier les doublons et les plugins inutiles.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">Mon site fonctionne en lecture mais plante en ecriture. Pourquoi ?</h3>
+                        <p class="text-sm text-gray-600">Les operations d'ecriture (sauvegarde Elementor, upload media, modification de contenu) consomment beaucoup plus de memoire que l'affichage d'une page. WordPress doit traiter les donnees, regenerer les caches, mettre a jour la base de donnees. C'est la que la limite memoire est atteinte.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">L'ecran blanc WordPress et l'erreur 500, c'est la meme chose ?</h3>
+                        <p class="text-sm text-gray-600">Oui. Le White Screen of Death (WSOD) est la manifestation WordPress de l'erreur 500. PHP crashe avant de generer la page HTML, donc le navigateur recoit une reponse vide. Le diagnostic et les causes sont identiques dans les deux cas.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- CTA -->
+            <div class="reveal mt-12">
+                <div class="bg-gradient-to-br from-orange-500 to-red-700 rounded-2xl p-8 sm:p-10 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Votre WordPress affiche une erreur 500 ?
+                    </h2>
+                    <p class="text-orange-100 mb-4 max-w-xl mx-auto">
+                        Chaque site est different : la combinaison theme + plugins + hebergement cree des situations uniques. Un diagnostic generique ne suffit pas.
+                    </p>
+                    <p class="text-white font-semibold mb-8 max-w-xl mx-auto text-lg">
+                        Contactez-moi pour que je puisse auditer votre WordPress et identifier la cause exacte.
+                    </p>
+                    <a href="../index.html#contact" class="inline-flex items-center bg-white text-red-600 px-8 py-3 rounded-lg font-semibold hover:bg-orange-50 transition-colors">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Demander un audit WordPress
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <img loading="lazy" src="../assets/optimycloud-logo.png" alt="OptimyCloud" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        Expert IA Generative & Automatisation pour PME et startups. Agents IA, chatbots, workflows automatises. Infrastructure Cloud AWS certifiee.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">IA & Automatisation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Agents IA & Chatbots</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Infrastructure AWS</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Kubernetes & DevOps</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fab fa-whatsapp mr-2 text-slate-500"></i>
+                            <a href="https://wa.me/33631109539" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors">+33 6 31 10 95 39</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-400 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Expert IA & Cloud - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-400">
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Legales</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialite</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
+        <p class="text-sm text-gray-600 mb-3">Nous utilisons des cookies pour optimiser votre experience.</p>
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">
+                Refuser
+            </button>
+            <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">
+                Accepter
+            </button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // ===== Reveal on scroll =====
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal--visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+
+        // ===== Mobile menu =====
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // ===== Cookie consent =====
+        var cookieBanner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('accept-cookies');
+        var rejectBtn = document.getElementById('reject-cookies');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieBanner.style.display = 'block';
+        }
+
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieBanner.style.display = 'none';
+            });
+        }
+
+        if (rejectBtn) {
+            rejectBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'rejected');
+                cookieBanner.style.display = 'none';
+                window['ga-disable-GTM-NXVN48XF'] = true;
+            });
+        }
+    });
+    </script>
+</body>
+</html>
