@@ -2,11 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>https://optimycloud.com/</loc>
-        <lastmod>2026-03-23</lastmod>
+        <lastmod>2026-03-24</lastmod>
+    </url>
+    <url>
+        <loc>https://optimycloud.com/offres.html</loc>
+        <lastmod>2026-03-24</lastmod>
     </url>
     <url>
         <loc>https://optimycloud.com/blog/avez-vous-besoin-cms-site-web.html</loc>
         <lastmod>2026-03-23</lastmod>
+    </url>
+    <url>
+        <loc>https://optimycloud.com/blog/llms-txt-referencement-ia-guide.html</loc>
+        <lastmod>2026-03-15</lastmod>
+    </url>
+    <url>
+        <loc>https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html</loc>
+        <lastmod>2026-03-21</lastmod>
     </url>
     <url>
         <loc>https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html</loc>
@@ -23,13 +35,5 @@
     <url>
         <loc>https://optimycloud.com/blog/integrer-ia-generative-pme-guide-pratique.html</loc>
         <lastmod>2026-02-27</lastmod>
-    </url>
-    <url>
-        <loc>https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html</loc>
-        <lastmod>2026-03-21</lastmod>
-    </url>
-    <url>
-        <loc>https://optimycloud.com/blog/llms-txt-referencement-ia-guide.html</loc>
-        <lastmod>2026-03-15</lastmod>
     </url>
 </urlset>

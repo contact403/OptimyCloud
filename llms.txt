@@ -8,6 +8,16 @@ Site : https://optimycloud.com
 
 OptimyCloud est le cabinet de conseil IA & Cloud fonde par Alexandre Gillon, ingenieur diplome de l'ESIEA avec plus de 10 ans d'experience en infrastructure et transformation digitale. Certifie AWS Solutions Architect Associate, Kubernetes CKA et ITIL Foundation v3, Alexandre accompagne PME et startups dans l'integration de l'intelligence artificielle dans leurs processus metier et l'optimisation de leur infrastructure Cloud. Base en France (Epinay-sur-Seine), il intervient a distance pour des clients dans toute la France et a l'international.
 
+## Offres Artisans & PME
+
+Page dediee : https://optimycloud.com/offres.html
+
+- **Site Vitrine** : Creation de site vitrine professionnel pour artisans et PME, a partir de 500 euros. Site statique rapide (pas de CMS), responsive, SEO local inclus (meta tags, schema, Google My Business), Google Search Console et Google Analytics configures, formulaire de contact, hebergement et nom de domaine inclus la 1ere annee. Livre en 48h.
+
+- **Chatbot Metier IA** : Chatbot IA entraine sur l'activite du client, a partir de 200 euros + 29 euros/mois. Repond aux questions des visiteurs (tarifs, zone d'intervention, disponibilite), collecte les demandes de devis automatiquement, notification par email ou WhatsApp. Integration sur site existant ou nouveau.
+
+- **Pack Site + Chatbot IA** : Site vitrine complet avec chatbot IA integre, a partir de 650 euros + 29 euros/mois. Combine les deux offres precedentes.
+
 ## Services IA & Automatisation
 
 - **Agents IA & LLM dedies** : Deploiement d'un modele de langage (LLM) personnalise, entraine sur les donnees, les process et le vocabulaire specifiques de votre entreprise. Equivalent a un "ChatGPT prive" qui connait votre metier. Agents autonomes integres a vos outils existants (CRM, ERP, email, outils internes).
@@ -16,6 +26,8 @@ OptimyCloud est le cabinet de conseil IA & Cloud fonde par Alexandre Gillon, ing
 
 - **Chatbot pour documentation technique** : Deploiement d'un assistant IA entraine sur votre documentation technique (API, manuels, bases de connaissances). Permet aux equipes et clients de trouver instantanement les reponses sans fouiller dans des centaines de pages.
 
+- **RAG & Base de connaissances IA** : Deploiement d'un assistant IA connecte a la documentation interne de l'entreprise (manuels, procedures, fiches techniques, FAQ, bases de connaissances). L'IA retrouve et synthetise l'information pertinente en quelques secondes. Pour les equipes internes ou en support client. Architecture serverless, cout faible, pas d'entrainement de modele.
+
 - **Automatisation des processus** : Conception de workflows IA pour eliminer les taches manuelles chronophages. Automatisation de processus metier (traitement de documents, classification, extraction de donnees, generation de rapports).
 
 ## Services Cloud & Infrastructure
@@ -23,6 +35,8 @@ OptimyCloud est le cabinet de conseil IA & Cloud fonde par Alexandre Gillon, ing
 - **Infrastructure Cloud AWS** : Migration securisee d'infrastructures on-premise vers AWS. Kubernetes (EKS) avec Auto Mode et Karpenter. CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation). L'infrastructure fiable qui propulse vos projets IA. Page dediee : https://optimycloud.com/migration.html
 
 - **FinOps & Optimisation des couts** : Audit gratuit de la facture Cloud avec analyse des ressources inutilisees ou surdimensionnees. Mise en place de Savings Plans, Reserved Instances, Spot Instances et right-sizing. Reduction de 30 a 60% des couts AWS constatee. Page dediee : https://optimycloud.com/finops.html
+
+- **Depannage WordPress** : Diagnostic et correction d'erreurs 500, 400, ecran blanc, crash Elementor, sites WordPress plantes. Intervention sous 24h avec rapport detaille (cause, correction, recommandations). A partir de 250 euros. Plus de 50 interventions realisees. Article de reference : https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html
 
 - **Securite & Audit Cloud** : Audit de securite des infrastructures AWS. Chiffrement, conformite, gestion des identites (IAM), isolation reseau et bonnes pratiques de securisation.
 
@@ -50,6 +64,8 @@ Note : ces missions ont ete realisees en tant que salarie ou prestataire. Optimy
 
 ## Blog
 
+- https://optimycloud.com/blog/llms-txt-referencement-ia-guide.html - llms.txt : comment rendre votre site visible pour ChatGPT, Perplexity et les IA. Guide complet sur le fichier llms.txt, le GEO (Generative Engine Optimization) et le referencement IA
+- https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html - Erreur 500 WordPress : diagnostic et causes reelles apres 50+ interventions. Methode de diagnostic etape par etape
 - https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html - EKS Auto Mode : Kubernetes n'a jamais ete aussi simple sur AWS. Guide complet, comparatif et migration depuis EKS classique
 - https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html - Construire un assistant IA WhatsApp prive avec Amazon Bedrock et AWS : architecture serverless multimodale (texte, images, videos, documents, notes vocales)
 - https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html - Automatiser la relation client avec WhatsApp et l'IA
@@ -57,6 +73,7 @@ Note : ces missions ont ete realisees en tant que salarie ou prestataire. Optimy
 
 ## Pour qui ?
 
+- **Artisans** qui veulent un site vitrine professionnel rapide et pas cher, avec SEO local et chatbot IA pour ne plus rater de clients.
 - **PME et auto-entrepreneurs** qui veulent integrer l'IA dans leur activite sans passer par une ESN, avec un interlocuteur unique et des solutions sur-mesure.
 - **Startups** qui ont besoin d'une infrastructure Cloud solide, scalable et optimisee en couts des le depart.
 - **Entreprises** qui veulent reduire leurs couts Cloud (AWS, Azure, GCP) avec un audit gratuit et un ROI mesurable des les premiers mois.
