@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,15 +10,28 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
-
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
-    <title>EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS | OptimyCloud</title>
+    <title>EKS Auto Mode : Kubernetes simple sur AWS | OptimyCloud</title>
     <meta name="description" content="Découvrez EKS Auto Mode : AWS gère vos nodes, scaling, networking et stockage Kubernetes automatiquement. Guide complet, comparatif et migration depuis EKS classique.">
     <meta name="keywords" content="EKS Auto Mode, Amazon EKS, Kubernetes AWS, Kubernetes simplifié, EKS managed nodes, Karpenter, auto scaling Kubernetes, cluster EKS, AWS Kubernetes 2026, migration EKS, infrastructure Kubernetes">
     <meta name="author" content="Alexandre Gillon">
@@ -24,7 +39,7 @@
     <link rel="canonical" href="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS | OptimyCloud">
+    <meta property="og:title" content="EKS Auto Mode : Kubernetes simple sur AWS">
     <meta property="og:description" content="AWS gère vos nodes, scaling, networking et stockage Kubernetes automatiquement. Guide complet EKS Auto Mode.">
     <meta property="og:url" content="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html">
     <meta property="og:type" content="article">
@@ -34,15 +49,14 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS">
+    <meta name="twitter:title" content="EKS Auto Mode : Kubernetes simple sur AWS">
     <meta name="twitter:description" content="AWS gère vos nodes, scaling, networking et stockage Kubernetes automatiquement. Guide complet.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Schema.org -->
@@ -65,8 +79,8 @@
           "url": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html",
           "datePublished": "2026-03-11",
           "dateModified": "2026-03-11",
-          "author": { "@type": "Person", "name": "Alexandre Gillon", "url": "https://optimycloud.com/" },
-          "publisher": { "@type": "Organization", "name": "OptimyCloud", "url": "https://optimycloud.com/", "logo": { "@type": "ImageObject", "url": "https://optimycloud.com/assets/optimycloud-logo.png" } },
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html" },
           "image": "https://optimycloud.com/assets/optimycloud-logo.png",
           "wordCount": 2500,
@@ -94,6 +108,7 @@
                             <img src="../assets/optimycloud-logo.png"
                                  alt="OptimyCloud"
                                  width="200" height="64"
+                                 fetchpriority="high"
                                  class="h-20 w-auto"
                                  style="mix-blend-mode: multiply;">
                         </a>
@@ -596,14 +611,14 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div class="col-span-2">
                     <div class="flex items-center mb-4">
-                        <img loading="lazy" src="../assets/optimycloud-logo.png" alt="OptimyCloud" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
+                        <img loading="lazy" src="../assets/optimycloud-logo.png" alt="OptimyCloud" width="160" height="40" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
                         <h3 class="text-xl font-bold">OptimyCloud</h3>
                     </div>
                     <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
                         Expert IA Générative & Automatisation pour PME et startups. Agents IA, chatbots, workflows automatisés. Infrastructure Cloud AWS certifiée.
                     </p>
                     <div class="flex space-x-3">
-                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>

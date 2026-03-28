@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,15 +10,29 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
     <title>Avez-vous vraiment besoin d'un CMS en 2026 ? | OptimyCloud</title>
-    <meta name="description" content="Sur 30 sites deployes ces 18 derniers mois, 22 n'avaient pas besoin de WordPress. Analyse concrete : quand un CMS se justifie, quand il vous ralentit, et quelles alternatives existent.">
+    <meta name="description" content="Sur 30 sites deployes, 22 n'avaient pas besoin de WordPress. Quand un CMS se justifie, quand il ralentit, et les alternatives concretes.">
     <meta name="keywords" content="CMS necessaire, WordPress alternative, site statique, Astro, Next.js, headless CMS, site sans CMS, generateur site statique, JAMstack, site vitrine sans WordPress">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
@@ -37,11 +53,10 @@
     <meta name="twitter:description" content="Sur 30 sites deployes ces 18 derniers mois, 22 n'avaient pas besoin de WordPress. Analyse concrete des alternatives.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Schema.org -->
@@ -64,59 +79,14 @@
           "url": "https://optimycloud.com/blog/avez-vous-besoin-cms-site-web.html",
           "datePublished": "2026-03-23",
           "dateModified": "2026-03-23",
-          "author": { "@type": "Person", "name": "Alexandre Gillon", "url": "https://optimycloud.com/" },
-          "publisher": { "@type": "Organization", "name": "OptimyCloud", "url": "https://optimycloud.com/", "logo": { "@type": "ImageObject", "url": "https://optimycloud.com/assets/optimycloud-logo.png" } },
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/avez-vous-besoin-cms-site-web.html" },
           "image": "https://optimycloud.com/assets/optimycloud-logo.png",
           "wordCount": 2600,
           "inLanguage": "fr",
           "articleSection": "Web & Architecture",
           "keywords": ["CMS", "WordPress alternative", "site statique", "generateur site statique", "JAMstack", "headless CMS", "Astro", "Next.js"]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Un site sans CMS peut-il etre bien reference sur Google ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui, et souvent mieux. Les sites statiques produisent un HTML plus propre, chargent plus vite (critere Core Web Vitals) et n'ont pas les conflits de plugins SEO typiques de WordPress. Les sitemaps XML, les balises meta, les donnees structurees et les URLs canoniques s'implementent aussi facilement sans CMS."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment modifier le contenu d'un site sans CMS ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Plusieurs options : editer des fichiers Markdown dans un depot Git (avec preview automatique), utiliser un headless CMS comme Sanity ou Contentful qui fournit une interface d'edition sans imposer le front-end, ou utiliser un assistant IA conversationnel pour mettre a jour le contenu via des commandes en langage naturel."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quand est-ce qu'un CMS reste indispensable ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Un CMS se justifie quand plusieurs personnes editent du contenu quotidiennement, quand le site necessite du e-commerce avec gestion de stock, quand il faut des espaces membres avec contenus personnalises, ou quand le modele de donnees est complexe et change frequemment."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Combien coute un site statique par rapport a un site WordPress ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'hebergement d'un site statique est quasi gratuit : Cloudflare Pages, Netlify et Vercel offrent des plans gratuits suffisants pour la majorite des sites vitrines. Un site WordPress necessite un hebergement PHP + base de donnees (5 a 30 euros/mois minimum), plus les licences de theme et plugins premium. Sur 3 ans, la difference depasse souvent 1 000 euros."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Est-ce que les sites statiques sont plus securises que WordPress ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui, par conception. Un site statique n'a pas de base de donnees, pas de panel d'administration, pas de PHP cote serveur. Il n'y a rien a pirater. WordPress, en revanche, est la cible numero 1 des attaques automatisees : plugins vulnerables, brute force sur wp-admin, injections SQL. 43% du web tourne sur WordPress, ce qui en fait une cible privilegiee."
-              }
-            }
-          ]
         }
       ]
     }
@@ -138,6 +108,7 @@
                             <img src="../assets/optimycloud-logo.png"
                                  alt="OptimyCloud"
                                  width="200" height="64"
+                                 fetchpriority="high"
                                  class="h-20 w-auto"
                                  style="mix-blend-mode: multiply;">
                         </a>
@@ -620,6 +591,11 @@
                 </div>
             </div>
 
+            <!-- Offres link -->
+            <div class="mt-10 text-center">
+                <a href="../offres.html" class="text-indigo-600 font-medium hover:underline">Voir nos offres site vitrine et chatbot IA →</a>
+            </div>
+
             <!-- CTA -->
             <div class="reveal mt-12">
                 <div class="bg-gradient-to-br from-cyan-600 to-blue-800 rounded-2xl p-8 sm:p-10 text-center">
@@ -648,14 +624,14 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div class="col-span-2">
                     <div class="flex items-center mb-4">
-                        <img loading="lazy" src="../assets/optimycloud-logo.png" alt="OptimyCloud" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
+                        <img loading="lazy" src="../assets/optimycloud-logo.png" alt="OptimyCloud" width="160" height="40" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
                         <h3 class="text-xl font-bold">OptimyCloud</h3>
                     </div>
                     <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
                         Expert IA Generative & Automatisation pour PME et startups. Agents IA, chatbots, workflows automatises. Infrastructure Cloud AWS certifiee.
                     </p>
                     <div class="flex space-x-3">
-                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>

@@ -32,9 +32,9 @@ Page dediee : https://optimycloud.com/offres.html
 
 ## Services Cloud & Infrastructure
 
-- **Infrastructure Cloud AWS** : Migration securisee d'infrastructures on-premise vers AWS. Kubernetes (EKS) avec Auto Mode et Karpenter. CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation). L'infrastructure fiable qui propulse vos projets IA. Page dediee : https://optimycloud.com/migration.html
+- **Infrastructure Cloud AWS** : Migration securisee d'infrastructures on-premise vers AWS. Kubernetes (EKS) avec Auto Mode et Karpenter. CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation). L'infrastructure fiable qui propulse vos projets IA. Page dediee : https://optimycloud.com/#services
 
-- **FinOps & Optimisation des couts** : Audit gratuit de la facture Cloud avec analyse des ressources inutilisees ou surdimensionnees. Mise en place de Savings Plans, Reserved Instances, Spot Instances et right-sizing. Reduction de 30 a 60% des couts AWS constatee. Page dediee : https://optimycloud.com/finops.html
+- **FinOps & Optimisation des couts** : Audit gratuit de la facture Cloud avec analyse des ressources inutilisees ou surdimensionnees. Mise en place de Savings Plans, Reserved Instances, Spot Instances et right-sizing. Reduction de 30 a 60% des couts AWS constatee. Page dediee : https://optimycloud.com/#services
 
 - **Depannage WordPress** : Diagnostic et correction d'erreurs 500, 400, ecran blanc, crash Elementor, sites WordPress plantes. Intervention sous 24h avec rapport detaille (cause, correction, recommandations). A partir de 250 euros. Plus de 50 interventions realisees. Article de reference : https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html
 
@@ -64,6 +64,7 @@ Note : ces missions ont ete realisees en tant que salarie ou prestataire. Optimy
 
 ## Blog
 
+- https://optimycloud.com/blog/avez-vous-besoin-cms-site-web.html - Avez-vous vraiment besoin d'un CMS en 2026 ? Methode des 3 strates pour choisir entre CMS et site statique
 - https://optimycloud.com/blog/llms-txt-referencement-ia-guide.html - llms.txt : comment rendre votre site visible pour ChatGPT, Perplexity et les IA. Guide complet sur le fichier llms.txt, le GEO (Generative Engine Optimization) et le referencement IA
 - https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html - Erreur 500 WordPress : diagnostic et causes reelles apres 50+ interventions. Methode de diagnostic etape par etape
 - https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html - EKS Auto Mode : Kubernetes n'a jamais ete aussi simple sur AWS. Guide complet, comparatif et migration depuis EKS classique
@@ -87,7 +88,7 @@ IA : LLM, agents IA, RAG, chatbots conversationnels, automatisation de workflows
 
 - Site : https://optimycloud.com
 - Email : alexandre@optimycloud.com
-- LinkedIn : https://mu.linkedin.com/in/alexandre-gillon
+- LinkedIn : https://www.linkedin.com/in/alexandre-gillon
 - Localisation : France (Epinay-sur-Seine)
 - Fondateur : Alexandre Gillon
 - Reponse sous 24h. Audit gratuit disponible.

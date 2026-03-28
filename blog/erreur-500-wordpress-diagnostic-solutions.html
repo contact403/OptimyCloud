@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -8,22 +10,36 @@
     'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
     })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
     <!-- End Google Tag Manager -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
-    <title>Erreur 500 WordPress : diagnostic et causes reelles (cas client) | OptimyCloud</title>
-    <meta name="description" content="L'erreur 500 WordPress cache toujours une cause precise. Retour d'experience apres 50+ interventions : memoire PHP, .htaccess, plugins. Methode de diagnostic etape par etape.">
+    <title>Erreur 500 WordPress : diagnostic complet | OptimyCloud</title>
+    <meta name="description" content="Erreur 500 WordPress : methode de diagnostic apres 50+ interventions. Causes reelles, debug.log, solutions concretes etape par etape.">
     <meta name="keywords" content="erreur 500 WordPress, internal server error WordPress, WordPress ecran blanc, debug WordPress, WP_DEBUG, erreur 500 Elementor, erreur 500 OVH, WordPress plante, depannage WordPress">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Erreur 500 WordPress : diagnostic et causes reelles (cas client)">
+    <meta property="og:title" content="Erreur 500 WordPress : diagnostic complet">
     <meta property="og:description" content="L'erreur 500 WordPress cache toujours une cause precise. Methode de diagnostic et causes reelles apres 50+ interventions.">
     <meta property="og:url" content="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html">
     <meta property="og:type" content="article">
@@ -33,15 +49,14 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Erreur 500 WordPress : diagnostic et causes reelles (cas client)">
+    <meta name="twitter:title" content="Erreur 500 WordPress : diagnostic complet">
     <meta name="twitter:description" content="L'erreur 500 WordPress cache toujours une cause precise. Methode de diagnostic apres 50+ interventions.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Schema.org -->
@@ -64,59 +79,14 @@
           "url": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html",
           "datePublished": "2026-03-21",
           "dateModified": "2026-03-21",
-          "author": { "@type": "Person", "name": "Alexandre Gillon", "url": "https://optimycloud.com/" },
-          "publisher": { "@type": "Organization", "name": "OptimyCloud", "url": "https://optimycloud.com/", "logo": { "@type": "ImageObject", "url": "https://optimycloud.com/assets/optimycloud-logo.png" } },
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html" },
           "image": "https://optimycloud.com/assets/optimycloud-logo.png",
           "wordCount": 2400,
           "inLanguage": "fr",
           "articleSection": "WordPress",
           "keywords": ["erreur 500 WordPress", "internal server error", "depannage WordPress", "WP_DEBUG", "memoire PHP", "Elementor erreur 500"]
-        },
-        {
-          "@type": "FAQPage",
-          "mainEntity": [
-            {
-              "@type": "Question",
-              "name": "Pourquoi mon site WordPress affiche une erreur 500 ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "L'erreur 500 sur WordPress est generalement causee par une limite de memoire PHP atteinte, un fichier .htaccess corrompu, un conflit de plugins ou un theme incompatible. Dans 90% des cas, la cause est identifiable en activant les logs d'erreur WordPress via WP_DEBUG_LOG."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Comment diagnostiquer une erreur 500 WordPress ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Trois etapes : 1) Activer WP_DEBUG et WP_DEBUG_LOG dans wp-config.php pour enregistrer les erreurs dans wp-content/debug.log. 2) Lire le fichier debug.log et chercher les lignes 'Fatal error' ou 'Allowed memory size exhausted'. 3) Verifier le fichier .htaccess pour des directives incompatibles avec votre hebergement."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "L'erreur 500 WordPress peut-elle venir d'Elementor ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Oui, c'est frequent. Elementor est gourmand en memoire PHP et necessite au minimum 256M de memory_limit et 5000 pour max_input_vars. Sur les hebergements mutualises avec des limites basses, la sauvegarde de pages complexes dans Elementor provoque regulierement des erreurs 500."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Quelle est la difference entre erreur 500 et ecran blanc WordPress ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "C'est souvent la meme chose. L'ecran blanc (White Screen of Death) est la version WordPress de l'erreur 500 : PHP crashe silencieusement et le serveur renvoie une page blanche au lieu du contenu. Les causes et le diagnostic sont identiques."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "Combien de plugins WordPress peut-on avoir avant de risquer une erreur 500 ?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "Il n'y a pas de nombre magique, mais au-dela de 20 plugins actifs, les risques de conflits et de depassement memoire augmentent significativement. Le vrai probleme n'est pas le nombre mais la qualite : 3 plugins qui font le meme travail posent plus de problemes que 25 plugins bien choisis."
-              }
-            }
-          ]
         }
       ]
     }
@@ -138,6 +108,7 @@
                             <img src="../assets/optimycloud-logo.png"
                                  alt="OptimyCloud"
                                  width="200" height="64"
+                                 fetchpriority="high"
                                  class="h-20 w-auto"
                                  style="mix-blend-mode: multiply;">
                         </a>
@@ -610,6 +581,16 @@
                 </div>
             </div>
 
+            <!-- Lire aussi -->
+            <div class="mt-10 bg-gray-50 rounded-xl p-6">
+                <h3 class="font-semibold text-gray-900 mb-3">Lire aussi</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="avez-vous-besoin-cms-site-web.html" class="text-indigo-600 hover:underline">Avez-vous vraiment besoin d'un CMS en 2026 ?</a></li>
+                    <li><a href="llms-txt-referencement-ia-guide.html" class="text-indigo-600 hover:underline">llms.txt : guide du référencement IA</a></li>
+                </ul>
+                <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">Voir nos offres →</a></p>
+            </div>
+
             <!-- CTA -->
             <div class="reveal mt-12">
                 <div class="bg-gradient-to-br from-orange-500 to-red-700 rounded-2xl p-8 sm:p-10 text-center">
@@ -638,14 +619,14 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div class="col-span-2">
                     <div class="flex items-center mb-4">
-                        <img loading="lazy" src="../assets/optimycloud-logo.png" alt="OptimyCloud" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
+                        <img loading="lazy" src="../assets/optimycloud-logo.png" alt="OptimyCloud" width="160" height="40" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
                         <h3 class="text-xl font-bold">OptimyCloud</h3>
                     </div>
                     <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
                         Expert IA Generative & Automatisation pour PME et startups. Agents IA, chatbots, workflows automatises. Infrastructure Cloud AWS certifiee.
                     </p>
                     <div class="flex space-x-3">
-                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>

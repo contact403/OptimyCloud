@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
     new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
@@ -24,8 +26,6 @@
     <noscript><img height="1" width="1" style="display:none"
     src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Favicon -->
     <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
     <link rel="shortcut icon" href="./assets/favicon.ico" />
@@ -51,11 +51,10 @@
     <meta name="twitter:description" content="Site vitrine, chatbot IA, audit SEO et Cloud AWS. Tarifs transparents pour artisans et PME.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" media="print" onload="this.media='all'">
 
     <!-- Schema.org -->
@@ -77,6 +76,36 @@
           "url": "https://optimycloud.com/offres.html",
           "isPartOf": { "@id": "https://optimycloud.com/#website" },
           "about": { "@id": "https://optimycloud.com/#organization" }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://optimycloud.com/offres.html#site-vitrine",
+          "name": "Site Vitrine Professionnel",
+          "description": "Site vitrine rapide, responsive et optimise SEO. Jusqu'a 5 pages, Google Analytics, formulaire de contact. Livre en 48h.",
+          "provider": { "@id": "https://optimycloud.com/#organization" },
+          "serviceType": "Web Development",
+          "areaServed": { "@type": "Country", "name": "France" },
+          "offers": { "@type": "Offer", "price": "500", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://optimycloud.com/offres.html#chatbot-ia",
+          "name": "Chatbot Metier IA",
+          "description": "Chatbot IA entraine sur votre activite. Repond aux questions, collecte les demandes de devis, notification par email ou WhatsApp.",
+          "provider": { "@id": "https://optimycloud.com/#organization" },
+          "serviceType": "AI Chatbot Development",
+          "areaServed": { "@type": "Country", "name": "France" },
+          "offers": { "@type": "Offer", "price": "200", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Service",
+          "@id": "https://optimycloud.com/offres.html#site-chatbot",
+          "name": "Site Vitrine + Chatbot IA",
+          "description": "Site vitrine complet avec chatbot IA integre. Combine site professionnel et assistant IA entraine sur votre metier.",
+          "provider": { "@id": "https://optimycloud.com/#organization" },
+          "serviceType": "Web Development",
+          "areaServed": { "@type": "Country", "name": "France" },
+          "offers": { "@type": "Offer", "price": "650", "priceCurrency": "EUR", "availability": "https://schema.org/InStock" }
         }
       ]
     }
@@ -97,6 +126,7 @@
                         <img src="./assets/optimycloud-logo.png"
                              alt="OptimyCloud"
                              width="200" height="64"
+                             fetchpriority="high"
                              class="h-20 w-auto"
                              style="mix-blend-mode: multiply;">
                     </a>
@@ -139,7 +169,7 @@
             </nav>
             <div class="max-w-3xl">
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
-                    Des offres claires, des résultats concrets
+                    Offres site vitrine, chatbot IA & Cloud pour artisans et PME
                 </h1>
                 <p class="text-lg text-indigo-200 max-w-2xl">
                     Site vitrine, chatbot IA, référencement, infrastructure Cloud. Chaque offre est pensée pour vous faire gagner du temps et des clients.
@@ -511,7 +541,7 @@
                         Expert IA, Automatisation & SEO pour PME et startups. Sites vitrines, chatbots IA, infrastructure Cloud AWS.
                     </p>
                     <div class="flex space-x-3">
-                        <a href="https://mu.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
