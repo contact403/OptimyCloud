@@ -119,7 +119,7 @@
                     <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
                     <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
                     <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
-                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">A propos</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
                     <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
                 </div>
                 <!-- Mobile menu button -->
@@ -137,7 +137,7 @@
                 <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
                 <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
                 <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
-                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">A propos</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
                 <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
             </div>
         </div>
@@ -183,7 +183,7 @@
             <!-- Introduction -->
             <div class="reveal">
                 <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                    Si vous avez déjà gère un cluster Kubernetes en production, vous connaissez la douleur : gestion des nodes, mises a jour des AMI, configuration de Karpenter, tuning du VPC CNI, installation du driver EBS CSI... Tout ça <strong>avant même de déployer la première application</strong>.
+                    Si vous avez déjà gère un cluster Kubernetes en production, vous connaissez la douleur : gestion des nodes, mises à jour des AMI, configuration de Karpenter, tuning du VPC CNI, installation du driver EBS CSI... Tout ça <strong>avant même de déployer la première application</strong>.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
                     Avec <strong>EKS Auto Mode</strong>, lancé par AWS fin 2024 et mature en 2026, cette complexité disparaît. AWS gère automatiquement les nodes, le scaling, le networking et le stockage. Vous ne vous occupez que de vos workloads. C'est la même philosophie que le <a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 underline hover:text-indigo-800">serverless sur AWS</a> : déléguer l'infrastructure pour se concentrer sur la valeur. Kubernetes vient enfin de tenir sa promesse : <strong>se concentrer sur les applications, pas l'infrastructure</strong>.
@@ -191,7 +191,7 @@
 
                 <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-lg mb-10">
                     <h3 class="font-semibold text-gray-900 mb-2">En résumé</h3>
-                    <p class="text-gray-600 text-sm">EKS Auto Mode = EKS + Karpenter + VPC CNI + EBS CSI + CoreDNS + kube-proxy, le tout gère par AWS. Zéro add-on a installer, zéro node group a configurer. Vous creez un cluster, vous déployez vos pods.</p>
+                    <p class="text-gray-600 text-sm">EKS Auto Mode = EKS + Karpenter + VPC CNI + EBS CSI + CoreDNS + kube-proxy, le tout gère par AWS. Zéro add-on à installer, zéro node group à configurer. Vous créez un cluster, vous déployez vos pods.</p>
                 </div>
             </div>
 
@@ -219,19 +219,19 @@
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>CoreDNS</strong> et <strong>kube-proxy</strong> a maintenir a jour</span>
+                        <span class="text-gray-600"><strong>CoreDNS</strong> et <strong>kube-proxy</strong> à maintenir a jour</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>Mises a jour AMI</strong> régulières + rotations de nodes</span>
+                        <span class="text-gray-600"><strong>Mises à jour AMI</strong> régulières + rotations de nodes</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>IAM roles</strong> pour chaque composant (IRSA, Pod Identity)</span>
+                        <span class="text-gray-600"><strong>IAM rôles</strong> pour chaque composant (IRSA, Pod Identity)</span>
                     </li>
                 </ul>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Résultat : des équipes entières passent leur temps a maintenir la plateforme plutôt qu'a livrer de la valeur. Les PME et startups qui veulent utiliser Kubernetes sont souvent découragées par cette complexité — d'autant plus quand elles cherchent aussi a <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">intégrer l'IA générative dans leurs processus</a>.
+                    Résultat : des équipes entières passent leur temps à maintenir la plateforme plutôt qu'à livrer de la valeur. Les PME et startups qui veulent utiliser Kubernetes sont souvent découragées par cette complexité — d'autant plus quand elles cherchent aussi a <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">intégrer l'IA générative dans leurs processus</a>.
                 </p>
             </div>
 
@@ -239,10 +239,10 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-magic text-indigo-600 mr-2"></i>
-                    EKS Auto Mode : AWS fait le travail a votre place
+                    EKS Auto Mode : AWS fait le travail à votre place
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    EKS Auto Mode est un nouveau mode de fonctionnement pour Amazon EKS ou <strong>AWS gère l'intégralité du data plane</strong>. Concrètement, quand vous activez Auto Mode :
+                    EKS Auto Mode est un nouveau mode de fonctionnement pour Amazon EKS où <strong>AWS gère l'intégralité du data plane</strong>. Concrètement, quand vous activez Auto Mode :
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                     <div class="bg-green-50 p-5 rounded-xl border border-green-100">
@@ -250,14 +250,14 @@
                             <i class="fas fa-server text-green-600 mr-2"></i>
                             <h3 class="font-semibold text-gray-900">Compute</h3>
                         </div>
-                        <p class="text-sm text-gray-600">AWS provisionne et scale les nodes automatiquement avec la technologie Karpenter intégrée. Zéro node group a configurer.</p>
+                        <p class="text-sm text-gray-600">AWS provisionne et scale les nodes automatiquement avec la technologie Karpenter intégrée. Zéro node group à configurer.</p>
                     </div>
                     <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
                         <div class="flex items-center mb-3">
                             <i class="fas fa-network-wired text-blue-600 mr-2"></i>
                             <h3 class="font-semibold text-gray-900">Networking</h3>
                         </div>
-                        <p class="text-sm text-gray-600">VPC CNI, kube-proxy et CoreDNS sont gérés et mis a jour par AWS. Les pods obtiennent des IPs VPC natives.</p>
+                        <p class="text-sm text-gray-600">VPC CNI, kube-proxy et CoreDNS sont gérés et mis à jour par AWS. Les pods obtiennent des IPs VPC natives.</p>
                     </div>
                     <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
                         <div class="flex items-center mb-3">
@@ -283,7 +283,7 @@
                     Créer un cluster EKS Auto Mode en 5 minutes
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    C'est la ou ça devient impressionnant. Un cluster EKS Auto Mode opérationnel se crée en une seule commande :
+                    C'est là où ça devient impressionnant. Un cluster EKS Auto Mode opérationnel se crée en une seule commande :
                 </p>
 
                 <div class="bg-gray-900 rounded-xl p-6 text-sm font-mono overflow-x-auto mb-6">
@@ -329,7 +329,7 @@
 
                 <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg mb-8">
                     <h3 class="font-semibold text-gray-900 mb-2">Comparaison</h3>
-                    <p class="text-gray-600 text-sm">Un cluster EKS classique avec Karpenter, VPC CNI, EBS CSI et ALB Controller demande ~300 lignes de Terraform et 4-5 IAM roles. Avec Auto Mode : ~30 lignes et 1 role.</p>
+                    <p class="text-gray-600 text-sm">Un cluster EKS classique avec Karpenter, VPC CNI, EBS CSI et ALB Controller demande ~300 lignes de Terraform et 4-5 IAM rôles. Avec Auto Mode : ~30 lignes et 1 role.</p>
                 </div>
             </div>
 
@@ -356,13 +356,13 @@
                                 <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatique</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Mises a jour AMI</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Mises à jour AMI</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Manuelles ou rolling updates</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatique</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">VPC CNI</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Add-on a installer + IAM</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Add-on à installer + IAM</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Inclus et gère</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
@@ -377,7 +377,7 @@
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">CoreDNS / kube-proxy</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Versions a gérer manuellement</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Versions à gérer manuellement</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatique</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
@@ -411,7 +411,7 @@
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                     <div class="bg-red-50 p-5 rounded-xl border border-red-100">
-                        <h3 class="font-semibold text-gray-900 mb-3">EKS classique (coûts caches)</h3>
+                        <h3 class="font-semibold text-gray-900 mb-3">EKS classique (coûts cachés)</h3>
                         <ul class="space-y-2 text-sm text-gray-600">
                             <li class="flex items-start">
                                 <i class="fas fa-minus-circle text-red-500 mr-2 mt-0.5 flex-shrink-0"></i>
@@ -466,7 +466,7 @@
                     Migrer un cluster existant vers Auto Mode
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Bonne nouvelle : vous n'avez pas besoin de recréer votre cluster. La migration se fait <strong>progressivement, sans downtime</strong>. On a migré un cluster EKS classique de 47 pods vers Auto Mode pour un client SaaS le mois dernier : le temps de setup est passé de 3 jours a 2 heures, et la facture compute mensuelle a baissé de 15% grâce au bin-packing optimisé.
+                    Bonne nouvelle : vous n'avez pas besoin de recréer votre cluster. La migration se fait <strong>progressivement, sans downtime</strong>. On a migré un cluster EKS classique de 47 pods vers Auto Mode pour un client SaaS le mois dernier : le temps de setup est passé de 3 jours à 2 heures, et la facture compute mensuelle a baissé de 15% grâce au bin-packing optimisé.
                 </p>
 
                 <div class="space-y-6 mb-8">
@@ -494,14 +494,14 @@
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                         <div class="ml-4">
-                            <h3 class="font-semibold text-gray-900 mb-1">Nettoyer les IAM roles inutiles</h3>
-                            <p class="text-sm text-gray-600">Les roles IRSA pour VPC CNI, EBS CSI et ALB Controller ne sont plus nécessaires.</p>
+                            <h3 class="font-semibold text-gray-900 mb-1">Nettoyer les IAM rôles inutiles</h3>
+                            <p class="text-sm text-gray-600">Les rôles IRSA pour VPC CNI, EBS CSI et ALB Controller ne sont plus nécessaires.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-gray-900 rounded-xl p-6 text-sm font-mono overflow-x-auto mb-8">
-                    <div class="text-gray-400 mb-3"># Migration pas a pas</div>
+                    <div class="text-gray-400 mb-3"># Migration pas à pas</div>
                     <div class="text-green-500 mb-2">kubectl cordon &lt;old-node&gt;</div>
                     <div class="text-green-500 mb-2">kubectl drain &lt;old-node&gt; --ignore-daemonsets --delete-emptydir-data</div>
                     <div class="text-gray-400 mb-3"># Les pods redémarrent sur les nodes Auto Mode</div>
@@ -513,10 +513,10 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-exclamation-circle text-orange-600 mr-2"></i>
-                    Les limites a connaître
+                    Les limites à connaître
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    EKS Auto Mode n'est pas une solution universelle. Voici les cas ou le mode classique reste pertinent :
+                    EKS Auto Mode n'est pas une solution universelle. Voici les cas où le mode classique reste pertinent :
                 </p>
                 <ul class="space-y-3 mb-8">
                     <li class="flex items-start">
@@ -572,11 +572,11 @@
                 <div class="space-y-4 mb-10">
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">Qu'est-ce que EKS Auto Mode ?</h3>
-                        <p class="text-sm text-gray-600">EKS Auto Mode est une fonctionnalité d'Amazon EKS qui automatise entièrement la gestion des nodes, du scaling, du networking et du stockage. AWS gère l'infrastructure Kubernetes pour vous.</p>
+                        <p class="text-sm text-gray-600">EKS Auto Mode est une fonctionnalité d'Amazon EKS qui automatisé entièrement la gestion des nodes, du scaling, du networking et du stockage. AWS gère l'infrastructure Kubernetes pour vous.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">Combien coûte EKS Auto Mode ?</h3>
-                        <p class="text-sm text-gray-600">0,0842 USD par vCPU/heure, soit ~40% de plus que EC2 on-demand. Mais le TCO est souvent inférieur grâce a l'elimination de la maintenance et du sur-provisioning.</p>
+                        <p class="text-sm text-gray-600">0,0842 USD par vCPU/heure, soit ~40% de plus que EC2 on-demand. Mais le TCO est souvent inférieur grâce à l'elimination de la maintenance et du sur-provisioning.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">Peut-on migrer un cluster existant ?</h3>
@@ -584,7 +584,7 @@
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">EKS Auto Mode remplace-t-il Karpenter ?</h3>
-                        <p class="text-sm text-gray-600">EKS Auto Mode utilise Karpenter sous le capot, mais vous n'avez plus a l'installer ni le configurer. Le comportement est similaire mais entièrement managé.</p>
+                        <p class="text-sm text-gray-600">EKS Auto Mode utilise Karpenter sous le capot, mais vous n'avez plus à l'installer ni le configurer. Le comportement est similaire mais entièrement managé.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">Quelles sont les limites ?</h3>

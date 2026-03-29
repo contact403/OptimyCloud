@@ -32,7 +32,7 @@
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
     <title>Assistant IA WhatsApp avec Amazon Bedrock | OptimyCloud</title>
-    <meta name="description" content="Guide technique : deployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK. Architecture serverless complete.">
+    <meta name="description" content="Guide technique : déployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK. Architecture serverless complete.">
     <meta name="keywords" content="Amazon Bedrock, WhatsApp assistant IA, AWS Lambda, serverless, chatbot WhatsApp AWS, IA multimodale, Amazon Nova, AWS CDK, DynamoDB, Amazon Transcribe, WhatsApp Business API AWS, assistant IA privé">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
@@ -119,7 +119,7 @@
                     <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
                     <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
                     <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
-                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">A propos</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
                     <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
                 </div>
                 <!-- Mobile menu button -->
@@ -137,7 +137,7 @@
                 <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
                 <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
                 <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
-                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">A propos</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
                 <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
             </div>
         </div>
@@ -183,13 +183,13 @@
             <!-- Introduction -->
             <div class="reveal">
                 <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
-                    Un client nous a demande un assistant WhatsApp capable de lire des PDF, analyser des photos et repondre en langage naturel. Contrainte non negociable : toutes les donnees devaient rester sur son propre compte AWS, sans transiter par un service tiers. On a deploye une architecture serverless basee sur Amazon Bedrock, et le resultat gere aujourd'hui plusieurs centaines de conversations par mois.
+                    Un client nous a demandé un assistant WhatsApp capable de lire des PDF, analyser des photos et répondre en langage naturel. Contrainte non négociable : toutes les données devaient rester sur son propre compte AWS, sans transiter par un service tiers. On a déployé une architecture serverless basée sur Amazon Bedrock, et le résultat gère aujourd'hui plusieurs centaines de conversations par mois.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'architecture s'appuie sur le projet open-source <strong class="text-gray-900">building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python</strong> publie par AWS. Elle combine Amazon Bedrock, Lambda, DynamoDB et l'integration native WhatsApp d'AWS pour creer un assistant IA multimodal 100% serverless.
+                    L'architecture s'appuie sur le projet open-source <strong class="text-gray-900">building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python</strong> publié par AWS. Elle combine Amazon Bedrock, Lambda, DynamoDB et l'intégration native WhatsApp d'AWS pour créer un assistant IA multimodal 100% serverless.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    Dans cet article, je detaille cette architecture telle qu'on l'a deployee, j'explique comment chaque brique s'assemble, et je vous donne les cles pour lancer votre propre assistant IA WhatsApp prive en quelques commandes CDK.
+                    Dans cet article, je détaillé cette architecture telle qu'on l'a déployée, j'explique comment chaque brique s'assemble, et je vous donne les clés pour lancer votre propre assistant IA WhatsApp privé en quelques commandes CDK.
                 </p>
             </div>
 
@@ -200,7 +200,7 @@
                     Pourquoi un assistant WhatsApp privé sur AWS ?
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-4">
-                    Les solutions SaaS de chatbot WhatsApp ne manquent pas (on detaille les cas d'usage metier dans notre article sur <a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 underline hover:text-indigo-800">l'automatisation de la relation client par WhatsApp et IA</a>). Mais elles posent un problème majeur : <strong class="text-gray-900">vos données transitent par des serveurs tiers</strong>. Messages clients, documents sensibles, informations métier... tout est stocké chez un fournisseur que vous ne contrôlez pas.
+                    Les solutions SaaS de chatbot WhatsApp ne manquent pas (on détaillé les cas d'usage métier dans notre article sur <a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 underline hover:text-indigo-800">l'automatisation de la relation client par WhatsApp et IA</a>). Mais elles posent un problème majeur : <strong class="text-gray-900">vos données transitent par des serveurs tiers</strong>. Messages clients, documents sensibles, informations métier... tout est stocké chez un fournisseur que vous ne contrôlez pas.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-4">
                     Avec une architecture hébergée sur votre propre compte AWS :
@@ -212,7 +212,7 @@
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong class="text-gray-900">Coût maîtrisé</strong> : architecture serverless = vous ne payez que ce que vous consommez. Pas de serveur qui tourne a vide, pas d'abonnement mensuel fixe.</span>
+                        <span class="text-gray-600"><strong class="text-gray-900">Coût maîtrisé</strong> : architecture serverless = vous ne payez que ce que vous consommez. Pas de serveur qui tourne à vide, pas d'abonnement mensuel fixe.</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
@@ -232,7 +232,7 @@
                     Architecture serverless : comment ça marche
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'architecture repose sur 7 services AWS qui s'enchainent de manière event-driven. Aucun serveur a gérer, tout scale automatiquement.
+                    L'architecture repose sur 7 services AWS qui s'enchaînent de manière event-driven. Aucun serveur à gérer, tout scale automatiquement.
                 </p>
 
                 <!-- Architecture diagram as styled blocks -->
@@ -313,9 +313,9 @@
                             AWS Lambda : 3 fonctions spécialisées
                         </h3>
                         <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">whatsapp_in</strong> : point d'entrée. Reçoit le message via SNS, identifie le type (texte, image, audio, video, document), télécharge les médias dans S3, et route vers le bon traitement.</li>
-                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">bedrock_agent</strong> : invoque l'agent Bedrock avec le message et le contexte de conversation. Pour les médias, utilise d'abord l'API Converse pour analyser le contenu avant de le passer a l'agent.</li>
-                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">transcriber_done</strong> : déclenchée a la fin d'une transcription audio. Récupère le texte transcrit et le transmet a l'agent Bedrock.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">whatsapp_in</strong> : point d'entrée. Reçoit le message via SNS, identifie le type (texte, image, audio, vidéo, document), télécharge les médias dans S3, et route vers le bon traitement.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">bedrock_agent</strong> : invoque l'agent Bedrock avec le message et le contexte de conversation. Pour les médias, utilise d'abord l'API Converse pour analyser le contenu avant de le passer à l'agent.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">transcriber_done</strong> : déclenchée à la fin d'une transcription audio. Récupère le texte transcrit et le transmet à l'agent Bedrock.</li>
                         </ul>
                     </div>
 
@@ -331,7 +331,7 @@
                             Le projet utilise le modèle <strong class="text-gray-800">Amazon Nova</strong> via Bedrock, le service d'IA générative managée d'AWS. Deux APIs sont utilisées :
                         </p>
                         <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-caret-right text-purple-500 mr-2 mt-1"></i><strong class="text-gray-800">Bedrock Agents</strong> : gère les conversations textuelles avec mémoire et instructions personnalisées. L'agent maintient le contexte sur plusieurs échanges grâce a un session ID stocké dans DynamoDB.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-purple-500 mr-2 mt-1"></i><strong class="text-gray-800">Bedrock Agents</strong> : gère les conversations textuelles avec mémoire et instructions personnalisées. L'agent maintient le contexte sur plusieurs échanges grâce à un session ID stocké dans DynamoDB.</li>
                             <li class="flex items-start"><i class="fas fa-caret-right text-purple-500 mr-2 mt-1"></i><strong class="text-gray-800">Bedrock Converse API</strong> : analyse les contenus multimodaux (images, vidéos, documents). Le résultat de l'analyse est injecté dans la conversation de l'agent comme contexte supplémentaire.</li>
                         </ul>
                     </div>
@@ -345,7 +345,7 @@
                             DynamoDB : mémoire de conversation
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Deux tables DynamoDB stockent respectivement l'historique des messages (type, contenu, horodatage, numéro de telephone) et le contexte de session de l'agent Bedrock (session ID par utilisateur). C'est ce qui permet a l'assistant de se souvenir des échanges précédents et de fournir des réponses contextuelles. Le tout avec une latence inférieure a 10 ms.
+                            Deux tables DynamoDB stockent respectivement l'historique des messages (type, contenu, horodatage, numéro de téléphone) et le contexte de session de l'agent Bedrock (session ID par utilisateur). C'est ce qui permet à l'assistant de se souvenir des échanges précédents et de fournir des réponses contextuelles. Le tout avec une latence inférieure à 10 ms.
                         </p>
                     </div>
 
@@ -371,7 +371,7 @@
                             Amazon Transcribe : speech-to-text
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Les notes vocales WhatsApp sont transcrites automatiquement en texte. Le service détecte la langue automatiquement (pas besoin de la spécifier) et supporte plus de 100 langues. Une fois la transcription terminée, un événement déclenche la Lambda <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">transcriber_done</code> qui transmet le texte a l'agent.
+                            Les notes vocales WhatsApp sont transcrites automatiquement en texte. Le service détecte la langue automatiquement (pas besoin de la spécifier) et supporte plus de 100 langues. Une fois la transcription terminée, un événement déclenche la Lambda <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">transcriber_done</code> qui transmet le texte à l'agent.
                         </p>
                     </div>
 
@@ -390,7 +390,7 @@
                 </div>
             </div>
 
-            <!-- Section 4 : Deploiement -->
+            <!-- Section 4 : Déploiement -->
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fas fa-terminal text-orange-600 mr-2"></i>
@@ -431,10 +431,10 @@
                     </div>
 
                     <p class="text-base text-gray-600 leading-relaxed mt-4">
-                        Le <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">cdk deploy</code> crée automatiquement : les 3 fonctions Lambda, le bucket S3, les 2 tables DynamoDB, l'agent Bedrock, le topic SNS, les roles IAM et la configuration End User Messaging. Comptez environ 5 minutes pour le déploiement complet.
+                        Le <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">cdk deploy</code> crée automatiquement : les 3 fonctions Lambda, le bucket S3, les 2 tables DynamoDB, l'agent Bedrock, le topic SNS, les rôles IAM et la configuration End User Messaging. Comptez environ 5 minutes pour le déploiement complet.
                     </p>
                     <p class="text-base text-gray-600 leading-relaxed mt-4">
-                        En production, on a constate que le point qui prend le plus de temps n'est pas le deploiement AWS mais la verification du Meta Business Account (comptez 2 a 5 jours ouvrés). Notre conseil : lancez cette etape en parallele du developpement pour ne pas bloquer la mise en service.
+                        En production, on a constaté que le point qui prend le plus de temps n'est pas le déploiement AWS mais la vérification du Meta Business Account (comptez 2 à 5 jours ouvrés). Notre conseil : lancez cette étape en parallele du développement pour ne pas bloquer la mise en service.
                     </p>
                 </div>
             </div>
@@ -453,22 +453,22 @@
                 <div class="space-y-4 mb-8">
                     <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg">
                         <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-comment text-blue-600 mr-2"></i>Message texte</h3>
-                        <p class="text-gray-600 text-sm">Le texte est extrait du payload WhatsApp et transmis directement a la Lambda <code class="text-xs bg-blue-100 px-1 rounded">bedrock_agent</code> via un appel Lambda asynchrone (<code class="text-xs bg-blue-100 px-1 rounded">InvocationType: Event</code>). L'agent Bedrock génère la réponse en s'appuyant sur ses instructions et l'historique de conversation.</p>
+                        <p class="text-gray-600 text-sm">Le texte est extrait du payload WhatsApp et transmis directement à la Lambda <code class="text-xs bg-blue-100 px-1 rounded">bedrock_agent</code> via un appel Lambda asynchrone (<code class="text-xs bg-blue-100 px-1 rounded">InvocationType: Event</code>). L'agent Bedrock génère la réponse en s'appuyant sur ses instructions et l'historique de conversation.</p>
                     </div>
                     <div class="bg-purple-50 border-l-4 border-purple-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-image text-purple-600 mr-2"></i>Image, video ou document</h3>
-                        <p class="text-gray-600 text-sm">Le média est télécharge depuis WhatsApp et stocké dans S3. Le chemin S3 est transmis a la Lambda <code class="text-xs bg-purple-100 px-1 rounded">bedrock_agent</code>, qui utilise l'API Bedrock Converse pour analyser visuellement le contenu (description d'image, extraction de texte d'un PDF, analyse de video). Le résultat est ensuite injecté dans la conversation de l'agent comme contexte.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-image text-purple-600 mr-2"></i>Image, vidéo ou document</h3>
+                        <p class="text-gray-600 text-sm">Le média est télécharge depuis WhatsApp et stocké dans S3. Le chemin S3 est transmis à la Lambda <code class="text-xs bg-purple-100 px-1 rounded">bedrock_agent</code>, qui utilise l'API Bedrock Converse pour analyser visuellement le contenu (description d'image, extraction de texte d'un PDF, analyse de video). Le résultat est ensuite injecté dans la conversation de l'agent comme contexte.</p>
                     </div>
                     <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg">
                         <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-microphone text-orange-600 mr-2"></i>Note vocale</h3>
-                        <p class="text-gray-600 text-sm">L'audio est stocké dans S3, puis un job Amazon Transcribe est lancé avec détection automatique de la langue. Une fois la transcription terminée, un événement déclenche la Lambda <code class="text-xs bg-orange-100 px-1 rounded">transcriber_done</code> qui récupère le texte et le transmet a l'agent Bedrock. Le client peut donc parler a l'assistant comme il parlerait a un humain.</p>
+                        <p class="text-gray-600 text-sm">L'audio est stocké dans S3, puis un job Amazon Transcribe est lancé avec détection automatique de la langue. Une fois la transcription terminée, un événement déclenche la Lambda <code class="text-xs bg-orange-100 px-1 rounded">transcriber_done</code> qui récupère le texte et le transmet à l'agent Bedrock. Le client peut donc parler à l'assistant comme il parlerait à un humain.</p>
                     </div>
                 </div>
 
                 <div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
                     <h3 class="text-base font-bold text-gray-900 mb-3"><i class="fas fa-memory text-gray-600 mr-2"></i>Gestion de la mémoire</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Chaque message est sauvegardé dans DynamoDB avec le numéro de telephone comme clé de partition. L'agent Bedrock utilise un <strong class="text-gray-800">session ID</strong> unique par utilisateur, stocké également dans DynamoDB, pour maintenir le contexte de conversation. Résultat : l'assistant se souvient de tout ce que le client a dit précédemment, même si la conversation s'étale sur plusieurs jours.
+                        Chaque message est sauvegardé dans DynamoDB avec le numéro de téléphone comme clé de partition. L'agent Bedrock utilise un <strong class="text-gray-800">session ID</strong> unique par utilisateur, stocké également dans DynamoDB, pour maintenir le contexte de conversation. Résultat : l'assistant se souvient de tout ce que le client a dit précédemment, même si la conversation s'étale sur plusieurs jours.
                     </p>
                 </div>
             </div>
@@ -480,7 +480,7 @@
                     Estimation des coûts : combien ça coûte vraiment ?
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'avantage d'une architecture serverless : pas de coût fixe. Vous payez a l'usage. Voici une estimation pour 1 000 messages par mois :
+                    L'avantage d'une architecture serverless : pas de coût fixe. Vous payez à l'usage. Voici une estimation pour 1 000 messages par mois :
                 </p>
 
                 <div class="overflow-x-auto mb-8">
@@ -535,7 +535,7 @@
                 <div class="bg-green-50 rounded-xl p-6 mb-8">
                     <p class="text-green-800 text-sm leading-relaxed">
                         <i class="fas fa-lightbulb text-green-600 mr-2"></i>
-                        <strong>Comparaison :</strong> les solutions SaaS de chatbot WhatsApp coûtent entre 100 et 500 USD/mois avec des limites de messages. Ici, pour un volume comparable, vous êtes 3 a 10 fois moins cher, avec un contrôle total sur vos données et votre infrastructure.
+                        <strong>Comparaison :</strong> les solutions SaaS de chatbot WhatsApp coûtent entre 100 et 500 USD/mois avec des limites de messages. Ici, pour un volume comparable, vous êtes 3 à 10 fois moins cher, avec un contrôle total sur vos données et votre infrastructure.
                     </p>
                 </div>
             </div>
@@ -547,7 +547,7 @@
                     Cas d'usage concrets
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Cette architecture ouvre la porte a de nombreux cas d'usage grâce a sa capacité multimodale. Si vous cherchez une vision plus large de l'integration de l'IA en entreprise, consultez notre <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">guide pratique pour integrer l'IA generative en PME</a>.
+                    Cette architecture ouvre la porte à de nombreux cas d'usage grâce à sa capacité multimodale. Si vous cherchez une vision plus large de l'intégration de l'IA en entreprise, consultez notre <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">guide pratique pour intégrer l'IA générative en PME</a>.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -570,7 +570,7 @@
                             <i class="fas fa-graduation-cap text-purple-600"></i>
                         </div>
                         <h3 class="font-bold text-gray-900 mb-2 text-sm">Assistant formation</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Les apprenants envoient leurs exercices (photos ou documents), l'IA corrige et fournit un feedback personnalisé. Support multilingue grâce a la détection automatique.</p>
+                        <p class="text-gray-600 text-xs leading-relaxed">Les apprenants envoient leurs exercices (photos ou documents), l'IA corrige et fournit un feedback personnalisé. Support multilingue grâce à la détection automatique.</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100">
                         <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
@@ -595,7 +595,7 @@
                             Combien coûte un assistant IA WhatsApp sur AWS ?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Grâce a l'architecture serverless, les coûts sont proportionnels a l'usage. Pour 1 000 messages par mois, comptez environ 20 a 50 USD tout compris. Le coût augmente linéairement avec le volume, sans palier ni abonnement fixe.
+                            Grâce à l'architecture serverless, les coûts sont proportionnels à l'usage. Pour 1 000 messages par mois, comptez environ 20 à 50 USD tout compris. Le coût augmenté linéairement avec le volume, sans palier ni abonnement fixe.
                         </p>
                     </div>
 
@@ -613,7 +613,7 @@
                             Les données sont-elles sécurisées ?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Oui. Toutes les données restent dans votre compte AWS. Bedrock ne stocke pas vos données et ne les utilise pas pour l'entraînement. S3 chiffre les fichiers avec SSE, DynamoDB chiffre au repos. Cependant, les messages transitent par WhatsApp qui a ses propres politiques de confidentialité.
+                            Oui. Toutes les données restent dans votre compte AWS. Bedrock ne stocke pas vos données et ne les utilise pas pour l'entraînement. S3 chiffre les fichiers avec SSE, DynamoDB chiffre au repos. Cependant, les messages transitent par WhatsApp qui à ses propres politiques de confidentialité.
                         </p>
                     </div>
 
