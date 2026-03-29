@@ -184,7 +184,7 @@
             <!-- Introduction -->
             <div class="reveal">
                 <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                    Écran blanc. Aucun message. Le back-office ne répond plus. Le client appelle en panique parce que son site "ne marché plus". C'est le quotidien de l'<strong>erreur 500 sur WordPress</strong>, et c'est probablement ce qui vous amene ici.
+                    Écran blanc. Aucun message. Le back-office ne répond plus. Le client appelle en panique parce que son site "ne marche plus". C'est le quotidien de l'<strong>erreur 500 sur WordPress</strong>, et c'est probablement ce qui vous amène ici.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
                     La bonne nouvelle : ce n'est presque jamais grave. La mauvaise : WordPress ne vous dit rien d'utile. Il faut aller chercher l'information vous-même. Cet article vous montre exactement ou regarder, base sur un cas réel qu'on a traite sur un hébergement OVH mutualisé avec Elementor.
@@ -210,7 +210,7 @@
                     L'erreur 500 signifie "Internal Server Error". En clair : <strong>PHP a crashe</strong> et le serveur n'a pas su quoi répondre. C'est un message générique qui ne donne aucun indice sur la cause réelle.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    WordPress est particulièrement concerné parce qu'il empile des couches : le coeur WordPress, le theme, les plugins, le page builder. Chaque couche consomme de la mémoire et du temps serveur. Quand la limite est atteinte, tout s'arrete.
+                    WordPress est particulièrement concerné parce qu'il empile des couches : le coeur WordPress, le theme, les plugins, le page builder. Chaque couche consomme de la mémoire et du temps serveur. Quand la limite est atteinte, tout s'arrête.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -250,7 +250,7 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>Un plugin crashé silencieusement en arriere-plan</span>
+                                <span>Un plugin crashe silencieusement en arrière-plan</span>
                             </li>
                         </ul>
                     </div>
@@ -258,7 +258,7 @@
 
                 <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg mb-8">
                     <h3 class="font-semibold text-gray-900 mb-2">Écran blanc = erreur 500</h3>
-                    <p class="text-gray-600 text-sm">Le fameux <strong>"White Screen of Death"</strong> (WSOD) de WordPress est la même chose qu'une erreur 500. PHP crashé avant de pouvoir générer la page, donc le navigateur affiche une page vide. Le diagnostic et les causes sont identiques.</p>
+                    <p class="text-gray-600 text-sm">Le fameux <strong>"White Screen of Death"</strong> (WSOD) de WordPress est la même chose qu'une erreur 500. PHP crashe avant de pouvoir générer la page, donc le navigateur affiche une page vide. Le diagnostic et les causes sont identiques.</p>
                 </div>
             </div>
 
@@ -269,7 +269,7 @@
                     Diagnostic en 3 étapes : trouver la cause réelle
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Inutile de deviner. WordPress à un système de logs integre, mais il est <strong>désactivé par défaut</strong>. C'est la première chose a activer.
+                    Inutile de deviner. WordPress a un système de logs intégré, mais il est <strong>désactivé par défaut</strong>. C'est la première chose à activer.
                 </p>
 
                 <!-- Etape 1 -->
@@ -287,7 +287,7 @@
                         <div class="text-green-400">define( 'WP_DEBUG_LOG', true );</div>
                         <div class="text-green-400">define( 'WP_DEBUG_DISPLAY', false );</div>
                     </div>
-                    <p class="text-xs text-gray-500 mt-3"><strong>WP_DEBUG_DISPLAY a false</strong> : les erreurs sont enregistrées dans un fichier, pas affichees aux visiteurs. Votre site reste propre.</p>
+                    <p class="text-xs text-gray-500 mt-3"><strong>WP_DEBUG_DISPLAY a false</strong> : les erreurs sont enregistrées dans un fichier, pas affichées aux visiteurs. Votre site reste propre.</p>
                 </div>
 
                 <!-- Etape 2 -->
@@ -305,7 +305,7 @@
                         <div class="text-red-400">(tried to allocate 65536 bytes) in</div>
                         <div class="text-red-400">/home/www/wp-includes/class-wpdb.php on line 2357</div>
                     </div>
-                    <p class="text-xs text-gray-500">134 217 728 bytes = <strong>128 Mo</strong>. Cette ligne vous dit que PHP a atteint sa limité de mémoire. C'est la cause numéro 1.</p>
+                    <p class="text-xs text-gray-500">134 217 728 bytes = <strong>128 Mo</strong>. Cette ligne vous dit que PHP a atteint sa limite de mémoire. C'est la cause numéro 1.</p>
                 </div>
 
                 <!-- Etape 3 -->
@@ -350,7 +350,7 @@
                         <span class="text-red-500 mr-2">#1</span> Mémoire PHP insuffisante
                     </h3>
                     <p class="text-base text-gray-600 leading-relaxed mb-4">
-                        C'est la cause la plus courante et la plus sournoise. Par défaut, PHP alloue <strong>128 Mo de mémoire</strong> à chaque requete. Ça peut sembler suffisant, mais faites le calcul :
+                        C'est la cause la plus courante et la plus sournoise. Par défaut, PHP alloue <strong>128 Mo de mémoire</strong> à chaque requête. Ça peut sembler suffisant, mais faites le calcul :
                     </p>
                     <ul class="space-y-2 text-sm text-gray-600 mb-4">
                         <li class="flex items-start">
@@ -367,15 +367,15 @@
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-caret-right text-red-400 mr-2 mt-1 flex-shrink-0"></i>
-                            <span>Elementor en mode édition : 60-120 Mo supplementaires</span>
+                            <span>Elementor en mode édition : 60-120 Mo supplémentaires</span>
                         </li>
                     </ul>
                     <p class="text-base text-gray-600 leading-relaxed mb-4">
-                        <strong>Total : 150 à 290 Mo pour une seule requete.</strong> Avec une limité a 128 Mo, PHP crashé. Le serveur renvoie une erreur 500. Rien dans WordPress ne vous previent.
+                        <strong>Total : 150 à 290 Mo pour une seule requête.</strong> Avec une limite à 128 Mo, PHP crashe. Le serveur renvoie une erreur 500. Rien dans WordPress ne vous prévient.
                     </p>
 
                     <div class="bg-orange-50 border border-orange-200 p-4 rounded-lg">
-                        <p class="text-sm text-gray-700"><strong>Symptome revelateur :</strong> le site fonctionne en lecture (pages front-end) mais plante quand vous sauvegardez dans Elementor, modifiez une image ou accedez a certaines pages du back-office. C'est le signe classique d'un dépassement mémoire.</p>
+                        <p class="text-sm text-gray-700"><strong>Symptôme révélateur :</strong> le site fonctionne en lecture (pages front-end) mais plante quand vous sauvegardez dans Elementor, modifiez une image ou accédez à certaines pages du back-office. C'est le signe classique d'un dépassement mémoire.</p>
                     </div>
                 </div>
 
@@ -425,7 +425,7 @@
                     </ul>
 
                     <div class="bg-yellow-50 border border-yellow-200 p-4 rounded-lg">
-                        <p class="text-sm text-gray-700"><strong>Règle empirique :</strong> au-dela de 20 plugins actifs, faites un audit. Pas pour en supprimer aveuglément, mais pour éliminer les doublons fonctionnels et les plugins qui n'ont pas été mis à jour depuis plus d'un an.</p>
+                        <p class="text-sm text-gray-700"><strong>Règle empirique :</strong> au-delà de 20 plugins actifs, faites un audit. Pas pour en supprimer aveuglément, mais pour éliminer les doublons fonctionnels et les plugins qui n'ont pas été mis à jour depuis plus d'un an.</p>
                     </div>
                 </div>
 
@@ -435,10 +435,10 @@
                         <span class="text-blue-500 mr-2">#4</span> Thème incompatible
                     </h3>
                     <p class="text-base text-gray-600 leading-relaxed mb-4">
-                        Un thème mal code ou incompatible avec la version de PHP peut provoquer des erreurs 500. Les thèmes premium avec beaucoup d'options (OceanWP, Avada, Divi) chargent davantage de code et de dépendances.
+                        Un thème mal codé ou incompatible avec la version de PHP peut provoquer des erreurs 500. Les thèmes premium avec beaucoup d'options (OceanWP, Avada, Divi) chargent davantage de code et de dépendances.
                     </p>
                     <p class="text-base text-gray-600 leading-relaxed">
-                        <strong>Test rapide :</strong> basculer temporairement sur le thème par défaut (Twenty Twenty-Four) via FTP en renommant le dossier du thème actif dans <code class="bg-gray-100 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/thèmes/</code>. Si l'erreur disparaît, le thème est en cause.
+                        <strong>Test rapide :</strong> basculer temporairement sur le thème par défaut (Twenty Twenty-Four) via FTP en renommant le dossier du thème actif dans <code class="bg-gray-100 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/themes/</code>. Si l'erreur disparaît, le thème est en cause.
                     </p>
                 </div>
 
@@ -451,7 +451,7 @@
                         WordPress 6.x nécessite PHP 7.4 minimum et recommande <strong>PHP 8.1 ou supérieur</strong>. On voit encore des sites tourner sur PHP 7.2, voire PHP 7.0. Les fonctions dépréciées provoquent des erreurs fatales que le serveur traduit en erreur 500.
                     </p>
                     <p class="text-base text-gray-600 leading-relaxed">
-                        Vérifiez votre version PHP depuis le panel de votre hébergeur (OVH Manager, cPanel). Si vous etes en dessous de PHP 8.0, il est temps de migrer.
+                        Vérifiez votre version PHP depuis le panel de votre hébergeur (OVH Manager, cPanel). Si vous êtes en dessous de PHP 8.0, il est temps de migrer.
                     </p>
                 </div>
             </div>
@@ -472,7 +472,7 @@
                         <div class="text-red-400">Allowed memory size of 536870912 bytes exhausted</div>
                     </div>
                     <p class="text-sm text-gray-600 mb-4">
-                        536 870 912 bytes = <strong>512 Mo</strong>. Le site avait déjà une limité de mémoire elevee, et ça ne suffisait toujours pas. Pourquoi ?
+                        536 870 912 bytes = <strong>512 Mo</strong>. Le site avait déjà une limite de mémoire élevée, et ça ne suffisait toujours pas. Pourquoi ?
                     </p>
                     <ul class="space-y-3 text-sm text-gray-600">
                         <li class="flex items-start">
@@ -496,11 +496,11 @@
 
                 <div class="bg-green-50 border-l-4 border-green-500 p-5 rounded-lg mb-6">
                     <h3 class="font-semibold text-gray-900 mb-2">Résultat après intervention</h3>
-                    <p class="text-sm text-gray-600"><strong>6 890 paramètres bloat supprimés</strong> sur 45 pages Elementor. Passage de 30 à 24 plugins actifs. Plus aucune erreur 500. Les sauvegardes Elementor fonctionnent instantanement.</p>
+                    <p class="text-sm text-gray-600"><strong>6 890 paramètres bloat supprimés</strong> sur 45 pages Elementor. Passage de 30 à 24 plugins actifs. Plus aucune erreur 500. Les sauvegardes Elementor fonctionnent instantanément.</p>
                 </div>
 
                 <p class="text-base text-gray-600 leading-relaxed">
-                    Ce cas illustre bien le problème : augmenter la mémoire ne suffit pas si la cause profonde est un <strong>empilement de plugins inutiles et de données mortes</strong> qui saturent PHP à chaque requete. Il faut auditer, nettoyer, puis ajuster.
+                    Ce cas illustre bien le problème : augmenter la mémoire ne suffit pas si la cause profonde est un <strong>empilement de plugins inutiles et de données mortes</strong> qui saturent PHP à chaque requête. Il faut auditer, nettoyer, puis ajuster.
                 </p>
             </div>
 
@@ -511,7 +511,7 @@
                     Les réflexes a prendre maintenant
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Meme si votre site ne plante pas encore, ces points permettent d'éviter la plupart des erreurs 500 avant qu'elles n'arrivent :
+                    Même si votre site ne plante pas encore, ces points permettent d'éviter la plupart des erreurs 500 avant qu'elles n'arrivent :
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -571,19 +571,19 @@
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">L'erreur 500 peut-elle venir de mon hébergement ?</h3>
-                        <p class="text-sm text-gray-600">Oui. Les hébergements mutualisés imposent des limites strictes sur la mémoire PHP, le temps d'execution et le nombre de requetes. Si vous avez optimisé WordPress et que les erreurs 500 persistent, votre hébergement est probablement le facteur limitant. Un VPS ou un hébergement WordPress managé offre davantage de marge.</p>
+                        <p class="text-sm text-gray-600">Oui. Les hébergements mutualisés imposent des limites strictes sur la mémoire PHP, le temps d'exécution et le nombre de requêtes. Si vous avez optimisé WordPress et que les erreurs 500 persistent, votre hébergement est probablement le facteur limitant. Un VPS ou un hébergement WordPress managé offre davantage de marge.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">Combien de plugins puis-je avoir avant de risquer une erreur 500 ?</h3>
-                        <p class="text-sm text-gray-600">Il n'y a pas de nombre magique. Le vrai problème n'est pas la quantité mais la qualité : 3 plugins qui font le même travail posent plus de problèmes que 25 plugins bien choisis. Au-dela de 20 plugins actifs, un audit s'impose pour identifier les doublons et les plugins inutiles.</p>
+                        <p class="text-sm text-gray-600">Il n'y a pas de nombre magique. Le vrai problème n'est pas la quantité mais la qualité : 3 plugins qui font le même travail posent plus de problèmes que 25 plugins bien choisis. Au-delà de 20 plugins actifs, un audit s'impose pour identifier les doublons et les plugins inutiles.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">Mon site fonctionne en lecture mais plante en écriture. Pourquoi ?</h3>
                         <p class="text-sm text-gray-600">Les opérations d'écriture (sauvegarde Elementor, upload media, modification de contenu) consomment beaucoup plus de mémoire que l'affichage d'une page. WordPress doit traiter les données, régénérer les caches, mettre à jour la base de données. C'est là que la limite mémoire est atteinte.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
-                        <h3 class="font-semibold text-gray-900 mb-2">L'ecran blanc WordPress et l'erreur 500, c'est la même chose ?</h3>
-                        <p class="text-sm text-gray-600">Oui. Le White Screen of Death (WSOD) est la manifestation WordPress de l'erreur 500. PHP crashé avant de générer la page HTML, donc le navigateur reçoit une réponse vide. Le diagnostic et les causes sont identiques dans les deux cas.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2">L'écran blanc WordPress et l'erreur 500, c'est la même chose ?</h3>
+                        <p class="text-sm text-gray-600">Oui. Le White Screen of Death (WSOD) est la manifestation WordPress de l'erreur 500. PHP crashe avant de générer la page HTML, donc le navigateur reçoit une réponse vide. Le diagnostic et les causes sont identiques dans les deux cas.</p>
                     </div>
                 </div>
             </div>
@@ -593,7 +593,7 @@
                 <h3 class="font-semibold text-gray-900 mb-3">Lire aussi</h3>
                 <ul class="space-y-2 text-sm">
                     <li><a href="avez-vous-besoin-cms-site-web.html" class="text-indigo-600 hover:underline">Avez-vous vraiment besoin d'un CMS en 2026 ?</a></li>
-                    <li><a href="llms-txt-référencement-ia-guide.html" class="text-indigo-600 hover:underline">llms.txt : guide du référencement IA</a></li>
+                    <li><a href="llms-txt-referencement-ia-guide.html" class="text-indigo-600 hover:underline">llms.txt : guide du référencement IA</a></li>
                 </ul>
                 <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">Voir nos offres →</a></p>
             </div>
@@ -605,7 +605,7 @@
                         Votre WordPress affiche une erreur 500 ?
                     </h2>
                     <p class="text-orange-100 mb-4 max-w-xl mx-auto">
-                        Chaque site est différent : la combinaison thème + plugins + hébergement cree des situations uniques. Un diagnostic générique ne suffit pas.
+                        Chaque site est différent : la combinaison thème + plugins + hébergement crée des situations uniques. Un diagnostic générique ne suffit pas.
                     </p>
                     <p class="text-white font-semibold mb-8 max-w-xl mx-auto text-lg">
                         Contactez-moi pour que je puisse auditer votre WordPress et identifier la cause exacte.
