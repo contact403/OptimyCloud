@@ -1,8 +1,8 @@
 User-agent: *
 Allow: /
 
-# Fichiers techniques
-Disallow: /assets/
+# Permettre le crawl de /assets/ (CSS, fonts, images)
+# pour que Google puisse rendre les pages correctement
 
 # Pages redirigées vers la homepage — ne pas bloquer le crawl
 # pour que Google puisse lire le noindex et les désindexer proprement
