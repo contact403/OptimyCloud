@@ -1,19 +1,11 @@
 User-agent: *
 Allow: /
 
-# Interdire l'indexation des fichiers techniques
+# Fichiers techniques
 Disallow: /assets/
-Disallow: /merci.html
-Disallow: /mentions-legales.html
-Disallow: /politique-confidentialite.html
-Disallow: /politique-cookies.html
 
-# Pages redirigées vers la homepage (noindex déjà en place)
-Disallow: /finops.html
-Disallow: /kubernetes.html
-Disallow: /migration.html
-Disallow: /about.html
-Disallow: /contact.html
+# Pages redirigées vers la homepage — ne pas bloquer le crawl
+# pour que Google puisse lire le noindex et les désindexer proprement
 
 # AI Crawlers - explicitly allowed for GEO visibility
 User-agent: GPTBot
