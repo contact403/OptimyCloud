@@ -792,6 +792,8 @@
                                 <option value="migration">Migration & Infrastructure Cloud</option>
                                 <option value="finops">Optimisation des coûts (FinOps)</option>
                                 <option value="seo">Audit SEO & Référencement</option>
+                                <option value="creation-site">Création de site web</option>
+                                <option value="depannage-wordpress">Dépannage WordPress</option>
                                 <option value="other">Autre besoin</option>
                             </select>
                         </div>
@@ -1015,6 +1017,15 @@
                 mobileMenuBtn.classList.remove('hamburger-active');
             });
         });
+
+        // ===== Pre-fill project type from URL param =====
+        var serviceParam = new URLSearchParams(window.location.search).get('service');
+        if (serviceParam) {
+            var select = document.getElementById('project_type');
+            if (select.querySelector('option[value="' + serviceParam + '"]')) {
+                select.value = serviceParam;
+            }
+        }
 
         // ===== Contact form =====
         document.getElementById('contact-form').addEventListener('submit', function(e) {

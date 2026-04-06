@@ -272,3 +272,24 @@ body {
 .whatsapp-fab:hover {
     transform: scale(1.1);
 }
+
+/* ===== Sticky CTA mobile (service pages) ===== */
+.sticky-cta {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .sticky-cta {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 9998;
+        box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .whatsapp-fab {
+        bottom: 70px;
+    }
+}
