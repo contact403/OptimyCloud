@@ -251,3 +251,24 @@ body {
     background-size: 400% 400%;
     animation: gradient-shift 15s ease infinite;
 }
+
+/* ===== WhatsApp floating button ===== */
+.whatsapp-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    background: #25D366;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.whatsapp-fab:hover {
+    transform: scale(1.1);
+}
