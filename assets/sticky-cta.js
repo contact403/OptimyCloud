@@ -4,14 +4,20 @@
 
     var label = meta.getAttribute('data-label') || 'Me contacter';
     var service = meta.getAttribute('data-service') || '';
-    var href = 'index.html' + (service ? '?service=' + service : '') + '#contact';
+    var href = 'index.html' + (service ? '?service=' + encodeURIComponent(service) : '') + '#contact';
 
     var bar = document.createElement('div');
     bar.className = 'sticky-cta';
-    bar.innerHTML =
-        '<a href="' + href + '" style="display:block;width:100%;text-align:center;background:#4f46e5;color:#fff;padding:14px 20px;font-weight:600;font-size:.9rem;text-decoration:none">' +
-            '<i class="fas fa-paper-plane" style="margin-right:8px"></i>' + label +
-        '</a>';
 
+    var link = document.createElement('a');
+    link.href = href;
+    link.className = 'sticky-cta__link';
+
+    var icon = document.createElement('i');
+    icon.className = 'fas fa-paper-plane';
+    link.appendChild(icon);
+    link.appendChild(document.createTextNode(' ' + label));
+
+    bar.appendChild(link);
     document.body.appendChild(bar);
 })();

@@ -1022,9 +1022,10 @@
         var serviceParam = new URLSearchParams(window.location.search).get('service');
         if (serviceParam) {
             var select = document.getElementById('project_type');
-            if (select.querySelector('option[value="' + serviceParam + '"]')) {
-                select.value = serviceParam;
-            }
+            var match = Array.prototype.find.call(select.options, function (o) {
+                return o.value === serviceParam;
+            });
+            if (match) select.value = serviceParam;
         }
 
         // ===== Contact form =====
