@@ -87,6 +87,51 @@
           "inLanguage": "fr",
           "articleSection": "WordPress",
           "keywords": ["erreur 500 WordPress", "internal server error", "dépannage WordPress", "WP_DEBUG", "mémoire PHP", "Elementor erreur 500"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Pourquoi mon site affiche une erreur 500 uniquement dans Elementor ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Elementor est gourmand en mémoire PHP. En mode édition, il charge l'ensemble de la page, les widgets, les CSS dynamiques et les previews en temps réel. Si votre memory_limit est trop bas ou si trop de plugins sont actifs simultanément, PHP dépasse sa limite et crashe. C'est la cause numéro 1 des erreurs 500 liées à Elementor."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L'erreur 500 peut-elle venir de mon hébergement ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Les hébergements mutualisés imposent des limites strictes sur la mémoire PHP, le temps d'exécution et le nombre de requêtes. Si vous avez optimisé WordPress et que les erreurs 500 persistent, votre hébergement est probablement le facteur limitant. Un VPS ou un hébergement WordPress managé offre davantage de marge."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien de plugins puis-je avoir avant de risquer une erreur 500 ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Il n'y a pas de nombre magique. Le vrai problème n'est pas la quantité mais la qualité : 3 plugins qui font le même travail posent plus de problèmes que 25 plugins bien choisis. Au-delà de 20 plugins actifs, un audit s'impose pour identifier les doublons et les plugins inutiles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Mon site fonctionne en lecture mais plante en écriture. Pourquoi ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les opérations d'écriture (sauvegarde Elementor, upload media, modification de contenu) consomment beaucoup plus de mémoire que l'affichage d'une page. WordPress doit traiter les données, régénérer les caches, mettre à jour la base de données. C'est là que la limite mémoire est atteinte."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "L'écran blanc WordPress et l'erreur 500, c'est la même chose ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Le White Screen of Death (WSOD) est la manifestation WordPress de l'erreur 500. PHP crashe avant de générer la page HTML, donc le navigateur reçoit une réponse vide. Le diagnostic et les causes sont identiques dans les deux cas."
+              }
+            }
+          ]
         }
       ]
     }

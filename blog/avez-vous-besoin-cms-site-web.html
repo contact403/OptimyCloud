@@ -87,6 +87,51 @@
           "inLanguage": "fr",
           "articleSection": "Web & Architecture",
           "keywords": ["CMS", "WordPress alternative", "site statique", "generateur site statique", "JAMstack", "headless CMS", "Astro", "Next.js"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Un site sans CMS peut-il être bien référencé sur Google ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, et souvent mieux. Les sites statiques produisent un HTML plus propre, chargent plus vite (critère Core Web Vitals) et n'ont pas les conflits de plugins SEO typiques de WordPress. Les sitemaps XML, les balises meta et les données structurées s'implémentent aussi facilement sans CMS."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment modifier le contenu d'un site sans CMS ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Plusieurs options : éditer des fichiers Markdown dans un dépôt Git, utiliser un headless CMS comme Sanity ou Contentful, ou utiliser un assistant IA conversationnel pour mettre à jour le contenu via des commandes en langage naturel. La solution dépend de votre profil et de vos besoins."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Est-ce que les sites statiques sont plus sécurisés que WordPress ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, par conception. Un site statique n'a pas de base de données, pas de panel d'administration, pas de PHP côté serveur. Il n'y a rien à pirater. WordPress est la cible numéro 1 des attaques automatisées : plugins vulnérables, brute force sur wp-admin, injections SQL."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien coûte la migration de WordPress vers un site statique ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pour un site vitrine de 5 à 15 pages, comptez 3 à 10 jours de travail. L'investissement est amorti en 12 à 18 mois grâce aux économies d'hébergement et de maintenance. Et le site sera plus rapide, plus sécurisé et moins coûteux à opérer sur le long terme."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Et si j'ai besoin d'un formulaire de contact ou d'analytics ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Les formulaires fonctionnent via des services tiers (Formspree, Netlify Forms) ou des fonctions serverless. Les analytics s'intègrent identiquement : Google Tag Manager, Plausible ou Matomo fonctionnent sur n'importe quel site, statique ou dynamique."
+              }
+            }
+          ]
         }
       ]
     }

@@ -87,6 +87,51 @@
           "inLanguage": "fr",
           "articleSection": "Cloud & Kubernetes",
           "keywords": ["EKS Auto Mode", "Amazon EKS", "Kubernetes AWS", "Karpenter", "AWS Kubernetes 2026"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qu'est-ce que EKS Auto Mode ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EKS Auto Mode est une fonctionnalité d'Amazon EKS qui automatise entièrement la gestion des nodes, du scaling, du networking et du stockage. AWS gère l'infrastructure Kubernetes pour vous."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Combien coûte EKS Auto Mode ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "0,0842 USD par vCPU/heure, soit ~40% de plus que EC2 on-demand. Mais le TCO est souvent inférieur grâce à l'élimination de la maintenance et du sur-provisioning."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Peut-on migrer un cluster existant ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, en activant Auto Mode sur le cluster existant et en migrant progressivement les workloads. Les managed node groups fonctionnent en parallèle pendant la transition."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "EKS Auto Mode remplace-t-il Karpenter ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "EKS Auto Mode utilise Karpenter sous le capot, mais vous n'avez plus à l'installer ni le configurer. Le comportement est similaire mais entièrement managé."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelles sont les limites ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Pas de DaemonSets custom, pas de SSH sur les nodes, support GPU limité, et pas d'AMI custom. Pour ces cas, le mode classique reste recommandé."
+              }
+            }
+          ]
         }
       ]
     }

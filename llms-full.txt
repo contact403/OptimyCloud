@@ -1,0 +1,468 @@
+# OptimyCloud - Contenu complet du site
+
+> OptimyCloud est un cabinet de conseil français spécialisé en IA générative, automatisation, Cloud AWS et SEO pour PME et startups, fondé par Alexandre Gillon, ingénieur certifié AWS Solutions Architect et Kubernetes CKA.
+
+---
+
+## Services IA & Automatisation
+
+### Agents IA & LLM dédiés
+Un ChatGPT formé sur vos données métier. Agents autonomes intégrés à vos outils (CRM, ERP, email) pour automatiser les tâches complexes et gagner du temps.
+
+### Chatbots WhatsApp & Web
+Chatbots IA pour la relation client : rappels automatiques, FAQ intelligente, suivi client. 98 % de taux d'ouverture sur WhatsApp vs 21 % par email.
+
+### Automatisation des processus
+Workflows IA pour éliminer les tâches répétitives : traitement de documents, classification, extraction de données, génération de rapports automatisés.
+
+## Services Cloud & Infrastructure
+
+### Infrastructure Cloud AWS
+Migration sécurisée, Kubernetes (EKS), CI/CD et Infrastructure as Code. L'infrastructure fiable qui propulse vos projets IA.
+
+### FinOps & Optimisation
+Audit gratuit et réduction de 30 à 60 % de vos coûts AWS. Savings Plans, Reserved Instances, right-sizing.
+
+### Audit de Sécurité
+Audit de sécurité de vos infrastructures Cloud et applications. Tests de pénétration, conformité, durcissement et bonnes pratiques AWS.
+
+### Audit SEO & Référencement
+Audit technique complet de votre site : performance, Core Web Vitals, schema markup, contenu, indexation. Stratégie SEO sur-mesure pour améliorer votre visibilité sur Google.
+
+### Dépannage WordPress
+Erreur 500, 400, écran blanc, crash après mise à jour Elementor ? Diagnostic, correction et rapport détaillé. Intervention sous 24h. À partir de 250 €.
+
+---
+
+## Offres & Tarifs
+
+### Offres Artisans & PME
+
+#### Site Vitrine -- À partir de 500 €
+Un site rapide, responsive et optimisé pour Google. Pas de CMS, pas d'usine à gaz. Juste ce qu'il faut pour convertir.
+
+Inclus :
+- Jusqu'à 5 pages (Accueil, Services, À propos, Contact, etc.)
+- Design responsive mobile et tablette
+- SEO local (meta tags, schema, Google My Business)
+- Google Search Console + Google Analytics configurés
+- Formulaire de contact
+- Hébergement + nom de domaine inclus la 1ère année
+- Livré en 48h
+
+#### Site + Chatbot IA -- À partir de 650 € (+ 29 €/mois pour le chatbot) [POPULAIRE]
+Votre site vitrine avec un chatbot IA entraîné sur votre métier. Il répond à vos clients même quand vous êtes sur un chantier.
+
+Inclus :
+- Tout le pack Site Vitrine inclus
+- Chatbot IA entraîné sur votre activité
+- Répond aux questions : tarifs, zone, disponibilité
+- Collecte les demandes de devis automatiquement
+- Notification par email ou WhatsApp
+- Mise à jour du chatbot incluse
+
+#### Chatbot Métier IA -- À partir de 200 € (+ 29 €/mois)
+Vous avez déjà un site ? On y intègre un chatbot IA qui connaît votre métier et répond à vos clients 24h/24.
+
+Inclus :
+- Chatbot entraîné sur votre activité
+- Intégration sur votre site existant
+- Répond en français, ton professionnel
+- Collecte automatique des demandes
+- Installation en moins de 24h
+- Support et mises à jour inclus
+
+### Services sur-mesure (Entreprises & Startups)
+
+- RAG & Base de connaissances IA : un assistant IA qui répond à partir de votre documentation interne (manuels, procédures, fiches techniques, FAQ). Sur devis.
+- Agents IA & LLM dédiés : un ChatGPT formé sur vos données métier. Agents autonomes intégrés à vos outils (CRM, ERP, email). Sur devis.
+- Automatisation IA : workflows pour éliminer les tâches répétitives (traitement de documents, extraction, rapports automatisés). Sur devis.
+- Infrastructure Cloud AWS : migration, Kubernetes (EKS), CI/CD, Infrastructure as Code. Sur devis.
+- Dépannage WordPress : erreur 500, 400, écran blanc, crash après mise à jour Elementor. Diagnostic, correction et rapport détaillé. Intervention sous 24h. À partir de 250 €.
+- Audit SEO & Référencement : audit technique, Core Web Vitals, schema markup, contenu, indexation. Stratégie SEO pour être visible sur Google. Sur devis.
+
+### Pourquoi travailler avec OptimyCloud
+
+- Rapide : site livré en 48h, chatbot opérationnel en 24h. Pas de réunions inutiles, pas de process à rallonge.
+- Pas de CMS, pas de dette : code propre, site statique ultra-rapide. Pas de WordPress, pas de mises à jour à gérer, pas de failles de sécurité.
+- Expertise certifiée : certifié AWS Solutions Architect et Kubernetes CKA. Ubisoft, Valeo, Culligan dans les références.
+
+### FAQ Offres
+
+Q : Pourquoi pas de CMS comme WordPress ?
+R : Un site statique charge en moins d'une seconde, ne tombe jamais en panne, n'a pas besoin de mises à jour et ne se fait pas pirater. WordPress, c'est bien pour un blog. Pour un site vitrine d'artisan, c'est de la complexité inutile.
+
+Q : Comment fonctionne le chatbot IA ?
+R : Le chatbot est entraîné sur les informations de votre activité : vos services, votre zone d'intervention, vos tarifs indicatifs. Quand un visiteur pose une question, il répond instantanément et collecte les coordonnées pour vous. Vous recevez une notification par email ou WhatsApp.
+
+Q : Je peux modifier mon site après la livraison ?
+R : Un aller-retour de corrections est inclus dans le tarif. Pour les modifications ultérieures (ajout de page, changement de texte, nouvelles photos), c'est facturé à la demande. Pas d'abonnement caché.
+
+Q : Qu'est-ce qu'il me faut pour démarrer ?
+R : Vous remplissez un formulaire avec vos infos (nom, activité, zone, services, photos, coordonnées). Je m'occupe du reste. Pas de formulaire rempli, pas de site lancé. Ça évite les allers-retours.
+
+Q : L'hébergement est inclus ?
+R : La première année est offerte. Ensuite, l'hébergement est à 5 €/mois. C'est un site statique, donc pas de serveur coûteux à maintenir.
+
+---
+
+## Audit SEO
+
+### Audit SEO complet pour améliorer votre visibilité sur Google
+
+Votre site ne remonte pas dans les résultats Google ? Un audit de référencement naturel identifie ce qui bloque et vous donne un plan d'action concret pour gagner en visibilité.
+
+Consultant SEO freelance en France -- analyse technique, contenu et performance.
+
+### Ce que l'audit SEO couvre
+
+Chaque point qui influence votre positionnement Google est passé au crible. Rien n'est laissé au hasard.
+
+- Core Web Vitals : LCP, INP, CLS -- les métriques de performance que Google utilise pour classer votre site. Analyse et recommandations pour chaque indicateur.
+- Schema markup : vérification des données structurées (JSON-LD) pour les rich snippets Google (FAQ, avis, produits, fil d'Ariane, organisation).
+- Indexation et crawl : robots.txt, sitemap XML, pages orphelines, redirections, erreurs 404. On vérifie que Google peut explorer et indexer toutes vos pages.
+- Contenu et mots-clés : balises title, meta descriptions, structure Hn, contenu dupliqué, cannibalisation de mots-clés. Chaque page est analysée individuellement.
+- Expérience mobile : Google indexe en priorité la version mobile. Responsive design, taille des boutons, lisibilité, viewport -- tout est vérifié.
+- Sécurité et HTTPS : certificat SSL, mixed content, en-têtes de sécurité, redirections HTTP vers HTTPS. Un site non sécurisé est pénalisé par Google.
+
+### Comment ça se passe
+
+1. Audit complet : analyse technique, contenu, performance, indexation, sécurité. Chaque page de votre site est passée au crible avec des outils professionnels.
+2. Rapport détaillé : vous recevez un rapport clair avec les problèmes identifiés, classés par priorité et impact sur votre référencement Google. Pas de jargon inutile.
+3. Plan d'action : un plan d'action priorisé avec les corrections à appliquer, étape par étape. Vous pouvez le suivre seul ou confier la mise en oeuvre à OptimyCloud.
+
+Tarif : sur devis. Adapté à la taille et la complexité de votre site.
+
+### Problèmes fréquents détectés
+
+- Pages non indexées par Google : robots.txt mal configuré, balises noindex oubliées, sitemap absente.
+- Temps de chargement trop long : images non compressées, JavaScript bloquant, serveur lent.
+- Contenu dupliqué ou trop mince : pages avec peu de texte, titres identiques, descriptions manquantes.
+- Erreurs techniques (404, 500, redirections) : liens cassés, chaînes de redirections, erreurs serveur.
+- Pas de données structurées : sans schema markup, Google ne peut pas afficher de rich snippets.
+- Site non adapté au mobile : Google utilise le mobile-first indexing.
+
+---
+
+## Création de site web
+
+### Création de site web professionnel pour PME et artisans
+
+Un site vitrine rapide, responsive et optimisé pour Google. Pas de CMS, pas d'abonnement caché. Livré en 48h, à partir de 500 €.
+
+Hébergement et nom de domaine inclus la première année.
+
+### Ce que vous obtenez
+
+- Jusqu'à 5 pages : Accueil, Services, À propos, Contact, et une page supplémentaire au choix. Structure pensée pour convertir les visiteurs en clients.
+- Design responsive : votre site s'adapte à tous les écrans (mobile, tablette, desktop). Plus de 60 % du trafic vient du mobile.
+- SEO optimisé : meta tags, schema markup, Google My Business. Votre site internet est configuré pour être trouvé sur Google dès le premier jour.
+- Formulaire de contact : vos visiteurs vous contactent directement depuis le site. Vous recevez leurs demandes par email.
+- Google Analytics : Google Analytics et Google Search Console configurés. Vous savez combien de visiteurs viennent sur votre site et d'où ils arrivent.
+- Hébergement inclus : hébergement rapide et nom de domaine inclus la première année. Ensuite 5 €/mois. Pas de serveur coûteux à maintenir.
+
+### Pourquoi pas de CMS ?
+
+WordPress représente 43 % du web, mais c'est aussi la cible numéro un des attaques informatiques. Pour un site vitrine de PME, un CMS est une usine à gaz : mises à jour constantes, plugins qui cassent, temps de chargement lent, failles de sécurité.
+
+Un site statique charge en moins d'une seconde, ne tombe jamais en panne et ne peut pas se faire pirater. Il n'y a rien à maintenir. Résultat : un score Google PageSpeed au-dessus de 95/100 et un site qui fonctionne, tout simplement.
+
+### Tarif
+
+Site vitrine complet : à partir de 500 € (paiement unique).
+
+Inclus :
+- Jusqu'à 5 pages
+- Design responsive mobile et tablette
+- SEO local (meta tags, schema, Google My Business)
+- Google Search Console + Google Analytics configurés
+- Formulaire de contact fonctionnel
+- Hébergement + nom de domaine inclus la 1ère année
+- Score Google PageSpeed 95+
+- Un aller-retour de corrections inclus
+- Livré en 48h après réception de vos contenus
+
+Ensuite : hébergement à 5 €/mois. Pas d'engagement.
+
+---
+
+## Dépannage WordPress
+
+### Dépannage WordPress : votre site plante ? Intervention sous 24h
+
+Erreur 500, écran blanc, site piraté, crash après mise à jour -- on diagnostique et on corrige. Pas de blabla, pas de devis à rallonge. Vous envoyez vos accès, on intervient.
+
+Intervention sous 24h -- À partir de 250 € HT.
+
+### Problèmes qu'on résout
+
+- Erreur 500 WordPress : Internal Server Error. Plugin défaillant, .htaccess corrompu, limite mémoire PHP dépassée. On identifie la cause et on corrige.
+- Écran blanc WordPress : le White Screen of Death. Conflit de plugin, thème cassé, dépassement mémoire. On réactive votre site sans perte de données.
+- Site WordPress piraté : redirections suspectes, pages injectées, malware. On nettoie le code, on sécurise les accès et on renforce la protection.
+- Site WordPress lent : temps de chargement supérieur à 3 secondes. On identifie les goulots (plugins, images, hébergement) et on optimise.
+- Crash après mise à jour : mise à jour WordPress, WooCommerce ou plugin qui casse tout. On restaure, on corrige la compatibilité et on remet en ligne.
+- Elementor qui plante : éditeur qui ne charge plus, widgets cassés, mise en page déformée. On diagnostique le conflit et on restaure l'éditeur.
+
+### Comment ça se passe
+
+1. Diagnostic : vous nous envoyez vos accès (FTP, wp-admin, hébergeur). On analyse les logs, on identifie la cause du problème. 9 fois sur 10, le diagnostic est posé en moins de 5 minutes.
+2. Correction : on corrige le problème (désactivation du plugin fautif, nettoyage du code, restauration de sauvegarde, patch de sécurité). Votre site est remis en ligne.
+3. Rapport : vous recevez un rapport détaillé (ce qui s'est passé, ce qu'on a fait, et nos recommandations pour éviter que ça se reproduise). Pas de jargon inutile.
+
+### Tarif
+
+Dépannage WordPress : 250 € HT -- à partir de. Diagnostic, correction et rapport inclus.
+
+Inclus :
+- Intervention sous 24h
+- Diagnostic de la cause du problème
+- Correction et remise en ligne
+- Rapport détaillé de l'intervention
+- Recommandations pour éviter les récidives
+
+Le tarif final dépend de la complexité du problème identifié lors du diagnostic.
+
+### Retour d'expérience
+
+- 50+ interventions WordPress réalisées
+- 34 erreurs 500 corrigées
+- 9/10 diagnostiquées en moins de 5 minutes
+
+---
+
+## Article : Combien coûte un chatbot IA pour une PME en 2026 ?
+
+Auteur : Alexandre Gillon | Date : 6 avril 2026 | Temps de lecture : 10 min
+
+### Introduction
+
+Vous avez googlé le prix d'un chatbot. Vous êtes tombé sur des pages qui disent "ça dépend" sans jamais donner un seul chiffre. Ou pire, sur des comparatifs sponsorisés qui vous poussent vers un outil SaaS à 99 €/mois "tout compris" -- sauf que rien n'est compris.
+
+Voici la réponse honnête : en 2026, un chatbot IA pour une PME coûte entre 500 et 50 000 €. L'écart est énorme parce que le mot "chatbot" recouvre des réalités complètement différentes. Un chatbot qui répond "nos horaires sont 9h-18h" et un chatbot qui traite des réclamations en interrogeant votre CRM en temps réel, ce n'est pas le même projet, pas le même budget, et pas le même retour sur investissement.
+
+Dans cet article, je vous donne les vrais chiffres. Pas de fourchettes vagues, pas de "contactez-nous pour un devis". Des prix concrets, des exemples réels, et les critères qui font varier la facture.
+
+### Les 3 types de chatbots (et pourquoi le prix varie de 0 à 50 000 €)
+
+Tous les chatbots ne se valent pas. La confusion vient du fait qu'on utilise le même mot pour désigner trois technologies fondamentalement différentes.
+
+#### 1. Le chatbot à règles (scénarisé)
+
+Le plus simple. Il suit un script prédéterminé : "Si le client dit X, répondre Y." Pas d'intelligence artificielle. Juste de la logique conditionnelle, comme un formulaire interactif sophistiqué.
+
+- Ce qu'il fait : réponses aux questions fréquentes, orientation vers le bon service, collecte d'informations de base.
+- Ce qu'il ne fait pas : comprendre une question formulée différemment, traiter des demandes complexes.
+- Idéal pour : un commerce, un restaurant, un artisan qui veut filtrer les demandes entrantes.
+- Prix : 500 à 3 000 € (création) + 0 à 50 €/mois.
+
+Exemple : un restaurant à Lyon déploie un chatbot WhatsApp pour les réservations. Le client répond à 4-5 questions guidées (date, couverts, allergies) et reçoit une confirmation automatique. Coût : environ 1 200 €, déployé en une semaine.
+
+#### 2. Le chatbot IA conversationnel (type GPT-4 / Claude)
+
+Le chatbot utilise un modèle de langage (LLM) comme GPT-4 ou Claude d'Anthropic pour comprendre les messages en langage naturel. Il ne suit pas un script : il comprend l'intention derrière la question, même si elle est formulée avec des fautes ou en mélangeant plusieurs sujets.
+
+- Ce qu'il fait : répond en langage naturel, maintient le contexte d'une conversation, gère des demandes variées.
+- Ce qu'il ne fait pas : accéder à vos systèmes internes (sauf intégration spécifique).
+- Idéal pour : une PME qui veut un assistant virtuel capable de répondre sur ses produits et services.
+- Prix : 2 000 à 15 000 € (création) + 100 à 300 €/mois.
+
+Exemple : un cabinet de conseil déploie un chatbot IA sur son site, propulsé par Claude via Amazon Bedrock. Le bot répond sur les praticiens, les tarifs, les spécialités, et qualifie les leads. Coût : environ 5 000 €, 2-3 semaines.
+
+#### 3. Le chatbot IA sur-mesure avec intégration métier
+
+Le haut de gamme. Le chatbot ne se contente pas de converser : il agit. Il se connecte à votre CRM, votre ERP, votre base de données produits. Il peut consulter l'historique d'un client, vérifier le statut d'une commande, créer un ticket SAV -- de manière autonome.
+
+- Ce qu'il fait : tout le conversationnel + accès temps réel à vos données, exécution d'actions, escalade intelligente.
+- Ce qu'il ne fait pas : remplacer votre équipe. Il traite 70 à 85 % des demandes courantes.
+- Idéal pour : un e-commerce avec du volume, une entreprise de services avec des processus structurés.
+- Prix : 5 000 à 50 000 € (création) + 200 à 800 €/mois.
+
+Exemple : une PME e-commerce déploie un chatbot WhatsApp connecté à Shopify et Zendesk. Le client envoie "où en est ma commande ?", le bot interroge Shopify et répond avec le statut exact. Coût : environ 12 000 €, 4-6 semaines.
+
+### Ce qui fait grimper (ou baisser) la facture
+
+Le nombre de canaux : un chatbot sur votre site web coûte moins cher qu'un chatbot disponible sur WhatsApp, Messenger et email. Chaque canal supplémentaire ajoute de la complexité. En contrepartie, le taux d'ouverture WhatsApp atteint 98 %, contre 21 % pour l'email. Impact : +1 000 à 3 000 € par canal supplémentaire.
+
+Les intégrations avec vos outils : connecter le chatbot à HubSpot, Doctolib, Shopify ou votre ERP, c'est ce qui le transforme en outil véritablement utile. Mais chaque intégration nécessite du développement spécifique. Impact : +1 500 à 5 000 € par intégration.
+
+Le volume de conversations : les coûts d'API des LLM (GPT-4, Claude via Amazon Bedrock) sont facturés à l'usage. Pour une PME typique (200 à 1 000 conversations/mois), ça reste raisonnable. Impact : 30 à 150 €/mois pour un volume PME standard.
+
+La formation sur vos données : pour que le chatbot réponde correctement sur vos produits et procédures, il faut le former sur vos données (FAQ, fiches produits, historique). C'est la phase de RAG (Retrieval-Augmented Generation). Impact : +1 000 à 5 000 € selon le volume de données.
+
+### Comparatif : freelance vs agence vs plateforme SaaS
+
+| Critère | SaaS | Agence | Freelance |
+|---|---|---|---|
+| Mise en place | 0 - 500 € | 5 000 - 30 000 € | 1 500 - 15 000 € |
+| Coût mensuel | 50 - 500 €/mois | 500 - 2 000 €/mois | 50 - 300 €/mois |
+| Personnalisation | Limitée | Élevée | Élevée |
+| Délai | 1 - 3 jours | 4 - 12 semaines | 1 - 4 semaines |
+| Interlocuteur | Support ticket | Chef de projet | Direct avec le dev |
+| Propriété du code | Non | Oui | Oui |
+| Dépendance | Forte (lock-in) | Moyenne | Faible |
+
+Pour 90 % des PME, le freelance spécialisé en IA est l'option la plus pertinente. Pas d'intermédiaire, pas de frais de structure gonflés. Vous parlez directement à la personne qui conçoit et déploie votre chatbot. Le code vous appartient, les délais sont courts.
+
+### Le coût caché qu'on ne vous dit jamais
+
+La plupart des devis couvrent la création. Point. Mais un chatbot, ce n'est pas un site web qu'on met en ligne et qu'on oublie. Voici les coûts que personne ne mentionne.
+
+- Maintenance (surveillance, corrections, mises à jour de sécurité) : 50 - 150 €/mois
+- Amélioration continue (nouveaux scénarios, affinement des réponses) : 100 - 400 €/mois
+- Monitoring (tableau de bord, métriques, rapports) : 50 - 100 €/mois
+
+Budget mensuel total réaliste : prévoyez 150 à 500 €/mois après la mise en place. C'est deux à cinq fois moins cher qu'un mi-temps dédié au support client.
+
+### 3 exemples concrets de chatbots pour des PME françaises
+
+#### Restaurant gastronomique à Bordeaux
+Chatbot WhatsApp pour les réservations. Le client envoie "je veux réserver", le bot demande date, heure, couverts, allergies, et confirme. Rappel automatique 24h avant.
+- Coût : 1 500 €
+- Mensuel : 60 €/mois
+- Délai : 5 jours
+- Résultat : 80 % des réservations automatisées
+
+#### Cabinet médical à Nantes
+Chatbot IA (Claude via Amazon Bedrock) sur site + WhatsApp. Répond sur les praticiens, tarifs, spécialités. Connecté à Doctolib pour les créneaux disponibles.
+- Coût : 3 500 €
+- Mensuel : 120 €/mois
+- Délai : 2 semaines
+- Résultat : -60 % d'appels téléphoniques
+
+#### E-commerce (15 000 commandes/mois)
+Chatbot IA sur-mesure WhatsApp + site, connecté à Shopify et Gorgias. Suivi de commandes en temps réel, étiquettes de retour automatiques, escalade intelligente.
+- Coût : 8 000 €
+- Mensuel : 350 €/mois
+- Délai : 5 semaines
+- Résultat : 75 % des demandes automatisées
+
+### Comment estimer votre budget
+
+Posez-vous ces cinq questions. Elles suffisent à cadrer 80 % de votre budget.
+
+1. Quel problème concret voulez-vous résoudre ? "Automatiser le service client" est trop vague. "Répondre automatiquement aux 50 questions récurrentes par jour" est un brief chiffrable.
+2. Sur quel canal vos clients vous contactent-ils ? WhatsApp ? Formulaire web ? Email ? Commencez par le canal principal.
+3. Avez-vous besoin d'intégrations ? CRM, réservation, e-commerce ? Plus d'intégrations = budget plus élevé mais ROI plus fort.
+4. Quel volume de conversations ? Moins de 200/mois : coûts API négligeables. 200-2 000 : standard. Au-delà : optimisation nécessaire.
+5. Quel est votre budget réaliste ? 1 000-3 000 € : chatbot à règles solide. 3 000-10 000 € : IA conversationnelle. 10 000 €+ : sur-mesure avec intégrations.
+
+---
+
+## FAQ - Audit SEO
+
+Q : Qu'est-ce qu'un audit SEO et pourquoi en faire un ?
+R : Un audit SEO est une analyse complète de votre site web pour identifier tout ce qui freine votre visibilité sur Google. Il couvre la technique (vitesse, indexation, sécurité), le contenu (mots-clés, structure, balises) et la popularité (liens, autorité). C'est la première étape indispensable avant toute stratégie de référencement naturel.
+
+Q : Combien coûte un audit SEO ?
+R : Le prix d'un audit SEO dépend de la taille du site, du nombre de pages et de la complexité technique. Chez OptimyCloud, chaque audit est sur devis pour s'adapter à votre situation. Comptez entre quelques centaines et plusieurs milliers d'euros selon le périmètre. Un premier échange gratuit permet d'évaluer vos besoins.
+
+Q : Combien de temps dure un audit SEO complet ?
+R : Un audit SEO complet prend généralement entre 5 et 10 jours ouvrables selon la taille du site. Ce délai inclut l'analyse technique, l'audit de contenu, la vérification de l'indexation et la rédaction du rapport avec les recommandations prioritaires.
+
+Q : Quels résultats attendre après un audit SEO ?
+R : Après un audit SEO, vous recevez un rapport détaillé avec les problèmes identifiés, classés par priorité et impact sur votre référencement Google. Les sites qui appliquent les recommandations constatent en moyenne une amélioration de leur positionnement dans les 3 à 6 mois suivants. Les gains dépendent de la concurrence et de la mise en oeuvre.
+
+Q : L'audit SEO inclut-il la correction des problèmes ?
+R : L'audit SEO inclut l'analyse, le rapport et le plan d'action détaillé. La correction des problèmes peut être réalisée par vos équipes en suivant le rapport, ou confiée à OptimyCloud dans le cadre d'un accompagnement séparé. Chaque recommandation est documentée avec les instructions techniques pour la mise en oeuvre.
+
+---
+
+## FAQ - Création de site web
+
+Q : Combien coûte la création d'un site web professionnel ?
+R : La création d'un site vitrine professionnel démarre à 500 € chez OptimyCloud. Ce tarif inclut jusqu'à 5 pages, un design responsive, l'optimisation SEO, un formulaire de contact, Google Analytics et l'hébergement la première année. C'est un paiement unique, pas un abonnement mensuel.
+
+Q : Quel est le délai de livraison pour un site vitrine ?
+R : Un site vitrine est livré en 48h après réception de vos contenus. Il suffit de remplir un formulaire avec vos informations (nom, activité, services, zone d'intervention, photos, coordonnées) et je m'occupe du reste. Pas de réunions inutiles, pas de process à rallonge.
+
+Q : Pourquoi un site statique plutôt que WordPress ?
+R : Un site statique charge en moins d'une seconde, ne tombe jamais en panne, n'a pas besoin de mises à jour de sécurité et ne peut pas se faire pirater. WordPress ajoute de la complexité inutile pour un site vitrine de PME ou d'artisan.
+
+Q : L'hébergement est-il inclus dans le prix ?
+R : Oui, la première année d'hébergement et le nom de domaine sont inclus dans le tarif de 500 €. Ensuite, l'hébergement est à 5 € par mois. C'est un site statique, donc pas de serveur coûteux à maintenir. Pas d'engagement, vous pouvez arrêter quand vous voulez.
+
+Q : Puis-je modifier mon site après la livraison ?
+R : Un aller-retour de corrections est inclus dans le tarif. Pour les modifications ultérieures (ajout de page, changement de texte, nouvelles photos), c'est facturé à la demande. Pas d'abonnement caché, pas de frais récurrents surprises.
+
+---
+
+## FAQ - Dépannage WordPress
+
+Q : Combien coûte un dépannage WordPress ?
+R : Le dépannage WordPress démarre à 250 € HT. Ce tarif couvre le diagnostic, la correction du problème et un rapport détaillé de l'intervention. Le prix final dépend de la complexité du problème identifié lors du diagnostic.
+
+Q : Quel est le délai d'intervention pour un dépannage WordPress ?
+R : L'intervention démarre sous 24h après la prise de contact. Dans la majorité des cas, le diagnostic est posé en moins de 5 minutes et la correction effectuée dans la foulée. Pour les cas complexes (site piraté, base de données corrompue), comptez 24 à 48h.
+
+Q : Mon site WordPress affiche une erreur 500 : que faire ?
+R : Une erreur 500 WordPress peut provenir d'un plugin défaillant, d'un fichier .htaccess corrompu, d'une limite mémoire PHP dépassée ou d'un problème serveur. La première étape est de consulter les logs d'erreur. Envoyez-nous vos accès, on diagnostique et on corrige sous 24h.
+
+Q : Mon site WordPress affiche un écran blanc, comment le réparer ?
+R : L'écran blanc WordPress (White Screen of Death) est souvent causé par un conflit de plugin, un thème défaillant ou un dépassement de mémoire PHP. Le diagnostic consiste à activer le mode debug, identifier la source du conflit et le corriger. C'est une intervention courante que nous résolvons en quelques heures.
+
+Q : Mon site WordPress a été piraté, que faire ?
+R : Si votre site WordPress est piraté, il faut agir vite : identifier les fichiers infectés, nettoyer le code malveillant, changer tous les mots de passe, mettre à jour WordPress et les plugins, et renforcer la sécurité pour éviter une récidive. Nous intervenons sous 24h avec un rapport complet des actions réalisées.
+
+---
+
+## Réalisations
+
+### PostCare (SaaS IA en production)
+Plateforme SaaS d'IA générative pour le suivi post-opératoire. Messagerie automatisée par IA, rappels intelligents, accompagnement patient personnalisé. Architecture serverless AWS, LLM intégrés, conformité données de santé.
+URL : https://www.postcare.net
+
+### FleetCast (SaaS en production)
+Radar de demande événementielle pour les loueurs de matériel en France. Détecte les festivals, chantiers et événements publics 4 à 6 semaines à l'avance pour anticiper les pics de demande.
+URL : https://fleetcast.fr
+
+### Les Petites Mascarades (SEO)
+Audit SEO complet et optimisation du référencement naturel pour cette agence événementielle dédiée aux enfants : organisation d'anniversaires, espaces kids lors d'événements adultes et animations sur mesure. Restructuration technique, optimisation on-page et stratégie de contenu.
+URL : https://lespetitesmascarades.com
+
+---
+
+## À propos
+
+### Alexandre Gillon -- Fondateur d'OptimyCloud
+
+Passionné d'intelligence artificielle et d'automatisation, j'aide les PME et startups à intégrer l'IA dans leurs processus métier : agents IA, chatbots, LLM dédiés et workflows automatisés.
+
+Ingénieur diplômé de l'ESIEA avec plus de 10 ans d'expérience, je maîtrise toute la chaîne : de la conception de solutions IA à leur déploiement sur une infrastructure Cloud performante et sécurisée.
+
+Certifié AWS Solutions Architect et Kubernetes CKA, je garantis que vos projets IA reposent sur une infrastructure fiable, scalable et optimisée en coûts.
+
+Mon approche : un interlocuteur unique, des solutions sur-mesure, pas d'ESN, et un ROI mesurable dès les premiers mois.
+
+Certifications :
+- AWS Solutions Architect Associate
+- Certified Kubernetes Administrator (CKA)
+- ITIL Foundation v3
+- AWS Cloud Practitioner
+
+Expertise technique :
+AWS, Azure, GCP, Docker, Kubernetes, Terraform, Ansible, GitLab, GitHub, Prometheus, Grafana, Linux.
+
+### Clients et références
+
+Projets réalisés pour (en tant que salarié ou prestataire) :
+- Arkema, Valeo, Culligan, TopTex, Samboat : Consultant Cloud & DevOps (AWS, Kubernetes, Terraform, CI/CD, Elastic Beanstalk)
+- Ubisoft : Ingénieur SRE / DevOps (supervision et automatisation)
+- Linkeo : Ingénieur Infrastructure (refonte du monitoring, gestion de l'infrastructure on-premise)
+- Châteauform' : Administrateur Systèmes (gestion des serveurs en environnement multisite)
+- Les Petites Mascarades : Audit SEO et optimisation du référencement naturel
+
+---
+
+## Contact
+
+- Email : alexandre@optimycloud.com
+- WhatsApp : +33 6 31 10 95 39
+- LinkedIn : https://www.linkedin.com/in/alexandre-gillon
+- Localisation : France (Épinay-sur-Seine, 93800)
+- Site web : https://optimycloud.com
+
+Décrivez votre besoin, réponse sous 24h avec une première analyse.
+
+---
+
+Source : https://optimycloud.com

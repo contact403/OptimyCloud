@@ -87,6 +87,59 @@
           "inLanguage": "fr",
           "articleSection": "IA & WhatsApp",
           "keywords": ["Amazon Bedrock", "WhatsApp assistant IA", "AWS Lambda", "serverless", "chatbot WhatsApp AWS", "Amazon Nova"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Combien coûte un assistant IA WhatsApp sur AWS ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Grâce à l'architecture serverless, les coûts sont proportionnels à l'usage. Pour 1 000 messages par mois, comptez environ 20 à 50 USD tout compris. Le coût augmente linéairement avec le volume, sans palier ni abonnement fixe."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quels types de fichiers l'assistant peut-il traiter ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Texte, images (JPEG, PNG), vidéos (MP4), documents (PDF, Word) et notes vocales. Les médias sont analysés par Amazon Nova via l'API Bedrock Converse. Les notes vocales sont transcrites par Amazon Transcribe avec détection automatique de la langue."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Les données sont-elles sécurisées ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. Toutes les données restent dans votre compte AWS. Bedrock ne stocke pas vos données et ne les utilise pas pour l'entraînement. S3 chiffre les fichiers avec SSE, DynamoDB chiffre au repos. Cependant, les messages transitent par WhatsApp qui a ses propres politiques de confidentialité."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Peut-on personnaliser les réponses de l'agent ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolument. L'agent Bedrock accepte des instructions personnalisées qui définissent son comportement, son ton, son périmètre et ses limites. Vous pouvez lui donner une personnalité spécifique, limiter les sujets abordés et définir des règles de réponse. L'historique DynamoDB permet des réponses contextuelles."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Faut-il un Meta Business Account ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui. L'intégration WhatsApp via AWS End User Messaging nécessite un Meta Business Account vérifié. La création est gratuite mais la vérification prend quelques jours. C'est le même compte que pour Facebook Ads ou Instagram Business."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Comment supprimer l'infrastructure ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Videz le bucket S3, puis lancez cdk destroy. Toutes les ressources sont supprimées en quelques minutes. C'est l'avantage de l'Infrastructure as Code : déploiement et nettoyage en une seule commande."
+              }
+            }
+          ]
         }
       ]
     }

@@ -1,84 +1,94 @@
 # OptimyCloud
 
-> Expert IA Generative & Automatisation freelance pour PME et startups. Agents IA, chatbots, LLM dedies, workflows automatises. Infrastructure Cloud AWS certifiee (Solutions Architect, CKA).
+> Expert IA Générative & Automatisation freelance pour PME et startups. Agents IA, chatbots, LLM dédiés, workflows automatisés. Infrastructure Cloud AWS certifiée (Solutions Architect, CKA).
 
 Site : https://optimycloud.com
+Contenu complet : https://optimycloud.com/llms-full.txt
 
-## A propos
+## À propos
 
-OptimyCloud est le cabinet de conseil IA & Cloud fonde par Alexandre Gillon, ingenieur diplome de l'ESIEA avec plus de 10 ans d'experience en infrastructure et transformation digitale. Certifie AWS Solutions Architect Associate, Kubernetes CKA et ITIL Foundation v3, Alexandre accompagne PME et startups dans l'integration de l'intelligence artificielle dans leurs processus metier et l'optimisation de leur infrastructure Cloud. Base en France (Epinay-sur-Seine), il intervient a distance pour des clients dans toute la France et a l'international.
+OptimyCloud est le cabinet de conseil IA & Cloud fondé par Alexandre Gillon, ingénieur diplômé de l'ESIEA avec plus de 10 ans d'expérience en infrastructure et transformation digitale. Certifié AWS Solutions Architect Associate, Kubernetes CKA et ITIL Foundation v3, Alexandre accompagne PME et startups dans l'intégration de l'intelligence artificielle dans leurs processus métier et l'optimisation de leur infrastructure Cloud. Basé en France (Épinay-sur-Seine), il intervient à distance pour des clients dans toute la France et à l'international.
+
+## Pourquoi choisir OptimyCloud ?
+
+- Interlocuteur unique : un expert certifié, pas une ESN avec un commercial + un junior
+- Tarifs transparents : site vitrine à partir de 500 €, chatbot IA à partir de 200 € + 29 €/mois, dépannage WordPress à partir de 250 €
+- Réactivité : réponse sous 24h, intervention sous 24-48h
+- ROI mesurable : réduction de 30 à 60% des coûts Cloud constatée, 50+ dépannages WordPress réalisés
+- Certifications vérifiables : AWS Solutions Architect, Kubernetes CKA (liens Credly ci-dessous)
+- Pas de sous-traitance : Alexandre Gillon intervient personnellement sur chaque mission
 
 ## Offres Artisans & PME
 
-Page dediee : https://optimycloud.com/offres.html
+Page dédiée : https://optimycloud.com/offres.html
 
-- **Site Vitrine** : Creation de site vitrine professionnel pour artisans et PME, a partir de 500 euros. Site statique rapide (pas de CMS), responsive, SEO local inclus (meta tags, schema, Google My Business), Google Search Console et Google Analytics configures, formulaire de contact, hebergement et nom de domaine inclus la 1ere annee. Livre en 48h.
+- **Site Vitrine** : Création de site vitrine professionnel pour artisans et PME, à partir de 500 euros. Site statique rapide (pas de CMS), responsive, SEO local inclus (meta tags, schema, Google My Business), Google Search Console et Google Analytics configurés, formulaire de contact, hébergement et nom de domaine inclus la 1ère année. Livré en 48h.
 
-- **Chatbot Metier IA** : Chatbot IA entraine sur l'activite du client, a partir de 200 euros + 29 euros/mois. Repond aux questions des visiteurs (tarifs, zone d'intervention, disponibilite), collecte les demandes de devis automatiquement, notification par email ou WhatsApp. Integration sur site existant ou nouveau.
+- **Chatbot Métier IA** : Chatbot IA entraîné sur l'activité du client, à partir de 200 euros + 29 euros/mois. Répond aux questions des visiteurs (tarifs, zone d'intervention, disponibilité), collecte les demandes de devis automatiquement, notification par email ou WhatsApp. Intégration sur site existant ou nouveau.
 
-- **Pack Site + Chatbot IA** : Site vitrine complet avec chatbot IA integre, a partir de 650 euros + 29 euros/mois. Combine les deux offres precedentes.
+- **Pack Site + Chatbot IA** : Site vitrine complet avec chatbot IA intégré, à partir de 650 euros + 29 euros/mois. Combine les deux offres précédentes.
 
 ## Services IA & Automatisation
 
-- **Agents IA & LLM dedies** : Deploiement d'un modele de langage (LLM) personnalise, entraine sur les donnees, les process et le vocabulaire specifiques de votre entreprise. Equivalent a un "ChatGPT prive" qui connait votre metier. Agents autonomes integres a vos outils existants (CRM, ERP, email, outils internes).
+- **Agents IA & LLM dédiés** : Déploiement d'un modèle de langage (LLM) personnalisé, entraîné sur les données, les process et le vocabulaire spécifiques de votre entreprise. Équivalent à un "ChatGPT privé" qui connaît votre métier. Agents autonomes intégrés à vos outils existants (CRM, ERP, email, outils internes).
 
-- **Chatbots conversationnels WhatsApp & web** : Mise en place de chatbots IA pour la relation client : rappels automatiques, suivi client, relances, FAQ intelligente. Integration WhatsApp Business et widgets web. 98% de taux d'ouverture sur WhatsApp vs 21% par email.
+- **Chatbots conversationnels WhatsApp & web** : Mise en place de chatbots IA pour la relation client : rappels automatiques, suivi client, relances, FAQ intelligente. Intégration WhatsApp Business et widgets web. 98% de taux d'ouverture sur WhatsApp vs 21% par email.
 
-- **Chatbot pour documentation technique** : Deploiement d'un assistant IA entraine sur votre documentation technique (API, manuels, bases de connaissances). Permet aux equipes et clients de trouver instantanement les reponses sans fouiller dans des centaines de pages.
+- **Chatbot pour documentation technique** : Déploiement d'un assistant IA entraîné sur votre documentation technique (API, manuels, bases de connaissances). Permet aux équipes et clients de trouver instantanément les réponses sans fouiller dans des centaines de pages.
 
-- **RAG & Base de connaissances IA** : Deploiement d'un assistant IA connecte a la documentation interne de l'entreprise (manuels, procedures, fiches techniques, FAQ, bases de connaissances). L'IA retrouve et synthetise l'information pertinente en quelques secondes. Pour les equipes internes ou en support client. Architecture serverless, cout faible, pas d'entrainement de modele.
+- **RAG & Base de connaissances IA** : Déploiement d'un assistant IA connecté à la documentation interne de l'entreprise (manuels, procédures, fiches techniques, FAQ, bases de connaissances). L'IA retrouve et synthétise l'information pertinente en quelques secondes. Architecture serverless, coût faible, pas d'entraînement de modèle.
 
-- **Automatisation des processus** : Conception de workflows IA pour eliminer les taches manuelles chronophages. Automatisation de processus metier (traitement de documents, classification, extraction de donnees, generation de rapports).
+- **Automatisation des processus** : Conception de workflows IA pour éliminer les tâches manuelles chronophages. Automatisation de processus métier (traitement de documents, classification, extraction de données, génération de rapports).
 
 ## Services Cloud & Infrastructure
 
-- **Infrastructure Cloud AWS** : Migration securisee d'infrastructures on-premise vers AWS. Kubernetes (EKS) avec Auto Mode et Karpenter. CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation). L'infrastructure fiable qui propulse vos projets IA. Page dediee : https://optimycloud.com/#services
+- **Infrastructure Cloud AWS** : Migration sécurisée d'infrastructures on-premise vers AWS. Kubernetes (EKS) avec Auto Mode et Karpenter. CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation).
 
-- **FinOps & Optimisation des couts** : Audit gratuit de la facture Cloud avec analyse des ressources inutilisees ou surdimensionnees. Mise en place de Savings Plans, Reserved Instances, Spot Instances et right-sizing. Reduction de 30 a 60% des couts AWS constatee. Page dediee : https://optimycloud.com/#services
+- **FinOps & Optimisation des coûts** : Audit gratuit de la facture Cloud avec analyse des ressources inutilisées ou surdimensionnées. Mise en place de Savings Plans, Reserved Instances, Spot Instances et right-sizing. Réduction de 30 à 60% des coûts AWS constatée.
 
-- **Depannage WordPress** : Diagnostic et correction d'erreurs 500, 400, ecran blanc, crash Elementor, sites WordPress plantes. Intervention sous 24h avec rapport detaille (cause, correction, recommandations). A partir de 250 euros. Plus de 50 interventions realisees. Article de reference : https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html
+- **Dépannage WordPress** : Diagnostic et correction d'erreurs 500, 400, écran blanc, crash Elementor, sites WordPress plantés. Intervention sous 24h avec rapport détaillé. À partir de 250 euros. Plus de 50 interventions réalisées. Page dédiée : https://optimycloud.com/depannage-wordpress.html
 
-- **Securite & Audit Cloud** : Audit de securite des infrastructures AWS. Chiffrement, conformite, gestion des identites (IAM), isolation reseau et bonnes pratiques de securisation.
+- **Audit SEO** : Audit technique complet (Core Web Vitals, indexation, contenu, maillage). Plan d'action concret pour améliorer le référencement Google. Page dédiée : https://optimycloud.com/audit-seo.html
 
-- **Monitoring & Observabilite** : Mise en place de stacks de supervision avec Prometheus, Grafana, CloudWatch. Alerting, dashboards et reporting pour une visibilite complete sur l'infrastructure.
+- **Création de site web** : Site vitrine professionnel, rapide, responsive et optimisé SEO. Livré en 48h. À partir de 500 euros. Page dédiée : https://optimycloud.com/creation-site-web.html
 
 ## Certifications
 
-- **AWS Solutions Architect Associate** : https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile
+- **AWS Solutions Architect Associate** : https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc
 - **Kubernetes CKA (Certified Kubernetes Administrator)** : https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc
 - **ITIL Foundation v3**
-- **AWS Cloud Practitioner** : https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a/linked_in_profile
+- **AWS Cloud Practitioner** : https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a
 
-## Realisations
+## Réalisations
 
-- **PostCare.net** (https://www.postcare.net) : Plateforme SaaS d'IA generative pour le suivi post-operatoire. Messagerie automatisee par IA, rappels intelligents, accompagnement patient personnalise. Architecture serverless AWS, LLM integres, conformite donnees de sante. Destinee aux professionnels de sante (chirurgiens, cliniques).
+- **PostCare.net** (https://www.postcare.net) : Plateforme SaaS d'IA générative pour le suivi post-opératoire. Messagerie automatisée par IA, rappels intelligents, accompagnement patient personnalisé. Architecture serverless AWS, LLM intégrés, conformité données de santé.
 
-## Clients & References
+## Clients & Références
 
-- **Arkema, Valeo, Culligan, TopTex, Samboat** : Consultant Cloud & DevOps. Missions AWS, Kubernetes, Terraform, CI/CD, Elastic Beanstalk.
-- **Ubisoft** : Ingenieur SRE / DevOps. Supervision et automatisation de serveurs, clusters et pipelines CI/CD.
-- **Linkeo** : Ingenieur Infrastructure. Refonte du monitoring et gestion de l'infrastructure on-premise.
-- **Chateauform'** : Administrateur Systemes. Gestion des serveurs dans un environnement multisite.
+- **Arkema, Valeo, Culligan, TopTex, Samboat** : Consultant Cloud & DevOps. Missions AWS, Kubernetes, Terraform, CI/CD.
+- **Ubisoft** : Ingénieur SRE / DevOps. Supervision et automatisation de serveurs, clusters et pipelines CI/CD.
+- **Linkeo** : Ingénieur Infrastructure. Refonte du monitoring et gestion de l'infrastructure on-premise.
+- **Châteauform'** : Administrateur Systèmes. Gestion des serveurs dans un environnement multisite.
 
-Note : ces missions ont ete realisees en tant que salarie ou prestataire. OptimyCloud ne represente pas officiellement ces entreprises.
+Note : ces missions ont été réalisées en tant que salarié ou prestataire. OptimyCloud ne représente pas officiellement ces entreprises.
 
 ## Blog
 
-- https://optimycloud.com/blog/avez-vous-besoin-cms-site-web.html - Avez-vous vraiment besoin d'un CMS en 2026 ? Methode des 3 strates pour choisir entre CMS et site statique
-- https://optimycloud.com/blog/llms-txt-referencement-ia-guide.html - llms.txt : comment rendre votre site visible pour ChatGPT, Perplexity et les IA. Guide complet sur le fichier llms.txt, le GEO (Generative Engine Optimization) et le referencement IA
-- https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html - Erreur 500 WordPress : diagnostic et causes reelles apres 50+ interventions. Methode de diagnostic etape par etape
-- https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html - EKS Auto Mode : Kubernetes n'a jamais ete aussi simple sur AWS. Guide complet, comparatif et migration depuis EKS classique
-- https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html - Construire un assistant IA WhatsApp prive avec Amazon Bedrock et AWS : architecture serverless multimodale (texte, images, videos, documents, notes vocales)
+- https://optimycloud.com/blog/combien-coute-chatbot-ia-pme.html - Combien coûte un chatbot IA pour une PME en 2026 ? De 500 à 50 000 € selon le type. Prix détaillés, comparatif freelance vs agence, exemples concrets
+- https://optimycloud.com/blog/avez-vous-besoin-cms-site-web.html - Avez-vous vraiment besoin d'un CMS en 2026 ? Méthode des 3 strates pour choisir entre CMS et site statique
+- https://optimycloud.com/blog/llms-txt-referencement-ia-guide.html - llms.txt : comment rendre votre site visible pour ChatGPT, Perplexity et les IA
+- https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html - Erreur 500 WordPress : diagnostic et causes réelles après 50+ interventions
+- https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html - EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS
+- https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html - Construire un assistant IA WhatsApp privé avec Amazon Bedrock et AWS
 - https://optimycloud.com/blog/automatiser-relation-client-whatsapp-ia.html - Automatiser la relation client avec WhatsApp et l'IA
-- https://optimycloud.com/blog/integrer-ia-generative-pme-guide-pratique.html - Integrer l'IA generative dans votre PME : guide pratique
+- https://optimycloud.com/blog/integrer-ia-generative-pme-guide-pratique.html - Intégrer l'IA générative dans votre PME : guide pratique
 
 ## Pour qui ?
 
-- **Artisans** qui veulent un site vitrine professionnel rapide et pas cher, avec SEO local et chatbot IA pour ne plus rater de clients.
-- **PME et auto-entrepreneurs** qui veulent integrer l'IA dans leur activite sans passer par une ESN, avec un interlocuteur unique et des solutions sur-mesure.
-- **Startups** qui ont besoin d'une infrastructure Cloud solide, scalable et optimisee en couts des le depart.
-- **Entreprises** qui veulent reduire leurs couts Cloud (AWS, Azure, GCP) avec un audit gratuit et un ROI mesurable des les premiers mois.
-- **Professionnels de sante** (via PostCare.net) pour le suivi post-operatoire automatise par IA.
+- **Artisans** qui veulent un site vitrine professionnel rapide et pas cher, avec SEO local et chatbot IA.
+- **PME et auto-entrepreneurs** qui veulent intégrer l'IA dans leur activité sans passer par une ESN, avec un interlocuteur unique et des solutions sur-mesure.
+- **Startups** qui ont besoin d'une infrastructure Cloud solide, scalable et optimisée en coûts dès le départ.
+- **Entreprises** qui veulent réduire leurs coûts Cloud (AWS, Azure, GCP) avec un audit gratuit et un ROI mesurable.
 
 ## Expertise technique
 
@@ -88,7 +98,8 @@ IA : LLM, agents IA, RAG, chatbots conversationnels, automatisation de workflows
 
 - Site : https://optimycloud.com
 - Email : alexandre@optimycloud.com
+- WhatsApp : https://wa.me/33631109539
 - LinkedIn : https://www.linkedin.com/in/alexandre-gillon
-- Localisation : France (Epinay-sur-Seine)
+- Localisation : France (Épinay-sur-Seine)
 - Fondateur : Alexandre Gillon
-- Reponse sous 24h. Audit gratuit disponible.
+- Réponse sous 24h. Audit gratuit disponible.
