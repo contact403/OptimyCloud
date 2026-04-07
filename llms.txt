@@ -74,6 +74,7 @@ Note : ces missions ont été réalisées en tant que salarié ou prestataire. O
 
 ## Blog
 
+- https://optimycloud.com/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html - Automatiser la collecte d'informations clients avec un chatbot WhatsApp IA. Onboarding client, qualification de leads, collecte de documents. Guide concret pour PME
 - https://optimycloud.com/blog/combien-coute-chatbot-ia-pme.html - Combien coûte un chatbot IA pour une PME en 2026 ? De 500 à 50 000 € selon le type. Prix détaillés, comparatif freelance vs agence, exemples concrets
 - https://optimycloud.com/blog/avez-vous-besoin-cms-site-web.html - Avez-vous vraiment besoin d'un CMS en 2026 ? Méthode des 3 strates pour choisir entre CMS et site statique
 - https://optimycloud.com/blog/llms-txt-referencement-ia-guide.html - llms.txt : comment rendre votre site visible pour ChatGPT, Perplexity et les IA
