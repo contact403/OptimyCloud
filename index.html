@@ -669,8 +669,8 @@
                     </div>
                 </a>
 
-                <!-- Article 0 : EKS Auto Mode -->
-                <a href="blog/eks-auto-mode-kubernetes-simple.html" class="reveal stagger-6 group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                <!-- === Articles cachés par défaut === -->
+                <a href="blog/eks-auto-mode-kubernetes-simple.html" class="blog-hidden-article hidden reveal group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
                     <div class="h-3 bg-gradient-to-r from-blue-500 to-indigo-600"></div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -685,8 +685,7 @@
                     </div>
                 </a>
 
-                <!-- Article 1 : WhatsApp Bedrock -->
-                <a href="blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="reveal stagger-7 group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                <a href="blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="blog-hidden-article hidden reveal group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
                     <div class="h-3 bg-gradient-to-r from-blue-600 to-blue-800"></div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -701,8 +700,7 @@
                     </div>
                 </a>
 
-                <!-- Article 2 : WhatsApp -->
-                <a href="blog/automatiser-relation-client-whatsapp-ia.html" class="reveal stagger-8 group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                <a href="blog/automatiser-relation-client-whatsapp-ia.html" class="blog-hidden-article hidden reveal group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
                     <div class="h-3 bg-gradient-to-r from-green-500 to-emerald-600"></div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -717,8 +715,7 @@
                     </div>
                 </a>
 
-                <!-- Article 3 : IA pour PME -->
-                <a href="blog/integrer-ia-generative-pme-guide-pratique.html" class="reveal stagger-8 group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
+                <a href="blog/integrer-ia-generative-pme-guide-pratique.html" class="blog-hidden-article hidden reveal group block bg-white border border-gray-100 rounded-xl overflow-hidden hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
                     <div class="h-3 bg-gradient-to-r from-purple-500 to-indigo-600"></div>
                     <div class="p-6">
                         <div class="flex items-center gap-2 mb-3">
@@ -732,6 +729,14 @@
                         </span>
                     </div>
                 </a>
+            </div>
+
+            <!-- Bouton voir plus -->
+            <div class="text-center mt-10">
+                <button id="blog-show-more" class="inline-flex items-center gap-2 bg-white border border-gray-200 text-gray-700 px-6 py-3 rounded-lg font-medium hover:bg-gray-50 hover:border-indigo-200 hover:text-indigo-600 transition-all duration-200">
+                    <span>Voir tous les articles</span>
+                    <i class="fas fa-chevron-down text-xs"></i>
+                </button>
             </div>
         </div>
     </section>
@@ -1204,6 +1209,16 @@
                 'consent_ads': false
             });
         });
+
+        // ===== Blog "voir plus" =====
+        var blogBtn = document.getElementById('blog-show-more');
+        if (blogBtn) {
+            blogBtn.addEventListener('click', function() {
+                var hiddenArticles = document.querySelectorAll('.blog-hidden-article');
+                hiddenArticles.forEach(function(el) { el.classList.remove('hidden'); });
+                blogBtn.style.display = 'none';
+            });
+        }
 
     });
     </script>
