@@ -61,8 +61,8 @@
     <!-- Cal.com embed -->
     <script type="text/javascript">
       (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "30min", {origin:"https://app.cal.com"});
-      Cal.ns["30min"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#2563eb"}},"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal("init", "diagnostic-finops", {origin:"https://app.cal.com"});
+      Cal.ns["diagnostic-finops"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#2563eb"}},"hideEventTypeDetails":false,"layout":"month_view"});
     </script>
 
     <!-- Schema.org -->
@@ -228,7 +228,7 @@
                     Consultant Cloud AWS Certified &middot; 10+ ans d'expérience en ingénierie cloud &middot; Interventions AWS, GCP et Azure.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button data-cal-link="optimycloud/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm cursor-pointer">
+                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm cursor-pointer">
                         <i class="fas fa-calendar-check mr-2"></i>
                         Diagnostic gratuit (30 min)
                     </button>
@@ -402,7 +402,7 @@
                         <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Recommandation honnête</strong> : audit complet pertinent ou pas pour vous</span></li>
                         <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Sans engagement</strong>, sans commercial, sans suivi insistant</span></li>
                     </ul>
-                    <button data-cal-link="optimycloud/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center w-full sm:w-auto bg-blue-600 text-white px-8 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm cursor-pointer">
+                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center w-full sm:w-auto bg-blue-600 text-white px-8 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm cursor-pointer">
                         <i class="fas fa-calendar-check mr-2"></i>
                         Réserver mon diagnostic gratuit
                     </button>
@@ -726,7 +726,7 @@
             <p class="text-sm mb-8" style="color: #cbd5e1;">
                 Vous pouvez aussi consulter <a href="offres.html" class="text-white underline hover:opacity-80 transition-opacity">toutes nos offres</a> ou <a href="audit-seo.html" class="text-white underline hover:opacity-80 transition-opacity">notre audit SEO</a>.
             </p>
-            <button data-cal-link="optimycloud/30min" data-cal-namespace="30min" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm cursor-pointer">
+            <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm cursor-pointer">
                 <i class="fas fa-calendar-check mr-2"></i>
                 Réserver mon diagnostic gratuit
             </button>
