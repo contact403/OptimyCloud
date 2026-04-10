@@ -150,22 +150,14 @@
     }
     </script>
 
-    <!-- Cal.com embed -->
-    <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "diagnostic-finops", {origin:"https://app.cal.com"});
-      Cal.ns["diagnostic-finops"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#2563eb"}},"hideEventTypeDetails":false,"layout":"month_view"});
-      Cal("init", "decouverte-agent-ia-gratuit", {origin:"https://app.cal.com"});
-      Cal.ns["decouverte-agent-ia-gratuit"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#4f46e5"}},"hideEventTypeDetails":false,"layout":"month_view"});
-      Cal("init", "audit-seo", {origin:"https://app.cal.com"});
-      Cal.ns["audit-seo"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#059669"}},"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
+    <script src="./assets/cal-embed.js" defer></script>
 
     <!-- Fonts -->
     <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./assets/style.css">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link rel="preconnect" href="https://images.credly.com" crossorigin>
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
 </head>
 <body class="bg-white text-gray-800">
@@ -297,10 +289,9 @@
             <!-- Services prioritaires : grille 2x2 grandes cards -->
             <div class="grid md:grid-cols-2 gap-6 mb-16">
 
-                <!-- 1. Agents IA & Chatbots -->
                 <div class="reveal stagger-1 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-indigo-200 transition-all duration-300 flex flex-col">
                     <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-robot text-indigo-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900">Agents IA & Chatbots métier</h3>
@@ -314,7 +305,7 @@
                         <li class="flex items-start"><i class="fas fa-check text-indigo-600 mr-2 mt-1 text-xs"></i><span>Widget chat intégré à votre site en quelques minutes</span></li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                        <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-indigo-600 text-white px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors font-semibold text-sm cursor-pointer">
+                        <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" class="inline-flex items-center justify-center bg-indigo-600 text-white px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors font-semibold text-sm cursor-pointer">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Diagnostic gratuit
                         </button>
@@ -324,10 +315,9 @@
                     </div>
                 </div>
 
-                <!-- 2. Audit FinOps Cloud -->
                 <div class="reveal stagger-2 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col">
                     <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900">Audit FinOps Cloud</h3>
@@ -341,7 +331,7 @@
                         <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>AWS Certified &middot; Expertise GCP et Azure</span></li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                        <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm cursor-pointer">
+                        <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="inline-flex items-center justify-center bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm cursor-pointer">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Diagnostic gratuit
                         </button>
@@ -351,10 +341,9 @@
                     </div>
                 </div>
 
-                <!-- 3. Audit SEO -->
                 <div class="reveal stagger-3 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col">
                     <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-magnifying-glass-chart text-emerald-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900">Audit SEO &amp; Référencement</h3>
@@ -368,7 +357,7 @@
                         <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Optimisation pour les moteurs de recherche IA</span></li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-3 mt-auto">
-                        <button data-cal-link="optimycloud/audit-seo" data-cal-namespace="audit-seo" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-emerald-600 text-white px-5 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm cursor-pointer">
+                        <button data-cal-link="optimycloud/audit-seo" data-cal-namespace="audit-seo" class="inline-flex items-center justify-center bg-emerald-600 text-white px-5 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm cursor-pointer">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Diagnostic gratuit
                         </button>
@@ -378,10 +367,9 @@
                     </div>
                 </div>
 
-                <!-- 4. Création de site web -->
                 <div class="reveal stagger-4 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-amber-200 transition-all duration-300 flex flex-col">
                     <div class="flex items-center mb-4">
-                        <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-rocket text-amber-600 text-2xl"></i>
                         </div>
                         <h3 class="text-xl font-bold text-gray-900">Création de site web</h3>
@@ -417,8 +405,7 @@
 
                 <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
 
-                    <!-- Infrastructure Cloud AWS -->
-                    <div class="bg-slate-50 border border-gray-100 rounded-xl p-5 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
                         <div class="flex items-center mb-3">
                             <i class="fab fa-aws text-orange-500 text-xl mr-3"></i>
                             <h4 class="font-bold text-gray-900 text-sm">Infrastructure Cloud AWS</h4>
@@ -427,8 +414,7 @@
                         <a href="migration.html" class="text-indigo-600 text-xs font-medium hover:underline">En discuter <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
 
-                    <!-- Kubernetes & containerisation -->
-                    <div class="bg-slate-50 border border-gray-100 rounded-xl p-5 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
                         <div class="flex items-center mb-3">
                             <i class="fas fa-dharmachakra text-blue-600 text-xl mr-3"></i>
                             <h4 class="font-bold text-gray-900 text-sm">Kubernetes &amp; containerisation</h4>
@@ -437,8 +423,7 @@
                         <a href="kubernetes.html" class="text-indigo-600 text-xs font-medium hover:underline">En discuter <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
 
-                    <!-- Dépannage WordPress -->
-                    <div class="bg-slate-50 border border-gray-100 rounded-xl p-5 hover:bg-white hover:shadow-md transition-all duration-300">
+                    <div class="bg-white border border-gray-100 rounded-xl p-5 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
                         <div class="flex items-center mb-3">
                             <i class="fas fa-triangle-exclamation text-orange-600 text-xl mr-3"></i>
                             <h4 class="font-bold text-gray-900 text-sm">Dépannage WordPress</h4>

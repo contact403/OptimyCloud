@@ -59,12 +59,8 @@
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
 
-    <!-- Cal.com embed -->
-    <script type="text/javascript">
-      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
-      Cal("init", "decouverte-agent-ia-gratuit", {origin:"https://app.cal.com"});
-      Cal.ns["decouverte-agent-ia-gratuit"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#10b981"}},"hideEventTypeDetails":false,"layout":"month_view"});
-    </script>
+    <script src="../assets/cal-embed.js" defer></script>
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -524,7 +520,7 @@
                 </div>
 
                 <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-5 mb-6">
-                    <p class="text-gray-700"><strong>Chez OptimyCloud</strong>, on conçoit et déploie ces agents IA de A à Z : audit de vos outils existants, architecture technique, intégration CRM et calendrier, construction de la base de connaissances RAG, widget chat sur votre site, et mise en production. Chaque projet est sur-mesure. <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="text-indigo-600 font-semibold hover:underline cursor-pointer bg-transparent border-0 p-0">Réservez un échange gratuit de 30 min</button> pour discuter de votre cas.</p>
+                    <p class="text-gray-700"><strong>Chez OptimyCloud</strong>, on conçoit et déploie ces agents IA de A à Z : audit de vos outils existants, architecture technique, intégration CRM et calendrier, construction de la base de connaissances RAG, widget chat sur votre site, et mise en production. Chaque projet est sur-mesure. <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" class="text-indigo-600 font-semibold hover:underline cursor-pointer bg-transparent border-0 p-0">Réservez un échange gratuit de 30 min</button> pour discuter de votre cas.</p>
                 </div>
 
                 <p class="text-gray-600 leading-relaxed mb-8">
@@ -602,7 +598,7 @@
                     <p class="text-emerald-100 mb-8 text-base leading-relaxed max-w-xl mx-auto">
                         Réservez 30 minutes en visio pour discuter de votre activité et de vos outils actuels. Vous repartez avec une première estimation de coût et de délai. Sans engagement.
                     </p>
-                    <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center bg-white text-emerald-700 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors duration-200 cursor-pointer">
+                    <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" class="inline-flex items-center bg-white text-emerald-700 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors duration-200 cursor-pointer">
                         <i class="fas fa-calendar-check mr-2"></i>
                         Réserver mon échange gratuit
                     </button>
