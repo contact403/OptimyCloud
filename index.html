@@ -149,6 +149,18 @@
       ]
     }
     </script>
+
+    <!-- Cal.com embed -->
+    <script type="text/javascript">
+      (function (C, A, L) { let p = function (a, ar) { a.q.push(ar); }; let d = C.document; C.Cal = C.Cal || function () { let cal = C.Cal; let ar = arguments; if (!cal.loaded) { cal.ns = {}; cal.q = cal.q || []; d.head.appendChild(d.createElement("script")).src = A; cal.loaded = true; } if (ar[0] === L) { const api = function () { p(api, arguments); }; const namespace = ar[1]; api.q = api.q || []; if(typeof namespace === "string"){cal.ns[namespace] = cal.ns[namespace] || api;p(cal.ns[namespace], ar);p(cal, ["initNamespace", namespace]);} else p(cal, ar); return;} p(cal, ar); }; })(window, "https://app.cal.com/embed/embed.js", "init");
+      Cal("init", "diagnostic-finops", {origin:"https://app.cal.com"});
+      Cal.ns["diagnostic-finops"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#2563eb"}},"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal("init", "decouverte-agent-ia-gratuit", {origin:"https://app.cal.com"});
+      Cal.ns["decouverte-agent-ia-gratuit"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#4f46e5"}},"hideEventTypeDetails":false,"layout":"month_view"});
+      Cal("init", "audit-seo", {origin:"https://app.cal.com"});
+      Cal.ns["audit-seo"]("ui", {"theme":"light","cssVarsPerTheme":{"light":{"cal-brand":"#059669"}},"hideEventTypeDetails":false,"layout":"month_view"});
+    </script>
+
     <!-- Fonts -->
     <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="stylesheet" href="./assets/style.css">
@@ -276,107 +288,165 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16 reveal">
                 <p class="text-indigo-600 font-semibold text-sm uppercase tracking-wide mb-2">Ce que je propose</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Mes prestations IA & Cloud</h2>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Mes prestations phares</h2>
                 <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    Des solutions IA sur-mesure pour automatiser vos processus, avec une infrastructure Cloud performante et optimisée.
+                    Quatre offres clés en main avec un retour sur investissement mesurable. Diagnostic gratuit en visio pour chacune.
                 </p>
             </div>
 
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Agents IA & LLM dédiés -->
-                <div class="reveal stagger-1 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-cyan-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fas fa-robot text-cyan-600 text-xl"></i>
+            <!-- Services prioritaires : grille 2x2 grandes cards -->
+            <div class="grid md:grid-cols-2 gap-6 mb-16">
+
+                <!-- 1. Agents IA & Chatbots -->
+                <div class="reveal stagger-1 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-indigo-200 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-indigo-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-robot text-indigo-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Agents IA & Chatbots métier</h3>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Agents IA & LLM dédiés</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Un ChatGPT formé sur vos données métier. Agents autonomes intégrés à vos outils (CRM, ERP, email) pour automatiser les tâches complexes et gagner du temps.</p>
-                    <a href="#contact" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        Me contacter <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed flex-grow">
+                        Un agent IA connecté à votre CRM et votre calendrier, qui remplace votre formulaire de contact. Le client parle naturellement, l'agent qualifie, crée la fiche et cale le rendez-vous. Sans intervention humaine.
+                    </p>
+                    <ul class="space-y-1.5 text-sm text-gray-600 mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-600 mr-2 mt-1 text-xs"></i><span>Intégration CRM (HubSpot, Pipedrive, Salesforce, logiciels métier)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-600 mr-2 mt-1 text-xs"></i><span>Base de connaissances (RAG) sur votre activité</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-indigo-600 mr-2 mt-1 text-xs"></i><span>Widget chat intégré à votre site en quelques minutes</span></li>
+                    </ul>
+                    <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                        <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-indigo-600 text-white px-5 py-2.5 rounded-lg hover:bg-indigo-700 transition-colors font-semibold text-sm cursor-pointer">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Diagnostic gratuit
+                        </button>
+                        <a href="blog/agent-ia-remplace-formulaire-crm-pme.html" class="inline-flex items-center justify-center text-indigo-600 px-5 py-2.5 rounded-lg hover:bg-indigo-50 transition-colors font-semibold text-sm">
+                            En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Chatbots WhatsApp & Web -->
-                <div class="reveal stagger-2 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fab fa-whatsapp text-green-600 text-xl"></i>
+                <!-- 2. Audit FinOps Cloud -->
+                <div class="reveal stagger-2 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-blue-200 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-blue-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-chart-line text-blue-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Audit FinOps Cloud</h3>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Chatbots WhatsApp & Web</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Chatbots IA pour la relation client : rappels automatiques, FAQ intelligente, suivi client. 98% de taux d'ouverture sur WhatsApp vs 21% par email.</p>
-                    <a href="#contact" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        Me contacter <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed flex-grow">
+                        Réduisez votre facture AWS, GCP ou Azure de 30 à 50% sans dégrader la performance. Audit complet, plan d'action chiffré et accompagnement pour la mise en œuvre. Retour sur investissement en 1 à 3 mois.
+                    </p>
+                    <ul class="space-y-1.5 text-sm text-gray-600 mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Right-sizing, Savings Plans, Reserved Instances</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Nettoyage des ressources orphelines et coûts cachés</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>AWS Certified &middot; Expertise GCP et Azure</span></li>
+                    </ul>
+                    <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                        <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-blue-600 text-white px-5 py-2.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm cursor-pointer">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Diagnostic gratuit
+                        </button>
+                        <a href="finops.html" class="inline-flex items-center justify-center text-blue-600 px-5 py-2.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm">
+                            En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Automatisation des processus -->
-                <div class="reveal stagger-3 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fas fa-wand-magic-sparkles text-purple-600 text-xl"></i>
+                <!-- 3. Audit SEO -->
+                <div class="reveal stagger-3 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-emerald-200 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-magnifying-glass-chart text-emerald-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Audit SEO &amp; Référencement</h3>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Automatisation des processus</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Workflows IA pour éliminer les tâches répétitives : traitement de documents, classification, extraction de données, génération de rapports automatisés.</p>
-                    <a href="#contact" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        Me contacter <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed flex-grow">
+                        Votre site ne remonte pas sur Google ? Audit technique complet pour identifier les blocages et un plan d'action priorisé pour améliorer votre visibilité. Couverture du référencement classique et de l'optimisation pour les IA (ChatGPT, Perplexity).
+                    </p>
+                    <ul class="space-y-1.5 text-sm text-gray-600 mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Core Web Vitals, schema markup, indexation</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Stratégie de contenu et mots-clés</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Optimisation pour les moteurs de recherche IA</span></li>
+                    </ul>
+                    <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                        <button data-cal-link="optimycloud/audit-seo" data-cal-namespace="audit-seo" data-cal-config='{"layout":"month_view","useSlotsViewOnSmallScreen":"true","theme":"light"}' class="inline-flex items-center justify-center bg-emerald-600 text-white px-5 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm cursor-pointer">
+                            <i class="fas fa-calendar-check mr-2"></i>
+                            Diagnostic gratuit
+                        </button>
+                        <a href="audit-seo.html" class="inline-flex items-center justify-center text-emerald-600 px-5 py-2.5 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-sm">
+                            En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- Infrastructure Cloud AWS -->
-                <div class="reveal stagger-4 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fas fa-cloud text-blue-600 text-xl"></i>
+                <!-- 4. Création de site web -->
+                <div class="reveal stagger-4 bg-white border-2 border-gray-100 rounded-2xl p-8 hover:shadow-xl hover:border-amber-200 transition-all duration-300 flex flex-col">
+                    <div class="flex items-center mb-4">
+                        <div class="w-14 h-14 bg-amber-50 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                            <i class="fas fa-rocket text-amber-600 text-2xl"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-gray-900">Création de site web</h3>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Infrastructure Cloud AWS</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Migration sécurisée, Kubernetes (EKS), CI/CD et Infrastructure as Code. L'infrastructure fiable qui propulse vos projets IA.</p>
-                    <a href="#contact" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        Me contacter <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
+                    <p class="text-gray-600 text-sm mb-5 leading-relaxed flex-grow">
+                        Site vitrine professionnel pour artisans, PME et indépendants. Code propre, performances maximales, optimisé pour Google et pour la conversion. Livré en 2 à 4 semaines, sans CMS lourd ni dépendance à un éditeur.
+                    </p>
+                    <ul class="space-y-1.5 text-sm text-gray-600 mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-amber-600 mr-2 mt-1 text-xs"></i><span>Design sur-mesure, responsive et accessible</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-600 mr-2 mt-1 text-xs"></i><span>SEO et schema markup intégrés dès le départ</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-amber-600 mr-2 mt-1 text-xs"></i><span>Hébergement et maintenance inclus</span></li>
+                    </ul>
+                    <div class="flex flex-col sm:flex-row gap-3 mt-auto">
+                        <a href="creation-site-web.html" class="inline-flex items-center justify-center bg-amber-600 text-white px-5 py-2.5 rounded-lg hover:bg-amber-700 transition-colors font-semibold text-sm">
+                            <i class="fas fa-arrow-right mr-2"></i>
+                            Voir les offres
+                        </a>
+                        <a href="offres.html" class="inline-flex items-center justify-center text-amber-700 px-5 py-2.5 rounded-lg hover:bg-amber-50 transition-colors font-semibold text-sm">
+                            Tarifs <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                        </a>
+                    </div>
                 </div>
 
-                <!-- FinOps & Optimisation -->
-                <div class="reveal stagger-5 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-emerald-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fas fa-chart-line text-emerald-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">FinOps & Optimisation</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Audit gratuit et réduction de 30 à 60% de vos coûts AWS. Savings Plans, Reserved Instances, right-sizing.</p>
-                    <a href="#contact" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        Me contacter <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
+            </div>
+
+            <!-- Expertises techniques (effet de halo) -->
+            <div class="reveal">
+                <div class="text-center mb-10">
+                    <p class="text-gray-500 text-xs uppercase tracking-widest font-semibold mb-2">Expertises techniques</p>
+                    <h3 class="text-2xl font-bold text-gray-900">Et bien plus encore</h3>
+                    <p class="text-gray-500 text-sm mt-2 max-w-xl mx-auto">10+ ans d'ingénierie cloud. AWS Certified et Kubernetes CKA. Pour les projets techniques avancés.</p>
                 </div>
 
-                <!-- Audit de Sécurité -->
-                <div class="reveal stagger-6 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fas fa-shield-alt text-red-600 text-xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit de Sécurité</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Audit de sécurité de vos infrastructures Cloud et applications. Tests de pénétration, conformité, durcissement et bonnes pratiques AWS.</p>
-                    <a href="#contact" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        Me contacter <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
-                </div>
+                <div class="grid md:grid-cols-3 gap-4 max-w-5xl mx-auto">
 
-                <!-- Audit SEO -->
-                <div class="reveal stagger-7 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fas fa-search text-amber-600 text-xl"></i>
+                    <!-- Infrastructure Cloud AWS -->
+                    <div class="bg-slate-50 border border-gray-100 rounded-xl p-5 hover:bg-white hover:shadow-md transition-all duration-300">
+                        <div class="flex items-center mb-3">
+                            <i class="fab fa-aws text-orange-500 text-xl mr-3"></i>
+                            <h4 class="font-bold text-gray-900 text-sm">Infrastructure Cloud AWS</h4>
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-3">Migration cloud, hébergement scalable, Infrastructure as Code (Terraform, CDK), CI/CD. Pour les startups et PME qui veulent une infra fiable et reproductible.</p>
+                        <a href="migration.html" class="text-indigo-600 text-xs font-medium hover:underline">En discuter <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit SEO & Référencement</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Audit technique complet de votre site : performance, Core Web Vitals, schema markup, contenu, indexation. Stratégie SEO sur-mesure pour améliorer votre visibilité sur Google.</p>
-                    <a href="audit-seo.html" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        En savoir plus <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
-                </div>
 
-                <!-- Dépannage WordPress -->
-                <div class="reveal stagger-8 bg-white border border-gray-100 rounded-xl p-6 hover:shadow-lg hover:border-indigo-100 transition-all duration-300">
-                    <div class="w-12 h-12 bg-orange-50 rounded-lg flex items-center justify-center mb-5">
-                        <i class="fas fa-triangle-exclamation text-orange-600 text-xl"></i>
+                    <!-- Kubernetes & containerisation -->
+                    <div class="bg-slate-50 border border-gray-100 rounded-xl p-5 hover:bg-white hover:shadow-md transition-all duration-300">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-dharmachakra text-blue-600 text-xl mr-3"></i>
+                            <h4 class="font-bold text-gray-900 text-sm">Kubernetes &amp; containerisation</h4>
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-3">Docker, Kubernetes (EKS, GKE, AKS), Helm, ArgoCD. Certifié CKA (Certified Kubernetes Administrator). Pour les équipes qui scalent et veulent industrialiser leurs déploiements.</p>
+                        <a href="kubernetes.html" class="text-indigo-600 text-xs font-medium hover:underline">En discuter <i class="fas fa-arrow-right ml-1"></i></a>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Dépannage WordPress</h3>
-                    <p class="text-gray-500 text-sm mb-4 leading-relaxed">Erreur 500, 400, écran blanc, crash après mise à jour Elementor ? Diagnostic, correction et rapport détaillé. Intervention sous 24h.</p>
-                    <a href="depannage-wordpress.html" class="text-indigo-600 text-sm font-medium hover:translate-x-1 transition-transform inline-block">
-                        À partir de 250 € <i class="fas fa-arrow-right ml-1 text-xs"></i>
-                    </a>
+
+                    <!-- Dépannage WordPress -->
+                    <div class="bg-slate-50 border border-gray-100 rounded-xl p-5 hover:bg-white hover:shadow-md transition-all duration-300">
+                        <div class="flex items-center mb-3">
+                            <i class="fas fa-triangle-exclamation text-orange-600 text-xl mr-3"></i>
+                            <h4 class="font-bold text-gray-900 text-sm">Dépannage WordPress</h4>
+                        </div>
+                        <p class="text-gray-500 text-xs leading-relaxed mb-3">Erreur 500, écran blanc, crash après mise à jour Elementor ? Diagnostic, correction et rapport détaillé. Intervention sous 24h, à partir de 250 €.</p>
+                        <a href="depannage-wordpress.html" class="text-indigo-600 text-xs font-medium hover:underline">À partir de 250 € <i class="fas fa-arrow-right ml-1"></i></a>
+                    </div>
+
                 </div>
             </div>
         </div>
