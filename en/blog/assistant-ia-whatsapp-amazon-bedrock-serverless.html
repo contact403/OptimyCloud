@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,39 +54,41 @@
     src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel -->
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="shortcut icon" href="../assets/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
-    <link rel="manifest" href="../assets/site.webmanifest" />
-    <title>Assistant IA WhatsApp avec Amazon Bedrock | OptimyCloud</title>
-    <meta name="description" content="Guide technique : déployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK. Architecture serverless complete.">
-    <meta name="keywords" content="Amazon Bedrock, WhatsApp assistant IA, AWS Lambda, serverless, chatbot WhatsApp AWS, IA multimodale, Amazon Nova, AWS CDK, DynamoDB, Amazon Transcribe, WhatsApp Business API AWS, assistant IA privé">
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>WhatsApp AI Assistant with Amazon Bedrock | OptimyCloud</title>
+    <meta name="description" content="Technical guide: deploy a multimodal WhatsApp AI assistant with Amazon Bedrock, Lambda and AWS CDK. Complete serverless architecture.">
+    <meta name="keywords" content="Amazon Bedrock, WhatsApp AI assistant, AWS Lambda, serverless, WhatsApp AWS chatbot, multimodal AI, Amazon Nova, AWS CDK, DynamoDB, Amazon Transcribe, WhatsApp Business API AWS, private AI assistant">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html">
+    <link rel="canonical" href="https://optimycloud.com/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html">
     <!-- hreflang -->
     <link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" />
     <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" />
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Assistant IA WhatsApp avec Amazon Bedrock">
-    <meta property="og:description" content="Guide technique : déployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK. Architecture serverless complète.">
-    <meta property="og:url" content="https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html">
+    <meta property="og:title" content="WhatsApp AI Assistant with Amazon Bedrock">
+    <meta property="og:description" content="Technical guide: deploy a multimodal WhatsApp AI assistant with Amazon Bedrock, Lambda and AWS CDK. Complete serverless architecture.">
+    <meta property="og:url" content="https://optimycloud.com/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-whatsapp-bedrock.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
     <meta property="article:published_time" content="2026-03-04">
     <meta property="article:author" content="Alexandre Gillon">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Assistant IA WhatsApp avec Amazon Bedrock">
-    <meta name="twitter:description" content="Guide technique : déployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK.">
+    <meta name="twitter:title" content="WhatsApp AI Assistant with Amazon Bedrock">
+    <meta name="twitter:description" content="Technical guide: deploy a multimodal WhatsApp AI assistant with Amazon Bedrock, Lambda and AWS CDK.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-whatsapp-bedrock.webp">
 
     <!-- Fonts -->
-    <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/style.css">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
 
@@ -98,76 +100,76 @@
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://optimycloud.com/" },
             { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "Construire un assistant IA WhatsApp privé avec Amazon Bedrock et AWS" }
+            { "@type": "ListItem", "position": 3, "name": "Build a private WhatsApp AI assistant with Amazon Bedrock and AWS" }
           ]
         },
         {
           "@type": "BlogPosting",
-          "headline": "Construire un assistant IA WhatsApp privé avec Amazon Bedrock et AWS",
-          "description": "Guide technique pour déployer un assistant IA WhatsApp multimodal avec Amazon Bedrock, Lambda et AWS CDK. Architecture serverless, traitement d'images, vidéos, documents et notes vocales.",
-          "url": "https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html",
+          "headline": "Build a private WhatsApp AI assistant with Amazon Bedrock and AWS",
+          "description": "Technical guide to deploying a multimodal WhatsApp AI assistant with Amazon Bedrock, Lambda and AWS CDK. Serverless architecture, processing of images, videos, documents and voice notes.",
+          "url": "https://optimycloud.com/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html",
           "datePublished": "2026-03-04",
           "dateModified": "2026-03-04",
           "author": { "@id": "https://optimycloud.com/#person" },
           "publisher": { "@id": "https://optimycloud.com/#organization" },
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" },
           "image": "https://optimycloud.com/assets/blog/hero-whatsapp-bedrock.webp",
           "wordCount": 2200,
-          "inLanguage": "fr",
-          "articleSection": "IA & WhatsApp",
-          "keywords": ["Amazon Bedrock", "WhatsApp assistant IA", "AWS Lambda", "serverless", "chatbot WhatsApp AWS", "Amazon Nova"]
+          "inLanguage": "en",
+          "articleSection": "AI & WhatsApp",
+          "keywords": ["Amazon Bedrock", "WhatsApp AI assistant", "AWS Lambda", "serverless", "WhatsApp AWS chatbot", "Amazon Nova"]
         },
         {
           "@type": "FAQPage",
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Combien coûte un assistant IA WhatsApp sur AWS ?",
+              "name": "How much does a WhatsApp AI assistant on AWS cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Grâce à l'architecture serverless, les coûts sont proportionnels à l'usage. Pour 1 000 messages par mois, comptez environ 20 à 50 USD tout compris. Le coût augmente linéairement avec le volume, sans palier ni abonnement fixe."
+                "text": "Thanks to the serverless architecture, costs are proportional to usage. For 1,000 messages per month, expect roughly 20 to 50 USD all in. The cost grows linearly with volume, with no tiers and no fixed subscription."
               }
             },
             {
               "@type": "Question",
-              "name": "Quels types de fichiers l'assistant peut-il traiter ?",
+              "name": "What types of files can the assistant process?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Texte, images (JPEG, PNG), vidéos (MP4), documents (PDF, Word) et notes vocales. Les médias sont analysés par Amazon Nova via l'API Bedrock Converse. Les notes vocales sont transcrites par Amazon Transcribe avec détection automatique de la langue."
+                "text": "Text, images (JPEG, PNG), videos (MP4), documents (PDF, Word) and voice notes. Media is analyzed by Amazon Nova through the Bedrock Converse API. Voice notes are transcribed by Amazon Transcribe with automatic language detection."
               }
             },
             {
               "@type": "Question",
-              "name": "Les données sont-elles sécurisées ?",
+              "name": "Is the data secure?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Oui. Toutes les données restent dans votre compte AWS. Bedrock ne stocke pas vos données et ne les utilise pas pour l'entraînement. S3 chiffre les fichiers avec SSE, DynamoDB chiffre au repos. Cependant, les messages transitent par WhatsApp qui a ses propres politiques de confidentialité."
+                "text": "Yes. All data stays in your own AWS account. Bedrock does not store your data and does not use it for training. S3 encrypts files with SSE, DynamoDB encrypts at rest. However, messages do travel through WhatsApp, which has its own privacy policies."
               }
             },
             {
               "@type": "Question",
-              "name": "Peut-on personnaliser les réponses de l'agent ?",
+              "name": "Can the agent's responses be customized?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Absolument. L'agent Bedrock accepte des instructions personnalisées qui définissent son comportement, son ton, son périmètre et ses limites. Vous pouvez lui donner une personnalité spécifique, limiter les sujets abordés et définir des règles de réponse. L'historique DynamoDB permet des réponses contextuelles."
+                "text": "Absolutely. The Bedrock agent accepts custom instructions that define its behavior, tone, scope and limits. You can give it a specific personality, restrict the topics it covers and set response rules. The DynamoDB history enables contextual responses."
               }
             },
             {
               "@type": "Question",
-              "name": "Faut-il un Meta Business Account ?",
+              "name": "Do you need a Meta Business Account?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Oui. L'intégration WhatsApp via AWS End User Messaging nécessite un Meta Business Account vérifié. La création est gratuite mais la vérification prend quelques jours. C'est le même compte que pour Facebook Ads ou Instagram Business."
+                "text": "Yes. WhatsApp integration via AWS End User Messaging requires a verified Meta Business Account. Creating one is free but verification takes a few days. It's the same account as the one used for Facebook Ads or Instagram Business."
               }
             },
             {
               "@type": "Question",
-              "name": "Comment supprimer l'infrastructure ?",
+              "name": "How do you delete the infrastructure?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Videz le bucket S3, puis lancez cdk destroy. Toutes les ressources sont supprimées en quelques minutes. C'est l'avantage de l'Infrastructure as Code : déploiement et nettoyage en une seule commande."
+                "text": "Empty the S3 bucket, then run cdk destroy. All resources are removed within a few minutes. That's the advantage of Infrastructure as Code: deployment and teardown in a single command."
               }
             }
           ]
@@ -189,7 +191,7 @@
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
-                            <img src="../assets/optimycloud-logo.webp"
+                            <img src="/assets/optimycloud-logo.webp"
                                  alt="OptimyCloud"
                                  width="200" height="64"
                                  fetchpriority="high"
@@ -199,17 +201,17 @@
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Accueil</a>
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Home</a>
                     <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
-                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
+                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Pricing</a>
                     <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
-                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">About</a>
                     <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
-                    <a href="/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" hreflang="en" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="English version"><i class="fas fa-globe mr-1.5 text-xs"></i>EN</a>
+                    <a href="/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" hreflang="fr" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="Voir la version française"><i class="fas fa-globe mr-1.5 text-xs"></i>FR</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Open menu" aria-expanded="false">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -218,13 +220,13 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
                 <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
-                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
+                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Pricing</a>
                 <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
-                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">About</a>
                 <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
-                <a href="/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" hreflang="en" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><i class="fas fa-globe mr-1.5 text-xs"></i>English version</a>
+                <a href="/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html" hreflang="fr" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><i class="fas fa-globe mr-1.5 text-xs"></i>Version française</a>
             </div>
         </div>
     </nav>
@@ -238,18 +240,18 @@
                 <span class="mx-2">/</span>
                 <span>Blog</span>
                 <span class="mx-2">/</span>
-                <span class="text-white">Assistant IA WhatsApp avec Amazon Bedrock</span>
+                <span class="text-white">WhatsApp AI Assistant with Amazon Bedrock</span>
             </nav>
             <div class="max-w-3xl">
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
-                    Construire un assistant IA WhatsApp privé avec Amazon Bedrock et AWS
+                    Build a private WhatsApp AI assistant with Amazon Bedrock and AWS
                 </h1>
                 <div class="flex flex-wrap items-center gap-4 text-indigo-100 text-sm">
                     <span class="flex items-center">
-                        <i class="fas fa-calendar-alt mr-2"></i> 4 mars 2026
+                        <i class="fas fa-calendar-alt mr-2"></i> March 4, 2026
                     </span>
                     <span class="flex items-center">
-                        <i class="fas fa-clock mr-2"></i> 10 min de lecture
+                        <i class="fas fa-clock mr-2"></i> 10 min read
                     </span>
                     <span class="flex items-center">
                         <i class="fas fa-user mr-2"></i> Alexandre Gillon
@@ -264,18 +266,18 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Hero Image -->
-            <img src="../assets/blog/hero-whatsapp-bedrock.webp" alt="Assistant IA WhatsApp avec Amazon Bedrock" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
+            <img src="/assets/blog/hero-whatsapp-bedrock.webp" alt="WhatsApp AI assistant with Amazon Bedrock" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
 
             <!-- Introduction -->
             <div class="reveal">
                 <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
-                    Un client nous a demandé un assistant WhatsApp capable de lire des PDF, analyser des photos et répondre en langage naturel. Contrainte non négociable : toutes les données devaient rester sur son propre compte AWS, sans transiter par un service tiers. On a déployé une architecture serverless basée sur Amazon Bedrock, et le résultat gère aujourd'hui plusieurs centaines de conversations par mois.
+                    A client asked us for a WhatsApp assistant able to read PDFs, analyze photos and reply in natural language. The non-negotiable constraint: all the data had to stay in their own AWS account, without passing through any third-party service. We deployed a serverless architecture based on Amazon Bedrock, and the result now handles several hundred conversations a month.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'architecture s'appuie sur le projet open-source <strong class="text-gray-900">building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python</strong> publié par AWS. Elle combine Amazon Bedrock, Lambda, DynamoDB et l'intégration native WhatsApp d'AWS pour créer un assistant IA multimodal 100% serverless.
+                    The architecture builds on the open-source project <strong class="text-gray-900">building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python</strong> published by AWS. It combines Amazon Bedrock, Lambda, DynamoDB and AWS's native WhatsApp integration to create a fully serverless, multimodal AI assistant.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    Dans cet article, je détaillé cette architecture telle qu'on l'a déployée, j'explique comment chaque brique s'assemble, et je vous donne les clés pour lancer votre propre assistant IA WhatsApp privé en quelques commandes CDK.
+                    In this article, I walk through this architecture exactly as we deployed it, explain how each building block fits together, and give you the keys to launch your own private WhatsApp AI assistant in a few CDK commands.
                 </p>
             </div>
 
@@ -283,30 +285,30 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-shield-alt text-orange-600 mr-2"></i>
-                    Pourquoi un assistant WhatsApp privé sur AWS ?
+                    Why a private WhatsApp assistant on AWS?
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-4">
-                    Les solutions SaaS de chatbot WhatsApp ne manquent pas (on détaillé les cas d'usage métier dans notre article sur <a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 underline hover:text-indigo-800">l'automatisation de la relation client par WhatsApp et IA</a>). Mais elles posent un problème majeur : <strong class="text-gray-900">vos données transitent par des serveurs tiers</strong>. Messages clients, documents sensibles, informations métier... tout est stocké chez un fournisseur que vous ne contrôlez pas.
+                    There's no shortage of SaaS WhatsApp chatbot solutions (we cover the business use cases in detail in our article on <a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 underline hover:text-indigo-800">automating customer relations through WhatsApp and AI</a>). But they raise a major problem: <strong class="text-gray-900">your data travels through third-party servers</strong>. Customer messages, sensitive documents, business information... it's all stored by a provider you don't control.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-4">
-                    Avec une architecture hébergée sur votre propre compte AWS :
+                    With an architecture hosted in your own AWS account:
                 </p>
                 <ul class="space-y-3 mb-8">
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong class="text-gray-900">Souveraineté des données</strong> : tout reste dans votre compte AWS, dans la région de votre choix (eu-west-1 pour la France). Amazon Bedrock ne stocke pas et n'utilise pas vos données pour entraîner ses modèles.</span>
+                        <span class="text-gray-600"><strong class="text-gray-900">Data sovereignty</strong>: everything stays in your AWS account, in the region of your choice (eu-west-1 for France). Amazon Bedrock does not store your data and does not use it to train its models.</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong class="text-gray-900">Coût maîtrisé</strong> : architecture serverless = vous ne payez que ce que vous consommez. Pas de serveur qui tourne à vide, pas d'abonnement mensuel fixe.</span>
+                        <span class="text-gray-600"><strong class="text-gray-900">Controlled cost</strong>: serverless architecture = you only pay for what you consume. No server running idle, no fixed monthly subscription.</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong class="text-gray-900">Personnalisation totale</strong> : vous contrôlez le modèle IA, les instructions de l'agent, le traitement des médias et la logique métier. Aucune limitation imposée par un SaaS.</span>
+                        <span class="text-gray-600"><strong class="text-gray-900">Full customization</strong>: you control the AI model, the agent's instructions, media processing and business logic. No limitations imposed by a SaaS.</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong class="text-gray-900">Multimodal natif</strong> : texte, images, vidéos, documents et notes vocales. Le modèle Amazon Nova comprend tous ces formats.</span>
+                        <span class="text-gray-600"><strong class="text-gray-900">Natively multimodal</strong>: text, images, videos, documents and voice notes. The Amazon Nova model understands all of these formats.</span>
                     </li>
                 </ul>
             </div>
@@ -315,21 +317,21 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fas fa-project-diagram text-orange-600 mr-2"></i>
-                    Architecture serverless : comment ça marche
+                    Serverless architecture: how it works
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'architecture repose sur 7 services AWS qui s'enchaînent de manière event-driven. Aucun serveur à gérer, tout scale automatiquement.
+                    The architecture relies on 7 AWS services that chain together in an event-driven way. No servers to manage, everything scales automatically.
                 </p>
 
                 <!-- Architecture diagram as styled blocks -->
                 <div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
-                    <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Flux de traitement des messages</h3>
+                    <h3 class="text-lg font-bold text-gray-900 mb-4 text-center">Message processing flow</h3>
 
                     <!-- Step 1 -->
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0 w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">1</div>
                         <div class="ml-3 flex-1 bg-green-50 rounded-lg p-3 border border-green-200">
-                            <span class="text-sm font-medium text-green-800"><i class="fab fa-whatsapp mr-1"></i> Message WhatsApp entrant</span>
+                            <span class="text-sm font-medium text-green-800"><i class="fab fa-whatsapp mr-1"></i> Incoming WhatsApp message</span>
                         </div>
                     </div>
                     <div class="flex justify-center mb-4"><i class="fas fa-arrow-down text-gray-400"></i></div>
@@ -347,7 +349,7 @@
                     <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-4">
                         <div class="bg-blue-50 rounded-lg p-3 border border-blue-200 text-center">
                             <i class="fas fa-comment text-blue-600 text-lg mb-1"></i>
-                            <div class="text-xs font-medium text-blue-800">Texte</div>
+                            <div class="text-xs font-medium text-blue-800">Text</div>
                             <div class="text-xs text-blue-600 mt-1">&darr; Bedrock Agent</div>
                         </div>
                         <div class="bg-purple-50 rounded-lg p-3 border border-purple-200 text-center">
@@ -357,7 +359,7 @@
                         </div>
                         <div class="bg-orange-50 rounded-lg p-3 border border-orange-500 text-center">
                             <i class="fas fa-microphone text-orange-600 text-lg mb-1"></i>
-                            <div class="text-xs font-medium text-orange-800">Note vocale</div>
+                            <div class="text-xs font-medium text-orange-800">Voice note</div>
                             <div class="text-xs text-orange-600 mt-1">S3 &rarr; Transcribe &rarr; Agent</div>
                         </div>
                     </div>
@@ -367,7 +369,7 @@
                     <div class="flex items-center mb-4">
                         <div class="flex-shrink-0 w-10 h-10 bg-orange-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">4</div>
                         <div class="ml-3 flex-1 bg-orange-50 rounded-lg p-3 border border-orange-500">
-                            <span class="text-sm font-medium text-orange-800"><i class="fas fa-brain mr-1"></i> Amazon Bedrock Agent (Nova) &rarr; génération de la réponse</span>
+                            <span class="text-sm font-medium text-orange-800"><i class="fas fa-brain mr-1"></i> Amazon Bedrock Agent (Nova) &rarr; response generation</span>
                         </div>
                     </div>
                     <div class="flex justify-center mb-4"><i class="fas fa-arrow-down text-gray-400"></i></div>
@@ -376,7 +378,7 @@
                     <div class="flex items-center">
                         <div class="flex-shrink-0 w-10 h-10 bg-green-500 rounded-lg flex items-center justify-center text-white font-bold text-sm">5</div>
                         <div class="ml-3 flex-1 bg-green-50 rounded-lg p-3 border border-green-200">
-                            <span class="text-sm font-medium text-green-800"><i class="fab fa-whatsapp mr-1"></i> Réponse envoyée via WhatsApp</span>
+                            <span class="text-sm font-medium text-green-800"><i class="fab fa-whatsapp mr-1"></i> Response sent via WhatsApp</span>
                         </div>
                     </div>
                 </div>
@@ -386,7 +388,7 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fab fa-aws text-orange-600 mr-2"></i>
-                    Les 7 services AWS au cœur de l'architecture
+                    The 7 AWS services at the core of the architecture
                 </h2>
 
                 <div class="space-y-4 mb-8">
@@ -396,12 +398,12 @@
                             <span class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mr-3">
                                 <i class="fas fa-bolt text-orange-600"></i>
                             </span>
-                            AWS Lambda : 3 fonctions spécialisées
+                            AWS Lambda: 3 specialized functions
                         </h3>
                         <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">whatsapp_in</strong> : point d'entrée. Reçoit le message via SNS, identifie le type (texte, image, audio, vidéo, document), télécharge les médias dans S3, et route vers le bon traitement.</li>
-                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">bedrock_agent</strong> : invoque l'agent Bedrock avec le message et le contexte de conversation. Pour les médias, utilise d'abord l'API Converse pour analyser le contenu avant de le passer à l'agent.</li>
-                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">transcriber_done</strong> : déclenchée à la fin d'une transcription audio. Récupère le texte transcrit et le transmet à l'agent Bedrock.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">whatsapp_in</strong>: the entry point. Receives the message via SNS, identifies the type (text, image, audio, video, document), downloads the media into S3, and routes it to the right processing path.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">bedrock_agent</strong>: invokes the Bedrock agent with the message and the conversation context. For media, it first uses the Converse API to analyze the content before passing it to the agent.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-orange-500 mr-2 mt-1"></i><strong class="text-gray-800">transcriber_done</strong>: triggered at the end of an audio transcription. Retrieves the transcribed text and forwards it to the Bedrock agent.</li>
                         </ul>
                     </div>
 
@@ -411,14 +413,14 @@
                             <span class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mr-3">
                                 <i class="fas fa-brain text-purple-600"></i>
                             </span>
-                            Amazon Bedrock : le cerveau de l'assistant
+                            Amazon Bedrock: the brain of the assistant
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed mb-2">
-                            Le projet utilise le modèle <strong class="text-gray-800">Amazon Nova</strong> via Bedrock, le service d'IA générative managée d'AWS. Deux APIs sont utilisées :
+                            The project uses the <strong class="text-gray-800">Amazon Nova</strong> model through Bedrock, AWS's managed generative AI service. Two APIs are used:
                         </p>
                         <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-caret-right text-purple-500 mr-2 mt-1"></i><strong class="text-gray-800">Bedrock Agents</strong> : gère les conversations textuelles avec mémoire et instructions personnalisées. L'agent maintient le contexte sur plusieurs échanges grâce à un session ID stocké dans DynamoDB.</li>
-                            <li class="flex items-start"><i class="fas fa-caret-right text-purple-500 mr-2 mt-1"></i><strong class="text-gray-800">Bedrock Converse API</strong> : analyse les contenus multimodaux (images, vidéos, documents). Le résultat de l'analyse est injecté dans la conversation de l'agent comme contexte supplémentaire.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-purple-500 mr-2 mt-1"></i><strong class="text-gray-800">Bedrock Agents</strong>: handles text conversations with memory and custom instructions. The agent maintains context across multiple exchanges thanks to a session ID stored in DynamoDB.</li>
+                            <li class="flex items-start"><i class="fas fa-caret-right text-purple-500 mr-2 mt-1"></i><strong class="text-gray-800">Bedrock Converse API</strong>: analyzes multimodal content (images, videos, documents). The result of the analysis is injected into the agent's conversation as additional context.</li>
                         </ul>
                     </div>
 
@@ -428,10 +430,10 @@
                             <span class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mr-3">
                                 <i class="fas fa-database text-blue-600"></i>
                             </span>
-                            DynamoDB : mémoire de conversation
+                            DynamoDB: conversation memory
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Deux tables DynamoDB stockent respectivement l'historique des messages (type, contenu, horodatage, numéro de téléphone) et le contexte de session de l'agent Bedrock (session ID par utilisateur). C'est ce qui permet à l'assistant de se souvenir des échanges précédents et de fournir des réponses contextuelles. Le tout avec une latence inférieure à 10 ms.
+                            Two DynamoDB tables store, respectively, the message history (type, content, timestamp, phone number) and the Bedrock agent's session context (session ID per user). This is what lets the assistant remember previous exchanges and provide contextual responses. All with latency under 10 ms.
                         </p>
                     </div>
 
@@ -441,10 +443,10 @@
                             <span class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mr-3">
                                 <i class="fas fa-archive text-green-600"></i>
                             </span>
-                            Amazon S3 : stockage des médias
+                            Amazon S3: media storage
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Les fichiers multimedia (images, vidéos, documents, notes vocales) sont téléchargés depuis WhatsApp et stockés dans S3 avant traitement. S3 sert aussi de destination pour les résultats de transcription d'Amazon Transcribe. Chiffrement SSE activé par défaut.
+                            Multimedia files (images, videos, documents, voice notes) are downloaded from WhatsApp and stored in S3 before processing. S3 also serves as the destination for Amazon Transcribe's transcription results. SSE encryption enabled by default.
                         </p>
                     </div>
 
@@ -454,10 +456,10 @@
                             <span class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-3">
                                 <i class="fas fa-headphones text-red-600"></i>
                             </span>
-                            Amazon Transcribe : speech-to-text
+                            Amazon Transcribe: speech-to-text
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Les notes vocales WhatsApp sont transcrites automatiquement en texte. Le service détecte la langue automatiquement (pas besoin de la spécifier) et supporte plus de 100 langues. Une fois la transcription terminée, un événement déclenche la Lambda <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">transcriber_done</code> qui transmet le texte à l'agent.
+                            WhatsApp voice notes are transcribed into text automatically. The service detects the language automatically (no need to specify it) and supports over 100 languages. Once the transcription is complete, an event triggers the <code class="text-xs bg-gray-100 px-1.5 py-0.5 rounded">transcriber_done</code> Lambda, which forwards the text to the agent.
                         </p>
                     </div>
 
@@ -467,10 +469,10 @@
                             <span class="w-10 h-10 bg-pink-100 rounded-lg flex items-center justify-center mr-3">
                                 <i class="fas fa-paper-plane text-pink-600"></i>
                             </span>
-                            SNS + AWS End User Messaging : intégration WhatsApp native
+                            SNS + AWS End User Messaging: native WhatsApp integration
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            AWS End User Messaging fournit une intégration WhatsApp Business native, sans passer par Twilio ou un autre intermédiaire. Les messages entrants sont publiés sur un topic SNS, qui déclenche la Lambda de traitement. Les réponses sont envoyées directement via l'API End User Messaging. Moins de latence, moins de coûts, moins de dépendances externes.
+                            AWS End User Messaging provides native WhatsApp Business integration, without going through Twilio or another intermediary. Incoming messages are published to an SNS topic, which triggers the processing Lambda. Responses are sent directly via the End User Messaging API. Less latency, lower cost, fewer external dependencies.
                         </p>
                     </div>
                 </div>
@@ -480,47 +482,47 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fas fa-terminal text-orange-600 mr-2"></i>
-                    Déployer en 5 étapes avec AWS CDK
+                    Deploy in 5 steps with AWS CDK
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'ensemble de l'infrastructure est définie en Python avec AWS CDK (Cloud Development Kit). Un seul <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">cdk deploy</code> crée toutes les ressources.
+                    The entire infrastructure is defined in Python with AWS CDK (Cloud Development Kit). A single <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">cdk deploy</code> creates all the resources.
                 </p>
 
                 <div class="space-y-4 mb-8">
                     <!-- Prerequisites -->
                     <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-exclamation-triangle text-orange-600 mr-2"></i>Pré-requis</h3>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-exclamation-triangle text-orange-600 mr-2"></i>Prerequisites</h3>
                         <ul class="text-gray-600 text-sm space-y-1">
-                            <li>&bull; Compte AWS avec CLI configurée</li>
+                            <li>&bull; AWS account with the CLI configured</li>
                             <li>&bull; Python 3.8+</li>
                             <li>&bull; AWS CDK v2.172.0+</li>
-                            <li>&bull; Meta Business Account (pour WhatsApp)</li>
+                            <li>&bull; Meta Business Account (for WhatsApp)</li>
                         </ul>
                     </div>
 
                     <!-- Steps -->
                     <div class="bg-gray-900 rounded-xl p-6 text-sm font-mono overflow-x-auto">
-                        <div class="text-gray-400 mb-3"># 1. Cloner le repo</div>
+                        <div class="text-gray-400 mb-3"># 1. Clone the repo</div>
                         <div class="text-green-500 mb-4">git clone https://github.com/build-on-aws/building-gen-ai-whatsapp-assistant-with-amazon-bedrock-and-python.git<br>cd private-assistant-v2</div>
 
-                        <div class="text-gray-400 mb-3"># 2. Créer l'environnement virtuel</div>
+                        <div class="text-gray-400 mb-3"># 2. Create the virtual environment</div>
                         <div class="text-green-500 mb-4">python3 -m venv .venv<br>source .venv/bin/activate</div>
 
-                        <div class="text-gray-400 mb-3"># 3. Installer les dépendances</div>
+                        <div class="text-gray-400 mb-3"># 3. Install the dependencies</div>
                         <div class="text-green-500 mb-4">pip install -r requirements.txt</div>
 
-                        <div class="text-gray-400 mb-3"># 4. Synthétiser le template CloudFormation</div>
+                        <div class="text-gray-400 mb-3"># 4. Synthesize the CloudFormation template</div>
                         <div class="text-green-500 mb-4">cdk synth</div>
 
-                        <div class="text-gray-400 mb-3"># 5. Déployer toute l'infrastructure</div>
+                        <div class="text-gray-400 mb-3"># 5. Deploy the whole infrastructure</div>
                         <div class="text-green-500">cdk deploy</div>
                     </div>
 
                     <p class="text-base text-gray-600 leading-relaxed mt-4">
-                        Le <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">cdk deploy</code> crée automatiquement : les 3 fonctions Lambda, le bucket S3, les 2 tables DynamoDB, l'agent Bedrock, le topic SNS, les rôles IAM et la configuration End User Messaging. Comptez environ 5 minutes pour le déploiement complet.
+                        The <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">cdk deploy</code> automatically creates: the 3 Lambda functions, the S3 bucket, the 2 DynamoDB tables, the Bedrock agent, the SNS topic, the IAM roles and the End User Messaging configuration. Expect around 5 minutes for the full deployment.
                     </p>
                     <p class="text-base text-gray-600 leading-relaxed mt-4">
-                        En production, on a constaté que le point qui prend le plus de temps n'est pas le déploiement AWS mais la vérification du Meta Business Account (comptez 2 à 5 jours ouvrés). Notre conseil : lancez cette étape en parallele du développement pour ne pas bloquer la mise en service.
+                        In production, we found that the step taking the longest isn't the AWS deployment but the Meta Business Account verification (expect 2 to 5 business days). Our advice: kick off this step in parallel with development so it doesn't block your go-live.
                     </p>
                 </div>
             </div>
@@ -529,32 +531,32 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fas fa-code text-orange-600 mr-2"></i>
-                    Sous le capot : comment le code traite chaque message
+                    Under the hood: how the code processes each message
                 </h2>
 
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    La Lambda <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">whatsapp_in</code> est le point d'entrée. Elle reçoit les événements SNS et orchestre le traitement selon le type de message :
+                    The <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">whatsapp_in</code> Lambda is the entry point. It receives the SNS events and orchestrates processing based on the message type:
                 </p>
 
                 <div class="space-y-4 mb-8">
                     <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-comment text-blue-600 mr-2"></i>Message texte</h3>
-                        <p class="text-gray-600 text-sm">Le texte est extrait du payload WhatsApp et transmis directement à la Lambda <code class="text-xs bg-blue-100 px-1 rounded">bedrock_agent</code> via un appel Lambda asynchrone (<code class="text-xs bg-blue-100 px-1 rounded">InvocationType: Event</code>). L'agent Bedrock génère la réponse en s'appuyant sur ses instructions et l'historique de conversation.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-comment text-blue-600 mr-2"></i>Text message</h3>
+                        <p class="text-gray-600 text-sm">The text is extracted from the WhatsApp payload and passed directly to the <code class="text-xs bg-blue-100 px-1 rounded">bedrock_agent</code> Lambda via an asynchronous Lambda call (<code class="text-xs bg-blue-100 px-1 rounded">InvocationType: Event</code>). The Bedrock agent generates the response based on its instructions and the conversation history.</p>
                     </div>
                     <div class="bg-purple-50 border-l-4 border-purple-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-image text-purple-600 mr-2"></i>Image, vidéo ou document</h3>
-                        <p class="text-gray-600 text-sm">Le média est télécharge depuis WhatsApp et stocké dans S3. Le chemin S3 est transmis à la Lambda <code class="text-xs bg-purple-100 px-1 rounded">bedrock_agent</code>, qui utilise l'API Bedrock Converse pour analyser visuellement le contenu (description d'image, extraction de texte d'un PDF, analyse de video). Le résultat est ensuite injecté dans la conversation de l'agent comme contexte.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-image text-purple-600 mr-2"></i>Image, video or document</h3>
+                        <p class="text-gray-600 text-sm">The media is downloaded from WhatsApp and stored in S3. The S3 path is passed to the <code class="text-xs bg-purple-100 px-1 rounded">bedrock_agent</code> Lambda, which uses the Bedrock Converse API to visually analyze the content (image description, text extraction from a PDF, video analysis). The result is then injected into the agent's conversation as context.</p>
                     </div>
                     <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg">
-                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-microphone text-orange-600 mr-2"></i>Note vocale</h3>
-                        <p class="text-gray-600 text-sm">L'audio est stocké dans S3, puis un job Amazon Transcribe est lancé avec détection automatique de la langue. Une fois la transcription terminée, un événement déclenche la Lambda <code class="text-xs bg-orange-100 px-1 rounded">transcriber_done</code> qui récupère le texte et le transmet à l'agent Bedrock. Le client peut donc parler à l'assistant comme il parlerait à un humain.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-base"><i class="fas fa-microphone text-orange-600 mr-2"></i>Voice note</h3>
+                        <p class="text-gray-600 text-sm">The audio is stored in S3, then an Amazon Transcribe job is launched with automatic language detection. Once the transcription is complete, an event triggers the <code class="text-xs bg-orange-100 px-1 rounded">transcriber_done</code> Lambda, which retrieves the text and forwards it to the Bedrock agent. The customer can therefore talk to the assistant just as they would talk to a human.</p>
                     </div>
                 </div>
 
                 <div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
-                    <h3 class="text-base font-bold text-gray-900 mb-3"><i class="fas fa-memory text-gray-600 mr-2"></i>Gestion de la mémoire</h3>
+                    <h3 class="text-base font-bold text-gray-900 mb-3"><i class="fas fa-memory text-gray-600 mr-2"></i>Memory management</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">
-                        Chaque message est sauvegardé dans DynamoDB avec le numéro de téléphone comme clé de partition. L'agent Bedrock utilise un <strong class="text-gray-800">session ID</strong> unique par utilisateur, stocké également dans DynamoDB, pour maintenir le contexte de conversation. Résultat : l'assistant se souvient de tout ce que le client a dit précédemment, même si la conversation s'étale sur plusieurs jours.
+                        Each message is saved in DynamoDB with the phone number as the partition key. The Bedrock agent uses a unique <strong class="text-gray-800">session ID</strong> per user, also stored in DynamoDB, to maintain conversation context. The result: the assistant remembers everything the customer said previously, even if the conversation spans several days.
                     </p>
                 </div>
             </div>
@@ -563,10 +565,10 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fas fa-calculator text-orange-600 mr-2"></i>
-                    Estimation des coûts : combien ça coûte vraiment ?
+                    Cost estimate: how much does it really cost?
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'avantage d'une architecture serverless : pas de coût fixe. Vous payez à l'usage. Voici une estimation pour 1 000 messages par mois :
+                    The advantage of a serverless architecture: no fixed cost. You pay as you go. Here is an estimate for 1,000 messages per month:
                 </p>
 
                 <div class="overflow-x-auto mb-8">
@@ -574,45 +576,45 @@
                         <thead>
                             <tr class="bg-indigo-600 text-white">
                                 <th class="px-6 py-4 text-left text-sm font-semibold">Service</th>
-                                <th class="px-6 py-4 text-center text-sm font-semibold">Coût estimé / mois</th>
-                                <th class="px-6 py-4 text-left text-sm font-semibold">Détails</th>
+                                <th class="px-6 py-4 text-center text-sm font-semibold">Estimated cost / month</th>
+                                <th class="px-6 py-4 text-left text-sm font-semibold">Details</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100">
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 text-sm text-gray-700 font-medium">AWS Lambda</td>
                                 <td class="px-6 py-4 text-center text-sm text-green-600 font-semibold">~ 0.50 USD</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">3 fonctions, 256 MB, ~15s/invocation</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">3 functions, 256 MB, ~15s/invocation</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 text-sm text-gray-700 font-medium">Amazon Bedrock (Nova Lite)</td>
                                 <td class="px-6 py-4 text-center text-sm text-green-600 font-semibold">~ 3-10 USD</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">~0.003 USD/requête (input + output tokens)</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">~0.003 USD/request (input + output tokens)</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 text-sm text-gray-700 font-medium">Amazon S3</td>
                                 <td class="px-6 py-4 text-center text-sm text-green-600 font-semibold">< 1 USD</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">Stockage médias + transcriptions</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">Media storage + transcriptions</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 text-sm text-gray-700 font-medium">DynamoDB</td>
                                 <td class="px-6 py-4 text-center text-sm text-green-600 font-semibold">< 1 USD</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">On-demand, faible volume</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">On-demand, low volume</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 text-sm text-gray-700 font-medium">Amazon Transcribe</td>
                                 <td class="px-6 py-4 text-center text-sm text-green-600 font-semibold">~ 2-5 USD</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">0.024 USD/min (si notes vocales)</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">0.024 USD/min (if voice notes)</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-6 py-4 text-sm text-gray-700 font-medium">SNS + End User Messaging</td>
                                 <td class="px-6 py-4 text-center text-sm text-green-600 font-semibold">< 1 USD</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">+ frais WhatsApp Business par conversation</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">+ WhatsApp Business fees per conversation</td>
                             </tr>
                             <tr class="bg-orange-50">
-                                <td class="px-6 py-4 text-sm text-gray-900 font-bold">Total estimé</td>
+                                <td class="px-6 py-4 text-sm text-gray-900 font-bold">Estimated total</td>
                                 <td class="px-6 py-4 text-center text-sm text-orange-700 font-bold">20 - 50 USD</td>
-                                <td class="px-6 py-4 text-sm text-gray-500">Pour 1 000 messages/mois</td>
+                                <td class="px-6 py-4 text-sm text-gray-500">For 1,000 messages/month</td>
                             </tr>
                         </tbody>
                     </table>
@@ -621,7 +623,7 @@
                 <div class="bg-green-50 rounded-xl p-6 mb-8">
                     <p class="text-green-800 text-sm leading-relaxed">
                         <i class="fas fa-lightbulb text-green-600 mr-2"></i>
-                        <strong>Comparaison :</strong> les solutions SaaS de chatbot WhatsApp coûtent entre 100 et 500 USD/mois avec des limites de messages. Ici, pour un volume comparable, vous êtes 3 à 10 fois moins cher, avec un contrôle total sur vos données et votre infrastructure.
+                        <strong>Comparison:</strong> SaaS WhatsApp chatbot solutions cost between 100 and 500 USD/month with message limits. Here, for a comparable volume, you're 3 to 10 times cheaper, with full control over your data and your infrastructure.
                     </p>
                 </div>
             </div>
@@ -630,10 +632,10 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fas fa-lightbulb text-orange-600 mr-2"></i>
-                    Cas d'usage concrets
+                    Concrete use cases
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Cette architecture ouvre la porte à de nombreux cas d'usage grâce à sa capacité multimodale. Si vous cherchez une vision plus large de l'intégration de l'IA en entreprise, consultez notre <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">guide pratique pour intégrer l'IA générative en PME</a>.
+                    This architecture opens the door to many use cases thanks to its multimodal capability. If you're looking for a broader view of integrating AI in business, see our <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">practical guide to integrating generative AI in SMEs</a>.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -641,29 +643,29 @@
                         <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-3">
                             <i class="fas fa-headset text-blue-600"></i>
                         </div>
-                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Support client intelligent</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Le client envoie une photo de son produit défectueux, l'IA diagnostique le problème et propose une solution. Notes vocales supportées pour les clients qui préfèrent parler.</p>
+                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Smart customer support</h3>
+                        <p class="text-gray-600 text-xs leading-relaxed">The customer sends a photo of their faulty product, the AI diagnoses the problem and suggests a solution. Voice notes are supported for customers who prefer to speak.</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100">
                         <div class="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center mb-3">
                             <i class="fas fa-file-medical text-green-600"></i>
                         </div>
-                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Suivi médical</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Un patient envoie une photo post-opératoire, l'IA analyse l'évolution et alerte le praticien si nécessaire. Les documents médicaux (PDF) sont analysés automatiquement. C'est exactement ce que propose <a href="https://postcare.net" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline font-medium">PostCare.net</a>, une solution de suivi patient par WhatsApp et IA.</p>
+                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Medical follow-up</h3>
+                        <p class="text-gray-600 text-xs leading-relaxed">A patient sends a post-operative photo, the AI analyzes the progress and alerts the practitioner if needed. Medical documents (PDF) are analyzed automatically. This is exactly what <a href="https://postcare.net" target="_blank" rel="noopener noreferrer" class="text-indigo-600 hover:underline font-medium">PostCare.net</a> offers, a patient follow-up solution via WhatsApp and AI.</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100">
                         <div class="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center mb-3">
                             <i class="fas fa-graduation-cap text-purple-600"></i>
                         </div>
-                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Assistant formation</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Les apprenants envoient leurs exercices (photos ou documents), l'IA corrige et fournit un feedback personnalisé. Support multilingue grâce à la détection automatique.</p>
+                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Training assistant</h3>
+                        <p class="text-gray-600 text-xs leading-relaxed">Learners send their exercises (photos or documents), the AI grades them and provides personalized feedback. Multilingual support thanks to automatic detection.</p>
                     </div>
                     <div class="bg-white rounded-xl shadow-md p-5 border border-gray-100">
                         <div class="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-3">
                             <i class="fas fa-building text-orange-600"></i>
                         </div>
-                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Assistant immobilier</h3>
-                        <p class="text-gray-600 text-xs leading-relaxed">Un prospect envoie des photos de son bien, l'IA fournit une estimation et des recommandations. Les documents (diagnostics, plans) sont analysés automatiquement.</p>
+                        <h3 class="font-bold text-gray-900 mb-2 text-sm">Real estate assistant</h3>
+                        <p class="text-gray-600 text-xs leading-relaxed">A prospect sends photos of their property, the AI provides an estimate and recommendations. Documents (inspection reports, floor plans) are analyzed automatically.</p>
                     </div>
                 </div>
             </div>
@@ -672,61 +674,61 @@
             <div class="reveal">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
                     <i class="fas fa-question-circle text-orange-600 mr-2"></i>
-                    Questions fréquentes
+                    Frequently asked questions
                 </h2>
 
                 <div class="space-y-4 mb-8">
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h3 class="text-base font-bold text-gray-900 mb-2">
-                            Combien coûte un assistant IA WhatsApp sur AWS ?
+                            How much does a WhatsApp AI assistant on AWS cost?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Grâce à l'architecture serverless, les coûts sont proportionnels à l'usage. Pour 1 000 messages par mois, comptez environ 20 à 50 USD tout compris. Le coût augmenté linéairement avec le volume, sans palier ni abonnement fixe.
+                            Thanks to the serverless architecture, costs are proportional to usage. For 1,000 messages per month, expect roughly 20 to 50 USD all in. The cost grows linearly with volume, with no tiers and no fixed subscription.
                         </p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h3 class="text-base font-bold text-gray-900 mb-2">
-                            Quels types de fichiers l'assistant peut-il traiter ?
+                            What types of files can the assistant process?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Texte, images (JPEG, PNG), vidéos (MP4), documents (PDF, Word) et notes vocales. Les médias sont analysés par Amazon Nova via l'API Bedrock Converse. Les notes vocales sont transcrites par Amazon Transcribe avec détection automatique de la langue.
+                            Text, images (JPEG, PNG), videos (MP4), documents (PDF, Word) and voice notes. Media is analyzed by Amazon Nova through the Bedrock Converse API. Voice notes are transcribed by Amazon Transcribe with automatic language detection.
                         </p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h3 class="text-base font-bold text-gray-900 mb-2">
-                            Les données sont-elles sécurisées ?
+                            Is the data secure?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Oui. Toutes les données restent dans votre compte AWS. Bedrock ne stocke pas vos données et ne les utilise pas pour l'entraînement. S3 chiffre les fichiers avec SSE, DynamoDB chiffre au repos. Cependant, les messages transitent par WhatsApp qui à ses propres politiques de confidentialité.
+                            Yes. All data stays in your own AWS account. Bedrock does not store your data and does not use it for training. S3 encrypts files with SSE, DynamoDB encrypts at rest. However, messages do travel through WhatsApp, which has its own privacy policies.
                         </p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h3 class="text-base font-bold text-gray-900 mb-2">
-                            Peut-on personnaliser les réponses de l'agent ?
+                            Can the agent's responses be customized?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Absolument. L'agent Bedrock accepte des instructions personnalisées qui définissent son comportement, son ton, son périmètre et ses limites. Vous pouvez lui donner une personnalité spécifique, limiter les sujets abordés et définir des règles de réponse. L'historique DynamoDB permet des réponses contextuelles.
+                            Absolutely. The Bedrock agent accepts custom instructions that define its behavior, tone, scope and limits. You can give it a specific personality, restrict the topics it covers and set response rules. The DynamoDB history enables contextual responses.
                         </p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h3 class="text-base font-bold text-gray-900 mb-2">
-                            Faut-il un Meta Business Account ?
+                            Do you need a Meta Business Account?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Oui. L'intégration WhatsApp via AWS End User Messaging nécessite un Meta Business Account vérifié. La création est gratuite mais la vérification prend quelques jours. C'est le même compte que pour Facebook Ads ou Instagram Business.
+                            Yes. WhatsApp integration via AWS End User Messaging requires a verified Meta Business Account. Creating one is free but verification takes a few days. It's the same account as the one used for Facebook Ads or Instagram Business.
                         </p>
                     </div>
 
                     <div class="bg-gray-50 p-6 rounded-xl">
                         <h3 class="text-base font-bold text-gray-900 mb-2">
-                            Comment supprimer l'infrastructure ?
+                            How do you delete the infrastructure?
                         </h3>
                         <p class="text-gray-600 text-sm leading-relaxed">
-                            Videz le bucket S3, puis lancez <code class="text-xs bg-gray-200 px-1.5 py-0.5 rounded">cdk destroy</code>. Toutes les ressources sont supprimées en quelques minutes. C'est l'avantage de l'Infrastructure as Code : déploiement et nettoyage en une seule commande.
+                            Empty the S3 bucket, then run <code class="text-xs bg-gray-200 px-1.5 py-0.5 rounded">cdk destroy</code>. All resources are removed within a few minutes. That's the advantage of Infrastructure as Code: deployment and teardown in a single command.
                         </p>
                     </div>
                 </div>
@@ -734,29 +736,29 @@
 
             <!-- Lire aussi -->
             <div class="mt-10 bg-gray-50 rounded-xl p-6">
-                <h3 class="font-semibold text-gray-900 mb-3">Lire aussi</h3>
+                <h3 class="font-semibold text-gray-900 mb-3">Read also</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 hover:underline">Automatiser la relation client avec WhatsApp et l'IA</a></li>
-                    <li><a href="eks-auto-mode-kubernetes-simple.html" class="text-indigo-600 hover:underline">EKS Auto Mode : Kubernetes simple sur AWS</a></li>
-                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline">Integrer l'IA generative dans votre PME : guide pratique</a></li>
+                    <li><a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 hover:underline">Automating customer relations with WhatsApp and AI</a></li>
+                    <li><a href="eks-auto-mode-kubernetes-simple.html" class="text-indigo-600 hover:underline">EKS Auto Mode: simple Kubernetes on AWS</a></li>
+                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline">Integrating generative AI into your SME: a practical guide</a></li>
                 </ul>
-                <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">Voir nos offres →</a></p>
+                <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">See our pricing →</a></p>
             </div>
 
             <!-- CTA Box -->
             <div class="reveal">
                 <div class="bg-indigo-600 rounded-2xl p-8 sm:p-10 mt-12 text-center">
                     <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-                        Envie de déployer votre assistant IA WhatsApp ?
+                        Want to deploy your own WhatsApp AI assistant?
                     </h2>
                     <p class="text-indigo-100 mb-8 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-                        Je vous accompagne dans le déploiement, la personnalisation et l'intégration de votre assistant IA WhatsApp sur AWS. Architecture serverless, sécurisée et optimisée en coûts.
+                        I'll support you in deploying, customizing and integrating your WhatsApp AI assistant on AWS. A serverless, secure and cost-optimized architecture.
                     </p>
                     <a href="../index.html#contact" class="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-200">
                         <i class="fas fa-paper-plane mr-2"></i>
-                        Discutons de votre projet
+                        Let's talk about your project
                     </a>
-                    <p class="text-indigo-200 text-sm mt-4">Réponse sous 24h - Premier échange gratuit et sans engagement</p>
+                    <p class="text-indigo-200 text-sm mt-4">Reply within 24h - First conversation free and with no commitment</p>
                 </div>
             </div>
 
@@ -773,10 +775,10 @@
                         <h3 class="text-xl font-bold">OptimyCloud</h3>
                     </div>
                     <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
-                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures AWS et on-premise.
+                        Your trusted Cloud partner for migrating, optimizing and securing your AWS and on-premise infrastructure.
                     </p>
                     <div class="flex space-x-3">
-                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Alexandre Gillon's LinkedIn profile" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
@@ -784,11 +786,11 @@
                 <div>
                     <h4 class="font-semibold mb-4 text-white">Services</h4>
                     <ul class="space-y-2.5 text-slate-400">
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">FinOps & Optimisation</a></li>
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Containerisation K8s</a></li>
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Migration Cloud</a></li>
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">IA & Automatisation</a></li>
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Infrastructure AWS</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">FinOps & Optimization</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">K8s containerization</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Cloud migration</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI & Automation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AWS infrastructure</a></li>
                     </ul>
                 </div>
                 <div>
@@ -811,17 +813,17 @@
             </div>
             <div class="border-t border-slate-800 mt-10 pt-8">
                 <p class="text-center text-slate-400 text-sm mb-3">
-                    &copy; 2026 OptimyCloud - Ingénieur Cloud Freelance - Alexandre Gillon
+                    &copy; 2026 OptimyCloud - Freelance Cloud Engineer - Alexandre Gillon
                 </p>
                 <div class="text-center space-x-4 text-xs text-slate-400">
-                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Légales</a>
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Legal Notice</a>
                     <span class="text-slate-600">&middot;</span>
-                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
                     <span class="text-slate-600">&middot;</span>
-                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Cookie Policy</a>
                 </div>
                 <p class="text-center text-xs text-slate-400 mt-4 max-w-3xl mx-auto">
-                    * Les projets et réalisations mentionnés ont été menés dans le cadre de mes fonctions chez Ubisoft, Chateauform', Teamwork et Linkeo. Je ne représente pas officiellement ces entreprises.
+                    * The projects and engagements mentioned were carried out as part of my roles at Ubisoft, Chateauform', Teamwork and Linkeo. I do not officially represent these companies.
                 </p>
             </div>
         </div>
@@ -829,13 +831,13 @@
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
-        <p class="text-sm text-gray-600 mb-3">Nous utilisons des cookies pour optimiser votre expérience.</p>
+        <p class="text-sm text-gray-600 mb-3">We use cookies to optimize your experience.</p>
         <div class="flex gap-2">
             <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">
-                Refuser
+                Decline
             </button>
             <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">
-                Accepter
+                Accept
             </button>
         </div>
     </div>
@@ -901,7 +903,7 @@
         }
     });
     </script>
-    <script src="../assets/blog-cta.js" defer></script>
-    <script src="../assets/whatsapp-button.js" defer></script>
+    <script src="/assets/blog-cta.js" defer></script>
+    <script src="/assets/whatsapp-button.js" defer></script>
 </body>
 </html>

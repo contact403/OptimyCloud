@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>Why an AI agent connected to your CRM replaces your forms | OptimyCloud</title>
+    <meta name="description" content="Your forms have a 70% abandonment rate. An AI agent connected to your CRM and calendar captures the customer's information in a natural conversation and does the work for them. A practical guide for SMEs.">
+    <meta name="keywords" content="AI agent CRM, replace form with AI chatbot, AI agent SME, chatbot connected to CRM calendar, AI appointment booking automation, AI agent website">
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/en/blog/agent-ia-remplace-formulaire-crm-pme.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/agent-ia-remplace-formulaire-crm-pme.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/agent-ia-remplace-formulaire-crm-pme.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/agent-ia-remplace-formulaire-crm-pme.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Why an AI agent connected to your CRM replaces your forms">
+    <meta property="og:description" content="Your forms have a 70% abandonment rate. An AI agent connected to your CRM and calendar does the work in the customer's place. A practical guide for SMEs.">
+    <meta property="og:url" content="https://optimycloud.com/en/blog/agent-ia-remplace-formulaire-crm-pme.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="article:published_time" content="2026-04-08">
+    <meta property="article:author" content="Alexandre Gillon">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Why an AI agent connected to your CRM replaces your forms">
+    <meta name="twitter:description" content="Form abandonment rate: 70%. An AI agent connected to your CRM does the work in the customer's place.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    <script src="/assets/cal-embed.js" defer></script>
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Why an AI agent connected to your CRM replaces your forms" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Why an AI agent connected to your CRM replaces your forms",
+          "description": "Your forms have a 70% abandonment rate. An AI agent connected to your CRM and calendar captures the customer's information in a natural conversation and does the work for them.",
+          "url": "https://optimycloud.com/en/blog/agent-ia-remplace-formulaire-crm-pme.html",
+          "datePublished": "2026-04-08",
+          "dateModified": "2026-04-08",
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/agent-ia-remplace-formulaire-crm-pme.html" },
+          "image": "https://optimycloud.com/assets/optimycloud-logo.png",
+          "wordCount": 2900,
+          "inLanguage": "en",
+          "articleSection": "AI & Automation",
+          "keywords": ["AI agent CRM", "replace form with AI agent", "chatbot connected to CRM calendar", "SME automation", "AI agent website"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is the difference between a traditional chatbot and an AI agent connected to the CRM?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A traditional chatbot follows a fixed script and displays pre-written answers. An AI agent understands natural language, connects to your CRM and calendar, and carries out actions: creating a customer record, booking a slot, sending a confirmation. It replaces both the form AND the manual data-entry work."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does the AI agent replace my CRM?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The AI agent does not replace your CRM, it feeds it. Your CRM remains your management tool. The AI agent becomes the interface between your customers and your CRM: it gathers the information in a natural conversation and pushes it straight into your existing system."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does an AI agent connected to the CRM cost for an SME?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Between 1,500 and 8,000 euros for the setup, then 80 to 200 euros per month (hosting, LLM calls, connector maintenance). The return on investment is measured in weeks, not months."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.webp"
+                                 alt="OptimyCloud"
+                                 width="200" height="64"
+                                 fetchpriority="high"
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Home</a>
+                    <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Pricing</a>
+                    <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">About</a>
+                    <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/blog/agent-ia-remplace-formulaire-crm-pme.html" hreflang="fr" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="Voir la version française"><i class="fas fa-globe mr-1.5 text-xs"></i>FR</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Open menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Pricing</a>
+                <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">About</a>
+                <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/blog/agent-ia-remplace-formulaire-crm-pme.html" hreflang="fr" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><i class="fas fa-globe mr-1.5 text-xs"></i>Version française</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="bg-gradient-to-br from-slate-800 to-emerald-900 py-16 sm:py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm text-emerald-200 mb-6" aria-label="Breadcrumb">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="./" class="hover:text-white transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">AI agent vs forms</span>
+            </nav>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-4xl leading-tight">
+                Your forms are scaring off your customers. An AI agent connected to your CRM does the work in their place.
+            </h1>
+            <div class="flex flex-wrap items-center text-emerald-200 text-sm gap-4 mt-6">
+                <span><i class="fas fa-calendar-alt mr-2"></i>April 8, 2026</span>
+                <span><i class="fas fa-clock mr-2"></i>12 min read</span>
+                <span><i class="fas fa-user mr-2"></i>Alexandre Gillon</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="space-y-16">
+
+            <!-- Section 1 : Le constat -->
+            <div class="reveal">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    You have a CRM. Maybe HubSpot, Pipedrive, Salesforce, or a niche business tool. You also have a form on your website. And you have a problem: <strong>70% of the people who start your form never finish it</strong>.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The form was invented in the 90s. It's 2026. Your customers talk to Siri, they place orders by voice message, they chat with AI every single day. And you're asking them to fill in 12 fields on a phone screen, look up their company registration number, and click a "Submit" button that doesn't even confirm it worked.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The problem isn't your CRM. Your CRM works just fine. The problem is the <strong>bridge between your customer and your CRM</strong>. Today, that bridge is a cold, impersonal form that nobody wants to fill in. And behind it, it's you or your assistant re-keying the information, chasing people by email, and manually blocking a slot in the calendar.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    An AI agent is that new bridge. The customer lands on your site, clicks the chat, and speaks naturally. The agent understands, asks the right questions, and does what's needed: it creates the record in your CRM, blocks the slot in your calendar, and sends the confirmation to the customer. <strong>Zero forms, zero manual data entry, zero follow-up emails.</strong>
+                </p>
+            </div>
+
+            <!-- Section 2 : Agent IA ≠ chatbot à l'ancienne -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    An AI agent is not an old-school chatbot
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Let's clear this up right away. When people hear "chatbot", most of them think of those website popups that reply "I didn't understand your question, here's our FAQ". That is <strong>not</strong> what we're talking about.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    An old-school chatbot follows a fixed decision tree. If the customer says something unexpected, it breaks. It connects to nothing. It displays pre-written answers. Its one talent is redirecting to a human when it's out of its depth -- which is to say, just about all the time.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    An AI agent is a different animal. It's powered by a language model (Claude, GPT-4) that understands natural English, typos, and incomplete sentences. And above all: <strong>it acts</strong>. It doesn't just answer questions. It carries out tasks.
+                </p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                        <caption class="sr-only">Comparison of a traditional chatbot vs a connected AI agent</caption>
+                        <thead class="bg-emerald-50">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Criterion</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Traditional chatbot</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Connected AI agent</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Understanding</td><td class="p-3">Keywords and buttons</td><td class="p-3 text-emerald-700 font-medium">Natural language, voice, typos included</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">CRM connection</td><td class="p-3">None</td><td class="p-3 text-emerald-700 font-medium">Creates/updates records in real time</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Calendar</td><td class="p-3">Shows a Calendly link</td><td class="p-3 text-emerald-700 font-medium">Checks availability and books the slot</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Confirmation</td><td class="p-3">"Thanks, we'll get back to you"</td><td class="p-3 text-emerald-700 font-medium">Sends a confirmation with the exact details</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Follow-up</td><td class="p-3">Manual (by you)</td><td class="p-3 text-emerald-700 font-medium">Automatic, personalized, natural</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Adaptability</td><td class="p-3">Fixed script, same path for everyone</td><td class="p-3 text-emerald-700 font-medium">Adapts to the context and the answers</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-5 mb-8">
+                    <p class="text-gray-700"><strong>In short:</strong> the traditional chatbot is a form disguised as a conversation. The AI agent is a colleague who talks to the customer, understands what they want, and does the work inside your tools.</p>
+                </div>
+            </div>
+
+            <!-- Section 3 : Ce que fait concrètement un agent IA -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    What an AI agent actually does (that your form doesn't)
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Let's take a simple example. A prospect lands on your site. Here's what happens with a form, then with an AI agent.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">The traditional form journey</h3>
+                <ul class="space-y-2 text-gray-600 mb-6">
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>The customer hits your contact form (name, email, phone, message, subject...)</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>They fill in 3 fields out of 8, hesitate, close the tab. Abandonment rate: 70%</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>Those who finish get an email saying "Thanks, we'll get back to you within 48h"</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>You get a notification. You open the CRM. You create the record manually</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>You send an email to propose a slot. The customer replies 2 days later</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>You block the meeting manually in your calendar</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span><strong>Total time: 3 to 5 days. 30 minutes of admin work per prospect.</strong></span></li>
+                </ul>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">The connected AI agent journey</h3>
+                <ul class="space-y-2 text-gray-600 mb-6">
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span>The customer clicks the chat on your site and writes "Hi, I'm looking for an accountant for my property holding company"</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span>The agent replies: "Hi! I can help. Is it taxed under income tax or corporation tax?"</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span>In 5-6 natural exchanges, the agent collects: type of structure, revenue, number of partners, need (accounting only or legal too), contact details</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span>The agent creates the record in the CRM with all the information neatly structured</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span>It checks the firm's calendar and proposes 3 slots to the customer</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span>The customer picks one. The agent books the slot and sends the confirmation with the address and the documents to bring</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>Total time: 10 minutes. Zero human involvement.</strong></span></li>
+                </ul>
+
+                <div class="bg-amber-50 border border-amber-200 rounded-lg p-5 mb-8">
+                    <p class="text-gray-700"><strong>The fundamental difference:</strong> with a form, it's the customer who works for you. With an AI agent, it's the agent who works for the customer AND for you. The customer talks, the agent does.</p>
+                </div>
+            </div>
+
+            <!-- Section 4 : L'agent IA ne remplace pas votre CRM -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    The AI agent doesn't replace your CRM. It finally makes it useful.
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    This is the crucial point. Plenty of SMEs have invested in a CRM -- sometimes expensive, sometimes complex -- and they use it at 20% of its capacity. Why? Because the CRM doesn't fill itself. Someone has to enter the information. And that someone is you, between two meetings, when you remember, if you have the time.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The result: incomplete customer records, leads sitting around with no follow-up, meetings booked over the phone but never logged in the system. Your CRM is supposed to save you time, but it costs you time because feeding it is manual.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The AI agent solves exactly this problem. It becomes <strong>the natural interface between your customers and your CRM</strong>. The customer doesn't even know there's a CRM behind it. They chat. The agent structures the information and pushes it into your system in real time.
+                </p>
+
+                <div class="grid sm:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-slate-50 rounded-lg p-5 text-center">
+                        <i class="fas fa-comments text-emerald-600 text-2xl mb-3"></i>
+                        <p class="font-bold text-gray-900 mb-1">The customer talks</p>
+                        <p class="text-sm text-gray-600">Through the chat on your site. In their own words, at their own pace.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5 text-center">
+                        <i class="fas fa-robot text-emerald-600 text-2xl mb-3"></i>
+                        <p class="font-bold text-gray-900 mb-1">The agent understands and acts</p>
+                        <p class="text-sm text-gray-600">Qualifies, structures, pushes to the CRM, books a slot.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5 text-center">
+                        <i class="fas fa-chart-bar text-emerald-600 text-2xl mb-3"></i>
+                        <p class="font-bold text-gray-900 mb-1">You find it all there</p>
+                        <p class="text-sm text-gray-600">A complete CRM record, the meeting booked, the conversation history.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5 : Les secteurs -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    5 sectors where the AI agent has the most impact (and why)
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    These sectors have one thing in common: no in-house IT department, no systems integrator, a CRM that's often underused, and professionals who spend too much time on admin tasks instead of doing their actual job.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">1. Brokers (lending, insurance, real estate)</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> a broker has a CRM (often a sector-specific tool, or an adapted Pipedrive). But they spend 2 hours per prospect gathering the information before they can even start working the case. The site's web form generates incomplete leads: "name + email + I want a loan". Useless without calling the customer back.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>What the AI agent does:</strong> the prospect arrives on the broker's site and opens the chat. The agent asks them the key questions in conversation (income, employment status, down payment, project). It creates the complete record in the broker's CRM. It proposes a slot for the first meeting and books it in the calendar. The broker opens their CRM in the morning: everything is ready.
+                </p>
+                <p class="text-indigo-600 font-semibold text-sm mb-8">Measured gain: qualification time cut by 4, file completion rate rising from 65% to 92%.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">2. Accounting and advisory firms</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> accounting firms have niche software (Cegid, ACD, Sage). But onboarding a new client is still an administrative nightmare. The client gets an email with a list of documents to provide. They send half of them. The assistant chases them. The file takes 2 weeks to be complete.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>What the AI agent does:</strong> the new client arrives on the firm's site and starts a conversation with the AI agent. The agent asks for the information one item at a time, in a logical order, and pushes everything into the firm's software. No more manual chasing, no more documents lost in email threads.
+                </p>
+                <p class="text-indigo-600 font-semibold text-sm mb-8">Measured gain: client onboarding in 48h instead of 2 weeks. The assistant gets back 15 hours a month.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">3. Independent real estate agencies</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> the real estate agent uses software like Apimo, Hektor or Immofacile. When a prospect calls for a viewing, the agent jots the name on a sticky note, plans to create the record "later", and forgets one time out of three. The site's form generates cold leads that are never called back in time.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>What the AI agent does:</strong> the prospect arrives on the agency's site and opens the chat. The AI agent qualifies the project (buying, renting, budget, area, size), creates the record in the agency's software, and proposes a viewing slot by cross-referencing the availability of the agent and the property. An automatic confirmation is sent to the prospect and to the real estate agent.
+                </p>
+                <p class="text-indigo-600 font-semibold text-sm mb-8">Measured gain: leads are qualified and called back in under 5 minutes, around the clock. Viewing conversion rate doubles.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">4. Law firms and consultancies</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> a firm receives enquiries by email, form, phone. The partner or the assistant has to qualify the request (area of law, urgency, potential conflict of interest) before proposing a meeting. When the firm is in court or in a meeting, the client waits. Sometimes they go elsewhere.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>What the AI agent does:</strong> it responds immediately, qualifies the type of request, checks there's no conflict of interest (by cross-referencing with the CRM's client base), collects the first details of the case, and books a meeting in the relevant lawyer's slot. The client receives a confirmation within 10 minutes, even at 11pm on a Sunday.
+                </p>
+                <p class="text-indigo-600 font-semibold text-sm mb-8">Measured gain: 0 leads lost outside business hours, automatic pre-qualification that filters out 30% of out-of-scope requests.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">5. Training providers and skills assessment centers</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> enrollment involves the trainee, their employer, and sometimes a funding body or a training-rights scheme. The site's form captures one email. After that it's 3 weeks of back-and-forth to put together the complete file. The CRM (often Digiforma or YParéo) stays empty until everything is wrapped up.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>What the AI agent does:</strong> it guides the trainee through the site's chat and collects their information in conversation. It pushes each item into the CRM as it goes. The administrator sees the progress of each file in real time and can chase the remaining stakeholders (HR, funding body) with a file that's already pre-filled.
+                </p>
+                <p class="text-indigo-600 font-semibold text-sm mb-8">Measured gain: enrollment time cut by 3, fewer training sessions postponed because of an incomplete file.</p>
+            </div>
+
+            <!-- Section 6 : Formulaire vs Agent IA en chiffres -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    Form vs AI agent: the numbers that matter
+                </h2>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                        <caption class="sr-only">Comparison of a web form vs an AI agent connected to the CRM</caption>
+                        <thead class="bg-emerald-50">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Metric</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Web form</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Connected AI agent</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Completion rate</td><td class="p-3">25 to 35%</td><td class="p-3 text-emerald-700 font-medium">85 to 95%</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Time to qualify a lead</td><td class="p-3">24 to 72h (email chasing)</td><td class="p-3 text-emerald-700 font-medium">10 minutes</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">CRM data entry</td><td class="p-3">Manual (you or your assistant)</td><td class="p-3 text-emerald-700 font-medium">Automatic, in real time</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Booking a meeting</td><td class="p-3">2 to 5 email exchanges</td><td class="p-3 text-emerald-700 font-medium">In the same conversation</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Availability</td><td class="p-3">Office hours</td><td class="p-3 text-emerald-700 font-medium">24/7</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Cost per qualified lead</td><td class="p-3">15 to 30 min of human time</td><td class="p-3 text-emerald-700 font-medium">~€0.15 (API cost)</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    The math is simple. If you handle 50 leads a month and each lead takes you 20 minutes of manual qualification, that's 16 hours a month of admin work. At 40 euros an hour (the loaded cost of an assistant), that's 640 euros a month. The AI agent costs 80 to 200 euros a month and works around the clock.
+                </p>
+            </div>
+
+            <!-- Section 7 : Comment ça s'intègre -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    How it integrates with your existing tools
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The AI agent isn't one more tool to learn. It plugs into what you already have. Here are the most common integrations.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-address-book text-emerald-600 mr-2"></i>CRM</p>
+                        <p class="text-sm text-gray-600">HubSpot, Pipedrive, Salesforce, Zoho, or your niche business tool. The agent creates and updates records automatically via the API.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-calendar text-emerald-600 mr-2"></i>Calendar</p>
+                        <p class="text-sm text-gray-600">Google Calendar, Outlook, Cal.com, Calendly. The agent checks availability and books the slot directly.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-globe text-emerald-600 mr-2"></i>Chat widget on your site</p>
+                        <p class="text-sm text-gray-600">A chat widget embedded in your site that replaces the form. The customer talks, the agent does the rest.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-brain text-emerald-600 mr-2"></i>Knowledge base (RAG)</p>
+                        <p class="text-sm text-gray-600">The agent is trained on your business data (services, pricing, FAQ). It responds like a colleague who knows your company.</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The key point: <strong>you don't change any of your habits</strong>. You keep opening your CRM in the morning to see your meetings and your new leads. Except now, the records are complete, the meetings are already booked, and you didn't have to lift a finger.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    For the technical details on the AI architecture that powers this kind of solution (Amazon Bedrock, AWS Lambda), see our <a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline">technical guide</a>.
+                </p>
+            </div>
+
+            <!-- Section 7b : Le RAG -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    The CRM isn't enough: why your AI agent needs a knowledge base
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Connecting the AI agent to the CRM and the calendar is essential for it to <strong>act</strong>. But for it to <strong>respond intelligently</strong>, it needs something else: a deep knowledge of your company. That's the role of RAG (Retrieval-Augmented Generation).
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    In concrete terms, RAG is a knowledge base that the AI agent consults before every response. When a customer asks "do you handle business law?", the agent doesn't guess -- it looks up the answer in your data and responds accurately. Without this building block, the agent knows how to push information into the CRM, but it doesn't know how to <strong>talk about your business</strong>.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">What goes into the knowledge base</h3>
+                <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-briefcase text-emerald-600 mr-2"></i>Your services and pricing</p>
+                        <p class="text-sm text-gray-600">What you offer, at what prices, under what conditions. The agent can qualify the customer's need and give them an initial estimate.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-question-circle text-emerald-600 mr-2"></i>Your business FAQ</p>
+                        <p class="text-sm text-gray-600">The 30 questions your customers ask all the time. The agent answers them instantly, without you having to pick up the phone.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-map-marker-alt text-emerald-600 mr-2"></i>Your specifics</p>
+                        <p class="text-sm text-gray-600">Service areas, specialties, opening hours, team. The agent knows how to direct the customer to the right person or the right service.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-list-check text-emerald-600 mr-2"></i>Your internal processes</p>
+                        <p class="text-sm text-gray-600">What information to collect, in what order, what documents to request. The agent follows your methodology, not a generic script.</p>
+                    </div>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">A concrete example</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    An accounting firm has an AI agent on its site. A visitor opens the chat and writes: "Hi, I've just set up my single-shareholder company, I need an accountant. How much do you charge?"
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>Without RAG</strong>, the agent can only reply: "I'll pass your request on to our team." That's a disguised form.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>With RAG</strong>, the agent replies: "Hi! For a single-shareholder company, our packages start at 150 euros/month excl. tax for bookkeeping and tax filings. That includes the financial statements and the tax return. Do you already have a forecast, or are you starting from scratch?" -- then it qualifies the need, creates the CRM record, and proposes a slot.
+                </p>
+
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-5 mb-8">
+                    <p class="text-gray-700"><strong>The difference:</strong> with RAG, the AI agent doesn't just collect information. It <strong>advises</strong>, it <strong>guides</strong>, it <strong>reassures</strong>. The customer feels taken care of immediately. And by the time the professional steps in, the prospect is already 80% convinced.</p>
+                </div>
+            </div>
+
+            <!-- Section 8 : Combien ça coûte -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    How much it costs
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Full transparency. Here are the real ranges for an AI agent connected to your CRM and your calendar.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Website AI agent + CRM (qualification + booking)</h3>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Setup:</strong> 1,500 to 4,000 euros</p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Monthly:</strong> 80 to 150 euros/month (LLM + hosting)</p>
+                <p class="text-gray-600 leading-relaxed mb-8"><strong>Timeline:</strong> 1 to 2 weeks</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Full AI agent (qualification + document collection + CRM + calendar + follow-ups)</h3>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Setup:</strong> 3,000 to 8,000 euros</p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Monthly:</strong> 100 to 200 euros/month</p>
+                <p class="text-gray-600 leading-relaxed mb-6"><strong>Timeline:</strong> 2 to 4 weeks</p>
+
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-5 mb-6">
+                    <p class="text-gray-700"><strong>Typical return on investment:</strong> for a professional handling 30+ leads a month, the AI agent pays for itself in 4 to 8 weeks. This isn't an IT cost, it's an immediate productivity gain.</p>
+                </div>
+
+                <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-5 mb-6">
+                    <p class="text-gray-700"><strong>At OptimyCloud</strong>, we design and deploy these AI agents from A to Z: an audit of your existing tools, the technical architecture, CRM and calendar integration, building the RAG knowledge base, the chat widget on your site, and going live. Every project is bespoke. <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" class="text-indigo-600 font-semibold hover:underline cursor-pointer bg-transparent border-0 p-0">Book a free 30-minute call</button> to discuss your case.</p>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    For a detailed price comparison by type of solution, see our <a href="combien-coute-chatbot-ia-pme.html" class="text-indigo-600 hover:underline">full article on the cost of AI chatbots for SMEs</a>.
+                </p>
+            </div>
+
+            <!-- Section 9 : Pourquoi maintenant -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    Why now is the right time
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Two years ago, deploying an AI agent connected to a CRM was a 50,000-euro project reserved for large enterprises with an IT department and a systems integrator. That's no longer the case.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Three things changed in 2025-2026:
+                </p>
+                <ul class="space-y-3 text-gray-600 mb-6">
+                    <li class="flex items-start"><i class="fas fa-bolt text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>Language models have become reliable and affordable.</strong> Claude and GPT-4 understand language better than most enterprise chatbots did 3 years ago. And the cost per conversation has dropped to a few cents.</span></li>
+                    <li class="flex items-start"><i class="fas fa-bolt text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>AI chat widgets are mature and simple to integrate.</strong> A JavaScript snippet on your site, and your AI agent is live. No need to rebuild your site, no need for a front-end developer. The widget integrates in 5 minutes on any existing site.</span></li>
+                    <li class="flex items-start"><i class="fas fa-bolt text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>Every CRM now has an open API.</strong> HubSpot, Pipedrive, Zoho, even sector-specific business software -- they all let you create and modify records via API. Integration, which used to take months, now takes days.</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    In concrete terms: what required a systems integrator, 6 months and 80,000 euros in 2023 is now done in 1 to 4 weeks by a specialized freelancer for 1,500 to 8,000 euros. And it works better, because the 2026 LLMs are incomparably better than those of 2023.
+                </p>
+            </div>
+
+            <!-- Section 10 : FAQ -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    Frequently asked questions
+                </h2>
+
+                <div class="space-y-6 mb-8">
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"What if the customer asks a question the agent can't handle?"</h3>
+                        <p class="text-gray-600 text-sm">The agent escalates to a human. It sends you a notification with the full context of the conversation. You take over already knowing what the customer wants. No loss of information, no "could you repeat your request".</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"Will my customers know they're talking to an AI?"</h3>
+                        <p class="text-gray-600 text-sm">Yes, and it's important to be transparent. The agent introduces itself as an AI assistant. Customers are completely fine with it -- they prefer an instant answer from an AI agent to a form with no reply for 48h.</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"What about GDPR?"</h3>
+                        <p class="text-gray-600 text-sm">The data is hosted in the European Union, consent is explicit (the customer initiates the conversation), the data is encrypted, and the customer can request deletion at any time. The AI agent is configured never to store sensitive data outside your secure systems.</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"My CRM is a specific niche business tool, not HubSpot. Does it still work?"</h3>
+                        <p class="text-gray-600 text-sm">In most cases, yes. If your software has an API (and almost all of them do in 2026), the AI agent can connect to it. If it doesn't, we go through intermediate solutions (export to Google Sheets, webhook to Zapier/Make). There's always a way.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articles liés -->
+            <div class="reveal">
+                <h3 class="text-lg font-bold text-gray-900 mb-4">Read also</h3>
+                <ul class="space-y-2 mb-8">
+                    <li><a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 hover:underline text-sm">What is a FinOps audit? A complete guide for SMEs &rarr;</a></li>
+                    <li><a href="automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html" class="text-indigo-600 hover:underline text-sm">Automate customer information gathering with a WhatsApp AI chatbot &rarr;</a></li>
+                    <li><a href="combien-coute-chatbot-ia-pme.html" class="text-indigo-600 hover:underline text-sm">How much does an AI chatbot cost for an SME in 2026? &rarr;</a></li>
+                    <li><a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 hover:underline text-sm">Automate customer relations with WhatsApp and AI &rarr;</a></li>
+                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline text-sm">Integrating generative AI into your SME: a practical guide &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="reveal">
+                <div class="bg-emerald-600 rounded-2xl p-8 sm:p-10 mt-12 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        OptimyCloud designs and deploys your bespoke AI agent
+                    </h2>
+                    <p class="text-emerald-100 mb-4 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+                        An AI agent connected to your CRM, your calendar, and trained on your business. A chat widget embedded in your site, up and running in 2 to 5 weeks.
+                    </p>
+                    <p class="text-emerald-100 mb-8 text-base leading-relaxed max-w-xl mx-auto">
+                        Book 30 minutes by video call to discuss your business and your current tools. You'll leave with an initial cost and timeline estimate. No commitment.
+                    </p>
+                    <button data-cal-link="optimycloud/decouverte-agent-ia-gratuit" data-cal-namespace="decouverte-agent-ia-gratuit" class="inline-flex items-center bg-white text-emerald-700 px-8 py-3 rounded-lg font-semibold hover:bg-emerald-50 transition-colors duration-200 cursor-pointer">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Book my free call
+                    </button>
+                    <p class="text-emerald-200 text-sm mt-4">100% free &middot; 30 minutes &middot; no commitment</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        AI, Cloud & SEO expert for SMEs and startups. 10+ years of engineering experience. AWS Certified.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Alexandre Gillon's LinkedIn profile" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI Agents & LLMs</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI Automation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AWS Cloud</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">SEO Audit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fab fa-whatsapp mr-2 text-slate-500"></i>
+                            <a href="https://wa.me/33631109539" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors">+33 6 31 10 95 39</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-400 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Freelance Cloud Engineer - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-400">
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Legal Notice</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Cookie Policy</a>
+                </div>
+                <p class="text-center text-xs text-slate-400 mt-4 max-w-3xl mx-auto">
+                    * The projects and work mentioned were carried out as part of my roles at Ubisoft, Châteauform', Teamwork and Linkeo. I do not officially represent these companies.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
+        <p class="text-sm text-gray-600 mb-3">We use cookies to optimize your experience.</p>
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">Reject</button>
+            <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">Accept</button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ===== Reveal on scroll =====
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal--visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+        // ===== Mobile menu =====
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() { mobileMenu.classList.toggle('hidden'); });
+        }
+
+        // ===== Cookie consent =====
+        var banner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('accept-cookies');
+        var rejectBtn = document.getElementById('reject-cookies');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            banner.style.display = 'block';
+        }
+
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.style.display = 'none';
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
+            gtag('set', 'ads_data_redaction', false);
+        });
+
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            banner.style.display = 'none';
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+            gtag('set', 'ads_data_redaction', true);
+        });
+    });
+    </script>
+
+    <script src="/assets/blog-cta.js" defer></script>
+    <script src="/assets/whatsapp-button.js" defer></script>
+</body>
+</html>

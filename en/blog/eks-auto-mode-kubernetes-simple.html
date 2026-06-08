@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,39 +54,41 @@
     src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
     <!-- End Meta Pixel -->
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
-    <link rel="shortcut icon" href="../assets/favicon.ico" />
-    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
-    <link rel="manifest" href="../assets/site.webmanifest" />
-    <title>EKS Auto Mode : Kubernetes sans DevOps sur AWS (guide 2026) | OptimyCloud</title>
-    <meta name="description" content="EKS Auto Mode supprime 80% du travail opérationnel Kubernetes. AWS gère nodes, scaling, networking et stockage automatiquement. Guide complet + comparatif vs EKS classique + migration.">
-    <meta name="keywords" content="EKS Auto Mode, Amazon EKS, Kubernetes AWS, Kubernetes simplifié, EKS managed nodes, Karpenter, auto scaling Kubernetes, cluster EKS, AWS Kubernetes 2026, migration EKS, infrastructure Kubernetes">
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>EKS Auto Mode: Kubernetes Without DevOps on AWS (2026 guide) | OptimyCloud</title>
+    <meta name="description" content="EKS Auto Mode removes 80% of Kubernetes operational work. AWS manages nodes, scaling, networking and storage automatically. Full guide + comparison vs classic EKS + migration.">
+    <meta name="keywords" content="EKS Auto Mode, Amazon EKS, Kubernetes AWS, simplified Kubernetes, EKS managed nodes, Karpenter, Kubernetes auto scaling, EKS cluster, AWS Kubernetes 2026, EKS migration, Kubernetes infrastructure">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
-    <link rel="canonical" href="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html">
+    <link rel="canonical" href="https://optimycloud.com/en/blog/eks-auto-mode-kubernetes-simple.html">
     <!-- hreflang -->
     <link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html" />
     <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/eks-auto-mode-kubernetes-simple.html" />
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="EKS Auto Mode : Kubernetes sans DevOps sur AWS (guide 2026)">
-    <meta property="og:description" content="EKS Auto Mode supprime 80% du travail ops Kubernetes. AWS gère nodes, scaling et réseau automatiquement. Comparatif vs EKS classique + migration.">
-    <meta property="og:url" content="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html">
+    <meta property="og:title" content="EKS Auto Mode: Kubernetes Without DevOps on AWS (2026 guide)">
+    <meta property="og:description" content="EKS Auto Mode removes 80% of Kubernetes ops work. AWS manages nodes, scaling and networking automatically. Comparison vs classic EKS + migration.">
+    <meta property="og:url" content="https://optimycloud.com/en/blog/eks-auto-mode-kubernetes-simple.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-eks.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
     <meta property="article:published_time" content="2026-03-11">
     <meta property="article:author" content="Alexandre Gillon">
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EKS Auto Mode : Kubernetes sans DevOps sur AWS">
-    <meta name="twitter:description" content="Supprimez 80% du travail ops Kubernetes. AWS gère nodes, scaling et réseau. Guide complet 2026.">
+    <meta name="twitter:title" content="EKS Auto Mode: Kubernetes Without DevOps on AWS">
+    <meta name="twitter:description" content="Remove 80% of Kubernetes ops work. AWS manages nodes, scaling and networking. Full 2026 guide.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-eks.webp">
 
     <!-- Fonts -->
-    <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/style.css">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
 
@@ -98,24 +100,24 @@
         {
           "@type": "BreadcrumbList",
           "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://optimycloud.com/" },
             { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/blog/" },
-            { "@type": "ListItem", "position": 3, "name": "EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS" }
+            { "@type": "ListItem", "position": 3, "name": "EKS Auto Mode: Kubernetes Has Never Been This Simple on AWS" }
           ]
         },
         {
           "@type": "BlogPosting",
-          "headline": "EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS",
-          "description": "Découvrez EKS Auto Mode : AWS gère vos nodes, scaling, networking et stockage Kubernetes automatiquement. Guide complet, comparatif et migration.",
-          "url": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html",
+          "headline": "EKS Auto Mode: Kubernetes Has Never Been This Simple on AWS",
+          "description": "Discover EKS Auto Mode: AWS manages your Kubernetes nodes, scaling, networking and storage automatically. Full guide, comparison and migration.",
+          "url": "https://optimycloud.com/en/blog/eks-auto-mode-kubernetes-simple.html",
           "datePublished": "2026-03-11",
           "dateModified": "2026-03-11",
           "author": { "@id": "https://optimycloud.com/#person" },
           "publisher": { "@id": "https://optimycloud.com/#organization" },
-          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/eks-auto-mode-kubernetes-simple.html" },
           "image": "https://optimycloud.com/assets/blog/hero-eks.webp",
           "wordCount": 2500,
-          "inLanguage": "fr",
+          "inLanguage": "en",
           "articleSection": "Cloud & Kubernetes",
           "keywords": ["EKS Auto Mode", "Amazon EKS", "Kubernetes AWS", "Karpenter", "AWS Kubernetes 2026"]
         },
@@ -124,42 +126,42 @@
           "mainEntity": [
             {
               "@type": "Question",
-              "name": "Qu'est-ce que EKS Auto Mode ?",
+              "name": "What is EKS Auto Mode?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "EKS Auto Mode est une fonctionnalité d'Amazon EKS qui automatise entièrement la gestion des nodes, du scaling, du networking et du stockage. AWS gère l'infrastructure Kubernetes pour vous."
+                "text": "EKS Auto Mode is an Amazon EKS feature that fully automates the management of nodes, scaling, networking and storage. AWS manages the Kubernetes infrastructure for you."
               }
             },
             {
               "@type": "Question",
-              "name": "Combien coûte EKS Auto Mode ?",
+              "name": "How much does EKS Auto Mode cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "0,0842 USD par vCPU/heure, soit ~40% de plus que EC2 on-demand. Mais le TCO est souvent inférieur grâce à l'élimination de la maintenance et du sur-provisioning."
+                "text": "0.0842 USD per vCPU/hour, about 40% more than EC2 on-demand. But the TCO is often lower thanks to the elimination of maintenance and over-provisioning."
               }
             },
             {
               "@type": "Question",
-              "name": "Peut-on migrer un cluster existant ?",
+              "name": "Can you migrate an existing cluster?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Oui, en activant Auto Mode sur le cluster existant et en migrant progressivement les workloads. Les managed node groups fonctionnent en parallèle pendant la transition."
+                "text": "Yes, by enabling Auto Mode on the existing cluster and gradually migrating the workloads. Managed node groups run in parallel during the transition."
               }
             },
             {
               "@type": "Question",
-              "name": "EKS Auto Mode remplace-t-il Karpenter ?",
+              "name": "Does EKS Auto Mode replace Karpenter?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "EKS Auto Mode utilise Karpenter sous le capot, mais vous n'avez plus à l'installer ni le configurer. Le comportement est similaire mais entièrement managé."
+                "text": "EKS Auto Mode uses Karpenter under the hood, but you no longer have to install or configure it. The behavior is similar but fully managed."
               }
             },
             {
               "@type": "Question",
-              "name": "Quelles sont les limites ?",
+              "name": "What are the limitations?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "Pas de DaemonSets custom, pas de SSH sur les nodes, support GPU limité, et pas d'AMI custom. Pour ces cas, le mode classique reste recommandé."
+                "text": "No custom DaemonSets, no SSH on the nodes, limited GPU support, and no custom AMI. For these cases, classic mode remains recommended."
               }
             }
           ]
@@ -181,7 +183,7 @@
                 <div class="flex items-center">
                     <div class="flex-shrink-0 flex items-center">
                         <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
-                            <img src="../assets/optimycloud-logo.webp"
+                            <img src="/assets/optimycloud-logo.webp"
                                  alt="OptimyCloud"
                                  width="200" height="64"
                                  fetchpriority="high"
@@ -191,17 +193,17 @@
                     </div>
                 </div>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Accueil</a>
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Home</a>
                     <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
-                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
+                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Pricing</a>
                     <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
-                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">About</a>
                     <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
-                    <a href="/en/blog/eks-auto-mode-kubernetes-simple.html" hreflang="en" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="English version"><i class="fas fa-globe mr-1.5 text-xs"></i>EN</a>
+                    <a href="/blog/eks-auto-mode-kubernetes-simple.html" hreflang="fr" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="Voir la version française"><i class="fas fa-globe mr-1.5 text-xs"></i>FR</a>
                 </div>
                 <!-- Mobile menu button -->
                 <div class="md:hidden flex items-center">
-                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Open menu" aria-expanded="false">
                         <i class="fas fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -210,13 +212,13 @@
         <!-- Mobile menu -->
         <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
             <div class="px-2 pt-2 pb-3 space-y-1">
-                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
                 <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
-                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
+                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Pricing</a>
                 <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
-                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">About</a>
                 <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
-                <a href="/en/blog/eks-auto-mode-kubernetes-simple.html" hreflang="en" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><i class="fas fa-globe mr-1.5 text-xs"></i>English version</a>
+                <a href="/blog/eks-auto-mode-kubernetes-simple.html" hreflang="fr" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><i class="fas fa-globe mr-1.5 text-xs"></i>Version française</a>
             </div>
         </div>
     </nav>
@@ -234,14 +236,14 @@
             </nav>
             <div class="max-w-3xl">
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
-                    EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS
+                    EKS Auto Mode: Kubernetes has never been this simple on AWS
                 </h1>
                 <div class="flex flex-wrap items-center gap-4 text-indigo-100 text-sm">
                     <span class="flex items-center">
-                        <i class="fas fa-calendar-alt mr-2"></i> 11 mars 2026
+                        <i class="fas fa-calendar-alt mr-2"></i> March 11, 2026
                     </span>
                     <span class="flex items-center">
-                        <i class="fas fa-clock mr-2"></i> 12 min de lecture
+                        <i class="fas fa-clock mr-2"></i> 12 min read
                     </span>
                     <span class="flex items-center">
                         <i class="fas fa-user mr-2"></i> Alexandre Gillon
@@ -256,20 +258,20 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <!-- Hero Image -->
-            <img src="../assets/blog/hero-eks.webp" alt="Kubernetes EKS Auto Mode sur AWS" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
+            <img src="/assets/blog/hero-eks.webp" alt="Kubernetes EKS Auto Mode on AWS" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
 
             <!-- Introduction -->
             <div class="reveal">
                 <p class="text-lg text-gray-600 leading-relaxed mb-6">
-                    Si vous avez déjà gère un cluster Kubernetes en production, vous connaissez la douleur : gestion des nodes, mises à jour des AMI, configuration de Karpenter, tuning du VPC CNI, installation du driver EBS CSI... Tout ça <strong>avant même de déployer la première application</strong>.
+                    If you've ever run a Kubernetes cluster in production, you know the pain: managing nodes, updating AMIs, configuring Karpenter, tuning the VPC CNI, installing the EBS CSI driver... All of that <strong>before you even deploy your first application</strong>.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    Avec <strong>EKS Auto Mode</strong>, lancé par AWS fin 2024 et mature en 2026, cette complexité disparaît. AWS gère automatiquement les nodes, le scaling, le networking et le stockage. Vous ne vous occupez que de vos workloads. C'est la même philosophie que le <a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 underline hover:text-indigo-800">serverless sur AWS</a> : déléguer l'infrastructure pour se concentrer sur la valeur. Kubernetes vient enfin de tenir sa promesse : <strong>se concentrer sur les applications, pas l'infrastructure</strong>.
+                    With <strong>EKS Auto Mode</strong>, launched by AWS in late 2024 and mature in 2026, this complexity disappears. AWS automatically manages the nodes, scaling, networking and storage. You only have to worry about your workloads. It's the same philosophy as <a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 underline hover:text-indigo-800">serverless on AWS</a>: delegate the infrastructure to focus on value. Kubernetes has finally delivered on its promise: <strong>focus on applications, not infrastructure</strong>.
                 </p>
 
                 <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-lg mb-10">
-                    <h3 class="font-semibold text-gray-900 mb-2">En résumé</h3>
-                    <p class="text-gray-600 text-sm">EKS Auto Mode = EKS + Karpenter + VPC CNI + EBS CSI + CoreDNS + kube-proxy, le tout gère par AWS. Zéro add-on à installer, zéro node group à configurer. Vous créez un cluster, vous déployez vos pods.</p>
+                    <h3 class="font-semibold text-gray-900 mb-2">In short</h3>
+                    <p class="text-gray-600 text-sm">EKS Auto Mode = EKS + Karpenter + VPC CNI + EBS CSI + CoreDNS + kube-proxy, all managed by AWS. Zero add-ons to install, zero node groups to configure. You create a cluster, you deploy your pods.</p>
                 </div>
             </div>
 
@@ -277,39 +279,39 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-exclamation-triangle text-orange-600 mr-2"></i>
-                    Le problème : Kubernetes c'est puissant, mais c'est lourd
+                    The problem: Kubernetes is powerful, but it's heavy
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Un cluster EKS classique demande de gérer une pile considérable d'outils <strong>juste pour que l'infrastructure fonctionne</strong> :
+                    A classic EKS cluster requires managing a considerable stack of tools <strong>just to get the infrastructure working</strong>:
                 </p>
                 <ul class="space-y-3 mb-8">
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>Managed Node Groups</strong> ou <strong>Karpenter</strong> pour provisionner les EC2</span>
+                        <span class="text-gray-600"><strong>Managed Node Groups</strong> or <strong>Karpenter</strong> to provision the EC2 instances</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>VPC CNI add-on</strong> pour le networking des pods</span>
+                        <span class="text-gray-600"><strong>VPC CNI add-on</strong> for pod networking</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>EBS CSI driver</strong> pour les volumes persistants</span>
+                        <span class="text-gray-600"><strong>EBS CSI driver</strong> for persistent volumes</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>CoreDNS</strong> et <strong>kube-proxy</strong> à maintenir a jour</span>
+                        <span class="text-gray-600"><strong>CoreDNS</strong> and <strong>kube-proxy</strong> to keep up to date</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>Mises à jour AMI</strong> régulières + rotations de nodes</span>
+                        <span class="text-gray-600"><strong>Regular AMI updates</strong> + node rotations</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-times-circle text-red-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>IAM rôles</strong> pour chaque composant (IRSA, Pod Identity)</span>
+                        <span class="text-gray-600"><strong>IAM roles</strong> for each component (IRSA, Pod Identity)</span>
                     </li>
                 </ul>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Résultat : des équipes entières passent leur temps à maintenir la plateforme plutôt qu'à livrer de la valeur. Les PME et startups qui veulent utiliser Kubernetes sont souvent découragées par cette complexité — d'autant plus quand elles cherchent aussi a <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">intégrer l'IA générative dans leurs processus</a>.
+                    The result: entire teams spend their time maintaining the platform instead of delivering value. SMEs and startups that want to use Kubernetes are often put off by this complexity — all the more so when they're also looking to <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 underline hover:text-indigo-800">integrate generative AI into their processes</a>.
                 </p>
             </div>
 
@@ -317,10 +319,10 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-magic text-indigo-600 mr-2"></i>
-                    EKS Auto Mode : AWS fait le travail à votre place
+                    EKS Auto Mode: AWS does the work for you
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    EKS Auto Mode est un nouveau mode de fonctionnement pour Amazon EKS où <strong>AWS gère l'intégralité du data plane</strong>. Concrètement, quand vous activez Auto Mode :
+                    EKS Auto Mode is a new operating mode for Amazon EKS where <strong>AWS manages the entire data plane</strong>. Concretely, when you enable Auto Mode:
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                     <div class="bg-green-50 p-5 rounded-xl border border-green-100">
@@ -328,28 +330,28 @@
                             <i class="fas fa-server text-green-600 mr-2"></i>
                             <h3 class="font-semibold text-gray-900">Compute</h3>
                         </div>
-                        <p class="text-sm text-gray-600">AWS provisionne et scale les nodes automatiquement avec la technologie Karpenter intégrée. Zéro node group à configurer.</p>
+                        <p class="text-sm text-gray-600">AWS provisions and scales the nodes automatically with the built-in Karpenter technology. Zero node groups to configure.</p>
                     </div>
                     <div class="bg-blue-50 p-5 rounded-xl border border-blue-100">
                         <div class="flex items-center mb-3">
                             <i class="fas fa-network-wired text-blue-600 mr-2"></i>
                             <h3 class="font-semibold text-gray-900">Networking</h3>
                         </div>
-                        <p class="text-sm text-gray-600">VPC CNI, kube-proxy et CoreDNS sont gérés et mis à jour par AWS. Les pods obtiennent des IPs VPC natives.</p>
+                        <p class="text-sm text-gray-600">VPC CNI, kube-proxy and CoreDNS are managed and updated by AWS. Pods get native VPC IPs.</p>
                     </div>
                     <div class="bg-purple-50 p-5 rounded-xl border border-purple-100">
                         <div class="flex items-center mb-3">
                             <i class="fas fa-hdd text-purple-600 mr-2"></i>
-                            <h3 class="font-semibold text-gray-900">Stockage</h3>
+                            <h3 class="font-semibold text-gray-900">Storage</h3>
                         </div>
-                        <p class="text-sm text-gray-600">Le driver EBS CSI est pré-installé. Les PersistentVolumeClaims fonctionnent immédiatement avec la StorageClass auto.</p>
+                        <p class="text-sm text-gray-600">The EBS CSI driver is pre-installed. PersistentVolumeClaims work immediately with the auto StorageClass.</p>
                     </div>
                     <div class="bg-orange-50 p-5 rounded-xl border border-orange-100">
                         <div class="flex items-center mb-3">
                             <i class="fas fa-balance-scale text-orange-600 mr-2"></i>
                             <h3 class="font-semibold text-gray-900">Load Balancing</h3>
                         </div>
-                        <p class="text-sm text-gray-600">L'AWS Load Balancer Controller est intégré. Les Ingress et Services de type LoadBalancer fonctionnent nativement.</p>
+                        <p class="text-sm text-gray-600">The AWS Load Balancer Controller is built in. Ingress and Services of type LoadBalancer work natively.</p>
                     </div>
                 </div>
             </div>
@@ -358,29 +360,29 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-rocket text-orange-600 mr-2"></i>
-                    Créer un cluster EKS Auto Mode en 5 minutes
+                    Create an EKS Auto Mode cluster in 5 minutes
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    C'est là où ça devient impressionnant. Un cluster EKS Auto Mode opérationnel se crée en une seule commande :
+                    This is where it gets impressive. A working EKS Auto Mode cluster is created with a single command:
                 </p>
 
                 <div class="bg-gray-900 rounded-xl p-6 text-sm font-mono overflow-x-auto mb-6">
-                    <div class="text-gray-400 mb-3"># Créer un cluster EKS Auto Mode avec eksctl</div>
+                    <div class="text-gray-400 mb-3"># Create an EKS Auto Mode cluster with eksctl</div>
                     <div class="text-green-500 mb-4">eksctl create cluster \<br>
                     &nbsp;&nbsp;--name mon-cluster-auto \<br>
                     &nbsp;&nbsp;--region eu-west-3 \<br>
                     &nbsp;&nbsp;--enable-auto-mode</div>
-                    <div class="text-gray-400 mb-3"># C'est tout. Pas de node group, pas d'add-ons.</div>
-                    <div class="text-gray-400 mb-3"># Déployer une app directement :</div>
+                    <div class="text-gray-400 mb-3"># That's it. No node group, no add-ons.</div>
+                    <div class="text-gray-400 mb-3"># Deploy an app directly:</div>
                     <div class="text-green-500">kubectl apply -f mon-deployment.yaml</div>
                 </div>
 
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Avec <strong>Terraform</strong>, c'est tout aussi simple :
+                    With <strong>Terraform</strong>, it's just as simple:
                 </p>
 
                 <div class="bg-gray-900 rounded-xl p-6 text-sm font-mono overflow-x-auto mb-6">
-                    <div class="text-gray-400 mb-3"># main.tf - Cluster EKS Auto Mode</div>
+                    <div class="text-gray-400 mb-3"># main.tf - EKS Auto Mode cluster</div>
                     <div class="text-blue-400">resource</div> <div class="text-green-500">"aws_eks_cluster"</div> <div class="text-orange-400">"main"</div> <div class="text-white">{</div>
                     <div class="text-white ml-4">name     = <span class="text-green-500">"mon-cluster-auto"</span></div>
                     <div class="text-white ml-4">role_arn  = aws_iam_role.eks.arn</div>
@@ -406,8 +408,8 @@
                 </div>
 
                 <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg mb-8">
-                    <h3 class="font-semibold text-gray-900 mb-2">Comparaison</h3>
-                    <p class="text-gray-600 text-sm">Un cluster EKS classique avec Karpenter, VPC CNI, EBS CSI et ALB Controller demande ~300 lignes de Terraform et 4-5 IAM rôles. Avec Auto Mode : ~30 lignes et 1 role.</p>
+                    <h3 class="font-semibold text-gray-900 mb-2">Comparison</h3>
+                    <p class="text-gray-600 text-sm">A classic EKS cluster with Karpenter, VPC CNI, EBS CSI and ALB Controller requires ~300 lines of Terraform and 4-5 IAM roles. With Auto Mode: ~30 lines and 1 role.</p>
                 </div>
             </div>
 
@@ -415,62 +417,62 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-table text-indigo-600 mr-2"></i>
-                    EKS classique vs EKS Auto Mode
+                    Classic EKS vs EKS Auto Mode
                 </h2>
 
                 <div class="overflow-x-auto mb-8">
                     <table class="min-w-full bg-white rounded-xl shadow-md overflow-hidden">
                         <thead class="bg-indigo-600 text-white">
                             <tr>
-                                <th class="px-4 sm:px-6 py-4 text-left text-sm font-semibold">Fonctionnalité</th>
-                                <th class="px-4 sm:px-6 py-4 text-left text-sm font-semibold">EKS classique</th>
+                                <th class="px-4 sm:px-6 py-4 text-left text-sm font-semibold">Feature</th>
+                                <th class="px-4 sm:px-6 py-4 text-left text-sm font-semibold">Classic EKS</th>
                                 <th class="px-4 sm:px-6 py-4 text-left text-sm font-semibold">EKS Auto Mode</th>
                             </tr>
                         </thead>
                         <tbody class="divide-y divide-gray-100">
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Provisioning nodes</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Managed Node Groups ou Karpenter</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatique</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Node provisioning</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Managed Node Groups or Karpenter</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatic</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Mises à jour AMI</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Manuelles ou rolling updates</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatique</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">AMI updates</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Manual or rolling updates</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatic</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">VPC CNI</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Add-on à installer + IAM</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Inclus et gère</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Add-on to install + IAM</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Included and managed</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">EBS CSI</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Add-on + IAM + StorageClass</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Inclus et gère</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Included and managed</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Load Balancer Controller</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Helm chart + IAM + IngressClass</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Inclus et gère</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Included and managed</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">CoreDNS / kube-proxy</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Versions à gérer manuellement</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatique</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Versions to manage manually</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Automatic</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
                                 <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Scaling</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Cluster Autoscaler ou Karpenter</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Karpenter intégré</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">Cluster Autoscaler or Karpenter</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">Built-in Karpenter</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Coût compute</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Compute cost</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">EC2 on-demand/spot/RI</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-orange-600 font-medium">~40% plus cher (vCPU/h)</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-orange-600 font-medium">~40% more expensive (vCPU/h)</td>
                             </tr>
                             <tr class="hover:bg-gray-50 transition-colors">
-                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Temps de setup</td>
-                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">2-5 jours</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm font-medium text-gray-900">Setup time</td>
+                                <td class="px-4 sm:px-6 py-4 text-sm text-gray-600">2-5 days</td>
                                 <td class="px-4 sm:px-6 py-4 text-sm text-green-600 font-medium">15 minutes</td>
                             </tr>
                         </tbody>
@@ -482,58 +484,58 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-euro-sign text-green-600 mr-2"></i>
-                    Le vrai calcul : coût total vs coût EC2
+                    The real math: total cost vs EC2 cost
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Oui, le compute EKS Auto Mode est plus cher que du EC2 brut. Mais le vrai calcul doit inclure le <strong>coût total de possession (TCO)</strong> :
+                    Yes, EKS Auto Mode compute is more expensive than raw EC2. But the real math has to include the <strong>total cost of ownership (TCO)</strong>:
                 </p>
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
                     <div class="bg-red-50 p-5 rounded-xl border border-red-100">
-                        <h3 class="font-semibold text-gray-900 mb-3">EKS classique (coûts cachés)</h3>
+                        <h3 class="font-semibold text-gray-900 mb-3">Classic EKS (hidden costs)</h3>
                         <ul class="space-y-2 text-sm text-gray-600">
                             <li class="flex items-start">
                                 <i class="fas fa-minus-circle text-red-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>2-5 jours de setup initial (~2 000-5 000 EUR)</span>
+                                <span>2-5 days of initial setup (~EUR 2,000-5,000)</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-minus-circle text-red-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>1-2 jours/mois de maintenance (AMI, add-ons)</span>
+                                <span>1-2 days/month of maintenance (AMI, add-ons)</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-minus-circle text-red-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>Incidents de scaling, nodes zombie</span>
+                                <span>Scaling incidents, zombie nodes</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-minus-circle text-red-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>Sur-provisioning par sécurité</span>
+                                <span>Over-provisioning for safety</span>
                             </li>
                         </ul>
                     </div>
                     <div class="bg-green-50 p-5 rounded-xl border border-green-100">
-                        <h3 class="font-semibold text-gray-900 mb-3">EKS Auto Mode (tout inclus)</h3>
+                        <h3 class="font-semibold text-gray-900 mb-3">EKS Auto Mode (all included)</h3>
                         <ul class="space-y-2 text-sm text-gray-600">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>Setup en 15 minutes</span>
+                                <span>Setup in 15 minutes</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>Zéro maintenance nodes/add-ons</span>
+                                <span>Zero node/add-on maintenance</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>Bin-packing optimal = moins de gaspillage</span>
+                                <span>Optimal bin-packing = less waste</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span>Équipe focalisée sur la valeur business</span>
+                                <span>Team focused on business value</span>
                             </li>
                         </ul>
                     </div>
                 </div>
                 <div class="bg-indigo-50 border-l-4 border-indigo-500 p-5 rounded-lg mb-8">
-                    <h3 class="font-semibold text-gray-900 mb-2">Mon expérience terrain</h3>
-                    <p class="text-gray-600 text-sm">Pour une startup avec 5-20 microservices, EKS Auto Mode revient souvent <strong>moins cher au total</strong> qu'un EKS classique, car le sur-provisioning d'un cluster mal tuné coûte plus que le surcoût par vCPU. Sans compter les jours d'ingénierie économisés.</p>
+                    <h3 class="font-semibold text-gray-900 mb-2">My field experience</h3>
+                    <p class="text-gray-600 text-sm">For a startup with 5-20 microservices, EKS Auto Mode often works out <strong>cheaper overall</strong> than a classic EKS, because the over-provisioning of a poorly tuned cluster costs more than the per-vCPU premium. Not to mention the engineering days saved.</p>
                 </div>
             </div>
 
@@ -541,48 +543,48 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-exchange-alt text-purple-600 mr-2"></i>
-                    Migrer un cluster existant vers Auto Mode
+                    Migrating an existing cluster to Auto Mode
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Bonne nouvelle : vous n'avez pas besoin de recréer votre cluster. La migration se fait <strong>progressivement, sans downtime</strong>. On a migré un cluster EKS classique de 47 pods vers Auto Mode pour un client SaaS le mois dernier : le temps de setup est passé de 3 jours à 2 heures, et la facture compute mensuelle a baissé de 15% grâce au bin-packing optimisé.
+                    Good news: you don't need to recreate your cluster. The migration is done <strong>gradually, with no downtime</strong>. Last month we migrated a classic 47-pod EKS cluster to Auto Mode for a SaaS client: setup time dropped from 3 days to 2 hours, and the monthly compute bill fell by 15% thanks to optimized bin-packing.
                 </p>
 
                 <div class="space-y-6 mb-8">
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm">1</div>
                         <div class="ml-4">
-                            <h3 class="font-semibold text-gray-900 mb-1">Activer Auto Mode sur le cluster existant</h3>
-                            <p class="text-sm text-gray-600">Via la console AWS ou Terraform. Les node groups existants continuent de fonctionner.</p>
+                            <h3 class="font-semibold text-gray-900 mb-1">Enable Auto Mode on the existing cluster</h3>
+                            <p class="text-sm text-gray-600">Via the AWS console or Terraform. The existing node groups keep running.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm">2</div>
                         <div class="ml-4">
-                            <h3 class="font-semibold text-gray-900 mb-1">Migrer les workloads progressivement</h3>
-                            <p class="text-sm text-gray-600">Cordon + drain des anciens nodes. Les pods sont reschedulés sur les nodes Auto Mode.</p>
+                            <h3 class="font-semibold text-gray-900 mb-1">Migrate the workloads gradually</h3>
+                            <p class="text-sm text-gray-600">Cordon + drain the old nodes. The pods are rescheduled onto the Auto Mode nodes.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-indigo-600 rounded-full flex items-center justify-center text-white font-bold text-sm">3</div>
                         <div class="ml-4">
-                            <h3 class="font-semibold text-gray-900 mb-1">Supprimer les anciens node groups et add-ons</h3>
-                            <p class="text-sm text-gray-600">Une fois tous les workloads migrés, supprimez les managed node groups, Karpenter, et les add-ons obsolètes.</p>
+                            <h3 class="font-semibold text-gray-900 mb-1">Remove the old node groups and add-ons</h3>
+                            <p class="text-sm text-gray-600">Once all the workloads are migrated, delete the managed node groups, Karpenter, and the obsolete add-ons.</p>
                         </div>
                     </div>
                     <div class="flex items-start">
                         <div class="flex-shrink-0 w-10 h-10 bg-green-600 rounded-full flex items-center justify-center text-white font-bold text-sm">4</div>
                         <div class="ml-4">
-                            <h3 class="font-semibold text-gray-900 mb-1">Nettoyer les IAM rôles inutiles</h3>
-                            <p class="text-sm text-gray-600">Les rôles IRSA pour VPC CNI, EBS CSI et ALB Controller ne sont plus nécessaires.</p>
+                            <h3 class="font-semibold text-gray-900 mb-1">Clean up the unused IAM roles</h3>
+                            <p class="text-sm text-gray-600">The IRSA roles for VPC CNI, EBS CSI and ALB Controller are no longer needed.</p>
                         </div>
                     </div>
                 </div>
 
                 <div class="bg-gray-900 rounded-xl p-6 text-sm font-mono overflow-x-auto mb-8">
-                    <div class="text-gray-400 mb-3"># Migration pas à pas</div>
+                    <div class="text-gray-400 mb-3"># Step-by-step migration</div>
                     <div class="text-green-500 mb-2">kubectl cordon &lt;old-node&gt;</div>
                     <div class="text-green-500 mb-2">kubectl drain &lt;old-node&gt; --ignore-daemonsets --delete-emptydir-data</div>
-                    <div class="text-gray-400 mb-3"># Les pods redémarrent sur les nodes Auto Mode</div>
+                    <div class="text-gray-400 mb-3"># The pods restart on the Auto Mode nodes</div>
                     <div class="text-green-500">eksctl delete nodegroup --cluster mon-cluster --name old-ng</div>
                 </div>
             </div>
@@ -591,27 +593,27 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-exclamation-circle text-orange-600 mr-2"></i>
-                    Les limites à connaître
+                    The limitations to know about
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    EKS Auto Mode n'est pas une solution universelle. Voici les cas où le mode classique reste pertinent :
+                    EKS Auto Mode is not a universal solution. Here are the cases where classic mode is still relevant:
                 </p>
                 <ul class="space-y-3 mb-8">
                     <li class="flex items-start">
                         <i class="fas fa-info-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>Pas de DaemonSets custom</strong> sur les nodes managés — si vous utilisez Datadog, Falco ou un agent spécifique en DaemonSet, il faudra adapter (sidecar ou node groups mixtes)</span>
+                        <span class="text-gray-600"><strong>No custom DaemonSets</strong> on the managed nodes — if you use Datadog, Falco or a specific agent as a DaemonSet, you'll need to adapt (sidecar or mixed node groups)</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-info-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>Pas de SSH sur les nodes</strong> — le debugging se fait via kubectl debug, CloudWatch Logs et Container Insights</span>
+                        <span class="text-gray-600"><strong>No SSH on the nodes</strong> — debugging is done via kubectl debug, CloudWatch Logs and Container Insights</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-info-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>Support GPU limité</strong> — les workloads ML/IA lourds avec GPU spécifiques nécessitent encore des node groups classiques</span>
+                        <span class="text-gray-600"><strong>Limited GPU support</strong> — heavy ML/AI workloads with specific GPUs still require classic node groups</span>
                     </li>
                     <li class="flex items-start">
                         <i class="fas fa-info-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
-                        <span class="text-gray-600"><strong>Pas de Bottlerocket ou AMI custom</strong> — AWS utilise ses propres AMI optimisées, non modifiables</span>
+                        <span class="text-gray-600"><strong>No Bottlerocket or custom AMI</strong> — AWS uses its own optimized AMIs, which can't be modified</span>
                     </li>
                 </ul>
             </div>
@@ -620,23 +622,23 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-users text-indigo-600 mr-2"></i>
-                    Pour qui est fait EKS Auto Mode ?
+                    Who is EKS Auto Mode for?
                 </h2>
                 <div class="grid grid-cols-1 sm:grid-cols-3 gap-3 mb-8">
                     <div class="bg-green-50 p-5 rounded-xl text-center">
                         <i class="fas fa-rocket text-green-600 text-2xl mb-3"></i>
                         <h3 class="font-semibold text-gray-900 mb-2 text-sm">Startups</h3>
-                        <p class="text-xs text-gray-600">Kubernetes de production sans équipe plateforme dédiée</p>
+                        <p class="text-xs text-gray-600">Production Kubernetes without a dedicated platform team</p>
                     </div>
                     <div class="bg-blue-50 p-5 rounded-xl text-center">
                         <i class="fas fa-building text-blue-600 text-2xl mb-3"></i>
-                        <h3 class="font-semibold text-gray-900 mb-2 text-sm">PME</h3>
-                        <p class="text-xs text-gray-600">Migration vers Kubernetes sans exploser les coûts d'ingénierie</p>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-sm">SMEs</h3>
+                        <p class="text-xs text-gray-600">Migrating to Kubernetes without blowing up engineering costs</p>
                     </div>
                     <div class="bg-purple-50 p-5 rounded-xl text-center">
                         <i class="fas fa-code text-purple-600 text-2xl mb-3"></i>
-                        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Équipes dev</h3>
-                        <p class="text-xs text-gray-600">Focus sur les apps, pas sur l'infra Kubernetes</p>
+                        <h3 class="font-semibold text-gray-900 mb-2 text-sm">Dev teams</h3>
+                        <p class="text-xs text-gray-600">Focus on the apps, not on the Kubernetes infra</p>
                     </div>
                 </div>
             </div>
@@ -645,55 +647,55 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-question-circle text-indigo-600 mr-2"></i>
-                    Questions fréquentes
+                    Frequently asked questions
                 </h2>
                 <div class="space-y-4 mb-10">
                     <div class="bg-gray-50 p-5 rounded-xl">
-                        <h3 class="font-semibold text-gray-900 mb-2">Qu'est-ce que EKS Auto Mode ?</h3>
-                        <p class="text-sm text-gray-600">EKS Auto Mode est une fonctionnalité d'Amazon EKS qui automatisé entièrement la gestion des nodes, du scaling, du networking et du stockage. AWS gère l'infrastructure Kubernetes pour vous.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2">What is EKS Auto Mode?</h3>
+                        <p class="text-sm text-gray-600">EKS Auto Mode is an Amazon EKS feature that fully automates the management of nodes, scaling, networking and storage. AWS manages the Kubernetes infrastructure for you.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
-                        <h3 class="font-semibold text-gray-900 mb-2">Combien coûte EKS Auto Mode ?</h3>
-                        <p class="text-sm text-gray-600">0,0842 USD par vCPU/heure, soit ~40% de plus que EC2 on-demand. Mais le TCO est souvent inférieur grâce à l'elimination de la maintenance et du sur-provisioning.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2">How much does EKS Auto Mode cost?</h3>
+                        <p class="text-sm text-gray-600">0.0842 USD per vCPU/hour, about 40% more than EC2 on-demand. But the TCO is often lower thanks to the elimination of maintenance and over-provisioning.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
-                        <h3 class="font-semibold text-gray-900 mb-2">Peut-on migrer un cluster existant ?</h3>
-                        <p class="text-sm text-gray-600">Oui, en activant Auto Mode sur le cluster existant et en migrant progressivement les workloads. Les managed node groups fonctionnent en parallèle pendant la transition.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2">Can you migrate an existing cluster?</h3>
+                        <p class="text-sm text-gray-600">Yes, by enabling Auto Mode on the existing cluster and gradually migrating the workloads. Managed node groups run in parallel during the transition.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
-                        <h3 class="font-semibold text-gray-900 mb-2">EKS Auto Mode remplace-t-il Karpenter ?</h3>
-                        <p class="text-sm text-gray-600">EKS Auto Mode utilise Karpenter sous le capot, mais vous n'avez plus à l'installer ni le configurer. Le comportement est similaire mais entièrement managé.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2">Does EKS Auto Mode replace Karpenter?</h3>
+                        <p class="text-sm text-gray-600">EKS Auto Mode uses Karpenter under the hood, but you no longer have to install or configure it. The behavior is similar but fully managed.</p>
                     </div>
                     <div class="bg-gray-50 p-5 rounded-xl">
-                        <h3 class="font-semibold text-gray-900 mb-2">Quelles sont les limites ?</h3>
-                        <p class="text-sm text-gray-600">Pas de DaemonSets custom, pas de SSH sur les nodes, support GPU limité, et pas d'AMI custom. Pour ces cas, le mode classique reste recommandé.</p>
+                        <h3 class="font-semibold text-gray-900 mb-2">What are the limitations?</h3>
+                        <p class="text-sm text-gray-600">No custom DaemonSets, no SSH on the nodes, limited GPU support, and no custom AMI. For these cases, classic mode remains recommended.</p>
                     </div>
                 </div>
             </div>
 
             <!-- Lire aussi -->
             <div class="mt-10 bg-gray-50 rounded-xl p-6">
-                <h3 class="font-semibold text-gray-900 mb-3">Lire aussi</h3>
+                <h3 class="font-semibold text-gray-900 mb-3">Read also</h3>
                 <ul class="space-y-2 text-sm">
-                    <li><a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline">Assistant IA WhatsApp avec Amazon Bedrock et AWS</a></li>
-                    <li><a href="llms-txt-referencement-ia-guide.html" class="text-indigo-600 hover:underline">llms.txt : rendre votre site visible pour ChatGPT et les IA</a></li>
-                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline">Integrer l'IA generative dans votre PME : guide pratique</a></li>
+                    <li><a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline">WhatsApp AI assistant with Amazon Bedrock and AWS</a></li>
+                    <li><a href="llms-txt-referencement-ia-guide.html" class="text-indigo-600 hover:underline">llms.txt: making your site visible to ChatGPT and AI</a></li>
+                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline">Integrating generative AI into your SME: a practical guide</a></li>
                 </ul>
-                <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">Voir nos offres →</a></p>
+                <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">See our pricing →</a></p>
             </div>
 
             <!-- CTA -->
             <div class="reveal mt-12">
                 <div class="bg-indigo-600 rounded-2xl p-8 sm:p-10 text-center">
                     <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
-                        Simplifiez votre infrastructure Kubernetes
+                        Simplify your Kubernetes infrastructure
                     </h2>
                     <p class="text-indigo-100 mb-8 max-w-xl mx-auto">
-                        Migration vers EKS Auto Mode, audit de votre cluster existant ou mise en place from scratch — je vous accompagne.
+                        Migration to EKS Auto Mode, audit of your existing cluster or setup from scratch — I'll support you every step of the way.
                     </p>
                     <a href="../index.html#contact" class="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors">
                         <i class="fas fa-envelope mr-2"></i>
-                        Discutons de votre projet
+                        Let's talk about your project
                     </a>
                 </div>
             </div>
@@ -707,14 +709,14 @@
             <div class="grid md:grid-cols-4 gap-10">
                 <div class="col-span-2">
                     <div class="flex items-center mb-4">
-                        <img loading="lazy" src="../assets/optimycloud-logo.webp" alt="OptimyCloud" width="160" height="40" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
+                        <img loading="lazy" src="/assets/optimycloud-logo.webp" alt="OptimyCloud" width="160" height="40" class="h-10 w-auto mr-3" style="mix-blend-mode: multiply; filter: brightness(0) invert(1);">
                         <h3 class="text-xl font-bold">OptimyCloud</h3>
                     </div>
                     <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
-                        Expert IA Générative & Automatisation pour PME et startups. Agents IA, chatbots, workflows automatisés. Infrastructure Cloud AWS certifiée.
+                        Generative AI &amp; Automation expert for SMEs and startups. AI agents, chatbots, automated workflows. AWS certified cloud infrastructure.
                     </p>
                     <div class="flex space-x-3">
-                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Alexandre Gillon's LinkedIn profile" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
                             <i class="fab fa-linkedin"></i>
                         </a>
                     </div>
@@ -722,10 +724,10 @@
                 <div>
                     <h4 class="font-semibold mb-4 text-white">Services</h4>
                     <ul class="space-y-2.5 text-slate-400">
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">IA & Automatisation</a></li>
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Agents IA & Chatbots</a></li>
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Infrastructure AWS</a></li>
-                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Kubernetes & DevOps</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI &amp; Automation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI Agents &amp; Chatbots</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AWS Infrastructure</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Kubernetes &amp; DevOps</a></li>
                     </ul>
                 </div>
                 <div>
@@ -748,14 +750,14 @@
             </div>
             <div class="border-t border-slate-800 mt-10 pt-8">
                 <p class="text-center text-slate-400 text-sm mb-3">
-                    &copy; 2026 OptimyCloud - Expert IA & Cloud - Alexandre Gillon
+                    &copy; 2026 OptimyCloud - AI &amp; Cloud Expert - Alexandre Gillon
                 </p>
                 <div class="text-center space-x-4 text-xs text-slate-400">
-                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Légales</a>
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Legal Notice</a>
                     <span class="text-slate-600">&middot;</span>
-                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
                     <span class="text-slate-600">&middot;</span>
-                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Cookie Policy</a>
                 </div>
             </div>
         </div>
@@ -763,13 +765,13 @@
 
     <!-- Cookie Consent Banner -->
     <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
-        <p class="text-sm text-gray-600 mb-3">Nous utilisons des cookies pour optimiser votre expérience.</p>
+        <p class="text-sm text-gray-600 mb-3">We use cookies to optimize your experience.</p>
         <div class="flex gap-2">
             <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">
-                Refuser
+                Reject
             </button>
             <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">
-                Accepter
+                Accept
             </button>
         </div>
     </div>
@@ -840,7 +842,7 @@
         }
     });
     </script>
-    <script src="../assets/blog-cta.js" defer></script>
-    <script src="../assets/whatsapp-button.js" defer></script>
+    <script src="/assets/blog-cta.js" defer></script>
+    <script src="/assets/whatsapp-button.js" defer></script>
 </body>
 </html>

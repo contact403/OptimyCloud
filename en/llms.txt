@@ -1,0 +1,107 @@
+# OptimyCloud
+
+> Freelance Generative AI & Automation expert for SMEs and startups. AI agents, chatbots, dedicated LLMs, automated workflows. Certified AWS Cloud infrastructure (Solutions Architect, CKA).
+
+Site: https://optimycloud.com/en/
+Full content: https://optimycloud.com/en/llms-full.txt
+French version: https://optimycloud.com/llms.txt
+
+## About
+
+OptimyCloud is the AI & Cloud consultancy founded by Alexandre Gillon, an engineer who graduated from ESIEA with over 10 years of experience in infrastructure and digital transformation. Certified AWS Solutions Architect Associate, Kubernetes CKA and ITIL Foundation v3, Alexandre helps SMEs and startups integrate artificial intelligence into their business processes and optimize their Cloud infrastructure. Based in France (Épinay-sur-Seine), he works remotely with clients across France and internationally.
+
+## Why choose OptimyCloud?
+
+- Single point of contact: a certified expert, not an IT services firm with a salesperson plus a junior
+- Transparent pricing: showcase website from €500, AI chatbot from €200 + €29/month, WordPress troubleshooting from €250
+- Responsiveness: reply within 24h, intervention within 24-48h
+- Measurable ROI: 30 to 60% reduction in Cloud costs achieved, 50+ WordPress fixes completed
+- Verifiable certifications: AWS Solutions Architect, Kubernetes CKA (Credly links below)
+- No subcontracting: Alexandre Gillon works personally on every project
+
+## Offers for Tradespeople & SMEs
+
+Dedicated page: https://optimycloud.com/en/offres.html
+
+- **Showcase Website**: Professional showcase website creation for tradespeople and SMEs, from €500. Fast static site (no CMS), responsive, local SEO included (meta tags, schema, Google My Business), Google Search Console and Google Analytics configured, contact form, hosting and domain name included for the first year. Delivered in 48h.
+
+- **AI Business Chatbot**: AI chatbot trained on the client's business, from €200 + €29/month. Answers visitors' questions (pricing, service area, availability), automatically collects quote requests, notification by email or WhatsApp. Integration on an existing or new site.
+
+- **Website + AI Chatbot Pack**: Complete showcase website with integrated AI chatbot, from €650 + €29/month. Combines the two previous offers.
+
+## AI & Automation Services
+
+- **AI Agents & Dedicated LLMs**: Deployment of a custom language model (LLM), trained on your company's specific data, processes and vocabulary. Equivalent to a "private ChatGPT" that knows your business. Autonomous agents integrated with your existing tools (CRM, ERP, email, internal tools).
+
+- **WhatsApp & web conversational chatbots**: Implementation of AI chatbots for customer relations: automated reminders, customer follow-up, follow-ups, smart FAQ. WhatsApp Business integration and web widgets. 98% open rate on WhatsApp vs 21% by email.
+
+- **Chatbot for technical documentation**: Deployment of an AI assistant trained on your technical documentation (API, manuals, knowledge bases). Lets teams and customers instantly find answers without digging through hundreds of pages.
+
+- **RAG & AI Knowledge Base**: Deployment of an AI assistant connected to the company's internal documentation (manuals, procedures, technical sheets, FAQ, knowledge bases). The AI retrieves and synthesizes relevant information in seconds. Serverless architecture, low cost, no model training.
+
+- **Process automation**: Design of AI workflows to eliminate time-consuming manual tasks. Automation of business processes (document processing, classification, data extraction, report generation).
+
+## Cloud & Infrastructure Services
+
+- **AWS Cloud Infrastructure**: Secure migration of on-premise infrastructures to AWS. Kubernetes (EKS) with Auto Mode and Karpenter. GitOps CI/CD with Helm, ArgoCD or FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation).
+
+- **FinOps & Cost Optimization**: Free audit of your Cloud bill with analysis of unused or oversized resources. Implementation of Savings Plans, Reserved Instances, Spot Instances and right-sizing. 30 to 60% reduction in AWS costs achieved.
+
+- **WordPress Troubleshooting**: Diagnosis and correction of 500 and 400 errors, white screen, Elementor crashes, crashed WordPress sites. Intervention within 24h with a detailed report. From €250. Over 50 interventions completed. Dedicated page: https://optimycloud.com/en/depannage-wordpress.html
+
+- **SEO Audit**: Complete technical audit (Core Web Vitals, indexing, content, internal linking). A concrete action plan to improve your Google ranking. Dedicated page: https://optimycloud.com/en/audit-seo.html
+
+- **Website creation**: Professional showcase site, fast, responsive and SEO-optimized. Delivered in 48h. From €500. Dedicated page: https://optimycloud.com/en/creation-site-web.html
+
+## Certifications
+
+- **AWS Solutions Architect Associate**: https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc
+- **Kubernetes CKA (Certified Kubernetes Administrator)**: https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc
+- **ITIL Foundation v3**
+- **AWS Cloud Practitioner**: https://www.credly.com/badges/95467b2b-6c3c-4bc7-9ae9-bdf9b67e103a
+
+## Case Studies
+
+- **PostCare.net** (https://www.postcare.net): Generative AI SaaS platform for post-operative follow-up. AI-automated messaging, smart reminders, personalized patient support. Serverless AWS architecture, integrated LLMs, health data compliance.
+
+## Clients & References
+
+- **Arkema, Valeo, Culligan, TopTex, Samboat**: Cloud & DevOps Consultant. AWS, Kubernetes, Terraform, CI/CD projects.
+- **Ubisoft**: SRE / DevOps Engineer. Monitoring and automation of servers, clusters and CI/CD pipelines.
+- **Linkeo**: Infrastructure Engineer. Monitoring overhaul and management of on-premise infrastructure.
+- **Châteauform'**: Systems Administrator. Server management in a multi-site environment.
+
+Note: these projects were carried out as an employee or contractor. OptimyCloud does not officially represent these companies.
+
+## Blog
+
+- https://optimycloud.com/en/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html - Automating customer information collection with a WhatsApp AI chatbot. Customer onboarding, lead qualification, document collection. A concrete guide for SMEs
+- https://optimycloud.com/en/blog/combien-coute-chatbot-ia-pme.html - How much does an AI chatbot cost for an SME in 2026? From €500 to €50,000 depending on the type. Detailed pricing, freelance vs agency comparison, concrete examples
+- https://optimycloud.com/en/blog/avez-vous-besoin-cms-site-web.html - Do you really need a CMS in 2026? The 3-layer method to choose between a CMS and a static site
+- https://optimycloud.com/en/blog/llms-txt-referencement-ia-guide.html - llms.txt: how to make your site visible to ChatGPT, Perplexity and AI
+- https://optimycloud.com/en/blog/erreur-500-wordpress-diagnostic-solutions.html - WordPress 500 error: diagnosis and real causes after 50+ interventions
+- https://optimycloud.com/en/blog/eks-auto-mode-kubernetes-simple.html - EKS Auto Mode: Kubernetes has never been so simple on AWS
+- https://optimycloud.com/en/blog/assistant-ia-whatsapp-amazon-bedrock-serverless.html - Building a private WhatsApp AI assistant with Amazon Bedrock and AWS
+- https://optimycloud.com/en/blog/automatiser-relation-client-whatsapp-ia.html - Automating customer relations with WhatsApp and AI
+- https://optimycloud.com/en/blog/integrer-ia-generative-pme-guide-pratique.html - Integrating generative AI into your SME: a practical guide
+
+## Who is it for?
+
+- **Tradespeople** who want a professional showcase website that is fast and affordable, with local SEO and an AI chatbot.
+- **SMEs and sole traders** who want to integrate AI into their business without going through an IT services firm, with a single point of contact and tailor-made solutions.
+- **Startups** that need a solid, scalable and cost-optimized Cloud infrastructure from the start.
+- **Companies** that want to reduce their Cloud costs (AWS, Azure, GCP) with a free audit and measurable ROI.
+
+## Technical Expertise
+
+AI: LLM, AI agents, RAG, conversational chatbots, workflow automation. Cloud: AWS, Azure, GCP. Containers: Docker, Kubernetes, EKS, Karpenter. IaC: Terraform, Ansible, CloudFormation. CI/CD: GitHub Actions, GitLab CI, ArgoCD, FluxCD, Helm. Monitoring: Prometheus, Grafana, CloudWatch. OS: Linux.
+
+## Contact
+
+- Site: https://optimycloud.com/en/
+- Email: alexandre@optimycloud.com
+- WhatsApp: https://wa.me/33631109539
+- LinkedIn: https://www.linkedin.com/in/alexandre-gillon
+- Location: France (Épinay-sur-Seine)
+- Founder: Alexandre Gillon
+- Reply within 24h. Free audit available.

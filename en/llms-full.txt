@@ -1,0 +1,471 @@
+# OptimyCloud - Full site content
+
+> OptimyCloud is a French consultancy specialized in generative AI, automation, AWS Cloud and SEO for SMEs and startups, founded by Alexandre Gillon, an engineer certified as AWS Solutions Architect and Kubernetes CKA.
+
+English site: https://optimycloud.com/en/
+French version: https://optimycloud.com/llms-full.txt
+
+---
+
+## AI & Automation Services
+
+### AI Agents & Dedicated LLMs
+A ChatGPT trained on your business data. Autonomous agents integrated with your tools (CRM, ERP, email) to automate complex tasks and save time.
+
+### WhatsApp & Web Chatbots
+AI chatbots for customer relations: automated reminders, smart FAQ, customer follow-up. 98% open rate on WhatsApp vs 21% by email.
+
+### Process Automation
+AI workflows to eliminate repetitive tasks: document processing, classification, data extraction, automated report generation.
+
+## Cloud & Infrastructure Services
+
+### AWS Cloud Infrastructure
+Secure migration, Kubernetes (EKS), CI/CD and Infrastructure as Code. The reliable infrastructure that powers your AI projects.
+
+### FinOps & Optimization
+Free audit and 30 to 60% reduction in your AWS costs. Savings Plans, Reserved Instances, right-sizing.
+
+### Security Audit
+Security audit of your Cloud infrastructures and applications. Penetration testing, compliance, hardening and AWS best practices.
+
+### SEO & Search Audit
+Complete technical audit of your site: performance, Core Web Vitals, schema markup, content, indexing. Tailor-made SEO strategy to improve your visibility on Google.
+
+### WordPress Troubleshooting
+500 error, 400 error, white screen, crash after an Elementor update? Diagnosis, correction and detailed report. Intervention within 24h. From €250.
+
+---
+
+## Offers & Pricing
+
+### Offers for Tradespeople & SMEs
+
+#### Showcase Website -- From €500
+A fast, responsive site optimized for Google. No CMS, no over-engineering. Just what it takes to convert.
+
+Included:
+- Up to 5 pages (Home, Services, About, Contact, etc.)
+- Responsive design for mobile and tablet
+- Local SEO (meta tags, schema, Google My Business)
+- Google Search Console + Google Analytics configured
+- Contact form
+- Hosting + domain name included for the first year
+- Delivered in 48h
+
+#### Website + AI Chatbot -- From €650 (+ €29/month for the chatbot) [POPULAR]
+Your showcase website with an AI chatbot trained on your business. It answers your customers even when you're on a job site.
+
+Included:
+- The entire Showcase Website pack included
+- AI chatbot trained on your business
+- Answers questions: pricing, area, availability
+- Automatically collects quote requests
+- Notification by email or WhatsApp
+- Chatbot updates included
+
+#### AI Business Chatbot -- From €200 (+ €29/month)
+Already have a site? We integrate an AI chatbot that knows your business and answers your customers 24/7.
+
+Included:
+- Chatbot trained on your business
+- Integration on your existing site
+- Answers in French, professional tone
+- Automatic collection of requests
+- Installation in under 24h
+- Support and updates included
+
+### Tailor-made Services (Companies & Startups)
+
+- RAG & AI Knowledge Base: an AI assistant that answers from your internal documentation (manuals, procedures, technical sheets, FAQ). On quote.
+- AI Agents & Dedicated LLMs: a ChatGPT trained on your business data. Autonomous agents integrated with your tools (CRM, ERP, email). On quote.
+- AI Automation: workflows to eliminate repetitive tasks (document processing, extraction, automated reports). On quote.
+- AWS Cloud Infrastructure: migration, Kubernetes (EKS), CI/CD, Infrastructure as Code. On quote.
+- WordPress Troubleshooting: 500 error, 400 error, white screen, crash after an Elementor update. Diagnosis, correction and detailed report. Intervention within 24h. From €250.
+- SEO & Search Audit: technical audit, Core Web Vitals, schema markup, content, indexing. SEO strategy to be visible on Google. On quote.
+
+### Why work with OptimyCloud
+
+- Fast: site delivered in 48h, chatbot operational in 24h. No pointless meetings, no drawn-out processes.
+- No CMS, no debt: clean code, ultra-fast static site. No WordPress, no updates to manage, no security flaws.
+- Certified expertise: certified AWS Solutions Architect and Kubernetes CKA. Ubisoft, Valeo, Culligan among the references.
+
+### Offers FAQ
+
+Q: Why no CMS like WordPress?
+A: A static site loads in under a second, never crashes, needs no updates and can't be hacked. WordPress is fine for a blog. For a tradesperson's showcase site, it's needless complexity.
+
+Q: How does the AI chatbot work?
+A: The chatbot is trained on your business information: your services, your service area, your indicative prices. When a visitor asks a question, it answers instantly and collects their contact details for you. You receive a notification by email or WhatsApp.
+
+Q: Can I modify my site after delivery?
+A: One round of corrections is included in the price. For later changes (adding a page, changing text, new photos), it's billed on request. No hidden subscription.
+
+Q: What do I need to get started?
+A: You fill out a form with your details (name, business, area, services, photos, contact information). I take care of the rest. No completed form, no launched site. It avoids back-and-forth.
+
+Q: Is hosting included?
+A: The first year is free. After that, hosting is €5/month. It's a static site, so there's no expensive server to maintain.
+
+---
+
+## SEO Audit
+
+### Complete SEO audit to improve your visibility on Google
+
+Your site isn't ranking in Google results? An SEO audit identifies what's blocking it and gives you a concrete action plan to gain visibility.
+
+Freelance SEO consultant in France -- technical, content and performance analysis.
+
+### What the SEO audit covers
+
+Every factor that influences your Google ranking is examined. Nothing is left to chance.
+
+- Core Web Vitals: LCP, INP, CLS -- the performance metrics Google uses to rank your site. Analysis and recommendations for each indicator.
+- Schema markup: verification of structured data (JSON-LD) for Google rich snippets (FAQ, reviews, products, breadcrumb, organization).
+- Indexing and crawl: robots.txt, XML sitemap, orphan pages, redirects, 404 errors. We check that Google can crawl and index all your pages.
+- Content and keywords: title tags, meta descriptions, Hn structure, duplicate content, keyword cannibalization. Each page is analyzed individually.
+- Mobile experience: Google indexes the mobile version first. Responsive design, button size, readability, viewport -- everything is checked.
+- Security and HTTPS: SSL certificate, mixed content, security headers, HTTP to HTTPS redirects. An unsecured site is penalized by Google.
+
+### How it works
+
+1. Complete audit: technical, content, performance, indexing and security analysis. Every page of your site is examined with professional tools.
+2. Detailed report: you receive a clear report with the identified issues, ranked by priority and impact on your Google ranking. No needless jargon.
+3. Action plan: a prioritized action plan with the fixes to apply, step by step. You can follow it yourself or entrust the implementation to OptimyCloud.
+
+Price: on quote. Adapted to the size and complexity of your site.
+
+### Common issues detected
+
+- Pages not indexed by Google: misconfigured robots.txt, forgotten noindex tags, missing sitemap.
+- Loading time too long: uncompressed images, blocking JavaScript, slow server.
+- Duplicate or thin content: pages with little text, identical titles, missing descriptions.
+- Technical errors (404, 500, redirects): broken links, redirect chains, server errors.
+- No structured data: without schema markup, Google can't display rich snippets.
+- Site not mobile-friendly: Google uses mobile-first indexing.
+
+---
+
+## Website creation
+
+### Professional website creation for SMEs and tradespeople
+
+A fast, responsive showcase site optimized for Google. No CMS, no hidden subscription. Delivered in 48h, from €500.
+
+Hosting and domain name included for the first year.
+
+### What you get
+
+- Up to 5 pages: Home, Services, About, Contact, and one additional page of your choice. A structure designed to convert visitors into customers.
+- Responsive design: your site adapts to every screen (mobile, tablet, desktop). Over 60% of traffic comes from mobile.
+- SEO optimized: meta tags, schema markup, Google My Business. Your website is configured to be found on Google from day one.
+- Contact form: your visitors contact you directly from the site. You receive their requests by email.
+- Google Analytics: Google Analytics and Google Search Console configured. You know how many visitors come to your site and where they come from.
+- Hosting included: fast hosting and domain name included for the first year. Then €5/month. No expensive server to maintain.
+
+### Why no CMS?
+
+WordPress accounts for 43% of the web, but it's also the number-one target of cyberattacks. For an SME showcase site, a CMS is over-engineering: constant updates, plugins that break, slow loading times, security flaws.
+
+A static site loads in under a second, never crashes and can't be hacked. There's nothing to maintain. The result: a Google PageSpeed score above 95/100 and a site that simply works.
+
+### Pricing
+
+Complete showcase website: from €500 (one-time payment).
+
+Included:
+- Up to 5 pages
+- Responsive design for mobile and tablet
+- Local SEO (meta tags, schema, Google My Business)
+- Google Search Console + Google Analytics configured
+- Functional contact form
+- Hosting + domain name included for the first year
+- Google PageSpeed score 95+
+- One round of corrections included
+- Delivered in 48h after receiving your content
+
+Then: hosting at €5/month. No commitment.
+
+---
+
+## WordPress Troubleshooting
+
+### WordPress troubleshooting: your site is down? Intervention within 24h
+
+500 error, white screen, hacked site, crash after an update -- we diagnose and fix it. No fluff, no drawn-out quotes. You send your access details, we step in.
+
+Intervention within 24h -- From €250 excl. VAT.
+
+### Problems we solve
+
+- WordPress 500 error: Internal Server Error. Faulty plugin, corrupted .htaccess, exceeded PHP memory limit. We identify the cause and fix it.
+- WordPress white screen: the White Screen of Death. Plugin conflict, broken theme, memory overrun. We bring your site back online with no data loss.
+- Hacked WordPress site: suspicious redirects, injected pages, malware. We clean the code, secure access and strengthen protection.
+- Slow WordPress site: loading time over 3 seconds. We identify the bottlenecks (plugins, images, hosting) and optimize.
+- Crash after an update: a WordPress, WooCommerce or plugin update that breaks everything. We restore, fix compatibility and bring it back online.
+- Elementor crashing: editor that won't load anymore, broken widgets, distorted layout. We diagnose the conflict and restore the editor.
+
+### How it works
+
+1. Diagnosis: you send us your access details (FTP, wp-admin, host). We analyze the logs and identify the cause of the problem. 9 times out of 10, the diagnosis is made in under 5 minutes.
+2. Correction: we fix the problem (deactivating the faulty plugin, cleaning the code, restoring a backup, security patch). Your site is brought back online.
+3. Report: you receive a detailed report (what happened, what we did, and our recommendations to prevent it from happening again). No needless jargon.
+
+### Pricing
+
+WordPress troubleshooting: €250 excl. VAT -- starting from. Diagnosis, correction and report included.
+
+Included:
+- Intervention within 24h
+- Diagnosis of the cause of the problem
+- Correction and bringing back online
+- Detailed report of the intervention
+- Recommendations to avoid recurrences
+
+The final price depends on the complexity of the problem identified during the diagnosis.
+
+### Track record
+
+- 50+ WordPress interventions completed
+- 34 500 errors fixed
+- 9/10 diagnosed in under 5 minutes
+
+---
+
+## Article: How much does an AI chatbot cost for an SME in 2026?
+
+Author: Alexandre Gillon | Date: April 6, 2026 | Reading time: 10 min
+
+### Introduction
+
+You googled the price of a chatbot. You landed on pages that say "it depends" without ever giving a single figure. Or worse, on sponsored comparisons that push you toward a SaaS tool at €99/month "all included" -- except nothing is included.
+
+Here's the honest answer: in 2026, an AI chatbot for an SME costs between €500 and €50,000. The gap is huge because the word "chatbot" covers completely different realities. A chatbot that answers "our hours are 9am-6pm" and a chatbot that handles complaints by querying your CRM in real time are not the same project, not the same budget, and not the same return on investment.
+
+In this article, I give you the real numbers. No vague ranges, no "contact us for a quote." Concrete prices, real examples, and the criteria that make the bill vary.
+
+### The 3 types of chatbots (and why the price ranges from 0 to €50,000)
+
+Not all chatbots are equal. The confusion comes from using the same word to describe three fundamentally different technologies.
+
+#### 1. The rule-based (scripted) chatbot
+
+The simplest. It follows a predetermined script: "If the customer says X, reply Y." No artificial intelligence. Just conditional logic, like a sophisticated interactive form.
+
+- What it does: answers to frequently asked questions, routing to the right department, collecting basic information.
+- What it doesn't do: understand a question phrased differently, handle complex requests.
+- Ideal for: a shop, a restaurant, a tradesperson who wants to filter incoming requests.
+- Price: €500 to €3,000 (creation) + €0 to €50/month.
+
+Example: a restaurant in Lyon deploys a WhatsApp chatbot for reservations. The customer answers 4-5 guided questions (date, guests, allergies) and receives an automatic confirmation. Cost: about €1,200, deployed in one week.
+
+#### 2. The conversational AI chatbot (GPT-4 / Claude type)
+
+The chatbot uses a language model (LLM) like GPT-4 or Anthropic's Claude to understand messages in natural language. It doesn't follow a script: it understands the intent behind the question, even if it's phrased with mistakes or mixing several topics.
+
+- What it does: answers in natural language, maintains the context of a conversation, handles varied requests.
+- What it doesn't do: access your internal systems (unless specifically integrated).
+- Ideal for: an SME that wants a virtual assistant capable of answering about its products and services.
+- Price: €2,000 to €15,000 (creation) + €100 to €300/month.
+
+Example: a consulting firm deploys an AI chatbot on its site, powered by Claude via Amazon Bedrock. The bot answers about practitioners, pricing, specialties, and qualifies leads. Cost: about €5,000, 2-3 weeks.
+
+#### 3. The custom AI chatbot with business integration
+
+The high end. The chatbot doesn't just converse: it acts. It connects to your CRM, your ERP, your product database. It can check a customer's history, verify the status of an order, create a support ticket -- autonomously.
+
+- What it does: everything conversational + real-time access to your data, action execution, smart escalation.
+- What it doesn't do: replace your team. It handles 70 to 85% of routine requests.
+- Ideal for: an e-commerce site with volume, a service company with structured processes.
+- Price: €5,000 to €50,000 (creation) + €200 to €800/month.
+
+Example: an e-commerce SME deploys a WhatsApp chatbot connected to Shopify and Zendesk. The customer sends "where is my order?", the bot queries Shopify and answers with the exact status. Cost: about €12,000, 4-6 weeks.
+
+### What drives the bill up (or down)
+
+The number of channels: a chatbot on your website costs less than a chatbot available on WhatsApp, Messenger and email. Each additional channel adds complexity. In return, the WhatsApp open rate reaches 98%, compared to 21% for email. Impact: +€1,000 to €3,000 per additional channel.
+
+Integrations with your tools: connecting the chatbot to HubSpot, Doctolib, Shopify or your ERP is what turns it into a genuinely useful tool. But each integration requires specific development. Impact: +€1,500 to €5,000 per integration.
+
+The volume of conversations: LLM API costs (GPT-4, Claude via Amazon Bedrock) are billed by usage. For a typical SME (200 to 1,000 conversations/month), it stays reasonable. Impact: €30 to €150/month for a standard SME volume.
+
+Training on your data: for the chatbot to answer correctly about your products and procedures, it must be trained on your data (FAQ, product sheets, history). This is the RAG (Retrieval-Augmented Generation) phase. Impact: +€1,000 to €5,000 depending on the volume of data.
+
+### Comparison: freelance vs agency vs SaaS platform
+
+| Criterion | SaaS | Agency | Freelance |
+|---|---|---|---|
+| Setup | €0 - €500 | €5,000 - €30,000 | €1,500 - €15,000 |
+| Monthly cost | €50 - €500/month | €500 - €2,000/month | €50 - €300/month |
+| Customization | Limited | High | High |
+| Lead time | 1 - 3 days | 4 - 12 weeks | 1 - 4 weeks |
+| Point of contact | Support ticket | Project manager | Direct with the developer |
+| Code ownership | No | Yes | Yes |
+| Dependency | Strong (lock-in) | Medium | Low |
+
+For 90% of SMEs, the freelance AI specialist is the most relevant option. No middleman, no inflated overhead. You speak directly to the person who designs and deploys your chatbot. The code is yours, the lead times are short.
+
+### The hidden cost no one ever tells you about
+
+Most quotes cover the creation. Full stop. But a chatbot isn't a website you put online and forget. Here are the costs no one mentions.
+
+- Maintenance (monitoring, fixes, security updates): €50 - €150/month
+- Continuous improvement (new scenarios, refining responses): €100 - €400/month
+- Monitoring (dashboard, metrics, reports): €50 - €100/month
+
+Realistic total monthly budget: plan for €150 to €500/month after setup. That's two to five times cheaper than a part-time employee dedicated to customer support.
+
+### 3 concrete examples of chatbots for French SMEs
+
+#### Fine-dining restaurant in Bordeaux
+WhatsApp chatbot for reservations. The customer sends "I want to book", the bot asks for date, time, guests, allergies, and confirms. Automatic reminder 24h before.
+- Cost: €1,500
+- Monthly: €60/month
+- Lead time: 5 days
+- Result: 80% of reservations automated
+
+#### Medical practice in Nantes
+AI chatbot (Claude via Amazon Bedrock) on site + WhatsApp. Answers about practitioners, pricing, specialties. Connected to Doctolib for available slots.
+- Cost: €3,500
+- Monthly: €120/month
+- Lead time: 2 weeks
+- Result: -60% phone calls
+
+#### E-commerce (15,000 orders/month)
+Custom AI chatbot on WhatsApp + site, connected to Shopify and Gorgias. Real-time order tracking, automatic return labels, smart escalation.
+- Cost: €8,000
+- Monthly: €350/month
+- Lead time: 5 weeks
+- Result: 75% of requests automated
+
+### How to estimate your budget
+
+Ask yourself these five questions. They are enough to frame 80% of your budget.
+
+1. What concrete problem do you want to solve? "Automate customer service" is too vague. "Automatically answer the 50 recurring questions per day" is a quantifiable brief.
+2. On which channel do your customers contact you? WhatsApp? Web form? Email? Start with the main channel.
+3. Do you need integrations? CRM, booking, e-commerce? More integrations = higher budget but stronger ROI.
+4. What volume of conversations? Under 200/month: negligible API costs. 200-2,000: standard. Beyond that: optimization needed.
+5. What is your realistic budget? €1,000-3,000: a solid rule-based chatbot. €3,000-10,000: conversational AI. €10,000+: custom with integrations.
+
+---
+
+## FAQ - SEO Audit
+
+Q: What is an SEO audit and why do one?
+A: An SEO audit is a complete analysis of your website to identify everything that holds back your visibility on Google. It covers the technical side (speed, indexing, security), the content (keywords, structure, tags) and popularity (links, authority). It's the essential first step before any SEO strategy.
+
+Q: How much does an SEO audit cost?
+A: The price of an SEO audit depends on the size of the site, the number of pages and the technical complexity. At OptimyCloud, every audit is on quote to adapt to your situation. Expect between a few hundred and several thousand euros depending on the scope. An initial free discussion lets us assess your needs.
+
+Q: How long does a complete SEO audit take?
+A: A complete SEO audit generally takes between 5 and 10 business days depending on the size of the site. This timeframe includes the technical analysis, the content audit, the indexing check and the writing of the report with prioritized recommendations.
+
+Q: What results can I expect after an SEO audit?
+A: After an SEO audit, you receive a detailed report with the identified issues, ranked by priority and impact on your Google ranking. Sites that apply the recommendations see, on average, an improvement in their ranking within the following 3 to 6 months. The gains depend on competition and implementation.
+
+Q: Does the SEO audit include fixing the problems?
+A: The SEO audit includes the analysis, the report and the detailed action plan. Fixing the problems can be done by your teams following the report, or entrusted to OptimyCloud as part of a separate engagement. Each recommendation is documented with the technical instructions for implementation.
+
+---
+
+## FAQ - Website creation
+
+Q: How much does it cost to create a professional website?
+A: Creating a professional showcase website starts at €500 at OptimyCloud. This price includes up to 5 pages, responsive design, SEO optimization, a contact form, Google Analytics and hosting for the first year. It's a one-time payment, not a monthly subscription.
+
+Q: What is the delivery time for a showcase website?
+A: A showcase website is delivered in 48h after receiving your content. You just need to fill out a form with your information (name, business, services, service area, photos, contact details) and I take care of the rest. No pointless meetings, no drawn-out processes.
+
+Q: Why a static site rather than WordPress?
+A: A static site loads in under a second, never crashes, needs no security updates and can't be hacked. WordPress adds needless complexity for an SME or tradesperson showcase site.
+
+Q: Is hosting included in the price?
+A: Yes, the first year of hosting and the domain name are included in the €500 price. After that, hosting is €5 per month. It's a static site, so there's no expensive server to maintain. No commitment, you can stop whenever you want.
+
+Q: Can I modify my site after delivery?
+A: One round of corrections is included in the price. For later changes (adding a page, changing text, new photos), it's billed on request. No hidden subscription, no surprise recurring fees.
+
+---
+
+## FAQ - WordPress Troubleshooting
+
+Q: How much does WordPress troubleshooting cost?
+A: WordPress troubleshooting starts at €250 excl. VAT. This price covers the diagnosis, the correction of the problem and a detailed report of the intervention. The final price depends on the complexity of the problem identified during the diagnosis.
+
+Q: What is the intervention time for WordPress troubleshooting?
+A: The intervention starts within 24h after first contact. In most cases, the diagnosis is made in under 5 minutes and the correction carried out right after. For complex cases (hacked site, corrupted database), expect 24 to 48h.
+
+Q: My WordPress site shows a 500 error: what should I do?
+A: A WordPress 500 error can come from a faulty plugin, a corrupted .htaccess file, an exceeded PHP memory limit or a server problem. The first step is to check the error logs. Send us your access details, we diagnose and fix it within 24h.
+
+Q: My WordPress site shows a white screen, how do I fix it?
+A: The WordPress white screen (White Screen of Death) is often caused by a plugin conflict, a faulty theme or a PHP memory overrun. The diagnosis consists of enabling debug mode, identifying the source of the conflict and fixing it. It's a common intervention that we resolve in a few hours.
+
+Q: My WordPress site has been hacked, what should I do?
+A: If your WordPress site is hacked, you need to act fast: identify the infected files, clean the malicious code, change all passwords, update WordPress and the plugins, and strengthen security to avoid a recurrence. We step in within 24h with a complete report of the actions taken.
+
+---
+
+## Case Studies
+
+### PostCare (AI SaaS in production)
+Generative AI SaaS platform for post-operative follow-up. AI-automated messaging, smart reminders, personalized patient support. Serverless AWS architecture, integrated LLMs, health data compliance.
+URL: https://www.postcare.net
+
+### FleetCast (SaaS in production)
+Event demand radar for equipment rental companies in France. Detects festivals, construction sites and public events 4 to 6 weeks in advance to anticipate demand peaks.
+URL: https://fleetcast.fr
+
+### Les Petites Mascarades (SEO)
+Complete SEO audit and search optimization for this event agency dedicated to children: organizing birthday parties, kids' spaces at adult events and tailor-made entertainment. Technical restructuring, on-page optimization and content strategy.
+URL: https://lespetitesmascarades.com
+
+---
+
+## About
+
+### Alexandre Gillon -- Founder of OptimyCloud
+
+Passionate about artificial intelligence and automation, I help SMEs and startups integrate AI into their business processes: AI agents, chatbots, dedicated LLMs and automated workflows.
+
+An engineer who graduated from ESIEA with over 10 years of experience, I master the whole chain: from designing AI solutions to deploying them on a high-performance, secure Cloud infrastructure.
+
+Certified AWS Solutions Architect and Kubernetes CKA, I guarantee that your AI projects rest on a reliable, scalable and cost-optimized infrastructure.
+
+My approach: a single point of contact, tailor-made solutions, no IT services firm, and measurable ROI from the first months.
+
+Certifications:
+- AWS Solutions Architect Associate
+- Certified Kubernetes Administrator (CKA)
+- ITIL Foundation v3
+- AWS Cloud Practitioner
+
+Technical expertise:
+AWS, Azure, GCP, Docker, Kubernetes, Terraform, Ansible, GitLab, GitHub, Prometheus, Grafana, Linux.
+
+### Clients and references
+
+Projects carried out for (as an employee or contractor):
+- Arkema, Valeo, Culligan, TopTex, Samboat: Cloud & DevOps Consultant (AWS, Kubernetes, Terraform, CI/CD, Elastic Beanstalk)
+- Ubisoft: SRE / DevOps Engineer (monitoring and automation)
+- Linkeo: Infrastructure Engineer (monitoring overhaul, management of on-premise infrastructure)
+- Châteauform': Systems Administrator (server management in a multi-site environment)
+- Les Petites Mascarades: SEO audit and search optimization
+
+---
+
+## Contact
+
+- Email: alexandre@optimycloud.com
+- WhatsApp: +33 6 31 10 95 39
+- LinkedIn: https://www.linkedin.com/in/alexandre-gillon
+- Location: France (Épinay-sur-Seine, 93800)
+- Website: https://optimycloud.com/en/
+
+Describe your need, reply within 24h with an initial analysis.
+
+---
+
+Source: https://optimycloud.com/en/

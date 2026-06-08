@@ -4,6 +4,7 @@
 
 Site : https://optimycloud.com
 Contenu complet : https://optimycloud.com/llms-full.txt
+English version : https://optimycloud.com/en/llms.txt
 
 ## À propos
 

@@ -1,0 +1,762 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>What is a FinOps audit? A complete guide for SMEs in 2026 | OptimyCloud</title>
+    <meta name="description" content="FinOps audit: definition, method, deliverables, pricing. A complete guide for SMEs that want to cut their AWS, GCP or Azure bill by 30 to 50%. With concrete examples and a quantified ROI.">
+    <meta name="keywords" content="finops audit, what is a finops audit, finops aws, finops definition, cloud cost audit, reduce aws bill, finops sme, cloud optimization">
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/en/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="What is a FinOps audit? A complete guide for SMEs in 2026">
+    <meta property="og:description" content="FinOps audit: definition, method, deliverables, pricing. A complete guide for SMEs that want to cut their cloud bill by 30 to 50%.">
+    <meta property="og:url" content="https://optimycloud.com/en/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="article:published_time" content="2026-04-12">
+    <meta property="article:author" content="Alexandre Gillon">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="What is a FinOps audit? A complete guide for SMEs">
+    <meta name="twitter:description" content="Definition, method, deliverables, pricing. Cut your cloud bill by 30 to 50% with a concrete FinOps audit.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    <script src="/assets/cal-embed.js" defer></script>
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "What is a FinOps audit?" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "What is a FinOps audit? A complete guide for SMEs in 2026",
+          "description": "FinOps audit: definition, method, deliverables, pricing. A complete guide for SMEs that want to cut their AWS, GCP or Azure bill by 30 to 50%. With concrete examples and a quantified ROI.",
+          "url": "https://optimycloud.com/en/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html",
+          "datePublished": "2026-04-12",
+          "dateModified": "2026-04-12",
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html" },
+          "image": "https://optimycloud.com/assets/optimycloud-logo.png",
+          "wordCount": 3200,
+          "inLanguage": "en",
+          "articleSection": "FinOps & Cloud",
+          "keywords": ["finops audit", "finops aws", "reduce cloud bill", "finops sme", "cloud optimization"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What is a FinOps audit?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A FinOps audit is a complete analysis of your cloud spending (AWS, GCP or Azure) to identify waste, oversized instances, orphaned resources and pricing-commitment opportunities. It results in a quantified report with a prioritized action plan that cuts your bill by 30 to 50% on average, without degrading performance."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How much does a FinOps audit cost for an SME?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A FinOps audit for an SME costs between 1,500 and 5,000 euros depending on the size and complexity of the infrastructure. The return on investment is immediate: the monthly savings usually cover the cost of the audit within 1 to 3 months. At OptimyCloud, we offer a free 30-minute diagnostic to estimate the possible savings before any commitment."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How long does a FinOps audit take?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A complete FinOps audit takes between 3 and 7 business days depending on the size of your cloud infrastructure. The timeline includes analysis of the detailed bill, resource inventory, identification of waste, modeling of the optimal pricing commitments and writing the report with an action plan."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between FinOps and cloud cost optimization?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Cloud cost optimization is a one-off action: you identify waste and eliminate it. FinOps is an ongoing practice that involves the finance, engineering and management teams. A FinOps audit is the starting point that gives the snapshot and the action plan. The full FinOps approach then puts in place processes and tools to maintain the optimization over time."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "At what cloud bill level does a FinOps audit become worthwhile?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A FinOps audit becomes profitable from around 2,000 euros of monthly cloud spend. Below that, the potential gains do not always justify the cost of the audit. Above it, average savings of 30 to 50% quickly add up to several thousand euros per year, an ROI far higher than the cost of the engagement."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.webp"
+                                 alt="OptimyCloud"
+                                 width="200" height="64"
+                                 fetchpriority="high"
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Home</a>
+                    <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Pricing</a>
+                    <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">About</a>
+                    <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html" hreflang="fr" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="Voir la version française"><i class="fas fa-globe mr-1.5 text-xs"></i>FR</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Open menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Pricing</a>
+                <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">About</a>
+                <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/blog/qu-est-ce-qu-un-audit-finops-guide-pme.html" hreflang="fr" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><i class="fas fa-globe mr-1.5 text-xs"></i>Version française</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="py-16 sm:py-20" style="background: linear-gradient(135deg, #1e293b, #1e3a8a);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="text-sm mb-6" style="color: #cbd5e1;" aria-label="Breadcrumb">
+                <a href="../index.html" class="hover:text-white transition-colors">Home</a>
+                <span class="mx-2">/</span>
+                <a href="./" class="hover:text-white transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">What is a FinOps audit?</span>
+            </nav>
+            <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bold text-white mb-4 max-w-4xl leading-tight">
+                What is a FinOps audit? A complete guide for SMEs in 2026
+            </h1>
+            <p class="text-lg max-w-3xl mt-4" style="color: #e2e8f0;">
+                Definition, method, deliverables, pricing: everything you need to know before commissioning a FinOps audit for your cloud infrastructure.
+            </p>
+            <div class="flex flex-wrap items-center text-sm gap-4 mt-6" style="color: #cbd5e1;">
+                <span><i class="fas fa-calendar-alt mr-2"></i>April 12, 2026</span>
+                <span><i class="fas fa-clock mr-2"></i>13 min read</span>
+                <span><i class="fas fa-user mr-2"></i>Alexandre Gillon</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Content -->
+    <main class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div class="space-y-16">
+
+            <!-- Section 1 : Le constat -->
+            <div class="reveal">
+                <p class="text-lg text-gray-600 leading-relaxed mb-6">
+                    Your AWS, GCP or Azure bill has doubled in two years and nobody really knows why. The CTO says it's all necessary. The CFO thinks it's expensive. And you sign off on it every month without any certainty that you're paying a fair price.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Good news: you're not an isolated case. According to figures published by the FinOps Foundation, <strong>30% of global cloud spending is wasted</strong>. For an SME spending 5,000 euros a month, that's 1,500 euros thrown out the window, or 18,000 euros a year.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The FinOps audit is the tool that lets you pinpoint exactly where every euro goes, eliminate waste and put in place mechanisms for continuous optimization. In this guide, we'll look at what a FinOps audit concretely is, what it contains, how much it costs and when it becomes worthwhile for an SME.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    If you'd prefer a more commercial, action-oriented overview, you can head straight to our <a href="../finops.html" class="text-indigo-600 hover:underline">dedicated FinOps audit page</a>. Otherwise, settle in: this guide is designed to give you all the keys to understanding before you commit to an audit engagement.
+                </p>
+            </div>
+
+            <!-- Section 2 : FinOps définition -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    FinOps: what exactly are we talking about?
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    FinOps is short for <strong>Financial Operations</strong>. It's a discipline that emerged in the United States around 2018, formalized by the FinOps Foundation (part of the Linux Foundation), which consists of aligning cloud investment decisions with the company's business objectives.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Contrary to a common misconception, FinOps isn't just about "cutting costs". It's an approach that aims to <strong>optimize the value/cost ratio</strong>. Sometimes that means spending less. Sometimes it means spending the same but more wisely. Sometimes it means spending more on a strategic service and less on a non-critical one.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    FinOps rests on three cyclical phases:
+                </p>
+                <ul class="space-y-3 text-gray-600 mb-6">
+                    <li class="flex items-start"><i class="fas fa-eye text-indigo-600 mr-3 mt-1 text-sm"></i><span><strong>Inform</strong> — Understand where the money goes. Visualize costs by project, by team, by service. This is the audit phase proper.</span></li>
+                    <li class="flex items-start"><i class="fas fa-bolt text-indigo-600 mr-3 mt-1 text-sm"></i><span><strong>Optimize</strong> — Act on the identified waste. Right-sizing, Savings Plans, cleanup, rethought architecture.</span></li>
+                    <li class="flex items-start"><i class="fas fa-sync text-indigo-600 mr-3 mt-1 text-sm"></i><span><strong>Operate</strong> — Sustain it over time. Processes, alerts, dashboards, governance.</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    <strong>A FinOps audit corresponds mainly to the Inform phase, rounded out with an action plan for Optimize.</strong> For a large enterprise, the Operate approach then requires a complete toolset and a dedicated team. For an SME, a FinOps audit followed by a gradual application of the recommendations is generally enough to capture 80 to 90% of the possible gains.
+                </p>
+            </div>
+
+            <!-- Section 3 : Ce que couvre un audit FinOps -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    What a FinOps audit concretely covers
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    A serious FinOps audit examines your cloud infrastructure from seven different angles. Here's what each one means in practice.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">1. Right-sizing of compute instances</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    The auditor analyzes the actual consumption metrics (CPU, RAM, network, disk) of each EC2, RDS, ElastiCache or equivalent GCP/Azure instance. They identify oversized instances that could run on a cheaper type without degrading performance.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>A concrete example:</strong> a server on t3.xlarge (~150 euros/month) running at 5% average CPU can generally be moved to t3.medium (~35 euros/month). Saving: 115 euros per month, or 1,380 euros a year for a single instance.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">2. Pricing commitments (Savings Plans, Reserved Instances)</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    On AWS, Compute Savings Plans let you reserve capacity over 1 or 3 years in exchange for a 30 to 66% discount on the On-Demand price. On GCP, these are called Committed Use Discounts. On Azure, Reserved Instances.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The auditor models your historical consumption and projects future consumption to calculate the optimal level of commitment. Too little, and you leave money on the table. Too much, and you pay for unused capacity. The balance is calculated precisely.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">3. Orphaned resources</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    These are the resources that still bill but no longer serve any purpose: unattached EBS volumes, snapshots that are several years old, Elastic IP addresses reserved but unused, Load Balancers with no active targets.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    This is where you find the most obvious <strong>quick wins</strong>. On infrastructure that has never been audited, it's not uncommon to find 5 to 15% of the bill going to these phantom resources. The cleanup takes a few hours, and the savings start the following month.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">4. Storage and its lifecycle</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Data stored on Amazon S3 (or equivalents) has different pricing classes depending on how frequently it's accessed. From the most expensive and fastest (Standard) to the cheapest and slowest (Glacier Deep Archive), there are up to six different classes with prices that vary by a factor of 20.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The auditor analyzes your access patterns and recommends automatic lifecycle rules to shift cold data to the cheaper classes. They also identify obsolete versions, unfinalized multipart fragments and duplicates.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">5. Data transfers and networking</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    This is the most underestimated and most insidious cost item. Inter-AZ transfers, NAT Gateway data processing (0.045 USD/GB) and internet egress can account for 15 to 25% of an SME's bill without anyone realizing it.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The auditor maps the data flows between services and proposes architectural optimizations: VPC Endpoints to avoid the NAT, placing instances in a single AZ where possible, CloudFront to reduce egress, compression.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">6. Compute and serverless optimization</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    For compatible workloads, moving to Graviton instances (AWS's ARM processors) delivers 20% extra performance at equal cost, or lets you reduce cost at equivalent performance. For interruption-tolerant workloads, Spot Instances offer up to 90% reduction.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The auditor identifies eligible workloads and projects the gains. For intermittent workloads, they may also recommend a migration to Lambda or Fargate, where you only pay for actual usage.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">7. Non-production environments</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    A final point that's often overlooked: development, QA and staging environments that run 24/7, even though nobody connects to them at night or on weekends.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    A simple auto-stop/start mechanism (via AWS Instance Scheduler, Lambda or a plain cron) can cut the cost of these environments by a factor of 3. On a dev/staging infrastructure costing 800 euros/month, that's 6,400 euros in annual savings.
+                </p>
+
+                <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-5 mb-8">
+                    <p class="text-gray-700"><strong>In short:</strong> a FinOps audit covers seven main levers. Each one, taken in isolation, can already deliver 5 to 15% in savings. Combined, they make it possible to reach the 30 to 50% reduction so often cited in FinOps messaging. For an overview of our methodology, see our <a href="../finops.html" class="text-indigo-600 hover:underline font-semibold">Cloud FinOps audit page</a>.</p>
+                </div>
+            </div>
+
+            <!-- Section 4 : Le rapport final -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    What the final report contains
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    A FinOps audit is only as good as the clarity and usability of its report. Here's what a serious report should contain.
+                </p>
+
+                <div class="grid sm:grid-cols-2 gap-4 mb-6">
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-chart-pie text-indigo-600 mr-2"></i>Quantified assessment</p>
+                        <p class="text-sm text-gray-600">Breakdown of your spending by service, by region, by project. Identification of the Pareto split: the 20% of services that account for 80% of the bill.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-list-check text-indigo-600 mr-2"></i>Detailed list of waste</p>
+                        <p class="text-sm text-gray-600">Each problematic resource named, with its current monthly cost and the cost after optimization.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-compress-arrows-alt text-indigo-600 mr-2"></i>Right-sizing recommendations</p>
+                        <p class="text-sm text-gray-600">Instance by instance, with the new recommended type, the expected savings and the risk level of the operation.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-piggy-bank text-indigo-600 mr-2"></i>Commitment modeling</p>
+                        <p class="text-sm text-gray-600">Quantified simulation of the optimal Savings Plans or Reserved Instances over 1 and 3 years, with sensitivity analysis.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-road text-indigo-600 mr-2"></i>Prioritized action plan</p>
+                        <p class="text-sm text-gray-600">Quick wins (zero risk, immediate gains), medium-term optimizations, structural transformations. With an effort estimate for each action.</p>
+                    </div>
+                    <div class="bg-slate-50 rounded-lg p-5">
+                        <p class="font-bold text-gray-900 mb-2"><i class="fas fa-euro-sign text-indigo-600 mr-2"></i>Financial summary</p>
+                        <p class="text-sm text-gray-600">Total expected monthly and annual savings, ROI per action, recommended implementation timeline.</p>
+                    </div>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    A good FinOps report runs between 20 and 50 pages depending on the size of the infrastructure. It must be understandable both by a CFO (the summary section) and by a cloud engineer (the detailed technical section). Steer clear of reports stuffed with jargon or that don't put numbers on their recommendations: they're usually the sign of an auditor who doesn't have command of the subject.
+                </p>
+            </div>
+
+            <!-- Section 5 : Quand faire un audit FinOps -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    When should an SME consider a FinOps audit?
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Not every cloud project warrants a FinOps audit. Here are the five situations where the approach becomes worthwhile for an SME.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">1. Your cloud bill exceeds 2,000 euros per month</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    This is the break-even threshold. Below it, the potential gains (a few hundred euros per month) don't always justify the cost of an audit. Above it, the average 30% in savings adds up to several thousand euros per year, far higher than the cost of the engagement.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">2. Your bill has grown by more than 30% in a year for no clear reason</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Rapid growth in the bill without an equivalent growth in activity is a warning sign. It usually points to a buildup of un-cleaned resources, an architecture that has grown more complex, or teams provisioning without oversight. An audit resets the counters.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">3. You're about to sign a new multi-year commitment</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Before signing Savings Plans or Reserved Instances over 1 or 3 years, you need to be sure of the sizing. A commitment that's too high, and you pay for unused capacity. A commitment that's too low, and you leave savings on the table. The audit lets you model precisely before committing.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">4. You're preparing a fundraising round or a sale</h3>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Investors and acquirers look closely at infrastructure costs. A FinOps audit demonstrates rigorous management, documents the optimization potential and reassures on the project's financial scalability. It's an asset in the due diligence file.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">5. Your technical team doesn't have time to handle it</h3>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    An SME's tech teams juggle product development, support, incidents and roadmap. FinOps often falls to the bottom of the priority stack. Bringing in an external consultant for a few days is often more effective than asking an in-house engineer to devote a percentage of their time to it spread over months.
+                </p>
+            </div>
+
+            <!-- Section 6 : Combien ça coute -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    How much does a FinOps audit cost and what ROI to expect?
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Prices vary enormously depending on who carries out the audit. Here are the real ranges in the French market in 2026.
+                </p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                        <caption class="sr-only">Comparison of FinOps audit prices by provider</caption>
+                        <thead class="bg-indigo-50">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Provider</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Price</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Timeline</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">For whom?</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Automated SaaS tool</td><td class="p-3">€100-500/month</td><td class="p-3">Immediate</td><td class="p-3">Tech-savvy users who interpret it themselves</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Specialized freelancer</td><td class="p-3 text-indigo-600 font-medium">€1,500 - €5,000</td><td class="p-3 text-indigo-600 font-medium">3-7 days</td><td class="p-3 text-indigo-600 font-medium">SMEs and startups</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Agency / consultancy</td><td class="p-3">€8,000 - €25,000</td><td class="p-3">3-6 weeks</td><td class="p-3">Mid-market, large budgets</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">IT services firm / Big Four</td><td class="p-3">€30,000 - €100,000</td><td class="p-3">2-4 months</td><td class="p-3">Large accounts</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    For a typical French SME (cloud bill between 2,000 and 20,000 euros per month), the specialized freelancer offers the best value for money: expertise on par with consultancies, controlled price, short timeline and a single point of contact.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">A concrete ROI example</h3>
+                <div class="bg-emerald-50 border border-emerald-200 rounded-lg p-5 mb-6">
+                    <p class="text-gray-700 mb-3"><strong>Typical case:</strong> an e-commerce startup with an AWS bill of 6,500 euros per month, never optimized.</p>
+                    <ul class="space-y-2 text-gray-700 text-sm">
+                        <li><i class="fas fa-arrow-right text-emerald-600 mr-2"></i>Cost of the audit: 3,000 euros (freelance flat fee)</li>
+                        <li><i class="fas fa-arrow-right text-emerald-600 mr-2"></i>Identified and applicable savings: 2,200 euros per month (34%)</li>
+                        <li><i class="fas fa-arrow-right text-emerald-600 mr-2"></i>Implementation of quick wins: 1 week</li>
+                        <li><i class="fas fa-arrow-right text-emerald-600 mr-2"></i><strong>ROI: audit paid back in 1.4 months</strong></li>
+                        <li><i class="fas fa-arrow-right text-emerald-600 mr-2"></i><strong>Net annual saving: 23,400 euros</strong></li>
+                    </ul>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    To go further on the question of costs, see our <a href="combien-coute-chatbot-ia-pme.html" class="text-indigo-600 hover:underline">guide on the pricing of cloud and AI services</a>.
+                </p>
+            </div>
+
+            <!-- Section 7 : FinOps vs autres disciplines -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    FinOps, DevOps, SRE: don't confuse them
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    FinOps isn't DevOps, nor SRE, nor plain "cloud consulting". Here are the concrete differences.
+                </p>
+
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                        <caption class="sr-only">Comparison of FinOps vs DevOps vs SRE vs Cloud audit</caption>
+                        <thead class="bg-indigo-50">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Discipline</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Main objective</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Who does it?</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">FinOps</td><td class="p-3">Optimize the value/cost ratio of the cloud</td><td class="p-3">Cloud engineer + finance + business</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">DevOps</td><td class="p-3">Speed up software delivery</td><td class="p-3">DevOps engineer</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">SRE</td><td class="p-3">Guarantee reliability and availability</td><td class="p-3">Site Reliability Engineer</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Cloud security audit</td><td class="p-3">Identify vulnerabilities and risks</td><td class="p-3">Security expert</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    A good generalist cloud engineer can touch on all these topics. But if you want measurable results on cost optimization, hire a FinOps specialist. Just as you wouldn't ask your DevOps engineer to audit your security, don't ask just any cloud engineer to do FinOps: the methodology, the tools and the analytical rigor are specific.
+                </p>
+            </div>
+
+            <!-- Section 8 : Comment se préparer -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    How to prepare for a FinOps audit
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    To maximize the value of the audit and shorten timelines, a few preparatory actions are helpful on the client side.
+                </p>
+
+                <ul class="space-y-3 text-gray-600 mb-8">
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>Enable Cost Explorer and the Cost and Usage Report (CUR)</strong> on AWS, or the GCP/Azure equivalent, with at least 3 months of history. This is the raw material of the analysis.</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>Prepare read-only access</strong> via an IAM role with the ReadOnlyAccess and Billing policies. No modification is required for the audit.</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>List your environments and their usage</strong>. Which environments are critical? Which can be shut down at night? What are the availability constraints?</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>Identify your business constraints</strong>. Mandatory geographic zones, compliance obligations (EU hosting, ISO 27001), reversibility, SLAs committed to your customers.</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-3 mt-1 text-sm"></i><span><strong>Identify the decision-makers</strong> who will sign off on implementing the recommendations. An audit that sits in a drawer is useless.</span></li>
+                </ul>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    With these elements prepared, a FinOps audit can start within 48 hours and deliver its conclusions in under a week. To go further on cloud management best practices, our <a href="eks-auto-mode-kubernetes-simple.html" class="text-indigo-600 hover:underline">guide on EKS Auto Mode</a> shows how to drastically reduce Kubernetes operational needs, a FinOps angle that's often neglected.
+                </p>
+            </div>
+
+            <!-- Section 9 : Que faire après l'audit -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    After the audit: implementation
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The audit itself doesn't reduce your bill. It's the actions that flow from it that generate the savings. Here's how to approach this phase.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>The quick wins first.</strong> Cleanup of orphaned resources, deletion of obsolete snapshots, shutting down environments not used at night. These actions carry no risk and pay for themselves immediately. Aim for 1 to 2 weeks maximum to implement them.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>The pricing commitments next.</strong> Once the infrastructure is cleaned up and you have a clear view of stable consumption, activate the Savings Plans or Reserved Instances. On AWS, target the 1-year Compute Savings Plans first (more flexibility), then the 3-year EC2 Savings Plans for the truly stable workloads.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>Right-sizing last.</strong> This is the action that demands the most attention because it touches production instances. Proceed in batches, environment by environment, with rollback windows planned. A good FinOps consultant can support you through this phase if you don't have the internal resources.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    <strong>Put continuous monitoring in place.</strong> Once the optimizations are applied, configure budget alerts and FinOps dashboards to prevent drift. AWS Budgets, Cost Anomaly Detection or third-party solutions such as Vantage or CloudZero can automate this oversight.
+                </p>
+            </div>
+
+            <!-- Section 10 : FAQ -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    Frequently asked questions
+                </h2>
+
+                <div class="space-y-6 mb-8">
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"Can you run a FinOps audit yourself with AWS Cost Explorer?"</h3>
+                        <p class="text-gray-600 text-sm">You can identify some of the most obvious waste (orphaned resources in particular). But the most profitable levers (fine-grained right-sizing, Savings Plans modeling, data-transfer optimization) require a methodological expertise that tools alone don't replace. Count on 50 to 60% of the possible gains on your own, 90% with a specialist.</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"My infrastructure is on GCP or Azure, is that possible?"</h3>
+                        <p class="text-gray-600 text-sm">Yes. The principles of FinOps are the same across all cloud providers. Only the service names change: Compute Savings Plans become Committed Use Discounts on GCP and Reserved Instances on Azure. A good FinOps consultant has command of at least two of the three major cloud providers.</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"Will the recommendations break production?"</h3>
+                        <p class="text-gray-600 text-sm">The recommendations of a serious FinOps audit all come with a risk level. The quick wins (cleanup) are zero-risk. Right-sizing requires testing but remains low-risk if done well. Architectural optimizations (NAT changes, Graviton migration) call for more caution and are sometimes recommended as "nice-to-have" rather than mandatory.</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"At what cloud bill does it become worthwhile?"</h3>
+                        <p class="text-gray-600 text-sm">Around 2,000 euros per month. Below that, the absolute gains (a few hundred euros per month) make the audit marginally worthwhile. Between 2,000 and 5,000 euros per month, a short diagnostic (1 to 2 days) is often enough. Above 5,000 euros per month, a full audit is fully justified.</p>
+                    </div>
+                    <div class="border border-gray-200 rounded-lg p-5">
+                        <h3 class="font-bold text-gray-900 mb-2">"How many times a year should you redo a FinOps audit?"</h3>
+                        <p class="text-gray-600 text-sm">For an SME, an annual audit is generally enough, rounded out with light monthly or quarterly follow-up. Large enterprises with more complex infrastructures can move to a continuous FinOps model with dedicated teams. The key is not to let costs drift between two audits.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Articles liés -->
+            <div class="reveal">
+                <h3 class="text-lg font-bold text-gray-900 mb-4">Further reading</h3>
+                <ul class="space-y-2 mb-8">
+                    <li><a href="eks-auto-mode-kubernetes-simple.html" class="text-indigo-600 hover:underline text-sm">EKS Auto Mode: simple Kubernetes on AWS &rarr;</a></li>
+                    <li><a href="combien-coute-chatbot-ia-pme.html" class="text-indigo-600 hover:underline text-sm">How much does an AI chatbot cost for an SME in 2026? &rarr;</a></li>
+                    <li><a href="agent-ia-remplace-formulaire-crm-pme.html" class="text-indigo-600 hover:underline text-sm">Why an AI agent connected to your CRM replaces your forms &rarr;</a></li>
+                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline text-sm">Integrating generative AI into your SME: a practical guide &rarr;</a></li>
+                </ul>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="reveal">
+                <div class="rounded-2xl p-8 sm:p-10 mt-12 text-center" style="background: linear-gradient(135deg, #1e293b, #1e3a8a);">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Ready to take action?
+                    </h2>
+                    <p class="mb-4 text-base sm:text-lg leading-relaxed max-w-xl mx-auto" style="color: #e2e8f0;">
+                        At OptimyCloud, we run FinOps audits for SMEs on AWS, GCP and Azure. First free 30-minute video diagnostic to estimate your potential savings.
+                    </p>
+                    <p class="mb-8 text-sm leading-relaxed max-w-xl mx-auto" style="color: #cbd5e1;">
+                        See our <a href="../finops.html" class="text-white underline hover:opacity-80 transition-opacity">dedicated FinOps audit page</a> for more details on the method and pricing.
+                    </p>
+                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="inline-flex items-center bg-white text-blue-900 px-8 py-3 rounded-lg font-semibold hover:bg-blue-50 transition-colors duration-200 cursor-pointer">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Book my free diagnostic
+                    </button>
+                    <p class="text-xs mt-4" style="color: #94a3b8;">
+                        100% free &middot; 30 minutes &middot; quantified estimate
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        AI, Cloud & SEO expert for SMEs and startups. 10+ years of engineering experience. AWS Certified.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Alexandre Gillon's LinkedIn profile" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="../finops.html" class="hover:text-indigo-400 transition-colors text-sm">FinOps Audit</a></li>
+                        <li><a href="../audit-seo.html" class="hover:text-indigo-400 transition-colors text-sm">SEO Audit</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI Agents &amp; LLMs</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AWS Cloud</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fab fa-whatsapp mr-2 text-slate-500"></i>
+                            <a href="https://wa.me/33631109539" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors">+33 6 31 10 95 39</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-400 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Freelance Cloud Engineer - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-400">
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Legal Notice</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Cookie Policy</a>
+                </div>
+                <p class="text-center text-xs text-slate-400 mt-4 max-w-3xl mx-auto">
+                    * The projects and work mentioned were carried out as part of my roles at Ubisoft, Châteauform', Teamwork and Linkeo. I do not officially represent these companies.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
+        <p class="text-sm text-gray-600 mb-3">We use cookies to optimize your experience.</p>
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">Decline</button>
+            <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">Accept</button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal--visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() { mobileMenu.classList.toggle('hidden'); });
+        }
+
+        var banner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('accept-cookies');
+        var rejectBtn = document.getElementById('reject-cookies');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            banner.style.display = 'block';
+        }
+
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.style.display = 'none';
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
+            gtag('set', 'ads_data_redaction', false);
+        });
+
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            banner.style.display = 'none';
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+            gtag('set', 'ads_data_redaction', true);
+        });
+    });
+    </script>
+
+    <script src="/assets/blog-cta.js" defer></script>
+    <script src="/assets/whatsapp-button.js" defer></script>
+</body>
+</html>

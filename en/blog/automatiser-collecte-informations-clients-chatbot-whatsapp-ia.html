@@ -1,0 +1,715 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>Automate customer information gathering with a WhatsApp AI chatbot | OptimyCloud</title>
+    <meta name="description" content="How to automate customer information gathering with a WhatsApp AI chatbot: client onboarding, lead qualification, document collection. A concrete guide for SMEs.">
+    <meta name="keywords" content="automatic customer information gathering, client onboarding chatbot, WhatsApp data collection chatbot, automatic lead qualification, automated WhatsApp form">
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/en/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Automate customer information gathering with a WhatsApp AI chatbot">
+    <meta property="og:description" content="How to automate customer information gathering with a WhatsApp AI chatbot: client onboarding, lead qualification, document collection. A concrete guide for SMEs.">
+    <meta property="og:url" content="https://optimycloud.com/en/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="article:published_time" content="2026-04-07">
+    <meta property="article:author" content="Alexandre Gillon">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Automate customer information gathering with a WhatsApp AI chatbot">
+    <meta name="twitter:description" content="Client onboarding, lead qualification, document collection: a concrete guide for SMEs.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Automate customer information gathering with a WhatsApp AI chatbot" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Automate customer information gathering with a WhatsApp AI chatbot",
+          "description": "How to automate customer information gathering with a WhatsApp AI chatbot: client onboarding, lead qualification, document collection. A concrete guide for SMEs.",
+          "url": "https://optimycloud.com/en/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html",
+          "datePublished": "2026-04-07",
+          "dateModified": "2026-04-07",
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html" },
+          "image": "https://optimycloud.com/assets/optimycloud-logo.png",
+          "wordCount": 2800,
+          "inLanguage": "en",
+          "articleSection": "AI & WhatsApp",
+          "keywords": ["automatic customer information gathering", "client onboarding chatbot", "WhatsApp data collection chatbot", "automatic lead qualification", "automated WhatsApp form"]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.webp"
+                                 alt="OptimyCloud"
+                                 width="200" height="64"
+                                 fetchpriority="high"
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Home</a>
+                    <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Pricing</a>
+                    <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">About</a>
+                    <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html" hreflang="fr" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="Voir la version française"><i class="fas fa-globe mr-1.5 text-xs"></i>FR</a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Open menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Pricing</a>
+                <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">About</a>
+                <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html" hreflang="fr" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><i class="fas fa-globe mr-1.5 text-xs"></i>Version française</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="bg-gradient-to-br from-green-600 to-emerald-700 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="mb-8 text-sm text-green-200">
+                <a href="../index.html" class="hover:text-white transition-colors">OptimyCloud</a>
+                <span class="mx-2">/</span>
+                <a href="./" class="hover:text-white transition-colors">Blog</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">Automate customer information gathering</span>
+            </nav>
+            <div class="max-w-3xl">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                    Automate customer information gathering with a WhatsApp AI chatbot
+                </h1>
+                <div class="flex flex-wrap items-center gap-4 text-green-200 text-sm">
+                    <span class="flex items-center"><i class="fas fa-calendar-alt mr-2"></i> April 7, 2026</span>
+                    <span class="flex items-center"><i class="fas fa-clock mr-2"></i> 10 min read</span>
+                    <span class="flex items-center"><i class="fas fa-user mr-2"></i> Alexandre Gillon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <main class="py-12 sm:py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Section 1 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    The problem everyone knows (and no one solves)
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    How much time do you spend each week chasing your clients for missing documents?
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Two hours? Five hours? Some of the brokers I work with told me ten hours. Ten hours a week sending emails like "Hi, I still haven't received your latest payslip," calling clients who don't pick up, manually checking whether a file is complete.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The problem isn't that your clients are unwilling. It's that the process is painful for everyone. You send an email with a list of 12 documents to provide. The client opens it three days later, on their phone, between two appointments. They don't have time to do it all at once. They send 3 of the 12. You follow up. They send 4 more, but they forgot to sign a form. You follow up again. The file takes two weeks to complete. Sometimes three.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Meanwhile, you're not doing your real job. You're doing admin.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    There's an alternative. A WhatsApp chatbot powered by artificial intelligence that guides your clients step by step, collects the information and documents, validates in real time, and automatically follows up with those who haven't finished. All on WhatsApp, with a 98% open rate -- compared to 21% for email.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    This isn't science fiction. It's a tool that brokers, accounting firms and real estate agencies are already using every day.
+                </p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    What a collection chatbot actually does
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Forget the basic chatbots that reply "our hours are 9am-6pm." Here, we're talking about an AI assistant specialized in a single goal: getting all the information and documents you need from your client, as quickly as possible, with no friction.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Concretely, here's how it works.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    You're onboarding a new client. Instead of sending them an email with a PDF to fill in or a link to a 3-page web form, you send them a WhatsApp message: "Hi Marie, welcome to [your company]. I'll guide you through putting your file together. Shall we start?"
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    From there, the chatbot takes over. It asks the questions one at a time, in a logical order. It adapts the following questions based on previous answers. If Marie says she's a salaried employee, the chatbot asks for her payslips. If she's self-employed, it asks for her financial statements. No pointless questions, no generic form.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The chatbot receives photos and PDFs directly within the conversation. Marie takes a photo of her ID from her couch, the chatbot receives it, checks that the image is legible, and moves on to the next question. If the document is blurry or unreadable, it says so immediately and asks her to resend the photo.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    If Marie stops halfway through the conversation -- because she's at work, because her child is crying, because that's life -- the chatbot picks up exactly where she left off when she comes back. No need to start over.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    And if Marie doesn't come back? The chatbot sends an automatic follow-up 24 hours later. Then another 48 hours after that. Politely, naturally, without sounding like a robot.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    On the professional side, all the collected data is centralized in a dashboard or pushed straight into your CRM. You see at a glance which files are complete, which are in progress, and which are stuck. No more digging through 47 emails to find a client's bank details.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    To understand the technical architecture behind this kind of solution, check out our guide on <a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline">building a WhatsApp AI assistant with Amazon Bedrock</a>.
+                </p>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    5 sectors where it changes everything (and banks aren't one of them)
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Let's be clear from the start: this kind of solution is aimed at SMEs and independent professionals, not at big banks that have multi-million IT budgets and IT services firms to run their projects. Here are five sectors where a WhatsApp collection chatbot has an immediate, measurable impact.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">1. Real estate and mortgage brokerage</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> A mortgage broker spends, on average, 2 hours per file collecting the client's information before even starting to work on it. Income, employment status, down payment, expenses, supporting documents... The list is long, and clients systematically forget half the documents.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong>What the chatbot collects:</strong></p>
+                <ul class="space-y-2 text-gray-600 mb-4">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Employment status (salaried, self-employed, civil servant)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Net monthly income and bonuses</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Available down payment</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Current expenses (rent, existing loans)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Last 3 payslips (photo or PDF)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Latest tax assessment</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Bank statements from the last 3 months</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>ID document</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    <strong>The measurable gain:</strong> The chatbot pre-qualifies the file automatically. Even before the first appointment, the broker knows whether the client can be financed and at roughly what rate. Qualification time cut by 4, number of files handled multiplied by 3.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">2. Accounting firms</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> Onboarding a new client is an administrative nightmare. Company registration number, tax regime, projected revenue, bank details, engagement letters to sign... And every quarter, here we go again: you have to collect invoices, statements, supporting documents.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong>What the chatbot collects:</strong></p>
+                <ul class="space-y-2 text-gray-600 mb-4">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Company registration number (SIRET) and legal form</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Tax regime (micro, simplified, standard)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Projected revenue</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Business bank details</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Director's ID document</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>On an ongoing basis: purchase invoices, sales invoices, monthly bank statements</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    <strong>The measurable gain:</strong> Onboarding goes from 5 days on average (emails, follow-ups, missing documents) to 48 hours. The quarterly collection, which used to tie up an assistant for a week, now happens continuously and automatically. Clients send their invoices as they go, directly into the WhatsApp conversation.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">3. Property management and real estate agencies</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> Putting together a complete tenant file takes 3 days on average. The applicant sends their documents in dribs and drabs. Something is always missing. And when you're handling 20 applications in parallel for the same property, it's chaos.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong>What the chatbot collects:</strong></p>
+                <ul class="space-y-2 text-gray-600 mb-4">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>ID document</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Last 3 payslips</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Employment contract or employer's certificate</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Latest tax assessment</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Proof of current address</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Guarantor's information (same documents)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Bank details (RIB)</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    <strong>The measurable gain:</strong> A complete tenant file collected in 10 minutes instead of 3 days. Incomplete files are flagged automatically. The real estate agent can compare applications based on 100% complete files, without spending hours chasing.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">4. Training organizations</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> Enrolling a trainee involves information from three different parties: the trainee themselves, their company, and the funding body (OPCO, CPF). The back-and-forth is endless, and an incomplete file blocks the start of the training.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong>What the chatbot collects:</strong></p>
+                <ul class="space-y-2 text-gray-600 mb-4">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Trainee's personal information (identity, contact details)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Company information (SIRET, address, HR contact)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>OPCO funding approval number or CPF number</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Signed training agreement</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Employer's certificate</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Copy of the ID document</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    <strong>The measurable gain:</strong> Enrollment time reduced from 2 weeks to 3 days. The chatbot automatically follows up with each stakeholder (trainee, HR, OPCO) until all documents are received. Fewer training sessions postponed because of an incomplete file.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">5. Recruitment and temp staffing</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    <strong>The problem:</strong> A candidate validated in the interview, but you still have to collect a mountain of documents before placing them on an assignment: ID document, driver's license, certifications, diplomas, bank details, social security certificate... And the candidate is already replying to 5 other agencies.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-4"><strong>What the chatbot collects:</strong></p>
+                <ul class="space-y-2 text-gray-600 mb-4">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Up-to-date CV</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>ID document, front and back</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Driver's license (if required)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Certifications and accreditations (forklift license, electrical certification, etc.)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Diplomas</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Bank details (RIB)</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Social security certificate</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Availability and salary expectations</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>The measurable gain:</strong> The candidate completes their file in 15 minutes from their phone, the very evening of the interview. The agency can place them on an assignment the next day instead of waiting 5 days for the documents to arrive by email.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    To go further on automating customer relations via WhatsApp, read our <a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 hover:underline">dedicated article</a>.
+                </p>
+            </div>
+
+            <!-- Section 4 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    How it works technically (without the jargon)
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    You don't need to be an engineer to understand it. Here are the main building blocks.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>WhatsApp Business API</strong> -- This is WhatsApp's official interface for businesses. It lets you send and receive messages programmatically. Unlike the free WhatsApp Business app, the API lets you automate conversations at scale.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>A language model (LLM)</strong> -- This is the chatbot's brain. We use models like Claude from Anthropic or GPT-4 from OpenAI, accessible via Amazon Bedrock. The LLM understands the client's natural language, generates appropriate responses, and decides which question to ask next based on previous answers. It's not a fixed decision tree: it's a real conversation.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>Secure storage</strong> -- The documents sent by clients (photos, PDFs) are stored in a secure, encrypted space, hosted in the European Union. Each document is linked to the client's file and accessible from your dashboard.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>Connectors to your tools</strong> -- The chatbot can push the collected data directly into your CRM (HubSpot, Salesforce, Pipedrive...), your business software, or simply into a Google Sheets or Notion table. No double entry.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    <strong>A follow-up engine</strong> -- If the client hasn't finished their collection, the system sends automatic reminders at configured intervals. The messages are natural, personalized, and comply with WhatsApp's rules (no spam, mandatory opt-in).
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    On the GDPR compliance side, the data is hosted in the European Union, consent is explicit (mandatory opt-in before any exchange), the client can request the deletion of their data at any time, and the documents are encrypted both at rest and in transit.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    For the technical details on the Amazon Bedrock and AWS Lambda architecture that powers this kind of solution, check out our <a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline">complete technical guide</a>.
+                </p>
+            </div>
+
+            <!-- Section 5 : Comparaison -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    Why WhatsApp and not a web form?
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    A fair question. You already have a form on your site, maybe even a client portal. Why add WhatsApp?
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Because your clients don't fill in your forms. Or they fill them in badly, half-way, three weeks later.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Here's the concrete comparison:
+                </p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border border-gray-200 rounded-lg overflow-hidden">
+                        <caption class="sr-only">Comparison of WhatsApp chatbot vs web form for customer information gathering</caption>
+                        <thead class="bg-green-50">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Criterion</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Web form</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">WhatsApp chatbot</th>
+                            </tr>
+                        </thead>
+                        <tbody class="text-gray-600">
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Open rate</td><td class="p-3">21% (email)</td><td class="p-3 text-green-700 font-medium">98% (WhatsApp)</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Device required</td><td class="p-3">PC recommended</td><td class="p-3 text-green-700 font-medium">Phone is enough</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Sending photos</td><td class="p-3">Tedious upload</td><td class="p-3 text-green-700 font-medium">Photo straight from the phone</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Follow-up on abandonment</td><td class="p-3">Email (ends up in spam)</td><td class="p-3 text-green-700 font-medium">WhatsApp message (read in 3 min)</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">User experience</td><td class="p-3">Cold, impersonal form</td><td class="p-3 text-green-700 font-medium">Natural, guided conversation</td></tr>
+                            <tr class="border-t border-gray-100 bg-gray-50"><td class="p-3 font-medium">Resuming after interruption</td><td class="p-3">Often impossible</td><td class="p-3 text-green-700 font-medium">Picks up where the client left off</td></tr>
+                            <tr class="border-t border-gray-100"><td class="p-3 font-medium">Average time to complete</td><td class="p-3">3 to 7 days</td><td class="p-3 text-green-700 font-medium">10 to 30 minutes</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The most important point: WhatsApp is already installed on your client's phone. They have nothing to download, no account to create, no password to remember. They reply from their couch, on the subway, during their lunch break. The friction is almost zero.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The other major advantage: document photos. Asking a client to scan a payslip, save it as a PDF, log in to their client portal, and upload it... that's asking them for 10 minutes of effort. On WhatsApp, they take a photo and send it. Two seconds.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Finally, the follow-up. A follow-up email has about a 5% chance of being opened (clients filter, ignore, forget). A WhatsApp message is read within 3 minutes on average. Your file completion rate goes from 40-50% to over 85%.
+                </p>
+            </div>
+
+            <!-- Section 6 : Prix -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    How much it costs
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    Let's be transparent about pricing. As with any AI chatbot project, the cost depends on complexity. Here are the real ranges.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">Simple collection (5 to 10 fields, no AI)</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    A rule-based chatbot that asks questions in a fixed order and stores the answers. No natural language understanding, no dynamic adaptation.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Build cost:</strong> 1,000 to 2,500 euros</p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Monthly cost:</strong> 50 to 100 euros/month (hosting + WhatsApp API)</p>
+                <p class="text-gray-600 leading-relaxed mb-8"><strong>Ideal for:</strong> basic collection with few fields and no documents to receive.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">AI collection with validation and automatic follow-ups</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    The chatbot understands natural language, adapts its questions, receives documents, validates the information in real time, and automatically follows up with clients who haven't finished.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Build cost:</strong> 3,000 to 8,000 euros</p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Monthly cost:</strong> 100 to 200 euros/month (hosting + WhatsApp API + LLM calls)</p>
+                <p class="text-gray-600 leading-relaxed mb-8"><strong>Ideal for:</strong> brokers, real estate agencies, training organizations, accounting firms.</p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-4">AI collection with CRM and business tool integration</h3>
+                <p class="text-gray-600 leading-relaxed mb-4">
+                    Everything above, plus direct integration with your tools: CRM, business software, client portal, document management system. The collected data arrives directly where you need it.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Build cost:</strong> 5,000 to 15,000 euros</p>
+                <p class="text-gray-600 leading-relaxed mb-2"><strong>Monthly cost:</strong> 150 to 300 euros/month (hosting + WhatsApp API + LLM + connector maintenance)</p>
+                <p class="text-gray-600 leading-relaxed mb-6"><strong>Ideal for:</strong> companies with structured processes and a high volume of files to handle.</p>
+
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    For a detailed breakdown of pricing by AI chatbot type, check out our <a href="combien-coute-chatbot-ia-pme.html" class="text-indigo-600 hover:underline">complete article on costs</a>.
+                </p>
+            </div>
+
+            <!-- Section 7 : Exemple concret -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    A concrete example: a mortgage broker who cut his qualification time by 4
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    To make all this tangible, here's a real case.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Marc is a mortgage broker in Lyon. His firm handles around 30 files a month. Before, the process of qualifying a new client looked like this:
+                </p>
+                <ul class="space-y-2 text-gray-600 mb-6">
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>First phone call to understand the project (15 minutes)</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>Email with the list of documents to provide (ID document, last 3 payslips, tax assessment, bank statements, proof of down payment)</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>Waiting... The client takes 5 days on average to send all the documents</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>2 to 3 follow-ups by email and phone</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>Manual check of the file's completeness</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>Second call for the missing information</span></li>
+                    <li class="flex items-start"><i class="fas fa-times text-red-400 mr-3 mt-1 text-sm"></i><span>Total time per client: around 2 hours, spread over 7 to 10 days</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    With 30 files a month, Marc was spending 60 hours -- nearly 8 full days -- on information gathering alone. Not on advice, not on negotiating with banks. On pure admin.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Today, Marc uses a WhatsApp AI chatbot. Here's the new process:
+                </p>
+                <ul class="space-y-2 text-gray-600 mb-6">
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>After the first call, Marc sends the client a WhatsApp link</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>The chatbot takes over and guides the client step by step</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>It asks the questions in a logical order: employment status, income, expenses, down payment</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>It asks for the documents one by one, with clear instructions ("Take a photo of your latest payslip, front and back")</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>It checks that each document is legible and complete</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>If the client stops, it automatically follows up the next day</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-green-600 mr-3 mt-1 text-sm"></i><span>Once the file is complete, Marc gets a notification with a structured summary and all the documents sorted</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The results, three months after deployment:
+                </p>
+                <ul class="space-y-2 text-gray-600 mb-6">
+                    <li class="flex items-start"><i class="fas fa-chart-line text-green-600 mr-3 mt-1 text-sm"></i><span><strong>Qualification time per client:</strong> 30 minutes instead of 2 hours</span></li>
+                    <li class="flex items-start"><i class="fas fa-chart-line text-green-600 mr-3 mt-1 text-sm"></i><span><strong>File completion time:</strong> 24 hours instead of 7 days</span></li>
+                    <li class="flex items-start"><i class="fas fa-chart-line text-green-600 mr-3 mt-1 text-sm"></i><span><strong>Number of files handled per week:</strong> 10 instead of 7</span></li>
+                    <li class="flex items-start"><i class="fas fa-chart-line text-green-600 mr-3 mt-1 text-sm"></i><span><strong>File completion rate:</strong> 92% instead of 65%</span></li>
+                    <li class="flex items-start"><i class="fas fa-chart-line text-green-600 mr-3 mt-1 text-sm"></i><span><strong>Client satisfaction:</strong> clients find the process "simple" and "fast" -- some complete their file that very evening from their couch</span></li>
+                </ul>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    The return on investment? The chatbot cost 6,000 euros to deploy and 180 euros a month to run. Marc estimates it saves him 40 hours a month. At 80 euros an hour (the value of a broker's time), that's 3,200 euros in monthly savings. The chatbot paid for itself in less than two months.
+                </p>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    What it changes for your business
+                </h2>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    Beyond the numbers, the real change is qualitative. When you no longer spend your days chasing clients for documents, you do your real job. The broker negotiates with banks. The accountant advises their clients. The real estate agent shows properties. The recruiter places candidates.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-6">
+                    The chatbot doesn't replace the human relationship. It removes the painful part -- the administrative collection -- so the human relationship can start sooner and on a better footing. When a client arrives at their first appointment with a complete file, the conversation is immediately productive.
+                </p>
+                <p class="text-gray-600 leading-relaxed mb-8">
+                    If you want to explore how generative AI can transform other aspects of your business, our <a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline">practical guide for SMEs</a> is a good starting point.
+                </p>
+            </div>
+
+            <!-- Articles liés -->
+            <div class="reveal">
+                <h3 class="text-lg font-bold text-gray-900 mb-4">Also worth reading</h3>
+                <ul class="space-y-2 mb-8">
+                    <li><a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 hover:underline text-sm">What is a FinOps audit? A complete guide for SMEs →</a></li>
+                    <li><a href="agent-ia-remplace-formulaire-crm-pme.html" class="text-indigo-600 hover:underline text-sm">Why an AI agent connected to your CRM replaces your forms →</a></li>
+                    <li><a href="combien-coute-chatbot-ia-pme.html" class="text-indigo-600 hover:underline text-sm">How much does an AI chatbot cost for an SME in 2026? →</a></li>
+                    <li><a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 hover:underline text-sm">Automating customer relations with WhatsApp and AI →</a></li>
+                    <li><a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline text-sm">WhatsApp AI assistant with Amazon Bedrock →</a></li>
+                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline text-sm">Integrating generative AI into your SME: a practical guide →</a></li>
+                </ul>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="reveal">
+                <div class="bg-green-600 rounded-2xl p-8 sm:p-10 mt-12 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Spending too much time collecting customer information?
+                    </h2>
+                    <p class="text-green-100 mb-8 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+                        Tell me about your current collection process, and I'll tell you within 24h whether a WhatsApp chatbot can simplify it -- and how much it would cost.
+                    </p>
+                    <a href="../index.html?service=ia-chatbot#contact" class="inline-flex items-center bg-white text-green-700 px-8 py-3 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Let's talk about your project
+                    </a>
+                    <p class="text-green-200 text-sm mt-4">Reply within 24h</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        AI, Cloud & SEO expert for SMEs and startups. 10+ years of engineering experience. AWS Certified.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Alexandre Gillon's LinkedIn profile" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI Agents & LLM</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI Automation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AWS Cloud</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">SEO Audit</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fab fa-whatsapp mr-2 text-slate-500"></i>
+                            <a href="https://wa.me/33631109539" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors">+33 6 31 10 95 39</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-400 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Freelance Cloud Engineer - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-400">
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Legal Notice</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Cookie Policy</a>
+                </div>
+                <p class="text-center text-xs text-slate-400 mt-4 max-w-3xl mx-auto">
+                    * The projects and work mentioned were carried out as part of my roles at Ubisoft, Châteauform', Teamwork and Linkeo. I do not officially represent these companies.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
+        <p class="text-sm text-gray-600 mb-3">We use cookies to optimize your experience.</p>
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">Decline</button>
+            <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">Accept</button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // ===== Reveal on scroll =====
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal--visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        revealElements.forEach(function(el) { revealObserver.observe(el); });
+
+        // ===== Mobile menu =====
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() { mobileMenu.classList.toggle('hidden'); });
+        }
+
+        // ===== Cookie consent =====
+        var banner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('accept-cookies');
+        var rejectBtn = document.getElementById('reject-cookies');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            banner.style.display = 'block';
+        }
+
+        acceptBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'accepted');
+            banner.style.display = 'none';
+            gtag('consent', 'update', {
+                'ad_storage': 'granted',
+                'ad_user_data': 'granted',
+                'ad_personalization': 'granted',
+                'analytics_storage': 'granted'
+            });
+            gtag('set', 'ads_data_redaction', false);
+        });
+
+        rejectBtn.addEventListener('click', function() {
+            localStorage.setItem('cookieConsent', 'rejected');
+            banner.style.display = 'none';
+            gtag('consent', 'update', {
+                'ad_storage': 'denied',
+                'ad_user_data': 'denied',
+                'ad_personalization': 'denied',
+                'analytics_storage': 'denied'
+            });
+            gtag('set', 'ads_data_redaction', true);
+        });
+    });
+    </script>
+
+    <script src="/assets/blog-cta.js" defer></script>
+    <script src="/assets/whatsapp-button.js" defer></script>
+</body>
+</html>

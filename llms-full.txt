@@ -2,6 +2,8 @@
 
 > OptimyCloud est un cabinet de conseil français spécialisé en IA générative, automatisation, Cloud AWS et SEO pour PME et startups, fondé par Alexandre Gillon, ingénieur certifié AWS Solutions Architect et Kubernetes CKA.
 
+English version : https://optimycloud.com/en/llms-full.txt
+
 ---
 
 ## Services IA & Automatisation
