@@ -60,7 +60,7 @@
     <link rel="manifest" href="../assets/site.webmanifest" />
     <title>Agent IA autonome sur un VPS avec claude -p (et pourquoi Bedrock en production) | OptimyCloud</title>
     <meta name="description" content="Installer un agent IA autonome sur un VPS avec claude -p : le tutoriel qui marche, ce qui casse en production, et la configuration Amazon Bedrock qui règle le problème.">
-    <meta name="keywords" content="claude -p, Claude Code headless, agent IA VPS, Amazon Bedrock, CLAUDE_CODE_USE_BEDROCK, agent autonome serveur, IAM Bedrock, agent IA production, mode headless, automatisation IA serveur, souveraineté données IA">
+    <meta name="keywords" content="claude -p, Claude Code headless, agent IA VPS, Amazon Bedrock, CLAUDE_CODE_USE_BEDROCK, agent autonome serveur, IAM Bedrock, LiteLLM, passerelle LLM, gateway LLM, ANTHROPIC_BASE_URL, multi-cloud IA, agent IA production, mode headless, automatisation IA serveur, souveraineté données IA">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html">
@@ -510,6 +510,26 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL='eu.anthropic.claude-haiku-4-5-20251001-v1:
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
                     En environnement d'entreprise, on va plus loin : les profils d'inférence applicatifs permettent de router chaque version de modèle vers un ARN géré par l'organisation, avec ses propres quotas et son propre suivi de coût.
                 </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">Et si le client n'est pas sur AWS ?</h3>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    L'argument de cet article n'est pas « utilisez Bedrock ». Il est qu'un agent en production ne doit pas porter de secret statique, doit être traçable, plafonné, et maîtrisé quant à la localisation de ses données. Bedrock est une façon d'obtenir ces quatre propriétés quand le client est déjà sur AWS. Ce n'est pas la seule.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Sur GCP, Azure ou une infrastructure mixte, la réponse habituelle est une <strong class="text-gray-900">passerelle LLM</strong> &mdash; LiteLLM en étant l'implémentation open source la plus répandue. Elle s'intercale entre l'agent et le fournisseur et rend exactement le même service : la clé du fournisseur reste côté serveur, chaque service ou chaque développeur reçoit son propre identifiant, la consommation est attribuée, budgets et limites s'appliquent en un point unique, et chaque requête est journalisée.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Côté agent, la bascule tient là encore en une variable :
+                </p>
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>export ANTHROPIC_BASE_URL=https://passerelle.interne.example.com</code></pre>
+                </div>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    La passerelle apporte même une propriété que Bedrock n'a pas : changer de fournisseur se fait dans sa configuration, sans toucher aux machines qui exécutent les agents.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    La contrepartie est réelle, et il faut la poser avant de s'engager : la passerelle devient une brique d'infrastructure que vous exploitez. Elle doit suivre les évolutions du client &mdash; une passerelle qui ne relaie pas une nouvelle capacité casse la fonctionnalité correspondante. Et Anthropic ne maintient ni n'audite les produits de passerelle tiers.
+                </p>
             </div>
 
             <!-- Section 4 : securite -->
@@ -601,7 +621,7 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL='eu.anthropic.claude-haiku-4-5-20251001-v1:
                     </table>
                 </div>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    Le verdict est assez simple. Pour prototyper, explorer, automatiser vos propres tâches : la clé API, sans hésiter, c'est plus rapide et le surcoût de gouvernance ne se justifie pas. Dès qu'il y a un client, des données qui ne vous appartiennent pas ou un budget à défendre : Bedrock, et le passage se fait sans réécrire une ligne de l'agent.
+                    Le verdict est assez simple. Pour prototyper, explorer, automatiser vos propres tâches : la clé API, sans hésiter, c'est plus rapide et le surcoût de gouvernance ne se justifie pas. Dès qu'il y a un client, des données qui ne vous appartiennent pas ou un budget à défendre : une architecture gouvernée &mdash; Bedrock si le client est déjà sur AWS, une passerelle LLM sinon. Dans les deux cas, le passage se fait sans réécrire une ligne de l'agent.
                 </p>
             </div>
 

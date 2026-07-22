@@ -60,7 +60,7 @@
     <link rel="manifest" href="/assets/site.webmanifest" />
     <title>Running an autonomous AI agent on a VPS with claude -p (and why Bedrock in production) | OptimyCloud</title>
     <meta name="description" content="Running an autonomous AI agent on a VPS with claude -p: the tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.">
-    <meta name="keywords" content="claude -p, Claude Code headless, AI agent VPS, Amazon Bedrock, CLAUDE_CODE_USE_BEDROCK, autonomous agent server, Bedrock IAM, AI agent production, headless mode, server AI automation, data residency AI">
+    <meta name="keywords" content="claude -p, Claude Code headless, AI agent VPS, Amazon Bedrock, CLAUDE_CODE_USE_BEDROCK, autonomous agent server, Bedrock IAM, LiteLLM, LLM gateway, ANTHROPIC_BASE_URL, multi-cloud AI, AI agent production, headless mode, server AI automation, data residency AI">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html">
@@ -512,6 +512,26 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL='eu.anthropic.claude-haiku-4-5-20251001-v1:
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
                     In an enterprise setting you go further: application inference profiles let you route each model version to an ARN managed by the organization, with its own quotas and its own cost tracking.
                 </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">What if the client isn't on AWS?</h3>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    The argument in this article is not "use Bedrock". It is that a production agent must not carry a static secret, and must be traceable, capped, and controlled as to where its data is processed. Bedrock is one way to get those four properties when the client is already on AWS. It is not the only one.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    On GCP, Azure or a mixed estate, the usual answer is an <strong class="text-gray-900">LLM gateway</strong> &mdash; LiteLLM being the most widely deployed open-source implementation. It sits between the agent and the provider and delivers exactly the same thing: the provider key stays server-side, each service or developer gets its own credential, usage is attributed, budgets and rate limits are enforced in one place, and every request is logged.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    On the agent side, the switch is once again a single variable:
+                </p>
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>export ANTHROPIC_BASE_URL=https://gateway.internal.example.com</code></pre>
+                </div>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    A gateway even brings one property Bedrock does not: switching provider happens in the gateway's configuration, without touching the machines running the agents.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    The trade-off is real, and worth stating before you commit: the gateway becomes infrastructure you operate. It has to keep pace with the client &mdash; a gateway that fails to forward a new capability breaks the corresponding feature. And Anthropic does not maintain or audit third-party gateway products.
+                </p>
             </div>
 
             <!-- Section 4 : security -->
@@ -603,7 +623,7 @@ export ANTHROPIC_DEFAULT_HAIKU_MODEL='eu.anthropic.claude-haiku-4-5-20251001-v1:
                     </table>
                 </div>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    The verdict is fairly simple. For prototyping, exploring, automating your own tasks: the API key, without hesitation &mdash; it is faster and the governance overhead is not justified. As soon as there is a client, data that is not yours, or a budget to defend: Bedrock, and the move happens without rewriting a single line of the agent.
+                    The verdict is fairly simple. For prototyping, exploring, automating your own tasks: the API key, without hesitation &mdash; it is faster and the governance overhead is not justified. As soon as there is a client, data that is not yours, or a budget to defend: a governed architecture &mdash; Bedrock if the client is already on AWS, an LLM gateway otherwise. Either way, the move happens without rewriting a single line of the agent.
                 </p>
             </div>
 
