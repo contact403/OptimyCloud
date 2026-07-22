@@ -106,6 +106,21 @@
         <xhtml:link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/"/>
     </url>
+    <!-- Blog: agent IA autonome VPS + Bedrock -->
+    <url>
+        <loc>https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html"/>
+    </url>
+    <url>
+        <loc>https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html</loc>
+        <lastmod>2026-07-22</lastmod>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html"/>
+    </url>
     <!-- Blog: collecte infos WhatsApp -->
     <url>
         <loc>https://optimycloud.com/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html</loc>

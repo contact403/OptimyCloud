@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="/assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="/assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
+    <link rel="manifest" href="/assets/site.webmanifest" />
+    <title>Running an autonomous AI agent on a VPS with claude -p (and why Bedrock in production) | OptimyCloud</title>
+    <meta name="description" content="Running an autonomous AI agent on a VPS with claude -p: the tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.">
+    <meta name="keywords" content="claude -p, Claude Code headless, AI agent VPS, Amazon Bedrock, CLAUDE_CODE_USE_BEDROCK, autonomous agent server, Bedrock IAM, AI agent production, headless mode, server AI automation, data residency AI">
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Running an autonomous AI agent on a VPS with claude -p (and why Bedrock in production)">
+    <meta property="og:description" content="The tutorial that works, what breaks the moment there's a client involved, and the Amazon Bedrock setup that fixes it.">
+    <meta property="og:url" content="https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-agent-vps-bedrock.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="fr_FR">
+    <meta property="article:published_time" content="2026-07-22">
+    <meta property="article:author" content="Alexandre Gillon">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Running an autonomous AI agent on a VPS with claude -p">
+    <meta name="twitter:description" content="The tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-agent-vps-bedrock.webp">
+
+    <!-- Fonts -->
+    <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="/assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://optimycloud.com/en/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/en/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Autonomous AI agent on a VPS with claude -p" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Running an autonomous AI agent on a VPS with claude -p (and why I move to Bedrock in production)",
+          "description": "Running an autonomous AI agent on a VPS with claude -p: the tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.",
+          "url": "https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html",
+          "datePublished": "2026-07-22",
+          "dateModified": "2026-07-22",
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html" },
+          "image": "https://optimycloud.com/assets/blog/hero-agent-vps-bedrock.webp",
+          "wordCount": 2400,
+          "inLanguage": "en",
+          "articleSection": "AI Agents & Cloud",
+          "keywords": ["claude -p", "Claude Code headless", "AI agent VPS", "Amazon Bedrock", "IAM", "autonomous agent", "data residency"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Can you run an AI agent autonomously on a VPS?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. Claude Code's non-interactive mode (claude -p) reads stdin, writes to stdout and returns an exit code, so it behaves like any other Unix command and can be driven from cron, a systemd timer or a CI pipeline. A low-cost VPS is plenty, since the real workload runs on the API side."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What is the difference between an API key and Amazon Bedrock for a production agent?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "An API key is a static, named secret stored in plain text on the server, with no traceability and no technical spending cap. With Amazon Bedrock the agent authenticates through an IAM role using temporary credentials: no secret on disk, every call is logged in CloudTrail, spend is tracked through AWS Budgets and can be charged back by tag, and data stays inside the client's AWS account."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How do you configure Claude Code for Amazon Bedrock?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Export CLAUDE_CODE_USE_BEDROCK=1 and supply AWS credentials through the standard SDK credential chain (instance IAM role, profile, or environment variables). The region resolves from AWS_REGION, AWS_DEFAULT_REGION or the active AWS profile. Pinning models with ANTHROPIC_MODEL or the ANTHROPIC_DEFAULT_*_MODEL variables is strongly recommended."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Does agent data stay in Europe with Bedrock?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It can. Bedrock offers cross-region inference profiles prefixed with eu. that route requests only to European regions. Availability varies by model: some recent models are only exposed in Europe through a Global profile, which routes across all commercial regions. Check model by model with aws bedrock list-inference-profiles before committing to a data residency clause."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Should you use --dangerously-skip-permissions for an autonomous agent?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No, not on an exposed machine. The right setting is an explicit allowlist through --allowedTools, optionally combined with the dontAsk permission mode, which denies anything not covered by your allow rules or the read-only command set. An autonomous agent should run as a dedicated unprivileged user with restricted network egress."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What are the limitations of Claude Code on Amazon Bedrock?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "The web search tool is not available on Amazon Bedrock: an agent that needs to consult online sources has to go through an MCP server or a custom tool. Claude Code uses the Bedrock Invoke API, not the Converse API. Finally, prompt caching is not enabled in every Bedrock region, which can weigh on the bill for an agent that resends a large context on every run."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="/assets/optimycloud-logo.webp"
+                                 alt="OptimyCloud"
+                                 width="200" height="64"
+                                 fetchpriority="high"
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Home</a>
+                    <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Pricing</a>
+                    <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">About</a>
+                    <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/blog/agent-ia-autonome-vps-claude-code-bedrock.html" hreflang="fr" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="Voir la version française"><img src="/assets/flags/fr.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">FR</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <a href="/blog/agent-ia-autonome-vps-claude-code-bedrock.html" hreflang="fr" class="mobile-lang-flag md:hidden ml-auto mr-3 inline-flex items-center" aria-label="Voir la version française"><img src="/assets/flags/fr.svg" alt="" width="24" height="17" style="display:inline-block;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.15)"></a>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Open menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Home</a>
+                <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Pricing</a>
+                <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">About</a>
+                <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/blog/agent-ia-autonome-vps-claude-code-bedrock.html" hreflang="fr" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><img src="/assets/flags/fr.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">Version française</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm text-indigo-100">
+                <a href="../index.html" class="hover:text-white transition-colors">OptimyCloud</a>
+                <span class="mx-2">/</span>
+                <span>Blog</span>
+                <span class="mx-2">/</span>
+                <span class="text-white">Autonomous AI agent on a VPS</span>
+            </nav>
+            <div class="max-w-3xl">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                    Running an AI agent autonomously on a VPS &mdash; and why I move to Bedrock in production
+                </h1>
+                <div class="flex flex-wrap items-center gap-4 text-indigo-100 text-sm">
+                    <span class="flex items-center">
+                        <i class="fas fa-calendar-alt mr-2"></i> July 22, 2026
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i> 12 min read
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-user mr-2"></i> Alexandre Gillon
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <main class="py-12 sm:py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Hero Image -->
+            <img src="/assets/blog/hero-agent-vps-bedrock.webp" alt="Server rack hosting an autonomous AI agent" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
+
+            <!-- Introduction -->
+            <div class="reveal">
+                <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+                    Putting an AI agent on a VPS takes about twenty minutes. One <code class="text-base bg-gray-100 px-1.5 py-0.5 rounded">apt install</code>, an API key in a <code class="text-base bg-gray-100 px-1.5 py-0.5 rounded">.env</code> file, a cron entry, and you have a machine that triages your logs every night. It genuinely works, and it feels good.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    The trouble comes later: the day that setup stops running on your own server and starts running at a client's, with their data, their bill, and their IT lead asking questions. At that point the API key in the <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">.env</code> becomes a real problem, and there is no elegant patch for it.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    This article does both: the setup that works, then the version I actually deploy in production, built on Amazon Bedrock. Switching from one to the other comes down to a single environment variable &mdash; that is all that separates a side project from an auditable piece of infrastructure.
+                </p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-terminal text-orange-600 mr-2"></i>
+                    The basic setup: <code class="text-xl">claude -p</code> on a VPS
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Claude Code is not only an interactive terminal interface. The <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">-p</code> flag (or <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">--print</code>) switches it into non-interactive mode: it reads standard input, writes to standard output and returns an exit code. In other words it behaves like <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">grep</code> or <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">jq</code>, and can be driven from any shell script.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    That is what makes the agent deployable: no session, no TTY, no lingering <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">tmux</code>. An entry-level VPS is enough &mdash; inference runs on the API side, the machine only orchestrates.
+                </p>
+
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <p class="text-xs text-gray-400 mb-3 font-mono"># Install and first non-interactive call</p>
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>curl -fsSL https://claude.ai/install.sh | bash
+
+export ANTHROPIC_API_KEY="sk-ant-..."
+
+claude -p "Summarize the errors in this log" &lt; /var/log/app/error.log</code></pre>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">The four flags that matter</h3>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">--bare</code> &mdash; disables auto-discovery of hooks, skills, plugins, MCP servers and <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">CLAUDE.md</code> files. Without it, your agent loads whatever happens to sit in the working directory and in <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">~/.claude</code>. In production this is the flag that guarantees the command does the same thing on every machine.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">--output-format json</code> &mdash; returns a structured object instead of free text: the result, the session ID, token usage and the cost of the run. That is what makes orchestration possible: parse it with <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">jq</code> and branch on the output.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">--allowedTools</code> &mdash; the allowlist of tools the agent may use without asking. The syntax supports prefix matching: <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">Bash(git diff *)</code> allows any command starting with <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">git diff</code>. The space before the asterisk is significant.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">--append-system-prompt</code> &mdash; adds instructions to the system prompt without replacing default behavior. This is where you define the agent's role: security reviewer, incident triager, report writer.</span>
+                    </li>
+                </ul>
+
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <p class="text-xs text-gray-400 mb-3 font-mono"># A review agent driven by a systemd timer</p>
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>#!/usr/bin/env bash
+set -euo pipefail
+
+cd /srv/project
+
+git diff origin/main | claude --bare -p \
+  --append-system-prompt "You are a security engineer. Report only
+  exploitable vulnerabilities, with file and line." \
+  --output-format json \
+  --allowedTools "Read" \
+  | jq -r '.result' &gt; /var/reports/review-$(date +%F).md</code></pre>
+                </div>
+
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    A systemd timer, a cron entry, and you have an agent producing a review report every morning. It is genuinely useful, and it costs a few cents per run.
+                </p>
+
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-xl mb-8">
+                    <p class="text-sm text-blue-900 leading-relaxed">
+                        <strong>One detail that saves a bad surprise:</strong> piped standard input is capped at 10 MB. Past that, the command exits with an error and a non-zero status. For larger volumes, write the content to a file and reference the path in the prompt instead of piping it.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-triangle-exclamation text-orange-600 mr-2"></i>
+                    What breaks the moment it stops being a side project
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    The setup above is perfectly viable on your own server. It becomes hard to defend the day it runs at a client's. Four things block, and none of them is solved by tidier file layout.
+                </p>
+
+                <div class="space-y-4 mb-8">
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-key text-red-600"></i>
+                            </span>
+                            The API key is a static secret, in plain text, on the machine
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            It never rotates on its own, it belongs to a named account, and it lives in a file the process can read. An agent that runs shell commands runs, by construction, on the same machine as the secret paying for its calls. The day someone leaves the company or a backup leaks, you revoke by hand and redeploy everywhere.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-eye-slash text-red-600"></i>
+                            </span>
+                            No usable audit trail
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            You know how much the key consumed in total. You do not know which service, which machine, which job. In an audit, "an agent calls an API with a shared key" is not an acceptable answer: you will be asked who called what, when, and under which authorization.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-euro-sign text-red-600"></i>
+                            </span>
+                            No technical spending cap
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            An agent looping on a poorly scoped task keeps spending until somebody notices. The only native guardrail on an API key is the credit card limit behind it &mdash; plus an overage alert that arrives after the fact. On a client budget, that is not enough. We covered cloud spend control in our <a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 underline hover:text-indigo-800">FinOps audit guide</a>.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-globe text-red-600"></i>
+                            </span>
+                            The data question always comes up
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            As soon as an agent reads business files, application logs or proprietary code, the client's first question is where that data travels and under which jurisdiction it is processed. It is a fair question, and it is better answered with an architecture than with a screenshot of someone's terms of service.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 3 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fab fa-aws text-orange-600 mr-2"></i>
+                    The production version: the same agent, through Amazon Bedrock
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Amazon Bedrock serves Claude models from inside an AWS account. For the agent, nothing changes: same commands, same tools, same prompt. What changes is everything around the call.
+                </p>
+
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <p class="text-xs text-gray-400 mb-3 font-mono"># The complete switch</p>
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>export CLAUDE_CODE_USE_BEDROCK=1
+export AWS_REGION=eu-west-3
+
+# Model pinning (strongly recommended)
+export ANTHROPIC_MODEL='eu.anthropic.claude-sonnet-4-5-20250929-v1:0'
+
+claude --bare -p "Summarize the errors in this log" &lt; /var/log/app/error.log</code></pre>
+                </div>
+
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    There is no <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">ANTHROPIC_API_KEY</code> in the environment anymore. Claude Code uses the standard AWS SDK credential chain: on an EC2 instance it picks up temporary credentials from the IAM role attached to the machine. No secret is written to disk, and rotation is handled by AWS.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">The minimal IAM policy</h3>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    This is the heart of it: the agent's permissions become a declarative resource, versioned in your Terraform, reviewed in a pull request.
+                </p>
+
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>{
+  "Version": "2012-10-17",
+  "Statement": [{
+    "Effect": "Allow",
+    "Action": [
+      "bedrock:InvokeModel",
+      "bedrock:InvokeModelWithResponseStream",
+      "bedrock:ListInferenceProfiles",
+      "bedrock:GetInferenceProfile"
+    ],
+    "Resource": [
+      "arn:aws:bedrock:*:*:inference-profile/*",
+      "arn:aws:bedrock:*:*:foundation-model/*"
+    ]
+  }]
+}</code></pre>
+                </div>
+
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Narrow the resource down to the ARNs of the inference profiles the agent is actually allowed to call and you get a clean perimeter: this agent, on these models, in this account.
+                </p>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">What that changes in practice</h3>
+                <div class="space-y-4 mb-8">
+                    <div class="bg-green-50 rounded-xl p-5 border border-green-200">
+                        <h4 class="font-bold text-green-900 mb-2 text-base"><i class="fas fa-fingerprint mr-2"></i>Per-call traceability</h4>
+                        <p class="text-sm text-green-800 leading-relaxed">Every invocation goes through CloudTrail: which IAM principal, from which instance, on which model, at what time. That is the difference between "we think it was the nightly job" and a sourced answer in thirty seconds.</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-5 border border-green-200">
+                        <h4 class="font-bold text-green-900 mb-2 text-base"><i class="fas fa-chart-pie mr-2"></i>Budget and chargeback</h4>
+                        <p class="text-sm text-green-800 leading-relaxed">Consumption shows up in Cost Explorer like any other AWS service. You apply tags, charge back per team or project, and wire AWS Budgets to an alert at a threshold you choose. Bedrock service tiers (<code class="text-xs bg-green-100 px-1 py-0.5 rounded">default</code>, <code class="text-xs bg-green-100 px-1 py-0.5 rounded">flex</code>, <code class="text-xs bg-green-100 px-1 py-0.5 rounded">priority</code>) also let you trade cost against latency on background work.</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-5 border border-green-200">
+                        <h4 class="font-bold text-green-900 mb-2 text-base"><i class="fas fa-location-dot mr-2"></i>Data residency</h4>
+                        <p class="text-sm text-green-800 leading-relaxed">Bedrock exposes cross-region inference profiles prefixed with <code class="text-xs bg-green-100 px-1 py-0.5 rounded">eu.</code> that route only to European regions. One caveat: availability varies by model, and some recent models are offered in Europe only through a Global profile that routes across all commercial regions. Check before you commit.</p>
+                    </div>
+                    <div class="bg-green-50 rounded-xl p-5 border border-green-200">
+                        <h4 class="font-bold text-green-900 mb-2 text-base"><i class="fas fa-filter mr-2"></i>Centralized content filtering</h4>
+                        <p class="text-sm text-green-800 leading-relaxed">Bedrock Guardrails is applied via request headers, so it sits outside the agent's code. A security team can enforce a filtering policy without touching the deployed scripts.</p>
+                    </div>
+                </div>
+
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <p class="text-xs text-gray-400 mb-3 font-mono"># Check what is actually available in your region</p>
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>aws bedrock list-inference-profiles --region eu-west-3</code></pre>
+                </div>
+
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl mb-8">
+                    <p class="text-sm text-amber-900 leading-relaxed mb-3">
+                        <strong>Two limitations to know before switching.</strong>
+                    </p>
+                    <p class="text-sm text-amber-900 leading-relaxed mb-3">
+                        The native web search tool is not available on Amazon Bedrock. If your agent needs to consult online sources, you have to go through an MCP server or a custom tool. This is the point that surprises people most during migration.
+                    </p>
+                    <p class="text-sm text-amber-900 leading-relaxed">
+                        Prompt caching is not enabled in every Bedrock region. An agent that resends a large context on every run pays full price when the cache is unavailable &mdash; watch the cached-token counters, and if they stay at zero the region does not support it.
+                    </p>
+                </div>
+
+                <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">Pin your models</h3>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Without explicit pinning, the <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">sonnet</code> and <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">opus</code> aliases resolve to Claude Code's built-in defaults, which shift across versions and may not be enabled in the client's account. Across a fleet of machines, that guarantees behavior changing on its own one morning &mdash; and the bill changing with it, since an Opus model costs noticeably more than a Sonnet.
+                </p>
+                <div class="bg-gray-900 rounded-xl p-5 mb-6 overflow-x-auto">
+                    <pre class="text-sm text-gray-100 font-mono leading-relaxed"><code>export ANTHROPIC_DEFAULT_SONNET_MODEL='eu.anthropic.claude-sonnet-4-5-20250929-v1:0'
+export ANTHROPIC_DEFAULT_HAIKU_MODEL='eu.anthropic.claude-haiku-4-5-20251001-v1:0'</code></pre>
+                </div>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    In an enterprise setting you go further: application inference profiles let you route each model version to an ARN managed by the organization, with its own quotas and its own cost tracking.
+                </p>
+            </div>
+
+            <!-- Section 4 : security -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-lock text-orange-600 mr-2"></i>
+                    Before you let it run: what to lock down
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    An autonomous agent on an exposed machine is a process running shell commands chosen by a model, based on content it reads. That content &mdash; a log, a GitHub issue, a file dropped by a third party &mdash; is not trusted. Five rules, in order of importance:
+                </p>
+
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <i class="fas fa-shield-halved text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">No <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">--dangerously-skip-permissions</code> on an exposed machine.</strong> The right setting is an allowlist via <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">--allowedTools</code>, optionally combined with the <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">dontAsk</code> mode, which denies anything not covered by your allow rules or the read-only command set. An agent that fails because it lacks a permission is a useful signal; an agent with every permission emits none.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-shield-halved text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">A dedicated, unprivileged system user.</strong> No root, no shared deploy account. The agent only reaches the directories it must work on, with an IAM role carrying just the Bedrock actions it needs &mdash; and certainly not the account's administrative credentials.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-shield-halved text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Restricted network egress.</strong> An outbound security group limited to what the agent actually needs. That is the net that limits damage if malicious content manages to influence a command.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-shield-halved text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">An execution time cap.</strong> A <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">TimeoutStartSec</code> on the systemd side, or a <code class="text-xs bg-gray-100 px-1 py-0.5 rounded">timeout</code> around the call. On SIGTERM, Claude Code aborts the in-progress turn, terminates the process tree of any running command and exits with code 143 &mdash; the shutdown is clean, but something still has to trigger it.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-shield-halved text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Retained logs.</strong> Redirect the JSON output to a file or to CloudWatch. The day the agent does something unexpected, the full session trace is the only thing that lets you understand it.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Comparison table -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-scale-balanced text-orange-600 mr-2"></i>
+                    API key or Bedrock: the table
+                </h2>
+                <div class="overflow-x-auto mb-8">
+                    <table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Criterion</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">API key</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Amazon Bedrock</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Authentication</td>
+                                <td class="p-3 text-gray-600">Static secret on disk</td>
+                                <td class="p-3 text-gray-600">IAM role, temporary credentials</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 font-medium text-gray-800">Rotation</td>
+                                <td class="p-3 text-gray-600">Manual</td>
+                                <td class="p-3 text-gray-600">Automatic</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Traceability</td>
+                                <td class="p-3 text-gray-600">Total volume per key</td>
+                                <td class="p-3 text-gray-600">CloudTrail, per call</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 font-medium text-gray-800">Budget control</td>
+                                <td class="p-3 text-gray-600">After-the-fact alert</td>
+                                <td class="p-3 text-gray-600">AWS Budgets, quotas, tags</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Data residency</td>
+                                <td class="p-3 text-gray-600">Provider-dependent</td>
+                                <td class="p-3 text-gray-600"><code class="text-xs bg-gray-100 px-1 rounded">eu.</code> profiles (check per model)</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 font-medium text-gray-800">Native web search</td>
+                                <td class="p-3 text-gray-600">Available</td>
+                                <td class="p-3 text-gray-600">Not available</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Setup effort</td>
+                                <td class="p-3 text-gray-600">A few minutes</td>
+                                <td class="p-3 text-gray-600">AWS account, IAM, model access</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    The verdict is fairly simple. For prototyping, exploring, automating your own tasks: the API key, without hesitation &mdash; it is faster and the governance overhead is not justified. As soon as there is a client, data that is not yours, or a budget to defend: Bedrock, and the move happens without rewriting a single line of the agent.
+                </p>
+            </div>
+
+            <!-- FAQ -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-circle-question text-orange-600 mr-2"></i>
+                    Frequently asked questions
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            How big does the VPS need to be?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Much smaller than people expect. Inference runs at the model provider, not on your machine: the VPS orchestrates, reads files and runs commands. Two vCPUs and 2 GB of RAM cover most agents. Size for what the agent actually does &mdash; if it compiles or runs a test suite, that workload dictates the machine.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            How do you chain several steps in the same context?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Non-interactive mode keeps sessions. Capture the session ID from the JSON output, then pass it back with <code class="text-xs bg-gray-200 px-1.5 py-0.5 rounded">--resume</code> to continue the same conversation. <code class="text-xs bg-gray-200 px-1.5 py-0.5 rounded">--continue</code> resumes the most recent one. Both commands must run from the same project directory.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            How do you monitor the cost of a continuously running agent?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            The <code class="text-xs bg-gray-200 px-1.5 py-0.5 rounded">--output-format json</code> payload contains the total cost of the run and a per-model breakdown, so you can push it into a metric on every pass. On Bedrock, consumption also lands in Cost Explorer and is governed by AWS Budgets like any other AWS resource.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Do you really need a VPS, or is a Lambda enough?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            It depends on duration. A Lambda works for an agent that answers within tens of seconds; for longer tasks an ECS Fargate container triggered by EventBridge fits better and removes the machine to maintain. The VPS stays simplest when the agent needs a persistent workspace &mdash; an already-cloned Git repository, a dependency cache.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            What happens if the pinned model is not enabled on the AWS account?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Claude Code checks at startup that the models it intends to use are accessible. If the default model is unavailable and no pin is configured, it falls back to an earlier version for the current session and shows a notice &mdash; the fallback is not persisted. Avoiding exactly that silent behavior is why you pin explicitly in production.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Is Bedrock the only AWS option?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            No. AWS also exposes an endpoint called Mantle, which serves Claude models in the native Anthropic API shape rather than the Bedrock Invoke shape, using the same AWS credentials. Enable it with <code class="text-xs bg-gray-200 px-1.5 py-0.5 rounded">CLAUDE_CODE_USE_MANTLE=1</code>; it uses its own model IDs. Its catalog is separate from Bedrock's, and the two can coexist in the same session.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Read also -->
+            <div class="mt-10 bg-gray-50 rounded-xl p-6">
+                <h3 class="font-semibold text-gray-900 mb-3">Read also</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline">Building a private WhatsApp AI assistant with Amazon Bedrock</a></li>
+                    <li><a href="agent-ia-vs-chatbot-lequel-choisir-pme.html" class="text-indigo-600 hover:underline">AI agent or chatbot: which one for your SME?</a></li>
+                    <li><a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 hover:underline">What is a FinOps audit? Complete guide for SMEs</a></li>
+                    <li><a href="eks-auto-mode-kubernetes-simple.html" class="text-indigo-600 hover:underline">EKS Auto Mode: Kubernetes made simple on AWS</a></li>
+                </ul>
+                <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">See our pricing →</a></p>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="reveal">
+                <div class="bg-indigo-600 rounded-2xl p-8 sm:p-10 mt-12 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        An AI agent to put into production?
+                    </h2>
+                    <p class="text-indigo-100 mb-8 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+                        Architecture, IAM roles, model pinning, budget control and execution hardening. I design and deploy autonomous AI agents on AWS, with the governance that goes with them.
+                    </p>
+                    <a href="../index.html#contact" class="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-200">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Let's talk about your project
+                    </a>
+                    <p class="text-indigo-200 text-sm mt-4">Reply within 24h - First conversation free and with no commitment</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        Your trusted Cloud partner for migrating, optimizing and securing your AWS and on-premise infrastructure.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Alexandre Gillon's LinkedIn profile" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">FinOps & Optimization</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">K8s containerization</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Cloud migration</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AI & Automation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">AWS infrastructure</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fab fa-whatsapp mr-2 text-slate-500"></i>
+                            <a href="https://wa.me/33631109539" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors">+33 6 31 10 95 39</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-400 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Freelance Cloud Engineer - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-400">
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Legal Notice</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Privacy Policy</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Cookie Policy</a>
+                </div>
+                <p class="text-center text-xs text-slate-400 mt-4 max-w-3xl mx-auto">
+                    * The projects and engagements mentioned were carried out as part of my roles at Ubisoft, Chateauform', Teamwork and Linkeo. I do not officially represent these companies.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
+        <p class="text-sm text-gray-600 mb-3">We use cookies to optimize your experience.</p>
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">
+                Decline
+            </button>
+            <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">
+                Accept
+            </button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // ===== Reveal on scroll =====
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal--visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+
+        // ===== Mobile menu =====
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // ===== Cookie consent =====
+        var cookieBanner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('accept-cookies');
+        var rejectBtn = document.getElementById('reject-cookies');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieBanner.style.display = 'block';
+        }
+
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieBanner.style.display = 'none';
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'analytics_storage': 'granted'
+                });
+                gtag('set', 'ads_data_redaction', false);
+            });
+        }
+
+        if (rejectBtn) {
+            rejectBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'rejected');
+                cookieBanner.style.display = 'none';
+                // Disable GTM
+                window['ga-disable-GTM-NXVN48XF'] = true;
+            });
+        }
+    });
+    </script>
+    <script src="/assets/blog-cta.js" defer></script>
+    <script src="/assets/whatsapp-button.js" defer></script>
+</body>
+</html>

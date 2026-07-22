@@ -75,6 +75,7 @@ Note: these projects were carried out as an employee or contractor. OptimyCloud 
 
 ## Blog
 
+- https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html - Running an AI agent autonomously on a VPS with claude -p: full tutorial, production limitations and the move to Amazon Bedrock (IAM role, CloudTrail, budget control, data residency)
 - https://optimycloud.com/en/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html - Automating customer information collection with a WhatsApp AI chatbot. Customer onboarding, lead qualification, document collection. A concrete guide for SMEs
 - https://optimycloud.com/en/blog/combien-coute-chatbot-ia-pme.html - How much does an AI chatbot cost for an SME in 2026? From €500 to €50,000 depending on the type. Detailed pricing, freelance vs agency comparison, concrete examples
 - https://optimycloud.com/en/blog/avez-vous-besoin-cms-site-web.html - Do you really need a CMS in 2026? The 3-layer method to choose between a CMS and a static site
