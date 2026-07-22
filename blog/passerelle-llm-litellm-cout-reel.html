@@ -421,10 +421,62 @@
                     </li>
                 </ul>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Chiffrez ces lignes chez votre fournisseur, avec vos tarifs : selon la région, le niveau de disponibilité et le degré de « managé » que vous acceptez de payer, on parle couramment de plusieurs centaines d'euros par mois avant d'avoir passé le moindre appel à un modèle. La dernière ligne est la plus sous-estimée : le temps d'ingénierie ne s'arrête pas au déploiement.
+                    Chiffrons-le pour de vrai. Voici une passerelle correctement redondée sur AWS en région Paris, aux tarifs à la demande relevés le 22 juillet 2026 dans l'API de tarification d'AWS.
                 </p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Composant</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Configuration</th>
+                                <th class="text-right p-3 font-semibold text-gray-900">USD / mois</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Calcul (Fargate)</td>
+                                <td class="p-3 text-gray-600">2 tâches, 1 vCPU + 4 Go chacune</td>
+                                <td class="p-3 text-gray-600 text-right">101,91</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 font-medium text-gray-800">PostgreSQL (RDS)</td>
+                                <td class="p-3 text-gray-600">db.t4g.small, Multi-AZ</td>
+                                <td class="p-3 text-gray-600 text-right">52,56</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Redis (ElastiCache)</td>
+                                <td class="p-3 text-gray-600">cache.t4g.micro</td>
+                                <td class="p-3 text-gray-600 text-right">21,17</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 font-medium text-gray-800">Répartiteur de charge</td>
+                                <td class="p-3 text-gray-600">ALB + 1 LCU moyenne</td>
+                                <td class="p-3 text-gray-600 text-right">25,45</td>
+                            </tr>
+                            <tr class="bg-indigo-50">
+                                <td class="p-3 font-bold text-gray-900" colspan="2">Total</td>
+                                <td class="p-3 font-bold text-gray-900 text-right">≈ 201</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Environ <strong class="text-gray-900">200 USD par mois</strong>, soit de l'ordre de 185 € au taux du moment, avant le premier appel à un modèle. Et c'est un plancher : ce total exclut le trafic sortant, le stockage et les sauvegardes de la base, la supervision, et surtout le temps d'ingénierie, qui ne s'arrête pas au déploiement.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    En version frugale &mdash; base en zone unique, et Valkey plutôt que Redis &mdash; on descend autour de 151 USD. À noter au passage, c'est typiquement le genre d'arbitrage qu'un audit de coûts fait remonter : sur la même classe d'instance, Valkey est facturé environ moitié moins cher que Redis chez ElastiCache, pour un protocole compatible.
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-5 mb-6 border border-gray-200">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        <strong class="text-gray-900">Le seuil, exprimé en tokens.</strong> À 3 USD le million en entrée et 15 USD en sortie, 200 USD de passerelle équivalent à environ <strong class="text-gray-900">11 millions de tokens par mois</strong> (à volumes d'entrée et de sortie égaux). Si votre consommation est loin sous ce seuil, votre dispositif de maîtrise des coûts coûte plus cher que le poste qu'il maîtrise.
+                    </p>
+                </div>
+
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Mettez ce montant en face de votre dépense mensuelle en modèles. Si vous consommez quelques dizaines d'euros de tokens par mois, une passerelle en haute disponibilité coûte plusieurs fois ce qu'elle est censée aider à maîtriser. Le raisonnement est exactement celui d'un <a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 underline hover:text-indigo-800">audit FinOps</a> : on ne met pas en place un dispositif de pilotage qui coûte plus cher que le poste piloté.
+                    C'est exactement le raisonnement d'un <a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 underline hover:text-indigo-800">audit FinOps</a> : on ne déploie pas un dispositif de pilotage plus cher que le poste piloté. Refaites le calcul avec vos propres tarifs, votre région et votre niveau de disponibilité &mdash; l'ordre de grandeur, lui, bouge peu.
                 </p>
 
                 <div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">

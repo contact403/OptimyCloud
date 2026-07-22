@@ -423,10 +423,62 @@
                     </li>
                 </ul>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Price those lines with your own provider and rates: depending on region, availability target and how much "managed" you're willing to pay for, this routinely lands in the hundreds of euros a month before a single model call. The last line is the most underestimated &mdash; engineering time does not stop at deployment.
+                    Let's price it for real. Here is a properly redundant gateway on AWS in the Paris region, at on-demand rates pulled from the AWS pricing API on 22 July 2026.
                 </p>
+
+                <div class="overflow-x-auto mb-6">
+                    <table class="w-full text-sm border border-gray-200 rounded-xl overflow-hidden">
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="text-left p-3 font-semibold text-gray-900">Component</th>
+                                <th class="text-left p-3 font-semibold text-gray-900">Configuration</th>
+                                <th class="text-right p-3 font-semibold text-gray-900">USD / month</th>
+                            </tr>
+                        </thead>
+                        <tbody class="divide-y divide-gray-200">
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Compute (Fargate)</td>
+                                <td class="p-3 text-gray-600">2 tasks, 1 vCPU + 4 GB each</td>
+                                <td class="p-3 text-gray-600 text-right">101.91</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 font-medium text-gray-800">PostgreSQL (RDS)</td>
+                                <td class="p-3 text-gray-600">db.t4g.small, Multi-AZ</td>
+                                <td class="p-3 text-gray-600 text-right">52.56</td>
+                            </tr>
+                            <tr>
+                                <td class="p-3 font-medium text-gray-800">Redis (ElastiCache)</td>
+                                <td class="p-3 text-gray-600">cache.t4g.micro</td>
+                                <td class="p-3 text-gray-600 text-right">21.17</td>
+                            </tr>
+                            <tr class="bg-gray-50">
+                                <td class="p-3 font-medium text-gray-800">Load balancer</td>
+                                <td class="p-3 text-gray-600">ALB + 1 average LCU</td>
+                                <td class="p-3 text-gray-600 text-right">25.45</td>
+                            </tr>
+                            <tr class="bg-indigo-50">
+                                <td class="p-3 font-bold text-gray-900" colspan="2">Total</td>
+                                <td class="p-3 font-bold text-gray-900 text-right">≈ 201</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Roughly <strong class="text-gray-900">200 USD a month</strong> before the first model call. And that is a floor: the total excludes egress traffic, database storage and backups, monitoring, and above all engineering time, which does not stop at deployment.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    A frugal variant &mdash; single-AZ database, and Valkey instead of Redis &mdash; lands around 151 USD. Worth noting in passing, because it is exactly the kind of trade-off a cost audit surfaces: on the same instance class, ElastiCache bills Valkey at roughly half the price of Redis, for a compatible protocol.
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-5 mb-6 border border-gray-200">
+                    <p class="text-sm text-gray-700 leading-relaxed">
+                        <strong class="text-gray-900">The threshold, expressed in tokens.</strong> At 3 USD per million input tokens and 15 USD per million output, a 200 USD gateway is worth about <strong class="text-gray-900">11 million tokens a month</strong> (assuming equal input and output volumes). If your consumption sits well below that, your cost-control mechanism costs more than the line item it controls.
+                    </p>
+                </div>
+
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    Now put that number next to your monthly model spend. If you burn a few tens of euros of tokens a month, a highly available gateway costs several times what it is meant to help you control. The reasoning is exactly that of a <a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 underline hover:text-indigo-800">FinOps audit</a>: you don't deploy a control mechanism that costs more than the line item it controls.
+                    This is exactly the reasoning of a <a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 underline hover:text-indigo-800">FinOps audit</a>: you don't deploy a control mechanism that costs more than the line item it controls. Redo the calculation with your own rates, region and availability target &mdash; the order of magnitude, though, barely moves.
                 </p>
 
                 <div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
