@@ -75,6 +75,7 @@ Note : ces missions ont été réalisées en tant que salarié ou prestataire. O
 
 ## Blog
 
+- https://optimycloud.com/blog/passerelle-llm-litellm-cout-reel.html - Faut-il une passerelle LLM ? Ce que LiteLLM coûte vraiment : ce qu'une passerelle apporte, l'infrastructure qu'elle impose (PostgreSQL, Redis, haute disponibilité), et le calcul du seuil de rentabilité face à la gouvernance native d'un cloud
 - https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html - Faire tourner un agent IA en autonomie sur un VPS avec claude -p : tutoriel complet, limites en production et bascule vers Amazon Bedrock (rôle IAM, CloudTrail, budget, résidence des données)
 - https://optimycloud.com/blog/automatiser-collecte-informations-clients-chatbot-whatsapp-ia.html - Automatiser la collecte d'informations clients avec un chatbot WhatsApp IA. Onboarding client, qualification de leads, collecte de documents. Guide concret pour PME
 - https://optimycloud.com/blog/combien-coute-chatbot-ia-pme.html - Combien coûte un chatbot IA pour une PME en 2026 ? De 500 à 50 000 € selon le type. Prix détaillés, comparatif freelance vs agence, exemples concrets

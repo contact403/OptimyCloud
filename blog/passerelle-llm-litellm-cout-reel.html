@@ -1,0 +1,754 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="../assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
+    <link rel="manifest" href="../assets/site.webmanifest" />
+    <title>Faut-il une passerelle LLM ? Ce que LiteLLM coûte vraiment | OptimyCloud</title>
+    <meta name="description" content="Une passerelle LLM apporte clés virtuelles, budgets par équipe et journalisation. Elle apporte aussi un Postgres, un Redis et de la haute disponibilité à exploiter. Le calcul du seuil de rentabilité.">
+    <meta name="keywords" content="LiteLLM, passerelle LLM, LLM gateway, FinOps IA, coût LLM, clés virtuelles, budget par équipe, proxy LLM, gouvernance IA, refacturation LLM, Amazon Bedrock, observabilité LLM">
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/blog/passerelle-llm-litellm-cout-reel.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/passerelle-llm-litellm-cout-reel.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/passerelle-llm-litellm-cout-reel.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/passerelle-llm-litellm-cout-reel.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Faut-il une passerelle LLM ? Ce que LiteLLM coûte vraiment">
+    <meta property="og:description" content="Tout le monde vend le côté pile : 100+ fournisseurs, un seul endpoint, suivi des coûts. Voici le côté face, et le seuil à partir duquel ça devient rentable.">
+    <meta property="og:url" content="https://optimycloud.com/blog/passerelle-llm-litellm-cout-reel.html">
+    <meta property="og:type" content="article">
+    <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-passerelle-llm.webp">
+    <meta property="article:published_time" content="2026-07-22">
+    <meta property="article:author" content="Alexandre Gillon">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Faut-il une passerelle LLM ? Ce que LiteLLM coûte vraiment">
+    <meta name="twitter:description" content="Le côté face de la passerelle LLM : Postgres, Redis, haute disponibilité, et le seuil de rentabilité que personne ne calcule.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-passerelle-llm.webp">
+
+    <!-- Fonts -->
+    <link rel="preload" href="../assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="../assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://optimycloud.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://optimycloud.com/blog/" },
+            { "@type": "ListItem", "position": 3, "name": "Faut-il une passerelle LLM ?" }
+          ]
+        },
+        {
+          "@type": "BlogPosting",
+          "headline": "Faut-il une passerelle LLM ? Ce que LiteLLM coûte vraiment",
+          "description": "Une passerelle LLM apporte clés virtuelles, budgets par équipe et journalisation. Elle apporte aussi un Postgres, un Redis et de la haute disponibilité à exploiter. Le calcul du seuil de rentabilité.",
+          "url": "https://optimycloud.com/blog/passerelle-llm-litellm-cout-reel.html",
+          "datePublished": "2026-07-22",
+          "dateModified": "2026-07-22",
+          "author": { "@id": "https://optimycloud.com/#person" },
+          "publisher": { "@id": "https://optimycloud.com/#organization" },
+          "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/passerelle-llm-litellm-cout-reel.html" },
+          "image": "https://optimycloud.com/assets/blog/hero-passerelle-llm.webp",
+          "wordCount": 2300,
+          "inLanguage": "fr",
+          "articleSection": "FinOps & IA",
+          "keywords": ["LiteLLM", "passerelle LLM", "FinOps IA", "clés virtuelles", "budget par équipe", "Amazon Bedrock", "gouvernance IA"]
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Qu'est-ce qu'une passerelle LLM ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "C'est un service qui s'intercale entre vos applications et les fournisseurs de modèles. Il expose un point d'entrée unique, garde la clé du fournisseur côté serveur, distribue des identifiants par équipe ou par service, applique budgets et limites de débit en un point unique et journalise chaque requête. LiteLLM en est l'implémentation open source la plus répandue."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelle infrastructure faut-il pour faire tourner LiteLLM en production ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Une base PostgreSQL est nécessaire dès que vous utilisez les clés virtuelles, les budgets ou les journaux de dépense. Redis 7 ou plus devient nécessaire dès la deuxième instance de la passerelle, pour partager les compteurs de limites de débit et l'état du routeur. La documentation recommande un seul worker par pod, environ un cœur et 4 Go de mémoire par worker, et une montée en charge horizontale."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "À partir de quel volume une passerelle LLM devient-elle rentable ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Le coût d'une passerelle est fixe et le poste qu'elle optimise est variable. Tant que votre dépense mensuelle en modèles reste inférieure au coût d'exploitation de la passerelle en haute disponibilité, l'opération est perdante sur le plan strictement financier. La passerelle se justifie alors par d'autres motifs : refacturation entre plusieurs équipes, conformité, indépendance vis-à-vis d'un fournisseur."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Peut-on utiliser LiteLLM sans base de données ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui pour un simple routage, non dès que vous voulez les clés virtuelles, les budgets ou les journaux de dépense, qui sont précisément ce qui justifie la passerelle. SQLite convient à une démonstration locale mais pas à la production, les décrémentations de budget entrant en concurrence sous charge simultanée."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Une passerelle LLM ajoute-t-elle de la latence ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oui, mécaniquement : c'est un saut réseau supplémentaire, plus le temps de traitement du proxy. En pratique cette latence reste négligeable devant celle de l'inférence elle-même. Le vrai risque n'est pas la latence moyenne mais la disponibilité : sans redondance, la passerelle devient un point de panne unique qui coupe l'accès aux modèles pour toutes les applications à la fois."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Quelles sont les alternatives à une passerelle LLM ?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Si vous n'avez qu'un seul fournisseur, la gouvernance native de ce fournisseur suffit souvent. Sur AWS, Amazon Bedrock apporte déjà rôles IAM, traçabilité CloudTrail, suivi de coût par tag et AWS Budgets, sans service supplémentaire à exploiter. Une passerelle devient pertinente quand vous devez couvrir plusieurs fournisseurs, ou uniformiser la gouvernance sur un parc hétérogène."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0 flex items-center">
+                        <a href="../index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                            <img src="../assets/optimycloud-logo.webp"
+                                 alt="OptimyCloud"
+                                 width="200" height="64"
+                                 fetchpriority="high"
+                                 class="h-20 w-auto"
+                                 style="mix-blend-mode: multiply;">
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="../index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Accueil</a>
+                    <a href="../index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="../offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
+                    <a href="./" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Blog</a>
+                    <a href="../index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
+                    <a href="../index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/en/blog/passerelle-llm-litellm-cout-reel.html" hreflang="en" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="English version"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">EN</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <a href="/en/blog/passerelle-llm-litellm-cout-reel.html" hreflang="en" class="mobile-lang-flag md:hidden ml-auto mr-3 inline-flex items-center" aria-label="View the English version"><img src="/assets/flags/gb.svg" alt="" width="24" height="17" style="display:inline-block;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.15)"></a>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="../index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="../index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="../offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
+                <a href="./" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Blog</a>
+                <a href="../index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
+                <a href="../index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/en/blog/passerelle-llm-litellm-cout-reel.html" hreflang="en" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">English version</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Banner -->
+    <div class="bg-gradient-to-br from-blue-600 to-blue-800 py-16 sm:py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm text-indigo-100">
+                <a href="../index.html" class="hover:text-white transition-colors">OptimyCloud</a>
+                <span class="mx-2">/</span>
+                <span>Blog</span>
+                <span class="mx-2">/</span>
+                <span class="text-white">Faut-il une passerelle LLM ?</span>
+            </nav>
+            <div class="max-w-3xl">
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                    Faut-il une passerelle LLM ? Ce que LiteLLM coûte vraiment
+                </h1>
+                <div class="flex flex-wrap items-center gap-4 text-indigo-100 text-sm">
+                    <span class="flex items-center">
+                        <i class="fas fa-calendar-alt mr-2"></i> 22 juillet 2026
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-clock mr-2"></i> 11 min de lecture
+                    </span>
+                    <span class="flex items-center">
+                        <i class="fas fa-user mr-2"></i> Alexandre Gillon
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Content -->
+    <main class="py-12 sm:py-16 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+
+            <!-- Hero Image -->
+            <img src="../assets/blog/hero-passerelle-llm.webp" alt="Câbles réseau convergeant vers un point unique, illustration d'une passerelle LLM" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
+
+            <!-- Introduction -->
+            <div class="reveal">
+                <p class="text-lg sm:text-xl text-gray-700 leading-relaxed mb-6">
+                    Les articles sur les passerelles LLM racontent tous la même moitié de l'histoire : un point d'entrée unique, plus de cent fournisseurs, des clés virtuelles, du suivi de coût. Tout est vrai. Ce qu'on lit rarement, c'est ce qu'il y a de l'autre côté &mdash; parce que le jour où vous déployez une passerelle, vous n'ajoutez pas une fonctionnalité, vous ajoutez un service critique à exploiter.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Ce n'est pas un argument contre. Sur des parcs hétérogènes, une passerelle est souvent la bonne réponse, et c'est ce que je déploie chez des clients qui ne sont pas sur AWS. C'est un argument pour poser le calcul avant, parce qu'il existe un seuil sous lequel l'opération est perdante &mdash; et ce seuil est plus haut qu'on ne l'imagine.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    Cet article prend LiteLLM comme référence, puisque c'est l'implémentation open source la plus déployée. Le raisonnement vaut pour n'importe quelle passerelle.
+                </p>
+            </div>
+
+            <!-- Section 1 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
+                    <i class="fas fa-diagram-project text-orange-600 mr-2"></i>
+                    Ce qu'une passerelle apporte réellement
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Commençons par le côté pile, honnêtement. Une passerelle s'intercale entre vos applications et les fournisseurs de modèles, et résout cinq problèmes que la plupart des équipes traitent mal.
+                </p>
+                <ul class="space-y-3 mb-6">
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">La clé du fournisseur ne circule plus.</strong> Elle reste sur la passerelle. Les applications, les agents et les développeurs reçoivent une clé virtuelle, révocable individuellement. Un départ dans l'équipe, c'est une clé désactivée, pas une rotation générale.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">La dépense est attribuée.</strong> Chaque clé virtuelle porte son budget, ses limites de débit, sa liste de modèles autorisés et ses métadonnées. Vous savez enfin quelle équipe et quel service consomment quoi.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Les plafonds sont appliqués avant l'appel</strong>, pas constatés sur la facture du mois suivant. Budget par équipe, limites en requêtes et en tokens par minute.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Tout est journalisé au même endroit</strong>, quel que soit le fournisseur en aval. C'est ce qui rend un audit possible sur un parc hétérogène.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-check-circle text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Changer de fournisseur ne touche pas les machines.</strong> C'est la propriété que les intégrations natives n'ont pas : la bascule se fait dans la configuration de la passerelle, pas dans les déploiements.</span>
+                    </li>
+                </ul>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    Côté client, l'intégration est triviale. LiteLLM expose notamment un point d'entrée <code class="text-sm bg-gray-100 px-1.5 py-0.5 rounded">/v1/messages</code> au format Anthropic, ce qui permet de router un agent existant sans rien réécrire &mdash; voir <a href="agent-ia-autonome-vps-claude-code-bedrock.html" class="text-indigo-600 underline hover:text-indigo-800">l'article sur les agents autonomes en production</a>.
+                </p>
+            </div>
+
+            <!-- Section 2 -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-screwdriver-wrench text-orange-600 mr-2"></i>
+                    Le côté face : l'inventaire de ce que vous exploitez
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Une passerelle n'est pas un binaire qu'on lance et qu'on oublie. La documentation de mise en production de LiteLLM est explicite, et c'est tout à son honneur. Voici ce qu'elle demande.
+                </p>
+
+                <div class="space-y-4 mb-8">
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-database text-indigo-600"></i>
+                            </span>
+                            Une base PostgreSQL, non négociable
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Les clés virtuelles, les budgets et les journaux de dépense vivent dans Postgres &mdash; c'est-à-dire exactement les fonctionnalités pour lesquelles vous déployez la passerelle. SQLite tient pour une démo sur un portable et pas au-delà : sous requêtes simultanées, les décrémentations de budget entrent en concurrence et vos plafonds deviennent approximatifs. Il faut aussi définir une clé de salage avant d'enregistrer le moindre modèle, faute de quoi les identifiants des fournisseurs ne sont pas chiffrés en base.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-bolt text-indigo-600"></i>
+                            </span>
+                            Un Redis dès la deuxième instance
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Et c'est le piège le plus coûteux de tous. Sans Redis partagé, <strong class="text-gray-900">chaque instance applique les limites dans son coin</strong> : deux instances, et une équipe plafonnée à 100 requêtes par minute en obtient 200. Vous croyez avoir des budgets, vous avez des budgets multipliés par votre nombre de répliques. Or la haute disponibilité impose au moins deux instances. Autrement dit, dès que la passerelle devient fiable, Redis cesse d'être optionnel.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-server text-indigo-600"></i>
+                            </span>
+                            Un worker par pod, et de la mémoire
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            La recommandation est un seul processus par pod, avec une montée en charge horizontale &mdash; plusieurs workers dans un même pod rendent la latence imprévisible et faussent l'autoscaling. Comptez de l'ordre d'un cœur et 4 Go de mémoire par worker. Ce n'est pas un sidecar : c'est un service applicatif à part entière, avec ses ressources et ses sondes.
+                        </p>
+                    </div>
+
+                    <div class="bg-white rounded-xl shadow-md p-6 border border-gray-100">
+                        <h3 class="text-lg font-bold text-gray-900 mb-2 flex items-center">
+                            <span class="w-10 h-10 bg-indigo-100 rounded-lg flex items-center justify-center mr-3">
+                                <i class="fas fa-arrows-rotate text-indigo-600"></i>
+                            </span>
+                            Des redémarrages périodiques
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            La documentation recommande de fixer un nombre maximal de requêtes avant redémarrage du processus, pour absorber les fuites mémoire sous charge soutenue. C'est un aveu honnête de la part du projet, et une contrainte d'exploitation réelle : votre passerelle doit être conçue pour être redémarrée souvent et sans coupure.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="bg-amber-50 border-l-4 border-amber-500 p-5 rounded-r-xl mb-8">
+                    <p class="text-sm text-amber-900 leading-relaxed mb-3">
+                        <strong>Le réglage qui mord en premier :</strong> le délai d'expiration des requêtes est très élevé par défaut. Laissé tel quel, une requête bloquée en amont immobilise une connexion pendant des heures. C'est le genre de valeur par défaut qui ne se voit pas en recette et qui sature la passerelle en production.
+                    </p>
+                    <p class="text-sm text-amber-900 leading-relaxed">
+                        Dans le même esprit : les écritures de dépense se font par requête tant qu'on ne les regroupe pas, et au-delà d'environ mille requêtes par seconde elles deviennent le goulot d'étranglement de toute la passerelle. Il existe un tampon de transactions pour éviter les interblocages à ce niveau de charge &mdash; ce sont des réglages à connaître avant, pas après.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 3 : le seuil -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-scale-unbalanced text-orange-600 mr-2"></i>
+                    Le calcul que personne ne pose
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Voilà le cœur du sujet, et il tient en une phrase : <strong class="text-gray-900">le coût d'une passerelle est fixe, alors que le poste qu'elle optimise est variable.</strong>
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Reprenez l'inventaire ci-dessus et traduisez-le en lignes de facture. En haute disponibilité, une passerelle, c'est au minimum :
+                </p>
+                <ul class="space-y-2 mb-6">
+                    <li class="flex items-start">
+                        <i class="fas fa-caret-right text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600">deux instances de calcul, environ un cœur et 4 Go chacune ;</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-caret-right text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600">une base PostgreSQL managée, sauvegardée ;</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-caret-right text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600">un Redis managé ;</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-caret-right text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600">un répartiteur de charge, de la supervision, des alertes ;</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-caret-right text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600">et le temps humain de maintenir tout ça à jour.</span>
+                    </li>
+                </ul>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Chiffrez ces lignes chez votre fournisseur, avec vos tarifs : selon la région, le niveau de disponibilité et le degré de « managé » que vous acceptez de payer, on parle couramment de plusieurs centaines d'euros par mois avant d'avoir passé le moindre appel à un modèle. La dernière ligne est la plus sous-estimée : le temps d'ingénierie ne s'arrête pas au déploiement.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Mettez ce montant en face de votre dépense mensuelle en modèles. Si vous consommez quelques dizaines d'euros de tokens par mois, une passerelle en haute disponibilité coûte plusieurs fois ce qu'elle est censée aider à maîtriser. Le raisonnement est exactement celui d'un <a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 underline hover:text-indigo-800">audit FinOps</a> : on ne met pas en place un dispositif de pilotage qui coûte plus cher que le poste piloté.
+                </p>
+
+                <div class="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-200">
+                    <h3 class="text-lg font-bold text-gray-900 mb-4">La règle de décision</h3>
+                    <div class="grid md:grid-cols-2 gap-4">
+                        <div class="bg-white rounded-lg p-4 border border-red-200">
+                            <h4 class="font-bold text-red-800 mb-2 text-sm"><i class="fas fa-xmark mr-2"></i>N'en mettez pas si</h4>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <li>&bull; vous n'avez qu'un seul fournisseur de modèles ;</li>
+                                <li>&bull; une seule équipe consomme, et personne ne refacture ;</li>
+                                <li>&bull; votre dépense mensuelle est du même ordre que le coût d'exploitation ;</li>
+                                <li>&bull; vous n'avez pas d'astreinte pour un service critique de plus.</li>
+                            </ul>
+                        </div>
+                        <div class="bg-white rounded-lg p-4 border border-green-200">
+                            <h4 class="font-bold text-green-800 mb-2 text-sm"><i class="fas fa-check mr-2"></i>Mettez-en une si</h4>
+                            <ul class="text-sm text-gray-600 space-y-2">
+                                <li>&bull; plusieurs équipes consomment et il faut refacturer ;</li>
+                                <li>&bull; vous êtes sur plusieurs fournisseurs ou plusieurs clouds ;</li>
+                                <li>&bull; vous devez prouver qui a appelé quoi, de façon uniforme ;</li>
+                                <li>&bull; l'indépendance vis-à-vis d'un fournisseur est un objectif assumé.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    Notez que trois des quatre bonnes raisons ne sont pas financières. C'est normal, et c'est même le point important : une passerelle est un outil d'organisation avant d'être un outil d'économie. Vendue comme un moyen de réduire la facture, elle déçoit presque toujours.
+                </p>
+            </div>
+
+            <!-- Section 4 : alternative -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-route text-orange-600 mr-2"></i>
+                    Si vous n'êtes pas au-dessus du seuil
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    La bonne nouvelle, c'est que les propriétés recherchées existent souvent déjà sans service supplémentaire, quand vous n'avez qu'un fournisseur.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-4">
+                    Sur AWS, Amazon Bedrock donne l'authentification par rôle IAM plutôt que par clé statique, la traçabilité de chaque appel dans CloudTrail, le suivi de coût par tag dans Cost Explorer et des plafonds via AWS Budgets. Ce sont quatre des cinq propriétés de la section 1, sans aucun composant à exploiter. Il manque la cinquième &mdash; changer de fournisseur sans toucher aux machines &mdash; et c'est précisément celle qu'on paye avec une passerelle.
+                </p>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Les autres fournisseurs ont leurs équivalents. Le raisonnement est le même : si un seul d'entre eux couvre votre parc, sa gouvernance native est presque toujours le meilleur rapport résultat/exploitation.
+                </p>
+                <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-r-xl mb-8">
+                    <p class="text-sm text-blue-900 leading-relaxed">
+                        <strong>Étape intermédiaire souvent suffisante :</strong> avant de déployer une passerelle pour obtenir de l'attribution de coût, essayez une clé (ou un rôle) distinct par service et par environnement, avec une convention de nommage et des tags. C'est gratuit, ça se met en place en une journée, et ça résout la question « qui consomme quoi » dans une grande partie des cas. Vous saurez ensuite si le reste justifie une passerelle.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Section 5 : checklist -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-list-check text-orange-600 mr-2"></i>
+                    Si vous y allez : les points à ne pas découvrir en production
+                </h2>
+                <p class="text-base text-gray-600 leading-relaxed mb-6">
+                    Une liste courte, tirée des réglages qui ne sont pas ceux par défaut et des erreurs qu'on voit le plus souvent.
+                </p>
+                <ul class="space-y-3 mb-8">
+                    <li class="flex items-start">
+                        <i class="fas fa-square-check text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Redis avant la deuxième instance</strong>, pas après. Sinon vos limites et vos budgets sont faux d'un facteur égal au nombre de répliques, silencieusement.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-square-check text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Abaissez le délai d'expiration des requêtes</strong> dès le premier déploiement. La valeur par défaut se compte en heures.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-square-check text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Regroupez les écritures de dépense</strong> plutôt que d'écrire à chaque requête, et bornez le nombre de connexions à la base en fonction du nombre d'instances multiplié par le nombre de workers.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-square-check text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Traitez la passerelle comme un point de panne unique</strong>, parce que c'en est un. Si elle tombe, ce n'est pas une application qui perd l'accès aux modèles, c'est toutes. Redondance, sondes, et un plan de contournement écrit.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-square-check text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Prévoyez le coût de la mise à jour.</strong> Les clients évoluent vite ; une passerelle qui ne relaie pas une nouvelle capacité casse la fonctionnalité correspondante côté application, souvent sans message d'erreur clair.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <i class="fas fa-square-check text-orange-500 mr-3 mt-1 flex-shrink-0"></i>
+                        <span class="text-gray-600"><strong class="text-gray-900">Chiffrez les identifiants en base</strong> avec une clé de salage définie <em>avant</em> d'enregistrer le premier modèle, et sauvegardez cette clé comme le secret critique qu'elle est.</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- FAQ -->
+            <div class="reveal">
+                <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6 mt-12">
+                    <i class="fas fa-circle-question text-orange-600 mr-2"></i>
+                    Questions fréquentes
+                </h2>
+                <div class="space-y-4">
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Une passerelle LLM ajoute-t-elle de la latence ?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Oui, mécaniquement : un saut réseau de plus, et le temps de traitement du proxy. En pratique c'est négligeable devant la durée de l'inférence elle-même. Le vrai risque n'est pas la latence moyenne, c'est la disponibilité : sans redondance, la passerelle coupe l'accès aux modèles pour toutes vos applications à la fois.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Peut-on faire tourner LiteLLM sans base de données ?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Pour du simple routage, oui. Dès que vous voulez les clés virtuelles, les budgets ou les journaux de dépense &mdash; c'est-à-dire les fonctions qui justifient la passerelle &mdash; PostgreSQL devient nécessaire. SQLite convient à une démo locale, pas à la production.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Passerelle ou Bedrock : faut-il choisir ?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Non, ce ne sont pas des concurrents. Bedrock sert les modèles, la passerelle gouverne les accès. Le montage courant en entreprise place la passerelle devant Bedrock, pour uniformiser la gouvernance sur un parc qui comprend aussi d'autres fournisseurs. La vraie question n'est pas « lequel » mais « ai-je besoin de la couche supplémentaire ».
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Faut-il l'héberger soi-même ou prendre une offre managée ?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Si le calcul de rentabilité est serré, une offre managée le rend souvent négatif, mais elle supprime la ligne la plus sous-estimée : votre temps. Auto-héberger n'a de sens que si vous avez déjà une plateforme Kubernetes, une astreinte et des habitudes d'exploitation. Sinon, vous ajoutez un service critique à une équipe qui n'en demandait pas.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Comment migrer sans tout casser ?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Par service, pas d'un bloc. Vous basculez une application, vous vérifiez que la journalisation et les plafonds se comportent comme prévu, puis vous passez à la suivante. Côté client, la bascule est en général une variable d'environnement de point d'entrée, donc réversible immédiatement &mdash; gardez ce chemin de retour ouvert le temps de la migration.
+                        </p>
+                    </div>
+
+                    <div class="bg-gray-50 p-6 rounded-xl">
+                        <h3 class="text-base font-bold text-gray-900 mb-2">
+                            Est-ce que ça remplace l'observabilité ?
+                        </h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">
+                            Non. Une passerelle vous donne le coût, le volume et le débit &mdash; du comptage. Elle ne vous dit pas si les réponses sont bonnes, si les prompts dérivent, ni pourquoi un agent boucle. Ce sont deux chantiers distincts, et confondre les deux est une déception classique après la mise en place.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Lire aussi -->
+            <div class="mt-10 bg-gray-50 rounded-xl p-6">
+                <h3 class="font-semibold text-gray-900 mb-3">Lire aussi</h3>
+                <ul class="space-y-2 text-sm">
+                    <li><a href="agent-ia-autonome-vps-claude-code-bedrock.html" class="text-indigo-600 hover:underline">Faire tourner un agent IA en autonomie sur un VPS (et pourquoi Bedrock en production)</a></li>
+                    <li><a href="qu-est-ce-qu-un-audit-finops-guide-pme.html" class="text-indigo-600 hover:underline">Qu'est-ce qu'un audit FinOps ? Guide complet pour PME</a></li>
+                    <li><a href="assistant-ia-whatsapp-amazon-bedrock-serverless.html" class="text-indigo-600 hover:underline">Construire un assistant IA WhatsApp privé avec Amazon Bedrock</a></li>
+                    <li><a href="eks-auto-mode-kubernetes-simple.html" class="text-indigo-600 hover:underline">EKS Auto Mode : Kubernetes simple sur AWS</a></li>
+                </ul>
+                <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">Voir nos offres →</a></p>
+            </div>
+
+            <!-- CTA Box -->
+            <div class="reveal">
+                <div class="bg-indigo-600 rounded-2xl p-8 sm:p-10 mt-12 text-center">
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mb-4">
+                        Passerelle LLM : utile chez vous, ou pas ?
+                    </h2>
+                    <p class="text-indigo-100 mb-8 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
+                        Je pose le calcul avec vous : dépense actuelle, nombre d'équipes et de fournisseurs, contraintes de conformité. Puis on déploie la passerelle, ou on utilise la gouvernance native de votre cloud &mdash; selon ce que dit le chiffre.
+                    </p>
+                    <a href="../index.html#contact" class="inline-flex items-center bg-white text-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-200">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Discutons de votre projet
+                    </a>
+                    <p class="text-indigo-200 text-sm mt-4">Réponse sous 24h - Premier échange gratuit et sans engagement</p>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-4 gap-10">
+                <div class="col-span-2">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed">
+                        Votre partenaire Cloud de confiance pour la migration, l'optimisation et la sécurisation de vos infrastructures AWS et on-premise.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" aria-label="Profil LinkedIn d'Alexandre Gillon" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">FinOps & Optimisation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Containerisation K8s</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Migration Cloud</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">IA & Automatisation</a></li>
+                        <li><a href="../index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Infrastructure AWS</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fab fa-whatsapp mr-2 text-slate-500"></i>
+                            <a href="https://wa.me/33631109539" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors">+33 6 31 10 95 39</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-400 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Ingénieur Cloud Freelance - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-400">
+                    <a href="../mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Légales</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
+                    <span class="text-slate-600">&middot;</span>
+                    <a href="../politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                </div>
+                <p class="text-center text-xs text-slate-400 mt-4 max-w-3xl mx-auto">
+                    * Les projets et réalisations mentionnés ont été menés dans le cadre de mes fonctions chez Ubisoft, Chateauform', Teamwork et Linkeo. Je ne représente pas officiellement ces entreprises.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cookie Consent Banner -->
+    <div id="cookie-banner" class="fixed bottom-4 left-4 right-4 sm:left-auto sm:right-4 sm:max-w-sm bg-white border border-gray-200 rounded-xl shadow-lg p-4 z-50" style="display: none;">
+        <p class="text-sm text-gray-600 mb-3">Nous utilisons des cookies pour optimiser votre expérience.</p>
+        <div class="flex gap-2">
+            <button id="reject-cookies" class="flex-1 px-3 py-2 border border-gray-200 text-gray-600 rounded-lg text-sm hover:bg-gray-50 transition-colors">
+                Refuser
+            </button>
+            <button id="accept-cookies" class="flex-1 px-3 py-2 bg-indigo-600 text-white rounded-lg text-sm font-medium hover:bg-indigo-500 transition-colors">
+                Accepter
+            </button>
+        </div>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+
+        // ===== Reveal on scroll =====
+        var revealElements = document.querySelectorAll('.reveal');
+        var revealObserver = new IntersectionObserver(function(entries) {
+            entries.forEach(function(entry) {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('reveal--visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        revealElements.forEach(function(el) {
+            revealObserver.observe(el);
+        });
+
+        // ===== Mobile menu =====
+        var mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        var mobileMenu = document.getElementById('mobile-menu');
+
+        if (mobileMenuBtn && mobileMenu) {
+            mobileMenuBtn.addEventListener('click', function() {
+                mobileMenu.classList.toggle('hidden');
+            });
+        }
+
+        // ===== Cookie consent =====
+        var cookieBanner = document.getElementById('cookie-banner');
+        var acceptBtn = document.getElementById('accept-cookies');
+        var rejectBtn = document.getElementById('reject-cookies');
+
+        if (!localStorage.getItem('cookieConsent')) {
+            cookieBanner.style.display = 'block';
+        }
+
+        if (acceptBtn) {
+            acceptBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'accepted');
+                cookieBanner.style.display = 'none';
+                gtag('consent', 'update', {
+                    'ad_storage': 'granted',
+                    'ad_user_data': 'granted',
+                    'ad_personalization': 'granted',
+                    'analytics_storage': 'granted'
+                });
+                gtag('set', 'ads_data_redaction', false);
+            });
+        }
+
+        if (rejectBtn) {
+            rejectBtn.addEventListener('click', function() {
+                localStorage.setItem('cookieConsent', 'rejected');
+                cookieBanner.style.display = 'none';
+                // Disable GTM
+                window['ga-disable-GTM-NXVN48XF'] = true;
+            });
+        }
+    });
+    </script>
+    <script src="../assets/blog-cta.js" defer></script>
+    <script src="../assets/whatsapp-button.js" defer></script>
+</body>
+</html>
