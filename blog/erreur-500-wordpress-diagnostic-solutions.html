@@ -266,7 +266,7 @@
                     Écran blanc. Aucun message. Le back-office ne répond plus. Le client appelle en panique parce que son site "ne marche plus". C'est le quotidien de l'<strong>erreur 500 sur WordPress</strong>, et c'est probablement ce qui vous amène ici.
                 </p>
                 <p class="text-lg text-gray-600 leading-relaxed mb-8">
-                    La bonne nouvelle : ce n'est presque jamais grave. La mauvaise : WordPress ne vous dit rien d'utile. Il faut aller chercher l'information vous-même. Cet article vous montre exactement ou regarder, base sur un cas réel qu'on a traite sur un hébergement OVH mutualisé avec Elementor.
+                    La bonne nouvelle : ce n'est presque jamais grave. La mauvaise : WordPress ne vous dit rien d'utile. Il faut aller chercher l'information vous-même. Cet article vous montre exactement où regarder, basé sur un cas réel qu'on a traité sur un hébergement OVH mutualisé avec Elementor.
                 </p>
 
                 <div class="bg-orange-50 border-l-4 border-orange-500 p-5 rounded-lg mb-10">
@@ -286,10 +286,10 @@
                     Ce que l'erreur 500 vous dit (et ce qu'elle cache)
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    L'erreur 500 signifie "Internal Server Error". En clair : <strong>PHP a crashe</strong> et le serveur n'a pas su quoi répondre. C'est un message générique qui ne donne aucun indice sur la cause réelle.
+                    L'erreur 500 signifie "Internal Server Error". En clair : <strong>PHP a crashé</strong> et le serveur n'a pas su quoi répondre. C'est un message générique qui ne donne aucun indice sur la cause réelle.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    WordPress est particulièrement concerné parce qu'il empile des couches : le coeur WordPress, le theme, les plugins, le page builder. Chaque couche consomme de la mémoire et du temps serveur. Quand la limite est atteinte, tout s'arrête.
+                    WordPress est particulièrement concerné parce qu'il empile des couches : le coeur WordPress, le thème, les plugins, le page builder. Chaque couche consomme de la mémoire et du temps serveur. Quand la limite est atteinte, tout s'arrête.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -366,7 +366,7 @@
                         <div class="text-green-400">define( 'WP_DEBUG_LOG', true );</div>
                         <div class="text-green-400">define( 'WP_DEBUG_DISPLAY', false );</div>
                     </div>
-                    <p class="text-xs text-gray-500 mt-3"><strong>WP_DEBUG_DISPLAY a false</strong> : les erreurs sont enregistrées dans un fichier, pas affichées aux visiteurs. Votre site reste propre.</p>
+                    <p class="text-xs text-gray-500 mt-3"><strong>WP_DEBUG_DISPLAY à false</strong> : les erreurs sont enregistrées dans un fichier, pas affichées aux visiteurs. Votre site reste propre.</p>
                 </div>
 
                 <!-- Etape 2 -->
@@ -376,7 +376,7 @@
                         Lire le fichier debug.log
                     </h3>
                     <p class="text-sm text-gray-600 mb-4">
-                        Reproduisez l'erreur (rechargez la page, sauvegardez dans Elementor, etc.). Puis téléchargéz le fichier <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/debug.log</code> via FTP. Cherchez les lignes qui contiennent <strong>Fatal error</strong>.
+                        Reproduisez l'erreur (rechargez la page, sauvegardez dans Elementor, etc.). Puis téléchargez le fichier <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/debug.log</code> via FTP. Cherchez les lignes qui contiennent <strong>Fatal error</strong>.
                     </p>
                     <div class="bg-gray-900 rounded-xl p-5 text-sm font-mono overflow-x-auto mb-3">
                         <div class="text-gray-400 mb-2"># Exemple typique : dépassement mémoire</div>
@@ -420,7 +420,7 @@
                     Les 5 causes réelles, classées par fréquence
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    Après des dizaines d'interventions sur des sites WordPress en production, voici les causes qu'on retrouve dans l'ordre. La première représente a elle seule <strong>plus de la moitié des cas</strong>.
+                    Après des dizaines d'interventions sur des sites WordPress en production, voici les causes qu'on retrouve dans l'ordre. La première représente à elle seule <strong>plus de la moitié des cas</strong>.
                 </p>
 
                 <!-- Cause 1 -->
@@ -483,7 +483,7 @@
                         <span class="text-yellow-600 mr-2">#3</span> Conflit de plugins
                     </h3>
                     <p class="text-base text-gray-600 leading-relaxed mb-4">
-                        Plus il y a de plugins actifs, plus le risque de conflit augmenté. Sur le dernier site qu'on a audite, il y avait <strong>3 plugins de consentement cookies actifs en même temps</strong>. Chacun chargeait son propre code JavaScript et PHP. Résultat : conflit, crash, erreur 500.
+                        Plus il y a de plugins actifs, plus le risque de conflit augmente. Sur le dernier site qu'on a audité, il y avait <strong>3 plugins de consentement cookies actifs en même temps</strong>. Chacun chargeait son propre code JavaScript et PHP. Résultat : conflit, crash, erreur 500.
                     </p>
                     <p class="text-base text-gray-600 leading-relaxed mb-4">
                         Les cas les plus fréquents :
@@ -539,14 +539,14 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-briefcase text-gray-800 mr-2"></i>
-                    Cas réel : erreur 500 Elementor sur OVH mutualise
+                    Cas réel : erreur 500 Elementor sur OVH mutualisé
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
                     Site vitrine WordPress avec Elementor Pro. Hébergement OVH mutualisé. <strong>30 plugins actifs</strong>. L'erreur 500 apparaissait uniquement lors de la modification d'images dans Elementor. Le front-end fonctionnait parfaitement.
                 </p>
 
                 <div class="bg-gray-50 p-6 rounded-xl border border-gray-100 mb-6">
-                    <h3 class="font-bold text-gray-900 mb-4">Ce qu'on a trouve en activant WP_DEBUG_LOG :</h3>
+                    <h3 class="font-bold text-gray-900 mb-4">Ce qu'on a trouvé en activant WP_DEBUG_LOG :</h3>
                     <div class="bg-gray-900 rounded-xl p-5 text-sm font-mono overflow-x-auto mb-4">
                         <div class="text-red-400">Allowed memory size of 536870912 bytes exhausted</div>
                     </div>
@@ -587,7 +587,7 @@
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
                     <i class="fas fa-clipboard-check text-green-600 mr-2"></i>
-                    Les réflexes a prendre maintenant
+                    Les réflexes à prendre maintenant
                 </h2>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
                     Même si votre site ne plante pas encore, ces points permettent d'éviter la plupart des erreurs 500 avant qu'elles n'arrivent :
@@ -602,11 +602,11 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span><strong>memory_limit</strong> a 256M minimum</span>
+                                <span><strong>memory_limit</strong> à 256M minimum</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span><strong>max_input_vars</strong> a 5000 (Elementor/Divi)</span>
+                                <span><strong>max_input_vars</strong> à 5000 (Elementor/Divi)</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
@@ -622,7 +622,7 @@
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span><strong>Mises à jour</strong> régulières (WP, plugins, theme)</span>
+                                <span><strong>Mises à jour</strong> régulières (WP, plugins, thème)</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
@@ -672,7 +672,7 @@
                 <h3 class="font-semibold text-gray-900 mb-3">Lire aussi</h3>
                 <ul class="space-y-2 text-sm">
                     <li><a href="avez-vous-besoin-cms-site-web.html" class="text-indigo-600 hover:underline">Avez-vous vraiment besoin d'un CMS en 2026 ?</a></li>
-                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline">Integrer l'IA generative dans votre PME : guide pratique</a></li>
+                    <li><a href="integrer-ia-generative-pme-guide-pratique.html" class="text-indigo-600 hover:underline">Intégrer l'IA générative dans votre PME : guide pratique</a></li>
                     <li><a href="automatiser-relation-client-whatsapp-ia.html" class="text-indigo-600 hover:underline">Automatiser la relation client avec WhatsApp et l'IA</a></li>
                 </ul>
                 <p class="mt-3"><a href="../offres.html" class="text-indigo-600 font-medium hover:underline">Voir nos offres →</a></p>
