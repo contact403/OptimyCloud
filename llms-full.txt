@@ -391,6 +391,53 @@ Posez-vous ces cinq questions. Elles suffisent à cadrer 80 % de votre budget.
 
 ---
 
+## Article : Étude de cas GEO : comment Gemini en est venu à citer OptimyCloud
+
+Auteur : Alexandre Gillon | Date : 18 octobre 2026 | Temps de lecture : 8 min
+URL : https://optimycloud.com/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html
+
+### Le résultat
+
+En octobre 2026, un ingénieur cloud travaillant sur un projet GEO a demandé à Gemini de lui citer dix entreprises spécialisées dans le GEO. OptimyCloud est arrivé en quatrième position. Il a ensuite contacté Alexandre Gillon sur LinkedIn.
+
+### Point de départ
+
+Site statique en HTML, sans CMS, créé en août 2025. De septembre 2025 à février 2026 : entre 68 et 212 impressions Google par mois, entre 1 et 4 clics.
+
+### Chronologie (historique Git du site)
+
+- Août 2025 : création du site (HTML statique, sans CMS).
+- 27 février 2026 : services IA, section Réalisations, blog et premier llms.txt.
+- 12 mars 2026 : corrections d'audit SEO sur tout le site, @graph Schema.org en JSON-LD (entités Organization, Person et Service reliées).
+- 15 mars 2026 : publication du guide llms.txt, llms-full.txt, robots.txt autorisant explicitement GPTBot, ChatGPT-User, ClaudeBot, PerplexityBot, Google-Extended et Applebot-Extended.
+- 21 mars 2026 : marqueurs E-E-A-T (auteur, qualifications) et maillage interne sur tous les articles.
+- Février à avril 2026 : une douzaine d'articles pratiques, puis deux autres en juillet 2026.
+- 8 juin 2026 : version anglaise complète du site (/en/).
+- 18 octobre 2026 : OAI-SearchBot autorisé, page d'offre Audit GEO, guide llms.txt mis à jour.
+
+### Résultats (Google Search Console, sc-domain:optimycloud.com)
+
+Impressions (clics) par mois : sept. 2025 126 (1) ; oct. 2025 68 (1) ; nov. 2025 77 (1) ; déc. 2025 109 (1) ; janv. 2026 187 (4) ; févr. 2026 212 (2) ; mars 2026 719 (10) ; avr. 2026 2 196 (17) ; mai 2026 2 509 (12) ; juin 2026 9 083 (16) ; juil. 2026 13 751 (13) ; août 2026 14 728 (25) ; sept. 2026 8 800 (13) ; oct. 2026 (1er au 17) 3 249 (8).
+
+Total sur 14 mois : 124 clics, 55 814 impressions, position moyenne 18,3. Le guide llms.txt est la première page du site, avec environ 24 000 impressions en cumulant les versions française et anglaise.
+
+### Citations contre clics
+
+Sur environ 900 requêtes distinctes, 162 sont manifestement générées par des assistants IA qui interrogent Google pour le compte de leurs utilisateurs (environ 2 700 impressions). 66 portent sur le GEO ou llms.txt, souvent en position 1 à 6, en anglais, français, allemand et espagnol. Exemples : "agency that can add llms.txt and ai.txt for ai search visibility" (position moyenne 2,3) ; "best service for llms.txt setup and ai search optimization" (position 6,5, 118 impressions). Ces requêtes ont généré zéro clic : l'assistant lit les résultats et répond à la place de l'utilisateur.
+
+### Limites
+
+- Petit site, trafic absolu modeste.
+- Baisse des impressions en septembre et octobre 2026 : la page llms.txt française est passée d'une position d'environ 17 à environ 22 (sujet plus concurrentiel, contenu vieillissant), d'où la mise à jour d'octobre.
+- GA4 sous Consent Mode strict ne voit qu'une fraction des visiteurs : l'attribution des leads à l'IA n'est pas mesurable pour l'instant.
+- Corrélation n'est pas causalité : la version anglaise de juin a clairement contribué au bond des impressions.
+
+### Ce qu'il faut retenir
+
+La valeur de la recherche IA se mesure en citations et en conversations entrantes, pas en clics. Les leviers : données de première main, entités claires (Schema.org @graph), accès des robots IA (robots.txt, llms.txt), contenu dense en faits.
+
+---
+
 ## FAQ - Audit SEO
 
 Q : Qu'est-ce qu'un audit SEO et pourquoi en faire un ?

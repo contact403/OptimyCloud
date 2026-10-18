@@ -109,17 +109,32 @@
     <!-- Blog index -->
     <url>
         <loc>https://optimycloud.com/blog/</loc>
-        <lastmod>2026-04-07</lastmod>
+        <lastmod>2026-10-18</lastmod>
         <xhtml:link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/"/>
     </url>
     <url>
         <loc>https://optimycloud.com/en/blog/</loc>
-        <lastmod>2026-04-07</lastmod>
+        <lastmod>2026-10-18</lastmod>
         <xhtml:link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/"/>
         <xhtml:link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/"/>
+    </url>
+    <!-- Blog: étude de cas GEO / Gemini -->
+    <url>
+        <loc>https://optimycloud.com/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html</loc>
+        <lastmod>2026-10-18</lastmod>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html"/>
+    </url>
+    <url>
+        <loc>https://optimycloud.com/en/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html</loc>
+        <lastmod>2026-10-18</lastmod>
+        <xhtml:link rel="alternate" hreflang="fr" href="https://optimycloud.com/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://optimycloud.com/en/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html"/>
+        <xhtml:link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/etude-de-cas-geo-optimycloud-cite-par-gemini.html"/>
     </url>
     <!-- Blog: passerelle LLM / LiteLLM -->
     <url>
