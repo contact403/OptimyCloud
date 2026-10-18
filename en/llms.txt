@@ -51,6 +51,8 @@ Dedicated page: https://optimycloud.com/en/offres.html
 
 - **SEO Audit**: Complete technical audit (Core Web Vitals, indexing, content, internal linking). A concrete action plan to improve your Google ranking. Dedicated page: https://optimycloud.com/en/audit-seo.html
 
+- **GEO audit / AI search visibility**: Visibility audit for AI answer engines (ChatGPT, Gemini, Perplexity, Google AI Overviews). AI crawler access in robots.txt (GPTBot, OAI-SearchBot, Google-Extended, PerplexityBot, ClaudeBot), llms.txt and llms-full.txt, Schema.org @graph and connected entities, content citability, technical SEO baseline, brand mentions. Prioritized report and implementation plan, optional implementation. Custom quote, free 30-minute diagnostic. Dedicated page: https://optimycloud.com/en/audit-geo.html
+
 - **Website creation**: Professional showcase site, fast, responsive and SEO-optimized. Delivered in 48h. From €500. Dedicated page: https://optimycloud.com/en/creation-site-web.html
 
 ## Certifications

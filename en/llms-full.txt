@@ -32,6 +32,9 @@ Security audit of your Cloud infrastructures and applications. Penetration testi
 ### SEO & Search Audit
 Complete technical audit of your site: performance, Core Web Vitals, schema markup, content, indexing. Tailor-made SEO strategy to improve your visibility on Google.
 
+### GEO Audit / AI Search Visibility
+Get cited by ChatGPT, Gemini, Perplexity and Google AI Overviews: AI crawler access, llms.txt, Schema.org, citable content. Prioritized report and implementation plan. Dedicated page: https://optimycloud.com/en/audit-geo.html
+
 ### WordPress Troubleshooting
 500 error, 400 error, white screen, crash after an Elementor update? Diagnosis, correction and detailed report. Intervention within 24h. From €250.
 
@@ -83,6 +86,7 @@ Included:
 - AWS Cloud Infrastructure: migration, Kubernetes (EKS), CI/CD, Infrastructure as Code. On quote.
 - WordPress Troubleshooting: 500 error, 400 error, white screen, crash after an Elementor update. Diagnosis, correction and detailed report. Intervention within 24h. From €250.
 - SEO & Search Audit: technical audit, Core Web Vitals, schema markup, content, indexing. SEO strategy to be visible on Google. On quote.
+- GEO audit / AI search visibility: AI crawler access, llms.txt, Schema.org, content citability for ChatGPT, Gemini, Perplexity and Google AI Overviews. On quote, free 30-minute diagnostic.
 
 ### Why work with OptimyCloud
 
@@ -144,6 +148,43 @@ Price: on quote. Adapted to the size and complexity of your site.
 - Technical errors (404, 500, redirects): broken links, redirect chains, server errors.
 - No structured data: without schema markup, Google can't display rich snippets.
 - Site not mobile-friendly: Google uses mobile-first indexing.
+
+---
+
+## GEO Audit / AI Search Visibility
+
+Dedicated page: https://optimycloud.com/en/audit-geo.html
+
+### GEO audit: get your site cited by ChatGPT, Gemini, Perplexity and Google AI Overviews
+
+Your prospects now ask their questions to an AI. If those engines' crawlers can't read your site, or your content isn't written to be quoted, a competitor gets cited instead of you. A GEO (Generative Engine Optimization) audit finds what's in the way and gives you a prioritized action plan.
+
+### What is GEO?
+
+GEO is the set of optimizations that let a website be read, understood and cited by AI answer engines: ChatGPT Search, Gemini, Perplexity, Claude, Copilot and Google's AI Overviews. Classic SEO aims for a position in a list of links. GEO aims for a mention, with a link, inside the generated answer. The two go together: the GEO audit includes a technical SEO baseline check and can be combined with the complete SEO audit.
+
+### What the GEO audit covers
+
+- AI crawler access: robots.txt directives for GPTBot, OAI-SearchBot, ChatGPT-User, Google-Extended, PerplexityBot, ClaudeBot, Applebot-Extended. Blocking by the CDN or firewall, content that only renders with JavaScript.
+- llms.txt and llms-full.txt: presence, structure and content of these Markdown summaries of your business, offers and key pages.
+- Schema.org and entities: a JSON-LD @graph connecting Organization, Person, Service and WebPage through their @id. E-E-A-T signals: named author, certifications, sameAs links.
+- Content citability: passage-level analysis (direct answers, definitions, sourced figures, FAQs, tables).
+- Technical SEO baseline: indexing, XML sitemap, canonicals, hreflang, Core Web Vitals. Google's AI Overviews draw on the Google Search index.
+- Brand mentions and entity signals: consistency of name, business description and contact details on third-party sites; real questions tested in ChatGPT, Gemini and Perplexity.
+
+### How it works
+
+1. Free diagnostic: a 30-minute video call to identify what's blocking first.
+2. Prioritized report: each issue ranked by impact and effort, with the fix to apply.
+3. Implementation plan: the fixes in order, with ready-to-use snippets (robots.txt, llms.txt, JSON-LD). Implementation by OptimyCloud as an option.
+
+Price: custom quote. Free 30-minute diagnostic.
+
+### Why OptimyCloud
+
+- In Google Search Console, optimycloud.com ranks among the top results for GEO queries phrased by AI assistants.
+- Asked about GEO specialists, Gemini lists OptimyCloud among the companies in the field.
+- AWS Solutions Architect certified; builds AI agents and LLM integrations.
 
 ---
 
@@ -367,6 +408,25 @@ A: After an SEO audit, you receive a detailed report with the identified issues,
 
 Q: Does the SEO audit include fixing the problems?
 A: The SEO audit includes the analysis, the report and the detailed action plan. Fixing the problems can be done by your teams following the report, or entrusted to OptimyCloud as part of a separate engagement. Each recommendation is documented with the technical instructions for implementation.
+
+---
+
+## FAQ - GEO Audit
+
+Q: What's the difference between GEO and SEO?
+A: SEO optimizes your position in Google's classic results. GEO optimizes your chances of being picked up and cited in answers generated by ChatGPT, Gemini, Perplexity or AI Overviews. The foundations are shared (indexing, performance, structured data), but GEO adds AI crawler access, llms.txt files, entity consistency and writing designed to be cited passage by passage.
+
+Q: Does an llms.txt file actually matter?
+A: llms.txt is a convention proposed in 2024, not an official standard: Google has said it doesn't use it for Search or AI Overviews. Some AI tools and agents that browse a site directly do read it. It's cheap to set up. In the audit it's one item among others, never the priority if AI crawlers are blocked or the site is poorly indexed.
+
+Q: How long does a GEO audit take?
+A: It depends on the number of pages and the scope (GEO only, or combined with a complete SEO audit). The timeline is set in the quote, after the free diagnostic. The effect on AI citations isn't instant: engines have to recrawl the updated pages.
+
+Q: What access do you need?
+A: The site URL is enough for much of the audit. Read access to Google Search Console (and Bing Webmaster Tools) lets me check indexing and real queries; Google Analytics helps measure traffic from AI assistants. CMS or code repository access is only needed for implementation.
+
+Q: Can you implement the recommendations?
+A: Yes, as an option: robots.txt, llms.txt and llms-full.txt, JSON-LD, rewriting key passages, technical SEO fixes. That scope is quoted separately.
 
 ---
 

@@ -58,8 +58,8 @@
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
-    <title>Erreur 500 WordPress : diagnostic complet | OptimyCloud</title>
-    <meta name="description" content="Erreur 500 WordPress : méthode de diagnostic après 50+ interventions. Causes réelles, debug.log, solutions concrètes étape par étape.">
+    <title>Erreur 500 WordPress : causes et solutions | OptimyCloud</title>
+    <meta name="description" content="Erreur 500 WordPress ? Activez debug.log, repérez la « Fatal error » et corrigez la cause : mémoire PHP, .htaccess, plugin ou thème. Méthode issue du terrain.">
     <meta name="keywords" content="erreur 500 WordPress, internal server error WordPress, WordPress ecran blanc, debug WordPress, WP_DEBUG, erreur 500 Elementor, erreur 500 OVH, WordPress plante, dépannage WordPress">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
@@ -70,8 +70,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Erreur 500 WordPress : diagnostic complet">
-    <meta property="og:description" content="L'erreur 500 WordPress cache toujours une cause précise. Méthode de diagnostic et causes réelles après 50+ interventions.">
+    <meta property="og:title" content="Erreur 500 WordPress : causes et solutions">
+    <meta property="og:description" content="Erreur 500 WordPress : la méthode en 3 étapes pour trouver la cause (mémoire PHP, .htaccess, plugins, thème, version PHP) et la corriger, issue de 50+ interventions.">
     <meta property="og:url" content="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-erreur-500.webp">
@@ -80,8 +80,8 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Erreur 500 WordPress : diagnostic complet">
-    <meta name="twitter:description" content="L'erreur 500 WordPress cache toujours une cause précise. Méthode de diagnostic après 50+ interventions.">
+    <meta name="twitter:title" content="Erreur 500 WordPress : causes et solutions">
+    <meta name="twitter:description" content="Erreur 500 WordPress : la méthode en 3 étapes pour trouver la cause (mémoire PHP, .htaccess, plugins, thème, version PHP) et la corriger, issue de 50+ interventions.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-erreur-500.webp">
 
     <!-- Fonts -->
@@ -109,7 +109,7 @@
           "description": "L'erreur 500 WordPress cache toujours une cause précise. Retour d'expérience après 50+ interventions : mémoire PHP, .htaccess, plugins. Méthode de diagnostic.",
           "url": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html",
           "datePublished": "2026-03-21",
-          "dateModified": "2026-03-21",
+          "dateModified": "2026-10-18",
           "author": { "@id": "https://optimycloud.com/#person" },
           "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html" },
@@ -260,6 +260,13 @@
             <!-- Hero Image -->
             <img src="../assets/blog/hero-erreur-500.webp" alt="Diagnostic erreur 500 WordPress" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
 
+            <!-- Réponse directe -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg mb-10">
+                <h2 class="font-semibold text-gray-900 mb-2">Erreur 500 WordPress : la réponse courte</h2>
+                <p class="text-gray-600 text-sm mb-3">Une erreur 500 WordPress (« Internal Server Error ») signifie que <strong>PHP a crashé</strong> avant de générer la page. Pour trouver la cause, activez <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">WP_DEBUG_LOG</code> dans <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-config.php</code>, reproduisez l'erreur, puis cherchez la ligne <strong>Fatal error</strong> dans <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/debug.log</code>.</p>
+                <p class="text-gray-600 text-sm">Dans plus de la moitié des cas, c'est la <strong>mémoire PHP</strong> (128 Mo par défaut) qui est dépassée. Viennent ensuite un <strong>.htaccess</strong> corrompu, un <strong>conflit de plugins</strong>, un <strong>thème</strong> incompatible et une <strong>version de PHP</strong> obsolète. Sur nos interventions, la cause est identifiée en moins de 5 minutes dans 9 cas sur 10.</p>
+            </div>
+
             <!-- Introduction -->
             <div class="reveal">
                 <p class="text-lg text-gray-600 leading-relaxed mb-6">
@@ -289,7 +296,7 @@
                     L'erreur 500 signifie "Internal Server Error". En clair : <strong>PHP a crashé</strong> et le serveur n'a pas su quoi répondre. C'est un message générique qui ne donne aucun indice sur la cause réelle.
                 </p>
                 <p class="text-base text-gray-600 leading-relaxed mb-6">
-                    WordPress est particulièrement concerné parce qu'il empile des couches : le coeur WordPress, le thème, les plugins, le page builder. Chaque couche consomme de la mémoire et du temps serveur. Quand la limite est atteinte, tout s'arrête.
+                    WordPress est particulièrement concerné parce qu'il empile des couches : le cœur WordPress, le thème, les plugins, le page builder. Chaque couche consomme de la mémoire et du temps serveur. Quand la limite est atteinte, tout s'arrête.
                 </p>
 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -409,7 +416,7 @@
                         <div class="text-gray-300">&lt;/IfModule&gt;</div>
                         <div class="text-green-400"># END WordPress</div>
                     </div>
-                    <p class="text-xs text-gray-500"><strong>Toute ligne en dehors de ce bloc</strong> a été ajoutée par un plugin (cache, SEO, sécurité) ou manuellement. C'est la qu'il faut chercher.</p>
+                    <p class="text-xs text-gray-500"><strong>Toute ligne en dehors de ce bloc</strong> a été ajoutée par un plugin (cache, SEO, sécurité) ou manuellement. C'est là qu'il faut chercher.</p>
                 </div>
             </div>
 
@@ -556,7 +563,7 @@
                     <ul class="space-y-3 text-sm text-gray-600">
                         <li class="flex items-start">
                             <i class="fas fa-magnifying-glass text-indigo-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                            <span><strong>58% des données Elementor</strong> étaient du bloat laisse par des plugins désactivés (Happy Addons, Elementor Addon Elements)</span>
+                            <span><strong>58% des données Elementor</strong> étaient du bloat laissé par des plugins désactivés (Happy Addons, Elementor Addon Elements)</span>
                         </li>
                         <li class="flex items-start">
                             <i class="fas fa-magnifying-glass text-indigo-500 mr-2 mt-0.5 flex-shrink-0"></i>
@@ -598,7 +605,7 @@
                         <ul class="space-y-3 text-sm text-gray-600">
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
-                                <span><strong>WP_DEBUG_LOG</strong> active en permanence</span>
+                                <span><strong>WP_DEBUG_LOG</strong> activé en permanence</span>
                             </li>
                             <li class="flex items-start">
                                 <i class="fas fa-check-circle text-green-500 mr-2 mt-0.5 flex-shrink-0"></i>
@@ -663,6 +670,14 @@
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">L'écran blanc WordPress et l'erreur 500, c'est la même chose ?</h3>
                         <p class="text-sm text-gray-600">Oui. Le White Screen of Death (WSOD) est la manifestation WordPress de l'erreur 500. PHP crashe avant de générer la page HTML, donc le navigateur reçoit une réponse vide. Le diagnostic et les causes sont identiques dans les deux cas.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">Comment corriger une erreur 500 WordPress quand le back-office est inaccessible ?</h3>
+                        <p class="text-sm text-gray-600">Tout se fait via FTP ou le gestionnaire de fichiers de l'hébergeur. Activez WP_DEBUG_LOG dans wp-config.php, lisez wp-content/debug.log, puis comparez le .htaccess avec la version par défaut de WordPress. Pour tester le thème, renommez le dossier du thème actif dans wp-content/themes/ : WordPress bascule alors sur un thème par défaut.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">Augmenter la mémoire PHP suffit-il à régler l'erreur 500 ?</h3>
+                        <p class="text-sm text-gray-600">Pas toujours. Passer memory_limit à 256 Mo minimum est la première correction à appliquer, puisque la mémoire est la cause numéro 1. Dans notre cas client, le site plantait encore avec 512 Mo : la vraie cause était un empilement de plugins inutiles et de données Elementor mortes. Il faut auditer et nettoyer, puis ajuster la mémoire.</p>
                     </div>
                 </div>
             </div>

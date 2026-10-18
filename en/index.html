@@ -123,7 +123,7 @@
             "https://www.google.com/maps/place/OptimyCloud/@48.9524925,2.3129924,17z/data=!4m6!3m5!1s0x47e669073cebab91:0x214962cb3ff36235!8m2!3d48.952489!4d2.3155673!16s%2Fg%2F11z4mvpc3w"
           ],
           "hasMap": "https://www.google.com/maps/place/OptimyCloud/@48.9524925,2.3129924,17z/data=!4m6!3m5!1s0x47e669073cebab91:0x214962cb3ff36235!8m2!3d48.952489!4d2.3155673!16s%2Fg%2F11z4mvpc3w",
-          "serviceType": ["AI automation", "Generative AI", "AI chatbot development", "AI agents", "Process automation", "LLM integration", "AWS cloud migration", "FinOps consulting", "Kubernetes management", "Infrastructure as Code", "Cloud security audit", "SEO audit", "Application and platform integration", "Identity and access management", "Single sign-on", "Web design", "WordPress troubleshooting"],
+          "serviceType": ["AI automation", "Generative AI", "AI chatbot development", "AI agents", "Process automation", "LLM integration", "AWS cloud migration", "FinOps consulting", "Kubernetes management", "Infrastructure as Code", "Cloud security audit", "SEO audit", "GEO audit / AI search visibility", "Application and platform integration", "Identity and access management", "Single sign-on", "Web design", "WordPress troubleshooting"],
           "priceRange": "$$",
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -416,22 +416,22 @@
                         <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-magnifying-glass-chart text-emerald-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900">SEO audit &amp; search visibility</h3>
+                        <h3 class="text-xl font-bold text-gray-900">SEO audit &amp; AI visibility (GEO)</h3>
                     </div>
                     <p class="text-gray-600 text-sm mb-5 leading-relaxed flex-grow">
-                        Not ranking on Google? A full technical audit to pinpoint what's holding you back, plus a prioritized action plan to boost your visibility. Covers both classic search and optimization for AI engines (ChatGPT, Perplexity).
+                        Not ranking on Google, and never cited by ChatGPT, Gemini or Perplexity? One audit covers classic SEO and visibility in AI answer engines (GEO), with a prioritized action plan.
                     </p>
                     <ul class="space-y-1.5 text-sm text-gray-600 mb-6">
-                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Core Web Vitals, schema markup, indexing</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Content and keyword strategy</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Optimization for AI search engines</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span><a href="audit-seo.html" class="hover:underline">Technical SEO</a>: Core Web Vitals, indexing, content</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>AI crawler access (robots.txt, llms.txt)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Schema.org and AI-citable content</span></li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-3 mt-auto">
                         <button data-cal-link="optimycloud/audit-seo" data-cal-namespace="audit-seo" class="inline-flex items-center justify-center bg-emerald-600 text-white px-5 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm cursor-pointer">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Free consultation
                         </button>
-                        <a href="audit-seo.html" class="inline-flex items-center justify-center text-emerald-600 px-5 py-2.5 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-sm">
+                        <a href="audit-geo.html" class="inline-flex items-center justify-center text-emerald-600 px-5 py-2.5 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-sm">
                             Learn more <i class="fas fa-arrow-right ml-2 text-xs"></i>
                         </a>
                     </div>
@@ -1235,6 +1235,7 @@
                     <ul class="space-y-2.5 text-slate-400">
                         <li><a href="creation-site-web.html" class="hover:text-indigo-400 transition-colors text-sm">Web design</a></li>
                         <li><a href="audit-seo.html" class="hover:text-indigo-400 transition-colors text-sm">SEO audit & search visibility</a></li>
+                        <li><a href="audit-geo.html" class="hover:text-indigo-400 transition-colors text-sm">GEO audit & AI visibility</a></li>
                         <li><a href="depannage-wordpress.html" class="hover:text-indigo-400 transition-colors text-sm">WordPress troubleshooting</a></li>
                         <li><a href="#services" class="hover:text-indigo-400 transition-colors text-sm">AI agents & dedicated LLMs</a></li>
                         <li><a href="#services" class="hover:text-indigo-400 transition-colors text-sm">WhatsApp & web chatbots</a></li>
@@ -1411,10 +1412,10 @@
             })
             .then(function(response) {
                 if (response.ok) {
-                    // GTM tracking
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({ 'event': 'form_submit', 'form_name': 'contact' });
-                    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+                    if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'contact_form', project_type: formData.get('project_type') || '' }); }
+                    if (typeof fbq === 'function' && localStorage.getItem('cookieConsent') === 'accepted') { fbq('track', 'Lead'); }
                     window.location.href = 'merci.html';
                 } else {
                     showToast('Something went wrong. Please try again.', 'error');

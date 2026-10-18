@@ -58,8 +58,8 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/site.webmanifest" />
-    <title>WordPress 500 Error: Complete Diagnostic Guide | OptimyCloud</title>
-    <meta name="description" content="WordPress 500 error: a diagnostic method built on 50+ interventions. Real causes, debug.log, concrete step-by-step solutions.">
+    <title>WordPress 500 Error: Causes and Fixes | OptimyCloud</title>
+    <meta name="description" content="WordPress 500 error? Turn on debug.log, find the Fatal error line and fix the cause: PHP memory, .htaccess, plugin conflict or theme. A field-tested method.">
     <meta name="keywords" content="WordPress 500 error, internal server error WordPress, WordPress white screen, debug WordPress, WP_DEBUG, Elementor 500 error, OVH 500 error, WordPress crash, WordPress troubleshooting">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
@@ -70,8 +70,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="WordPress 500 Error: Complete Diagnostic Guide">
-    <meta property="og:description" content="The WordPress 500 error always hides a specific cause. A diagnostic method and the real causes after 50+ interventions.">
+    <meta property="og:title" content="WordPress 500 Error: Causes and Fixes">
+    <meta property="og:description" content="Error 500 on WordPress: a 3-step method to find the cause (PHP memory, .htaccess, plugins, theme, PHP version) and fix it, built on 50+ interventions.">
     <meta property="og:url" content="https://optimycloud.com/en/blog/erreur-500-wordpress-diagnostic-solutions.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-erreur-500.webp">
@@ -82,8 +82,8 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WordPress 500 Error: Complete Diagnostic Guide">
-    <meta name="twitter:description" content="The WordPress 500 error always hides a specific cause. A diagnostic method after 50+ interventions.">
+    <meta name="twitter:title" content="WordPress 500 Error: Causes and Fixes">
+    <meta name="twitter:description" content="Error 500 on WordPress: a 3-step method to find the cause (PHP memory, .htaccess, plugins, theme, PHP version) and fix it, built on 50+ interventions.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-erreur-500.webp">
 
     <!-- Fonts -->
@@ -111,7 +111,7 @@
           "description": "The WordPress 500 error always hides a specific cause. Field experience after 50+ interventions: PHP memory, .htaccess, plugins. A diagnostic method.",
           "url": "https://optimycloud.com/en/blog/erreur-500-wordpress-diagnostic-solutions.html",
           "datePublished": "2026-03-21",
-          "dateModified": "2026-03-21",
+          "dateModified": "2026-10-18",
           "author": { "@id": "https://optimycloud.com/#person" },
           "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/erreur-500-wordpress-diagnostic-solutions.html" },
@@ -261,6 +261,13 @@
 
             <!-- Hero Image -->
             <img src="/assets/blog/hero-erreur-500.webp" alt="WordPress 500 error diagnosis" width="1200" height="630" class="w-full rounded-xl mb-10 shadow-lg">
+
+            <!-- Direct answer -->
+            <div class="bg-blue-50 border-l-4 border-blue-500 p-5 rounded-lg mb-10">
+                <h2 class="font-semibold text-gray-900 mb-2">WordPress 500 error: the short answer</h2>
+                <p class="text-gray-600 text-sm mb-3">A WordPress 500 error ("error 500", Internal Server Error) means <strong>PHP crashed</strong> before it could build the page. To find the cause, enable <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">WP_DEBUG_LOG</code> in <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-config.php</code>, reproduce the error, then look for the <strong>Fatal error</strong> line in <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/debug.log</code>.</p>
+                <p class="text-gray-600 text-sm">In more than half the cases, <strong>PHP memory</strong> (128 MB by default) is exhausted. Next come a corrupted <strong>.htaccess</strong>, a <strong>plugin conflict</strong>, an incompatible <strong>theme</strong> and an outdated <strong>PHP version</strong>. In our interventions, the cause is identified in under 5 minutes in 9 cases out of 10.</p>
+            </div>
 
             <!-- Introduction -->
             <div class="reveal">
@@ -665,6 +672,14 @@
                     <div class="bg-gray-50 p-5 rounded-xl">
                         <h3 class="font-semibold text-gray-900 mb-2">Is the WordPress white screen the same thing as the 500 error?</h3>
                         <p class="text-sm text-gray-600">Yes. The White Screen of Death (WSOD) is the WordPress manifestation of the 500 error. PHP crashes before generating the HTML page, so the browser receives an empty response. The diagnosis and the causes are identical in both cases.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">How do I fix a WordPress 500 error when I can't access the admin?</h3>
+                        <p class="text-sm text-gray-600">Everything happens over FTP or your host's file manager. Enable WP_DEBUG_LOG in wp-config.php, read wp-content/debug.log, then compare your .htaccess with the default WordPress version. To test the theme, rename the active theme's folder in wp-content/themes/: WordPress then falls back to a default theme.</p>
+                    </div>
+                    <div class="bg-gray-50 p-5 rounded-xl">
+                        <h3 class="font-semibold text-gray-900 mb-2">Is raising the PHP memory limit enough to fix the 500 error?</h3>
+                        <p class="text-sm text-gray-600">Not always. Raising memory_limit to at least 256 MB is the first fix to apply, since memory is the number one cause. In our client case, the site still crashed at 512 MB: the real cause was a pile of useless plugins and dead Elementor data. Audit and clean up first, then adjust the memory.</p>
                     </div>
                 </div>
             </div>

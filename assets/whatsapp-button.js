@@ -9,6 +9,7 @@
     a.addEventListener('click', function () {
         window.dataLayer = window.dataLayer || [];
         window.dataLayer.push({ 'event': 'whatsapp_click' });
+        if (typeof gtag === 'function') gtag('event', 'whatsapp_click');
     });
     document.body.appendChild(a);
 })();

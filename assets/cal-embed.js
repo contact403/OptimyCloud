@@ -27,26 +27,32 @@
   };
 })(window, "https://app.cal.com/embed/embed.js", "init");
 
-Cal("init", "diagnostic-finops", { origin: "https://app.cal.com" });
-Cal.ns["diagnostic-finops"]("ui", {
-  theme: "light",
-  cssVarsPerTheme: { light: { "cal-brand": "#2563eb" } },
-  hideEventTypeDetails: false,
-  layout: "month_view"
+// Booking types (namespace -> brand colour). Each gets init, UI and lead tracking.
+var CAL_EVENTS = {
+  "diagnostic-finops": "#2563eb",
+  "decouverte-agent-ia-gratuit": "#4f46e5",
+  "audit-seo": "#059669"
+};
+
+Object.keys(CAL_EVENTS).forEach(function (ns) {
+  Cal("init", ns, { origin: "https://app.cal.com" });
+  Cal.ns[ns]("ui", {
+    theme: "light",
+    cssVarsPerTheme: { light: { "cal-brand": CAL_EVENTS[ns] } },
+    hideEventTypeDetails: false,
+    layout: "month_view"
+  });
+  Cal.ns[ns]("on", {
+    action: "bookingSuccessful",
+    callback: function () {
+      if (typeof gtag === "function") gtag("event", "generate_lead", { method: "cal.com", cal_event: ns });
+      if (typeof fbq === "function" && localStorage.getItem("cookieConsent") === "accepted") fbq("track", "Lead");
+    }
+  });
 });
 
-Cal("init", "decouverte-agent-ia-gratuit", { origin: "https://app.cal.com" });
-Cal.ns["decouverte-agent-ia-gratuit"]("ui", {
-  theme: "light",
-  cssVarsPerTheme: { light: { "cal-brand": "#4f46e5" } },
-  hideEventTypeDetails: false,
-  layout: "month_view"
-});
-
-Cal("init", "audit-seo", { origin: "https://app.cal.com" });
-Cal.ns["audit-seo"]("ui", {
-  theme: "light",
-  cssVarsPerTheme: { light: { "cal-brand": "#059669" } },
-  hideEventTypeDetails: false,
-  layout: "month_view"
+// GA4: booking modal opens
+document.addEventListener("click", function (e) {
+  var el = e.target.closest("[data-cal-link]");
+  if (el && typeof gtag === "function") gtag("event", "cal_open", { cal_event: el.getAttribute("data-cal-namespace") });
 });

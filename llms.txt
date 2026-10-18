@@ -51,6 +51,8 @@ Page dédiée : https://optimycloud.com/offres.html
 
 - **Audit SEO** : Audit technique complet (Core Web Vitals, indexation, contenu, maillage). Plan d'action concret pour améliorer le référencement Google. Page dédiée : https://optimycloud.com/audit-seo.html
 
+- **Audit GEO / visibilité IA** : Audit de visibilité dans les moteurs de réponse IA (ChatGPT, Gemini, Perplexity, Google AI Overviews). Accès des robots IA dans robots.txt (GPTBot, OAI-SearchBot, Google-Extended, PerplexityBot, ClaudeBot), llms.txt et llms-full.txt, Schema.org @graph et entités connectées, citabilité des contenus, base SEO technique, mentions de marque. Rapport priorisé et plan de mise en oeuvre, mise en oeuvre en option. Sur devis, diagnostic gratuit de 30 minutes. Page dédiée : https://optimycloud.com/audit-geo.html
+
 - **Création de site web** : Site vitrine professionnel, rapide, responsive et optimisé SEO. Livré en 48h. À partir de 500 euros. Page dédiée : https://optimycloud.com/creation-site-web.html
 
 ## Certifications

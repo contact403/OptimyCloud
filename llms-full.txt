@@ -31,6 +31,9 @@ Audit de sécurité de vos infrastructures Cloud et applications. Tests de pén�
 ### Audit SEO & Référencement
 Audit technique complet de votre site : performance, Core Web Vitals, schema markup, contenu, indexation. Stratégie SEO sur-mesure pour améliorer votre visibilité sur Google.
 
+### Audit GEO / visibilité IA
+Être cité par ChatGPT, Gemini, Perplexity et Google AI Overviews : accès des robots IA, llms.txt, Schema.org, contenus citables. Rapport priorisé et plan de mise en oeuvre. Page dédiée : https://optimycloud.com/audit-geo.html
+
 ### Dépannage WordPress
 Erreur 500, 400, écran blanc, crash après mise à jour Elementor ? Diagnostic, correction et rapport détaillé. Intervention sous 24h. À partir de 250 €.
 
@@ -82,6 +85,7 @@ Inclus :
 - Infrastructure Cloud AWS : migration, Kubernetes (EKS), CI/CD, Infrastructure as Code. Sur devis.
 - Dépannage WordPress : erreur 500, 400, écran blanc, crash après mise à jour Elementor. Diagnostic, correction et rapport détaillé. Intervention sous 24h. À partir de 250 €.
 - Audit SEO & Référencement : audit technique, Core Web Vitals, schema markup, contenu, indexation. Stratégie SEO pour être visible sur Google. Sur devis.
+- Audit GEO / visibilité IA : accès des robots IA, llms.txt, Schema.org, citabilité des contenus pour ChatGPT, Gemini, Perplexity et Google AI Overviews. Sur devis, diagnostic gratuit de 30 minutes.
 
 ### Pourquoi travailler avec OptimyCloud
 
@@ -143,6 +147,43 @@ Tarif : sur devis. Adapté à la taille et la complexité de votre site.
 - Erreurs techniques (404, 500, redirections) : liens cassés, chaînes de redirections, erreurs serveur.
 - Pas de données structurées : sans schema markup, Google ne peut pas afficher de rich snippets.
 - Site non adapté au mobile : Google utilise le mobile-first indexing.
+
+---
+
+## Audit GEO / visibilité IA
+
+Page dédiée : https://optimycloud.com/audit-geo.html
+
+### Audit GEO : faites citer votre site par ChatGPT, Gemini, Perplexity et Google AI Overviews
+
+Vos prospects posent maintenant leurs questions à une IA. Si les robots de ces moteurs ne peuvent pas lire votre site, ou si votre contenu n'est pas formulé pour être repris, c'est un concurrent qui est cité à votre place. L'audit GEO (Generative Engine Optimization) identifie ce qui vous en empêche et vous donne un plan d'action priorisé.
+
+### Qu'est-ce que le GEO ?
+
+Le GEO regroupe les optimisations qui permettent à un site d'être lu, compris et cité par les moteurs de réponse IA : ChatGPT Search, Gemini, Perplexity, Claude, Copilot et les AI Overviews de Google. Le SEO classique vise une position dans une liste de liens. Le GEO vise une mention, avec un lien, dans la réponse générée. Les deux se complètent : l'audit GEO inclut une vérification de la base SEO technique et peut être combiné avec l'audit SEO complet.
+
+### Ce que l'audit GEO couvre
+
+- Accès des robots IA : directives robots.txt pour GPTBot, OAI-SearchBot, ChatGPT-User, Google-Extended, PerplexityBot, ClaudeBot, Applebot-Extended. Blocages par le CDN ou le pare-feu, contenu rendu uniquement en JavaScript.
+- llms.txt et llms-full.txt : présence, structure et contenu de ces résumés Markdown de votre activité, de vos offres et de vos pages clés.
+- Schema.org et entités : graphe JSON-LD (@graph) qui relie Organization, Person, Service et WebPage par leurs @id. Signaux E-E-A-T : auteur identifié, certifications, liens sameAs.
+- Citabilité des contenus : analyse au niveau du passage (réponses directes, définitions, données chiffrées sourcées, FAQ, tableaux).
+- Base SEO technique : indexation, sitemap XML, canonicals, hreflang, Core Web Vitals. Les AI Overviews de Google s'appuient sur l'index de Google Search.
+- Mentions de marque et signaux d'entité : cohérence du nom, de l'activité et des coordonnées sur les sites tiers ; test de questions réelles dans ChatGPT, Gemini et Perplexity.
+
+### Comment ça se passe
+
+1. Diagnostic gratuit : 30 minutes en visio pour identifier ce qui bloque en premier.
+2. Rapport priorisé : chaque problème classé par impact et effort, avec la correction à appliquer.
+3. Plan de mise en oeuvre : les corrections dans l'ordre, avec les extraits prêts à intégrer (robots.txt, llms.txt, JSON-LD). Mise en oeuvre par OptimyCloud en option.
+
+Tarif : sur devis. Diagnostic de 30 minutes offert.
+
+### Pourquoi OptimyCloud
+
+- Dans Google Search Console, optimycloud.com se classe parmi les premiers résultats sur des requêtes GEO formulées par des assistants IA.
+- Interrogé sur les spécialistes du GEO, Gemini cite OptimyCloud parmi les entreprises du domaine.
+- Certifié AWS Solutions Architect ; conception d'agents IA et d'intégrations LLM.
 
 ---
 
@@ -366,6 +407,25 @@ R : Après un audit SEO, vous recevez un rapport détaillé avec les problèmes 
 
 Q : L'audit SEO inclut-il la correction des problèmes ?
 R : L'audit SEO inclut l'analyse, le rapport et le plan d'action détaillé. La correction des problèmes peut être réalisée par vos équipes en suivant le rapport, ou confiée à OptimyCloud dans le cadre d'un accompagnement séparé. Chaque recommandation est documentée avec les instructions techniques pour la mise en oeuvre.
+
+---
+
+## FAQ - Audit GEO
+
+Q : Quelle différence entre GEO et SEO ?
+R : Le SEO optimise votre position dans les résultats classiques de Google. Le GEO optimise vos chances d'être repris et cité dans les réponses générées par ChatGPT, Gemini, Perplexity ou les AI Overviews. Les bases sont communes (indexation, performance, données structurées), mais le GEO ajoute l'accès des robots IA, les fichiers llms.txt, la cohérence de l'entité et une rédaction pensée pour être citée passage par passage.
+
+Q : Le fichier llms.txt sert-il vraiment à quelque chose ?
+R : llms.txt est une convention proposée en 2024, pas un standard officiel : Google indique ne pas l'utiliser pour Search ni pour les AI Overviews. Il est en revanche lu par certains outils et agents IA qui consultent un site directement. Il coûte peu à mettre en place. Dans l'audit, c'est un point parmi d'autres, jamais la priorité si les robots IA sont bloqués ou si le site est mal indexé.
+
+Q : Combien de temps prend un audit GEO ?
+R : Le délai dépend du nombre de pages et du périmètre (GEO seul ou combiné à un audit SEO complet). Il est fixé dans le devis, après le diagnostic gratuit. Les effets sur les citations IA ne sont pas immédiats : les moteurs doivent recrawler les pages modifiées.
+
+Q : De quels accès avez-vous besoin ?
+R : L'URL du site suffit pour une grande partie de l'audit. Un accès en lecture à Google Search Console (et Bing Webmaster Tools) permet de vérifier l'indexation et les requêtes réelles ; Google Analytics aide à mesurer le trafic venant des assistants IA. Un accès au CMS ou au dépôt de code n'est nécessaire que pour la mise en oeuvre.
+
+Q : Pouvez-vous mettre en oeuvre les recommandations ?
+R : Oui, en option : robots.txt, llms.txt et llms-full.txt, JSON-LD, réécriture des passages clés, corrections SEO techniques. Le périmètre est chiffré séparément.
 
 ---
 

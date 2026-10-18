@@ -121,7 +121,7 @@
             "https://www.google.com/maps/place/OptimyCloud/@48.9524925,2.3129924,17z/data=!4m6!3m5!1s0x47e669073cebab91:0x214962cb3ff36235!8m2!3d48.952489!4d2.3155673!16s%2Fg%2F11z4mvpc3w"
           ],
           "hasMap": "https://www.google.com/maps/place/OptimyCloud/@48.9524925,2.3129924,17z/data=!4m6!3m5!1s0x47e669073cebab91:0x214962cb3ff36235!8m2!3d48.952489!4d2.3155673!16s%2Fg%2F11z4mvpc3w",
-          "serviceType": ["Automatisation IA", "IA générative", "Développement chatbot IA", "Agents IA", "Automatisation des processus", "Intégration LLM", "Migration Cloud AWS", "Conseil FinOps", "Gestion Kubernetes", "Infrastructure as Code", "Audit de sécurité Cloud", "Audit SEO", "Intégration d'applications et de plateformes", "Gestion des identités et des accès", "Single sign-on", "Création de site web", "Dépannage WordPress"],
+          "serviceType": ["Automatisation IA", "IA générative", "Développement chatbot IA", "Agents IA", "Automatisation des processus", "Intégration LLM", "Migration Cloud AWS", "Conseil FinOps", "Gestion Kubernetes", "Infrastructure as Code", "Audit de sécurité Cloud", "Audit SEO", "Audit GEO / visibilité IA", "Intégration d'applications et de plateformes", "Gestion des identités et des accès", "Single sign-on", "Création de site web", "Dépannage WordPress"],
           "priceRange": "$$",
           "aggregateRating": {
             "@type": "AggregateRating",
@@ -414,22 +414,22 @@
                         <div class="w-14 h-14 bg-emerald-50 rounded-xl flex items-center justify-center mr-4">
                             <i class="fas fa-magnifying-glass-chart text-emerald-600 text-2xl"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-gray-900">Audit SEO &amp; Référencement</h3>
+                        <h3 class="text-xl font-bold text-gray-900">Audit SEO &amp; visibilité IA (GEO)</h3>
                     </div>
                     <p class="text-gray-600 text-sm mb-5 leading-relaxed flex-grow">
-                        Votre site ne remonte pas sur Google ? Audit technique complet pour identifier les blocages et un plan d'action priorisé pour améliorer votre visibilité. Couverture du référencement classique et de l'optimisation pour les IA (ChatGPT, Perplexity).
+                        Votre site ne remonte pas sur Google et n'est jamais cité par ChatGPT, Gemini ou Perplexity ? Un audit couvre le référencement classique et la visibilité dans les moteurs IA (GEO), avec un plan d'action priorisé.
                     </p>
                     <ul class="space-y-1.5 text-sm text-gray-600 mb-6">
-                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Core Web Vitals, schema markup, indexation</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Stratégie de contenu et mots-clés</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Optimisation pour les moteurs de recherche IA</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span><a href="audit-seo.html" class="hover:underline">SEO technique</a> : Core Web Vitals, indexation, contenu</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Accès des robots IA (robots.txt, llms.txt)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-emerald-600 mr-2 mt-1 text-xs"></i><span>Schema.org et contenus citables par les IA</span></li>
                     </ul>
                     <div class="flex flex-col sm:flex-row gap-3 mt-auto">
                         <button data-cal-link="optimycloud/audit-seo" data-cal-namespace="audit-seo" class="inline-flex items-center justify-center bg-emerald-600 text-white px-5 py-2.5 rounded-lg hover:bg-emerald-700 transition-colors font-semibold text-sm cursor-pointer">
                             <i class="fas fa-calendar-check mr-2"></i>
                             Diagnostic gratuit
                         </button>
-                        <a href="audit-seo.html" class="inline-flex items-center justify-center text-emerald-600 px-5 py-2.5 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-sm">
+                        <a href="audit-geo.html" class="inline-flex items-center justify-center text-emerald-600 px-5 py-2.5 rounded-lg hover:bg-emerald-50 transition-colors font-semibold text-sm">
                             En savoir plus <i class="fas fa-arrow-right ml-2 text-xs"></i>
                         </a>
                     </div>
@@ -1235,6 +1235,7 @@
                     <ul class="space-y-2.5 text-slate-400">
                         <li><a href="creation-site-web.html" class="hover:text-indigo-400 transition-colors text-sm">Creation site web</a></li>
                         <li><a href="audit-seo.html" class="hover:text-indigo-400 transition-colors text-sm">Audit SEO & Référencement</a></li>
+                        <li><a href="audit-geo.html" class="hover:text-indigo-400 transition-colors text-sm">Audit GEO & visibilité IA</a></li>
                         <li><a href="depannage-wordpress.html" class="hover:text-indigo-400 transition-colors text-sm">Dépannage WordPress</a></li>
                         <li><a href="#services" class="hover:text-indigo-400 transition-colors text-sm">Agents IA & LLM dédiés</a></li>
                         <li><a href="#services" class="hover:text-indigo-400 transition-colors text-sm">Chatbots WhatsApp & Web</a></li>
@@ -1411,10 +1412,10 @@
             })
             .then(function(response) {
                 if (response.ok) {
-                    // GTM tracking
                     window.dataLayer = window.dataLayer || [];
                     window.dataLayer.push({ 'event': 'form_submit', 'form_name': 'contact' });
-                    if (typeof fbq === 'function') { fbq('track', 'Lead'); }
+                    if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'contact_form', project_type: formData.get('project_type') || '' }); }
+                    if (typeof fbq === 'function' && localStorage.getItem('cookieConsent') === 'accepted') { fbq('track', 'Lead'); }
                     window.location.href = 'merci.html';
                 } else {
                     showToast('Erreur lors de l\'envoi. Réessayez.', 'error');
