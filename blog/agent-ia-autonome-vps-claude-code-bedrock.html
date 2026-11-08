@@ -58,8 +58,8 @@
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
-    <title>Agent IA autonome sur un VPS avec claude -p (et pourquoi Bedrock en production) | OptimyCloud</title>
-    <meta name="description" content="Installer un agent IA autonome sur un VPS avec claude -p : le tutoriel qui marche, ce qui casse en production, et la configuration Amazon Bedrock qui règle le problème.">
+    <title>Agent IA autonome sur VPS avec claude -p et Bedrock</title>
+    <meta name="description" content="Installer un agent IA autonome sur un VPS avec claude -p : le tutoriel qui marche, ce qui casse en production et la configuration Bedrock qui règle tout.">
     <meta name="keywords" content="claude -p, Claude Code headless, agent IA VPS, Amazon Bedrock, CLAUDE_CODE_USE_BEDROCK, agent autonome serveur, IAM Bedrock, LiteLLM, passerelle LLM, gateway LLM, ANTHROPIC_BASE_URL, multi-cloud IA, agent IA production, mode headless, automatisation IA serveur, souveraineté données IA">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
@@ -70,8 +70,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Agent IA autonome sur un VPS avec claude -p (et pourquoi Bedrock en production)">
-    <meta property="og:description" content="Le tutoriel qui marche, ce qui casse dès que c'est un client, et la configuration Amazon Bedrock qui règle le problème.">
+    <meta property="og:title" content="Agent IA autonome sur VPS avec claude -p et Bedrock">
+    <meta property="og:description" content="Installer un agent IA autonome sur un VPS avec claude -p : le tutoriel qui marche, ce qui casse en production et la configuration Bedrock qui règle tout.">
     <meta property="og:url" content="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-agent-vps-bedrock.webp">
@@ -80,8 +80,8 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Agent IA autonome sur un VPS avec claude -p">
-    <meta name="twitter:description" content="Le tutoriel qui marche, ce qui casse en production, et la configuration Amazon Bedrock qui règle le problème.">
+    <meta name="twitter:title" content="Agent IA autonome sur VPS avec claude -p et Bedrock">
+    <meta name="twitter:description" content="Installer un agent IA autonome sur un VPS avec claude -p : le tutoriel qui marche, ce qui casse en production et la configuration Bedrock qui règle tout.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-agent-vps-bedrock.webp">
 
     <!-- Fonts -->
@@ -106,10 +106,10 @@
         {
           "@type": "BlogPosting",
           "headline": "Agent IA autonome sur un VPS avec claude -p (et pourquoi je passe par Bedrock en production)",
-          "description": "Installer un agent IA autonome sur un VPS avec claude -p : le tutoriel qui marche, ce qui casse en production, et la configuration Amazon Bedrock qui règle le problème.",
+          "description": "Installer un agent IA autonome sur un VPS avec claude -p : le tutoriel qui marche, ce qui casse en production et la configuration Bedrock qui règle tout.",
           "url": "https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html",
           "datePublished": "2026-07-22",
-          "dateModified": "2026-07-22",
+          "dateModified": "2026-11-08",
           "author": { "@id": "https://optimycloud.com/#person" },
           "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html" },
@@ -508,7 +508,7 @@ claude --bare -p "Résume les erreurs de ce log" &lt; /var/log/app/error.log</co
 export ANTHROPIC_DEFAULT_HAIKU_MODEL='eu.anthropic.claude-haiku-4-5-20251001-v1:0'</code></pre>
                 </div>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    En environnement d'entreprise, on va plus loin : les profils d'inférence applicatifs permettent de router chaque version de modèle vers un ARN géré par l'organisation, avec ses propres quotas et son propre suivi de coût.
+                    En environnement d'entreprise, on va plus loin : les profils d'inférence applicatifs permettent de router chaque version de modèle vers un ARN géré par l'organisation, avec ses propres quotas et son propre suivi de coût. Et si la facture cloud dérive malgré ces garde-fous, un <a href="../finops.html" class="text-indigo-600 hover:text-indigo-800 underline">audit FinOps cloud</a> montre où part le budget et ce qu'on peut couper.
                 </p>
 
                 <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">Et si le client n'est pas sur AWS ?</h3>

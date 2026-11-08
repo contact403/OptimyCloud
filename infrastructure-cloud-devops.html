@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <title>Consultant DevOps &amp; Cloud AWS, Kubernetes | OptimyCloud</title>
+    <meta name="description" content="Consultant DevOps et cloud AWS certifié : migration vers AWS et Kubernetes (EKS), infrastructure as code Terraform, CI/CD et monitoring. Diagnostic offert.">
+    <meta name="service-cta" data-label="Demander mon diagnostic gratuit" data-service="migration">
+    <meta name="facebook-domain-verification" content="sliau7t9ilkk0j7rijo6bnnxb3qrha" />
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/infrastructure-cloud-devops.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/infrastructure-cloud-devops.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/infrastructure-cloud-devops.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/infrastructure-cloud-devops.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Consultant DevOps &amp; Cloud AWS, Kubernetes | OptimyCloud">
+    <meta property="og:description" content="Consultant DevOps et cloud AWS certifié : migration vers AWS et Kubernetes (EKS), infrastructure as code Terraform, CI/CD et monitoring. Diagnostic offert.">
+    <meta property="og:url" content="https://optimycloud.com/infrastructure-cloud-devops.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+    <meta property="og:locale" content="fr_FR">
+    <meta property="og:locale:alternate" content="en_US">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Consultant DevOps &amp; Cloud AWS, Kubernetes | OptimyCloud">
+    <meta name="twitter:description" content="Consultant DevOps et cloud AWS certifié : migration vers AWS et Kubernetes (EKS), infrastructure as code Terraform, CI/CD et monitoring. Diagnostic offert.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://images.credly.com" crossorigin>
+
+    <!-- Schema.org -->
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Accueil",
+          "item": "https://optimycloud.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Infrastructure Cloud & DevOps",
+          "item": "https://optimycloud.com/infrastructure-cloud-devops.html"
+        }
+      ]
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://optimycloud.com/infrastructure-cloud-devops.html#webpage",
+      "name": "Infrastructure Cloud & DevOps : consultant AWS, Kubernetes et Terraform",
+      "description": "Consultant DevOps et cloud AWS certifié : migration vers AWS et Kubernetes (EKS), infrastructure as code Terraform, CI/CD et monitoring. Diagnostic offert.",
+      "url": "https://optimycloud.com/infrastructure-cloud-devops.html",
+      "inLanguage": "fr",
+      "isPartOf": {
+        "@id": "https://optimycloud.com/#website"
+      },
+      "about": {
+        "@id": "https://optimycloud.com/infrastructure-cloud-devops.html#service"
+      },
+      "author": {
+        "@id": "https://optimycloud.com/#person"
+      },
+      "publisher": {
+        "@id": "https://optimycloud.com/#organization"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://optimycloud.com/infrastructure-cloud-devops.html#service",
+      "name": "Infrastructure Cloud & DevOps",
+      "description": "Architecture cloud AWS, GCP et Azure, migration vers le cloud et vers Kubernetes (EKS, GKE, AKS, EKS Auto Mode), infrastructure as code (Terraform, AWS CDK), pipelines CI/CD, observabilité, gouvernance cloud et fédération d'identité. Missions menées par un ingénieur AWS Certified Solutions Architect et Kubernetes CKA.",
+      "serviceType": "Conseil DevOps et infrastructure cloud",
+      "provider": {
+        "@id": "https://optimycloud.com/#organization"
+      },
+      "brand": {
+        "@id": "https://optimycloud.com/#organization"
+      },
+      "areaServed": {
+        "@type": "Country",
+        "name": "France"
+      },
+      "audience": {
+        "@type": "BusinessAudience",
+        "name": "PME et startups"
+      },
+      "availableLanguage": [
+        "fr",
+        "en"
+      ],
+      "url": "https://optimycloud.com/infrastructure-cloud-devops.html",
+      "offers": {
+        "@type": "Offer",
+        "priceCurrency": "EUR",
+        "description": "Sur devis, après un diagnostic gratuit de 30 minutes",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+    </script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXVN48XF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                        <img src="./assets/optimycloud-logo.webp"
+                             alt="OptimyCloud"
+                             width="200" height="64"
+                             fetchpriority="high"
+                             class="h-20 w-auto"
+                             style="mix-blend-mode: multiply;">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Accueil</a>
+                    <a href="index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
+                    <a href="index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/en/infrastructure-cloud-devops.html" hreflang="en" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="English version"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">EN</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <a href="/en/infrastructure-cloud-devops.html" hreflang="en" class="mobile-lang-flag md:hidden ml-auto mr-3 inline-flex items-center" aria-label="View the English version"><img src="/assets/flags/gb.svg" alt="" width="24" height="17" style="display:inline-block;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.15)"></a>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/en/infrastructure-cloud-devops.html" hreflang="en" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">English version</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <div class="py-16 sm:py-24" style="background: linear-gradient(135deg, #1e293b, #1e3a8a);">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Breadcrumb -->
+            <nav class="mb-8 text-sm" style="color: #cbd5e1;" aria-label="Fil d'Ariane">
+                <a href="index.html" class="hover:text-white transition-colors">Accueil</a>
+                <span class="mx-2">/</span>
+                <span class="text-white">Infrastructure Cloud &amp; DevOps</span>
+            </nav>
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center rounded-full px-4 py-1.5 mb-6" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
+                    <i class="fas fa-server text-orange-400 mr-2"></i>
+                    <span class="text-white text-xs font-semibold uppercase tracking-wide">AWS &middot; Kubernetes &middot; Terraform</span>
+                </div>
+                <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
+                    Infrastructure Cloud &amp; DevOps : une plateforme fiable, automatisée et maîtrisée
+                </h1>
+                <p class="text-lg max-w-2xl mb-4" style="color: #e2e8f0;">
+                    Vous voulez migrer vers AWS, passer sur Kubernetes, ou simplement arrêter de déployer à la main ? Je conçois, migre et automatise l'infrastructure cloud des PME et des startups : architecture AWS, GCP ou Azure, clusters EKS, infrastructure as code avec Terraform, pipelines CI/CD et monitoring. L'objectif est simple : une infrastructure <strong class="text-white">fiable</strong>, <strong class="text-white">reproductible</strong> et dont <strong class="text-white">les coûts restent sous contrôle</strong>.
+                </p>
+                <p class="text-sm mb-8" style="color: #cbd5e1;">
+                    Consultant DevOps freelance &middot; Ingénieur ESIEA &middot; 10+ ans d'ingénierie cloud et infrastructure &middot; AWS Certified Solutions Architect &middot; Kubernetes CKA.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="index.html?service=migration#contact" class="inline-flex items-center justify-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm">
+                        <i class="fas fa-calendar-check mr-2"></i>
+                        Diagnostic gratuit (30 min)
+                    </a>
+                    <a href="finops.html" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg transition-colors font-semibold text-sm text-white" style="border: 2px solid rgba(255,255,255,0.4);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                        Réduire ma facture cloud (FinOps)
+                    </a>
+                </div>
+                <p class="text-xs mt-4" style="color: #94a3b8;">
+                    <i class="fas fa-circle-info mr-1"></i>
+                    Sans engagement &middot; un seul interlocuteur technique &middot; sur devis
+                </p>
+
+                <!-- Certifications Credly -->
+                <div class="mt-10 pt-8" style="border-top: 1px solid rgba(255,255,255,0.15);">
+                    <p class="text-xs uppercase tracking-widest font-semibold mb-4" style="color: #94a3b8;">Certifications vérifiées</p>
+                    <div class="flex flex-wrap gap-3">
+                        <a href="https://www.credly.com/badges/7111ab00-322f-4c9e-83b2-b8bc3d937cfc/linked_in_profile" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg px-4 py-2.5 transition-colors" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                            <img src="https://images.credly.com/size/110x110/images/0e284c3f-5164-4b21-8660-0d84737941bc/image.png"
+                                 alt="AWS Certified Solutions Architect"
+                                 width="32" height="32"
+                                 class="w-8 h-8 mr-2.5">
+                            <span class="text-white text-xs font-medium">AWS Solutions<br>Architect</span>
+                        </a>
+                        <a href="https://www.credly.com/badges/b2b46004-a0c3-4c2e-87a7-87b9d40b3cbc" target="_blank" rel="noopener noreferrer" class="inline-flex items-center rounded-lg px-4 py-2.5 transition-colors" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+                            <img src="https://images.credly.com/size/110x110/images/8b8ed108-e77d-4396-ac59-2504583b9d54/cka_from_cncfsite__281_29.png"
+                                 alt="Certified Kubernetes Administrator (CKA)"
+                                 width="32" height="32"
+                                 class="w-8 h-8 mr-2.5">
+                            <span class="text-white text-xs font-medium">Kubernetes<br>CKA</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services -->
+    <section id="services-infra" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Ce que je prends en charge</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Conseil DevOps et cloud, de l'architecture à la production</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Une mission peut couvrir un seul de ces sujets ou l'ensemble. Dans tous les cas, ce qui est livré tourne en production et reste maintenable par votre équipe.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-sitemap text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Architecture cloud AWS, GCP, Azure</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Conception d'architectures adaptées à votre charge réelle : réseau (VPC, sous-réseaux, peering), calcul, bases managées, stockage, sécurité. Les choix sont documentés et justifiés, y compris quand la bonne réponse est de faire plus simple.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-truck-moving text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Migration cloud AWS et vers Kubernetes</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Migration de serveurs on-premise ou de VM vers le cloud, conteneurisation des applications et bascule vers Kubernetes. Bases de données comprises, avec un plan de bascule et de retour arrière défini avant le jour J.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-purple-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-dharmachakra text-purple-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Kubernetes : EKS, GKE, AKS</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Mise en place et reprise de clusters managés, dont <a href="blog/eks-auto-mode-kubernetes-simple.html" class="text-blue-600 underline hover:text-blue-800">EKS Auto Mode</a> qui délègue à AWS la gestion des nodes. Ingress, autoscaling, gestion des secrets, RBAC, montées de version sans interruption.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-amber-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-code text-amber-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Infrastructure as code : Terraform, CDK</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Toute l'infrastructure décrite en code versionné avec Terraform ou AWS CDK : modules réutilisables, environnements identiques de la recette à la production, revue de code avant chaque changement.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-cyan-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-rocket text-cyan-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pipelines CI/CD</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Build, tests et déploiement automatisés avec GitLab CI, GitHub Actions ou Jenkins. Runners hébergés sur votre propre infrastructure si besoin, déploiements progressifs et retour arrière en un clic.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-red-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-chart-line text-red-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Observabilité et monitoring</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Métriques, logs et alertes qui servent vraiment : Prometheus, Grafana, CloudWatch, Datadog selon votre contexte. Des tableaux de bord lisibles et des alertes qui réveillent seulement quand c'est justifié.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-indigo-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-scale-balanced text-indigo-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Gouvernance cloud et bonnes pratiques</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Organisation des comptes et projets, conventions de nommage et de tags, politiques de sécurité, catalogue de services standardisés. Un cadre clair pour que chaque équipe déploie vite sans réinventer la roue.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-slate-100 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-user-shield text-slate-700 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Fédération d'identité et accès centralisé</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Un seul annuaire pour accéder à la console cloud, aux clusters et aux outils internes : SSO via Entra ID, Amazon Cognito ou IAM Identity Center. Moins de comptes à gérer, des départs traités en une seule action.</p>
+                </div>
+
+                <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg hover:border-blue-100 transition-all duration-300">
+                    <div class="w-12 h-12 bg-green-50 rounded-lg flex items-center justify-center mb-5">
+                        <i class="fas fa-piggy-bank text-green-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Maîtrise des coûts dès la conception</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Dimensionnement, tags de coûts et budgets intégrés à l'architecture. Si votre facture a déjà dérapé, l'<a href="finops.html" class="text-blue-600 underline hover:text-blue-800">audit FinOps</a> traite ce sujet en priorité.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Pour qui -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Pour qui</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Quand faire appel à un consultant DevOps et cloud</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    PME, startups et équipes techniques sans ingénieur infrastructure dédié, ou avec une équipe qui a besoin d'un renfort ponctuel.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="flex items-start bg-white border border-gray-200 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                        <i class="fas fa-arrow-right text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Vos serveurs arrivent en fin de vie</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Matériel à renouveler, contrat d'hébergement qui se termine, salle serveur à fermer : c'est le bon moment pour préparer une migration cloud AWS plutôt que de reconduire à l'identique.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white border border-gray-200 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                        <i class="fas fa-arrow-right text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Les déploiements font peur</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Mises en production manuelles, une seule personne qui sait comment tout fonctionne, environnements qui divergent. L'infrastructure as code et un pipeline CI/CD règlent ce problème à la racine.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white border border-gray-200 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                        <i class="fas fa-arrow-right text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Vous envisagez Kubernetes</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Vous voulez un avis indépendant avant de vous lancer, ou un consultant Kubernetes pour construire un cluster EKS propre dès le départ plutôt que de corriger plus tard.</p>
+                    </div>
+                </div>
+                <div class="flex items-start bg-white border border-gray-200 rounded-xl p-5">
+                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0 mr-4">
+                        <i class="fas fa-arrow-right text-blue-600"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-semibold text-gray-900 mb-1">Le cloud a grandi sans cadre</h3>
+                        <p class="text-gray-500 text-sm leading-relaxed">Comptes créés au fil de l'eau, droits trop larges, ressources sans propriétaire, pas de monitoring commun. Une remise à plat de la gouvernance et des accès évite l'incident ou la facture surprise.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Méthode -->
+    <section id="methode" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Méthode</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Comment se déroule une mission</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Quatre étapes, avec une validation de votre part à la fin de chacune. Rien n'est modifié en production sans plan écrit.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit de l'existant</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Inventaire des serveurs, applications, flux réseau, dépendances et points de douleur. Accès en lecture seule. On identifie ce qui doit bouger, ce qui peut attendre et les risques.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Conception</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Architecture cible, choix des services managés, stratégie de migration application par application, estimation des coûts de fonctionnement. Vous validez avant toute construction.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Construction et migration</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Infrastructure écrite en Terraform ou CDK, pipelines CI/CD, monitoring, puis bascule progressive des applications avec tests et plan de retour arrière à chaque étape.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">4</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Passation et documentation</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Documentation d'exploitation, runbooks d'incident, sessions de transfert avec votre équipe. Vous restez autonome, avec la possibilité d'un accompagnement ensuite si vous le souhaitez.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Livrables -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Livrables</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Ce que vous récupérez à la fin</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Tout reste chez vous : le code, les accès et la documentation. Aucune dépendance à un outil propriétaire ou à ma présence.
+                </p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8">
+                <ul class="grid md:grid-cols-2 gap-4 text-gray-600 text-sm">
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Rapport d'audit</strong> de l'existant avec les risques classés par priorité</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Dossier d'architecture</strong> : schémas, choix techniques et leurs justifications</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Dépôt Git d'infrastructure as code</strong> (Terraform ou CDK) prêt à être réutilisé</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Pipelines CI/CD</strong> configurés et documentés pour vos applications</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Plan de migration</strong> avec ordre de bascule, tests et retour arrière</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Tableaux de bord et alertes</strong> de monitoring branchés sur vos canaux</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Runbooks d'exploitation</strong> : incidents courants, montées de version, restauration</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Sessions de passation</strong> avec votre équipe technique</span></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Références -->
+    <section id="references" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Références</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Des missions menées en production</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Quelques missions d'infrastructure et de DevOps réalisées pour des industriels, des acteurs du numérique et un éditeur de jeux vidéo.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Chimie &middot; Industrie</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Arkema</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Migration des runners CI/CD vers un cluster EKS. Fédération d'identité (Cognito / Entra ID) pour un accès centralisé aux outils.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Équipementier automobile</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Valeo</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Conception d'une infrastructure as code intégrant des services managés. Contrôle d'accès centralisé sur un environnement critique.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Traitement de l'eau</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Culligan</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Migration d'un cluster on-premise vers Amazon EKS, base de données comprise.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Textile &middot; Distribution</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">TopTex</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Mise en place d'un cadre de gouvernance cloud et de bonnes pratiques.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Plateforme en ligne</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Samboat</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Conception d'un catalogue de services.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Jeux vidéo &middot; Ingénieur SRE / DevOps</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Ubisoft</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Au sein de l'équipe debug &amp; profiling : traitement des crashs en production, monitoring des serveurs et mise à jour des outils développeurs via des pipelines sur Kubernetes.</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6 md:col-span-2 lg:col-span-3">
+                    <p class="text-xs font-semibold uppercase tracking-wide text-blue-600 mb-2">Services numériques</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Linkeo</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Refonte du monitoring et gestion de l'infrastructure on-premise.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tarifs -->
+    <section id="tarifs" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Tarifs</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Sur devis, après un diagnostic gratuit</h2>
+                <p class="text-lg text-gray-500">
+                    Une migration de trois serveurs et la reprise d'une plateforme Kubernetes multi-équipes n'ont pas le même périmètre. Le devis est établi une fois le besoin compris, pas avant.
+                </p>
+            </div>
+            <div class="bg-white border-2 border-blue-500 rounded-2xl p-6 sm:p-8 shadow-lg relative overflow-hidden">
+                <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold uppercase tracking-wide px-4 py-1.5 rounded-bl-xl">
+                    Gratuit
+                </div>
+                <div class="flex items-center mb-4">
+                    <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
+                        <i class="fas fa-stethoscope text-blue-600 text-xl"></i>
+                    </div>
+                    <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Diagnostic gratuit de 30 minutes</h3>
+                </div>
+                <p class="text-gray-600 leading-relaxed mb-5">
+                    On échange en visio sur votre infrastructure actuelle et votre objectif : migration, Kubernetes, automatisation, fiabilité. Vous repartez avec un avis technique franc, les premières pistes et, si cela a du sens, une proposition de mission chiffrée.
+                </p>
+                <ul class="space-y-2 text-gray-600 text-sm mb-6">
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Lecture rapide</strong> de votre architecture et de vos contraintes</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Premières recommandations</strong> sur la cible et l'ordre des chantiers</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Avis honnête</strong>, y compris si vous n'avez pas besoin de moi</span></li>
+                    <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Sans engagement</strong> et sans relance insistante</span></li>
+                </ul>
+                <a href="index.html?service=migration#contact" class="inline-flex items-center justify-center w-full sm:w-auto bg-blue-600 text-white px-8 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm">
+                    <i class="fas fa-calendar-check mr-2"></i>
+                    Demander mon diagnostic gratuit
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pour aller plus loin -->
+    <section class="py-12 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-xl font-bold text-gray-900 mb-6">Pour aller plus loin</h2>
+            <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                <a href="finops.html" class="bg-white border-2 border-blue-200 rounded-xl p-5 hover:shadow-lg hover:border-blue-400 transition-all duration-300 block">
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wide mb-2">Offre</p>
+                    <h3 class="font-bold text-gray-900 mb-1">Audit FinOps cloud</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Comprendre et réduire votre facture AWS, GCP ou Azure.</p>
+                </a>
+                <a href="blog/eks-auto-mode-kubernetes-simple.html" class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg hover:border-blue-100 transition-all duration-300 block">
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wide mb-2">Kubernetes</p>
+                    <h3 class="font-bold text-gray-900 mb-1">EKS Auto Mode : Kubernetes simple sur AWS</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">AWS gère les nodes, le scaling, le réseau et le stockage.</p>
+                </a>
+                <a href="blog/passerelle-llm-litellm-cout-reel.html" class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg hover:border-blue-100 transition-all duration-300 block">
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wide mb-2">Architecture AWS</p>
+                    <h3 class="font-bold text-gray-900 mb-1">Le coût réel d'une passerelle LLM</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">LiteLLM sur AWS, chiffré poste par poste.</p>
+                </a>
+                <a href="blog/agent-ia-autonome-vps-claude-code-bedrock.html" class="bg-white border border-gray-200 rounded-xl p-5 hover:shadow-lg hover:border-blue-100 transition-all duration-300 block">
+                    <p class="text-blue-600 text-xs font-semibold uppercase tracking-wide mb-2">Infra &amp; IA</p>
+                    <h3 class="font-bold text-gray-900 mb-1">Un agent IA autonome sur un VPS</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Claude Code et Amazon Bedrock sur une infrastructure maîtrisée.</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section id="faq" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Questions fréquentes</h2>
+            </div>
+
+            <div class="space-y-4">
+                <details class="bg-white border border-gray-200 rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer text-gray-900 font-semibold">
+                        AWS, GCP ou Azure : quel cloud choisir ?
+                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                        Les trois fournisseurs couvrent les besoins d'une PME. Le choix dépend surtout de votre contexte : les compétences de votre équipe, les outils déjà en place (un parc Microsoft 365 et Entra ID oriente souvent vers Azure, un usage avancé de BigQuery vers GCP), les services managés dont vous avez besoin et vos contraintes de localisation des données. AWS reste le plus large en catalogue et c'est mon expertise principale, mais je recommande le cloud qui vous convient, pas celui que je préfère.
+                    </p>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer text-gray-900 font-semibold">
+                        Comment limiter l'interruption de service pendant une migration ?
+                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                        La nouvelle infrastructure est construite et testée en parallèle de l'existante. Les données sont synchronisées en continu quand c'est possible (réplication de base de données, copie incrémentale des fichiers), puis la bascule se fait application par application, sur un créneau choisi avec vous, avec un plan de retour arrière écrit à l'avance. La durée d'interruption dépend de chaque application et de sa base de données ; elle est estimée pendant la phase de conception, avant de s'engager.
+                    </p>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer text-gray-900 font-semibold">
+                        Kubernetes est-il adapté à une PME ?
+                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                        Pas toujours. Pour quelques applications simples, des services comme ECS, Cloud Run, App Runner ou une VM bien automatisée suffisent et coûtent moins cher à exploiter. Kubernetes devient intéressant quand vous avez plusieurs services conteneurisés, plusieurs équipes ou des besoins de montée en charge. Les offres managées comme EKS Auto Mode réduisent beaucoup la charge d'exploitation. En tant que consultant Kubernetes certifié CKA, je vous dirai franchement si c'est le bon outil pour vous.
+                    </p>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer text-gray-900 font-semibold">
+                        Qu'apporte concrètement l'infrastructure as code avec Terraform ?
+                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                        Votre infrastructure devient du code versionné dans Git : chaque modification est relue avant d'être appliquée, l'historique montre qui a changé quoi et pourquoi, et un environnement complet peut être recréé à l'identique. Cela supprime les configurations faites à la main dans la console, facilite les audits de sécurité et rend la reprise après incident beaucoup plus rapide. Terraform fonctionne sur AWS, GCP et Azure ; AWS CDK est une bonne option si vous êtes 100 % AWS et que votre équipe préfère TypeScript ou Python.
+                    </p>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer text-gray-900 font-semibold">
+                        Travaillez-vous avec nos équipes internes ?
+                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                        Oui, c'est le cas le plus fréquent. Je m'intègre à vos outils (Git, tickets, messagerie) et à vos rituels, je travaille en binôme avec vos développeurs ou votre équipe d'exploitation et je documente au fil de l'eau. L'objectif est que votre équipe soit autonome sur ce qui a été construit. Je peux aussi intervenir seul si vous n'avez pas encore de compétence infrastructure en interne.
+                    </p>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer text-gray-900 font-semibold">
+                        Les missions se font-elles à distance ?
+                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                        Oui, les missions se déroulent à distance, en français ou en anglais. L'infrastructure cloud s'administre de toute façon à distance, et les échanges se font en visio, sur votre messagerie d'équipe et dans vos dépôts de code. Les accès sont ouverts avec des droits limités au strict nécessaire et révoqués en fin de mission.
+                    </p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-16 sm:py-20" style="background: linear-gradient(135deg, #1e293b, #1e3a8a);">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Parlons de votre infrastructure</h2>
+            <p class="text-lg mb-4" style="color: #e2e8f0;">
+                Migration vers AWS, cluster Kubernetes, pipeline CI/CD ou remise en ordre de l'existant : décrivez votre situation en quelques lignes et on fixe 30 minutes pour en parler. <strong>Sans engagement</strong>, avec l'ingénieur qui fera le travail.
+            </p>
+            <p class="text-sm mb-8" style="color: #cbd5e1;">
+                Votre priorité est la facture ? Voyez plutôt l'<a href="finops.html" class="text-white underline hover:opacity-80 transition-opacity">audit FinOps</a>, ou consultez <a href="offres.html" class="text-white underline hover:opacity-80 transition-opacity">toutes les offres</a>.
+            </p>
+            <a href="index.html?service=migration#contact" class="inline-flex items-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm">
+                <i class="fas fa-calendar-check mr-2"></i>
+                Demander mon diagnostic gratuit
+            </a>
+            <p class="text-xs mt-4" style="color: #94a3b8;">
+                Gratuit &middot; 30 minutes &middot; avis technique franc
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
+                <div class="md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed text-sm">
+                        Expert IA, Automatisation &amp; SEO pour PME et startups. Sites vitrines, chatbots IA, infrastructure Cloud AWS.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Offres</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Site Vitrine</a></li>
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Chatbot Métier IA</a></li>
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Site + Chatbot</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="infrastructure-cloud-devops.html" class="hover:text-indigo-400 transition-colors text-sm">Infrastructure Cloud &amp; DevOps</a></li>
+                        <li><a href="finops.html" class="hover:text-indigo-400 transition-colors text-sm">Audit FinOps Cloud</a></li>
+                        <li><a href="index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Agents IA &amp; LLM</a></li>
+                        <li><a href="index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Automatisation IA</a></li>
+                        <li><a href="audit-seo.html" class="hover:text-indigo-400 transition-colors text-sm">Audit SEO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fab fa-whatsapp mr-2 text-slate-500"></i>
+                            <a href="https://wa.me/33631109539" target="_blank" rel="noopener noreferrer" class="hover:text-green-500 transition-colors">+33 6 31 10 95 39</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-500 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Expert IA &amp; Cloud - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-600">
+                    <a href="mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Légales</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('hidden');
+        });
+        menu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                menu.classList.add('hidden');
+            });
+        });
+    });
+    </script>
+    <script src="./assets/sticky-cta.js" defer></script>
+    <script src="./assets/whatsapp-button.js" defer></script>
+</body>
+</html>

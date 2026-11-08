@@ -71,7 +71,7 @@
 
     <!-- Open Graph -->
     <meta property="og:title" content="Erreur 500 WordPress : causes et solutions">
-    <meta property="og:description" content="Erreur 500 WordPress : la méthode en 3 étapes pour trouver la cause (mémoire PHP, .htaccess, plugins, thème, version PHP) et la corriger, issue de 50+ interventions.">
+    <meta property="og:description" content="Erreur 500 WordPress ? Activez debug.log, repérez la « Fatal error » et corrigez la cause : mémoire PHP, .htaccess, plugin ou thème. Méthode issue du terrain.">
     <meta property="og:url" content="https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-erreur-500.webp">
@@ -81,7 +81,7 @@
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Erreur 500 WordPress : causes et solutions">
-    <meta name="twitter:description" content="Erreur 500 WordPress : la méthode en 3 étapes pour trouver la cause (mémoire PHP, .htaccess, plugins, thème, version PHP) et la corriger, issue de 50+ interventions.">
+    <meta name="twitter:description" content="Erreur 500 WordPress ? Activez debug.log, repérez la « Fatal error » et corrigez la cause : mémoire PHP, .htaccess, plugin ou thème. Méthode issue du terrain.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-erreur-500.webp">
 
     <!-- Fonts -->
@@ -106,10 +106,10 @@
         {
           "@type": "BlogPosting",
           "headline": "Erreur 500 WordPress : diagnostic et causes réelles (cas client)",
-          "description": "L'erreur 500 WordPress cache toujours une cause précise. Retour d'expérience après 50+ interventions : mémoire PHP, .htaccess, plugins. Méthode de diagnostic.",
+          "description": "Erreur 500 WordPress ? Activez debug.log, repérez la « Fatal error » et corrigez la cause : mémoire PHP, .htaccess, plugin ou thème. Méthode issue du terrain.",
           "url": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html",
           "datePublished": "2026-03-21",
-          "dateModified": "2026-10-18",
+          "dateModified": "2026-11-08",
           "author": { "@id": "https://optimycloud.com/#person" },
           "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/blog/erreur-500-wordpress-diagnostic-solutions.html" },
@@ -265,6 +265,7 @@
                 <h2 class="font-semibold text-gray-900 mb-2">Erreur 500 WordPress : la réponse courte</h2>
                 <p class="text-gray-600 text-sm mb-3">Une erreur 500 WordPress (« Internal Server Error ») signifie que <strong>PHP a crashé</strong> avant de générer la page. Pour trouver la cause, activez <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">WP_DEBUG_LOG</code> dans <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-config.php</code>, reproduisez l'erreur, puis cherchez la ligne <strong>Fatal error</strong> dans <code class="bg-gray-200 px-1.5 py-0.5 rounded text-gray-800 text-xs">wp-content/debug.log</code>.</p>
                 <p class="text-gray-600 text-sm">Dans plus de la moitié des cas, c'est la <strong>mémoire PHP</strong> (128 Mo par défaut) qui est dépassée. Viennent ensuite un <strong>.htaccess</strong> corrompu, un <strong>conflit de plugins</strong>, un <strong>thème</strong> incompatible et une <strong>version de PHP</strong> obsolète. Sur nos interventions, la cause est identifiée en moins de 5 minutes dans 9 cas sur 10.</p>
+                <p class="text-gray-600 text-sm mt-3">Pas le temps de fouiller les logs, ou le site doit revenir en ligne vite ? Notre <a href="../depannage-wordpress.html" class="text-indigo-600 font-semibold underline hover:text-indigo-800">dépannage WordPress avec intervention sous 24h</a> prend en charge le diagnostic et la correction, à partir de 250 € HT.</p>
             </div>
 
             <!-- Introduction -->
@@ -644,6 +645,15 @@
                 </div>
             </div>
 
+            <!-- Encadré dépannage -->
+            <div class="reveal mt-12">
+                <div class="bg-indigo-50 border border-indigo-200 rounded-xl p-6">
+                    <p class="text-xl font-bold text-gray-900 mb-2"><i class="fas fa-screwdriver-wrench text-indigo-600 mr-2"></i>Dépannage WordPress sous 24h</p>
+                    <p class="text-sm text-gray-600 leading-relaxed mb-4">Le debug.log ne dit rien d'exploitable, vous n'avez pas d'accès FTP, ou le site est en production et chaque heure compte ? Je prends la main : diagnostic, correction de la cause (mémoire PHP, .htaccess, plugin, thème, version de PHP) et rapport complet des actions réalisées. Intervention sous 24h, à partir de 250 € HT.</p>
+                    <a href="../depannage-wordpress.html" class="inline-flex items-center text-indigo-700 font-semibold hover:underline">Voir l'offre de dépannage WordPress<i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                </div>
+            </div>
+
             <!-- FAQ -->
             <div class="reveal mt-12">
                 <h2 class="text-2xl sm:text-3xl font-bold text-gray-900 mb-6">
@@ -854,7 +864,6 @@
         }
     });
     </script>
-    <script src="../assets/blog-cta.js" defer></script>
     <script src="../assets/whatsapp-button.js" defer></script>
 </body>
 </html>

@@ -58,8 +58,8 @@
     <link rel="shortcut icon" href="../assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="../assets/apple-touch-icon.png" />
     <link rel="manifest" href="../assets/site.webmanifest" />
-    <title>EKS Auto Mode : Kubernetes sans DevOps sur AWS (guide 2026) | OptimyCloud</title>
-    <meta name="description" content="EKS Auto Mode supprime 80% du travail opérationnel Kubernetes. AWS gère nodes, scaling, networking et stockage automatiquement. Guide complet + comparatif vs EKS classique + migration.">
+    <title>EKS Auto Mode : Kubernetes simplifié sur AWS (2026)</title>
+    <meta name="description" content="EKS Auto Mode supprime 80 % du travail opérationnel Kubernetes : AWS gère nodes, scaling, réseau et stockage. Comparatif avec EKS classique et migration.">
     <meta name="keywords" content="EKS Auto Mode, Amazon EKS, Kubernetes AWS, Kubernetes simplifié, EKS managed nodes, Karpenter, auto scaling Kubernetes, cluster EKS, AWS Kubernetes 2026, migration EKS, infrastructure Kubernetes">
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
@@ -70,8 +70,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="EKS Auto Mode : Kubernetes sans DevOps sur AWS (guide 2026)">
-    <meta property="og:description" content="EKS Auto Mode supprime 80% du travail ops Kubernetes. AWS gère nodes, scaling et réseau automatiquement. Comparatif vs EKS classique + migration.">
+    <meta property="og:title" content="EKS Auto Mode : Kubernetes simplifié sur AWS (2026)">
+    <meta property="og:description" content="EKS Auto Mode supprime 80 % du travail opérationnel Kubernetes : AWS gère nodes, scaling, réseau et stockage. Comparatif avec EKS classique et migration.">
     <meta property="og:url" content="https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-eks.webp">
@@ -80,8 +80,8 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="EKS Auto Mode : Kubernetes sans DevOps sur AWS">
-    <meta name="twitter:description" content="Supprimez 80% du travail ops Kubernetes. AWS gère nodes, scaling et réseau. Guide complet 2026.">
+    <meta name="twitter:title" content="EKS Auto Mode : Kubernetes simplifié sur AWS (2026)">
+    <meta name="twitter:description" content="EKS Auto Mode supprime 80 % du travail opérationnel Kubernetes : AWS gère nodes, scaling, réseau et stockage. Comparatif avec EKS classique et migration.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-eks.webp">
 
     <!-- Fonts -->
@@ -106,7 +106,7 @@
         {
           "@type": "BlogPosting",
           "headline": "EKS Auto Mode : Kubernetes n'a jamais été aussi simple sur AWS",
-          "description": "Découvrez EKS Auto Mode : AWS gère vos nodes, scaling, networking et stockage Kubernetes automatiquement. Guide complet, comparatif et migration.",
+          "description": "EKS Auto Mode supprime 80 % du travail opérationnel Kubernetes : AWS gère nodes, scaling, réseau et stockage. Comparatif avec EKS classique et migration.",
           "url": "https://optimycloud.com/blog/eks-auto-mode-kubernetes-simple.html",
           "datePublished": "2026-03-11",
           "dateModified": "2026-03-11",
@@ -586,6 +586,9 @@
                     <div class="text-gray-400 mb-3"># Les pods redémarrent sur les nodes Auto Mode</div>
                     <div class="text-green-500">eksctl delete nodegroup --cluster mon-cluster --name old-ng</div>
                 </div>
+                <p class="text-base text-gray-600 leading-relaxed mb-8">
+                    Une migration de cluster vers EKS (ou depuis un cluster on-premise) demande un plan de bascule, des tests et un retour arrière prêt. C'est précisément ce que je fais dans mes <a href="../infrastructure-cloud-devops.html" class="text-indigo-600 hover:underline font-medium">missions d'infrastructure cloud et DevOps</a>.
+                </p>
             </div>
 
             <!-- Section 7: Limites -->

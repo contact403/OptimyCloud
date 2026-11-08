@@ -43,7 +43,7 @@ Page dédiée : https://optimycloud.com/offres.html
 
 ## Services Cloud & Infrastructure
 
-- **Infrastructure Cloud AWS** : Migration sécurisée d'infrastructures on-premise vers AWS. Kubernetes (EKS) avec Auto Mode et Karpenter. CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation).
+- **Infrastructure Cloud AWS** : Migration sécurisée d'infrastructures on-premise vers AWS. Kubernetes (EKS) avec Auto Mode et Karpenter. CI/CD GitOps avec Helm, ArgoCD ou FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation). Références : migration d'un cluster on-premise vers EKS (Culligan), runners CI/CD sur EKS (Arkema), infrastructure as code (Valeo), SRE sur Kubernetes (Ubisoft). Page dédiée : https://optimycloud.com/infrastructure-cloud-devops.html
 
 - **FinOps & Optimisation des coûts** : Audit gratuit de la facture Cloud avec analyse des ressources inutilisées ou surdimensionnées. Mise en place de Savings Plans, Reserved Instances, Spot Instances et right-sizing. Réduction de 30 à 60% des coûts AWS constatée.
 

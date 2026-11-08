@@ -2,6 +2,8 @@
 
 @source "../*.html";
 @source "../blog/*.html";
+@source "../en/*.html";
+@source "../en/blog/*.html";
 
 /* Self-hosted Plus Jakarta Sans (latin-ext) */
 @font-face {

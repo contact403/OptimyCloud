@@ -58,7 +58,7 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/site.webmanifest" />
-    <title>Running an autonomous AI agent on a VPS with claude -p (and why Bedrock in production) | OptimyCloud</title>
+    <title>Autonomous AI agent on a VPS with claude -p and Bedrock</title>
     <meta name="description" content="Running an autonomous AI agent on a VPS with claude -p: the tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.">
     <meta name="keywords" content="claude -p, Claude Code headless, AI agent VPS, Amazon Bedrock, CLAUDE_CODE_USE_BEDROCK, autonomous agent server, Bedrock IAM, LiteLLM, LLM gateway, ANTHROPIC_BASE_URL, multi-cloud AI, AI agent production, headless mode, server AI automation, data residency AI">
     <meta name="author" content="Alexandre Gillon">
@@ -70,8 +70,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/blog/agent-ia-autonome-vps-claude-code-bedrock.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="Running an autonomous AI agent on a VPS with claude -p (and why Bedrock in production)">
-    <meta property="og:description" content="The tutorial that works, what breaks the moment there's a client involved, and the Amazon Bedrock setup that fixes it.">
+    <meta property="og:title" content="Autonomous AI agent on a VPS with claude -p and Bedrock">
+    <meta property="og:description" content="Running an autonomous AI agent on a VPS with claude -p: the tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.">
     <meta property="og:url" content="https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html">
     <meta property="og:type" content="article">
     <meta property="og:image" content="https://optimycloud.com/assets/blog/hero-agent-vps-bedrock.webp">
@@ -82,8 +82,8 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Running an autonomous AI agent on a VPS with claude -p">
-    <meta name="twitter:description" content="The tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.">
+    <meta name="twitter:title" content="Autonomous AI agent on a VPS with claude -p and Bedrock">
+    <meta name="twitter:description" content="Running an autonomous AI agent on a VPS with claude -p: the tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/blog/hero-agent-vps-bedrock.webp">
 
     <!-- Fonts -->
@@ -111,7 +111,7 @@
           "description": "Running an autonomous AI agent on a VPS with claude -p: the tutorial that works, what breaks in production, and the Amazon Bedrock setup that fixes it.",
           "url": "https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html",
           "datePublished": "2026-07-22",
-          "dateModified": "2026-07-22",
+          "dateModified": "2026-11-08",
           "author": { "@id": "https://optimycloud.com/#person" },
           "publisher": { "@id": "https://optimycloud.com/#organization" },
           "mainEntityOfPage": { "@type": "WebPage", "@id": "https://optimycloud.com/en/blog/agent-ia-autonome-vps-claude-code-bedrock.html" },
@@ -510,7 +510,7 @@ claude --bare -p "Summarize the errors in this log" &lt; /var/log/app/error.log<
 export ANTHROPIC_DEFAULT_HAIKU_MODEL='eu.anthropic.claude-haiku-4-5-20251001-v1:0'</code></pre>
                 </div>
                 <p class="text-base text-gray-600 leading-relaxed mb-8">
-                    In an enterprise setting you go further: application inference profiles let you route each model version to an ARN managed by the organization, with its own quotas and its own cost tracking.
+                    In an enterprise setting you go further: application inference profiles let you route each model version to an ARN managed by the organization, with its own quotas and its own cost tracking. And if the cloud bill keeps drifting despite these guardrails, a <a href="../finops.html" class="text-indigo-600 hover:text-indigo-800 underline">cloud FinOps audit</a> shows where the budget goes and what can be cut.
                 </p>
 
                 <h3 class="text-xl font-bold text-gray-900 mb-3 mt-8">What if the client isn't on AWS?</h3>

@@ -29,6 +29,9 @@ Free audit and 30 to 60% reduction in your AWS costs. Savings Plans, Reserved In
 ### Security Audit
 Security audit of your Cloud infrastructures and applications. Penetration testing, compliance, hardening and AWS best practices.
 
+### Cloud infrastructure & DevOps
+AWS, GCP and Azure architecture, migration from on-premise to the cloud and to Kubernetes (EKS, GKE, AKS), infrastructure as code (Terraform, CDK), CI/CD, monitoring, cloud governance and identity federation. References: Culligan (on-premise cluster migration to EKS, database included), Arkema (CI/CD runners on EKS, identity federation), Valeo (infrastructure as code with managed services), TopTex (cloud governance), Ubisoft (SRE on Kubernetes). Custom quote, free 30-minute diagnostic. Dedicated page: https://optimycloud.com/en/infrastructure-cloud-devops.html
+
 ### SEO & Search Audit
 Complete technical audit of your site: performance, Core Web Vitals, schema markup, content, indexing. Tailor-made SEO strategy to improve your visibility on Google.
 
@@ -115,7 +118,7 @@ A: The first year is free. After that, hosting is €5/month. It's a static site
 
 ## SEO Audit
 
-### Complete SEO audit to improve your visibility on Google
+### Google SEO audit: technical review and action plan
 
 Your site isn't ranking in Google results? An SEO audit identifies what's blocking it and gives you a concrete action plan to gain visibility.
 
