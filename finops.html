@@ -85,7 +85,7 @@
 
     <!-- Fonts -->
     <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="./assets/style.css?v=20261119">
+    <link rel="stylesheet" href="./assets/style.css?v=20261119b">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
 
@@ -345,8 +345,181 @@
         </div>
     </section>
 
+    <!-- Offre Sprint FinOps AWS -->
+    <section id="sprint-finops" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">L'offre</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Le Sprint FinOps AWS</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Un prix fixe, un délai fixe, des livrables nommés. Pour les entreprises qui dépensent plus de 10 000 € par mois sur AWS.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-3 bg-white border-2 border-blue-500 rounded-2xl p-6 sm:p-8 shadow-lg">
+                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+                        <p class="text-4xl font-extrabold text-gray-900">2 400 € <span class="text-lg font-semibold text-gray-500">HT</span></p>
+                        <p class="text-sm text-gray-500">prix fixe &middot; livré en 7 jours ouvrés</p>
+                    </div>
+                    <p class="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 mb-6">
+                        <i class="fas fa-flag mr-1"></i>
+                        <strong>Tarif de lancement :</strong> les 3 premiers audits à 1 200 € HT, en échange d'une étude de cas anonymisée.
+                    </p>
+                    <h3 class="font-bold text-gray-900 mb-3">Ce que vous recevez</h3>
+                    <ul class="space-y-2.5 text-gray-600 text-sm mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Le rapport chiffré poste par poste</strong> : EC2, RDS, transferts de données et NAT, S3, EKS. Pas seulement ce que Compute Optimizer affiche.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Les corrections prêtes à appliquer</strong> : scripts et pull requests Terraform pour les gains rapides.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Une vidéo de restitution</strong> et une visio de 30 minutes en fin d'après-midi.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Une comparaison à 60 jours</strong> de votre nouvelle facture avec les estimations, sans frais.</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-gray-400 mr-3 mt-1 text-xs"></i><span><strong>Option :</strong> nous appliquons les corrections nous-mêmes, à prix fixe annoncé dans le rapport.</span></li>
+                    </ul>
+                    <div class="bg-green-50 border border-green-100 rounded-xl p-4 text-sm text-gray-700">
+                        <p class="font-semibold text-gray-900 mb-1"><i class="fas fa-shield-halved text-green-600 mr-2"></i>Garantie</p>
+                        Si les économies annuelles chiffrées dans le rapport sont inférieures à 5 fois le prix de l'audit, il est intégralement remboursé.
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-3"><i class="fas fa-lock text-blue-600 mr-2"></i>Sécurité de votre compte</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Aucun accès pour le pré-diagnostic.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>NDA signé avant tout accès.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Rôle créé par vous, avec un identifiant externe, révocable à tout moment.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Facturation et métadonnées uniquement : aucune lecture de vos données S3 ni de vos secrets.</span></li>
+                        </ul>
+                        <a href="politique-acces-aws.html" class="inline-flex items-center mt-4 text-sm font-semibold text-blue-600 hover:text-blue-800">Lire la politique IAM complète <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-2"><i class="fas fa-user-check text-blue-600 mr-2"></i>Pour qui ?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Startups et PME avec plus de 10 000 € par mois de facture AWS : fin des crédits Activate, facture qui a bondi, équipe sans le temps de faire le ménage. En dessous de ce seuil, le pré-diagnostic vous dira honnêtement si l'audit vaut le coup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment ca se passe -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Processus</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Comment se déroule l'audit FinOps</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Trois étapes, et vous voyez une estimation sur votre propre facture avant de payer quoi que ce soit.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+                <!-- Étape 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pré-diagnostic gratuit, sans accès</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Vous envoyez un simple export Cost Explorer. Vous recevez une estimation chiffrée des gains possibles et un avis honnête : audit pertinent ou pas. Un appel de 20 minutes si vous le souhaitez, en fin d'après-midi.</p>
+                </div>
+
+                <!-- Étape 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit en 7 jours ouvrés</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">NDA signé, puis vous créez vous-même le rôle IAM à partir de <a href="politique-acces-aws.html" class="text-blue-600 underline">notre politique publiée</a> (facturation et métadonnées uniquement). Analyse de la facture, de l'inventaire et des métriques CloudWatch.</p>
+                </div>
+
+                <!-- Étape 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Corrections prêtes à appliquer</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">Rapport chiffré poste par poste, scripts et pull requests Terraform, vidéo de restitution et visio de 30 minutes. Pas d'équipe pour appliquer ? Option mise en œuvre à prix fixe, annoncé dans le rapport.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Formulaire pré-diagnostic -->
+    <section id="pre-diagnostic" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Gratuit, sans accès</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Demandez votre pré-diagnostic</h2>
+                <p class="text-lg text-gray-500">
+                    Répondez à ces quelques questions. Je vous renvoie sous 24 h ouvrées la marche à suivre pour l'export Cost Explorer (5 minutes de votre côté), puis une estimation chiffrée des gains possibles.
+                </p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                <form id="prediag-form" class="space-y-5" novalidate>
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="project_type" value="finops-prediagnostic">
+                    <input type="hidden" name="_subject" value="Demande de pré-diagnostic FinOps AWS">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="pd-name" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
+                            <input type="text" id="pd-name" name="name" required autocomplete="name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label for="pd-email" class="block text-sm font-medium text-gray-700 mb-1">Email professionnel</label>
+                            <input type="email" id="pd-email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="pd-company" class="block text-sm font-medium text-gray-700 mb-1">Entreprise</label>
+                            <input type="text" id="pd-company" name="company" required autocomplete="organization" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label for="pd-bill" class="block text-sm font-medium text-gray-700 mb-1">Facture AWS mensuelle</label>
+                            <select id="pd-bill" name="aws_monthly_bill" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                                <option value="">Sélectionnez...</option>
+                                <option value="<5k">Moins de 5 000 €</option>
+                                <option value="5-10k">5 000 à 10 000 €</option>
+                                <option value="10-20k">10 000 à 20 000 €</option>
+                                <option value="20-40k">20 000 à 40 000 €</option>
+                                <option value=">40k">Plus de 40 000 €</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="block text-sm font-medium text-gray-700 mb-2">Crédits AWS Activate en cours ?</span>
+                        <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-600">
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="non" class="mr-2" checked>Non</label>
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="fin < 3 mois" class="mr-2">Oui, ils finissent dans moins de 3 mois</label>
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="oui" class="mr-2">Oui, plus longtemps</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="pd-services" class="block text-sm font-medium text-gray-700 mb-1">Principaux services utilisés <span class="text-gray-400 font-normal">(facultatif)</span></label>
+                        <input type="text" id="pd-services" name="main_services" placeholder="EC2, RDS, EKS, S3..." class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                    </div>
+                    <div>
+                        <label for="pd-message" class="block text-sm font-medium text-gray-700 mb-1">Contexte <span class="text-gray-400 font-normal">(facultatif)</span></label>
+                        <textarea id="pd-message" name="message" rows="3" placeholder="La facture a bondi récemment ? Votre équipe a déjà fait des optimisations ?" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm resize-none"></textarea>
+                    </div>
+                    <p class="text-xs text-gray-500">N'envoyez aucun identifiant ni clé d'accès. Vos informations servent uniquement à répondre à votre demande (<a href="politique-confidentialite.html" class="underline">politique de confidentialité</a>).</p>
+                    <p id="prediag-error" class="hidden text-sm text-red-600" role="alert"></p>
+                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Demander mon pré-diagnostic gratuit
+                    </button>
+                </form>
+                <div class="mt-6 pt-6 border-t border-gray-100 text-center text-sm text-gray-500">
+                    Vous préférez en parler d'abord ?
+                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="font-semibold text-blue-600 hover:text-blue-800 cursor-pointer">Réserver un appel de 20 minutes</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Ce que couvre l'audit -->
-    <section id="ce-que-laudit-couvre" class="py-16 sm:py-24 bg-white">
+    <section id="ce-que-laudit-couvre" class="py-16 sm:py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Audit FinOps complet</p>
@@ -412,179 +585,6 @@
                     <p class="text-gray-500 text-sm leading-relaxed">Migration vers Graviton (ARM), Spot Instances pour les workloads tolérants, Lambda ou Fargate pour les charges intermittentes. Analyse au cas par cas avec estimation des gains et des risques.</p>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Comment ca se passe -->
-    <section class="py-16 sm:py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Processus</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Comment se déroule l'audit FinOps</h2>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    Trois étapes, et vous voyez une estimation sur votre propre facture avant de payer quoi que ce soit.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-
-                <!-- Étape 1 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                        <span class="text-blue-700 text-2xl font-extrabold">1</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Pré-diagnostic gratuit, sans accès</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Vous envoyez un simple export Cost Explorer. Vous recevez une estimation chiffrée des gains possibles et un avis honnête : audit pertinent ou pas. Un appel de 20 minutes si vous le souhaitez, en fin d'après-midi.</p>
-                </div>
-
-                <!-- Étape 2 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                        <span class="text-blue-700 text-2xl font-extrabold">2</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit en 7 jours ouvrés</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">NDA signé, puis vous créez vous-même le rôle IAM à partir de <a href="politique-acces-aws.html" class="text-blue-600 underline">notre politique publiée</a> (facturation et métadonnées uniquement). Analyse de la facture, de l'inventaire et des métriques CloudWatch.</p>
-                </div>
-
-                <!-- Étape 3 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                        <span class="text-blue-700 text-2xl font-extrabold">3</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Corrections prêtes à appliquer</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Rapport chiffré poste par poste, scripts et pull requests Terraform, vidéo de restitution et visio de 30 minutes. Pas d'équipe pour appliquer ? Option mise en œuvre à prix fixe, annoncé dans le rapport.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- Offre Sprint FinOps AWS -->
-    <section id="sprint-finops" class="py-16 sm:py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">L'offre</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Le Sprint FinOps AWS</h2>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    Un prix fixe, un délai fixe, des livrables nommés. Pour les entreprises qui dépensent plus de 10 000 € par mois sur AWS.
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-5 gap-8">
-                <div class="lg:col-span-3 bg-white border-2 border-blue-500 rounded-2xl p-6 sm:p-8 shadow-lg">
-                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
-                        <p class="text-4xl font-extrabold text-gray-900">2 400 € <span class="text-lg font-semibold text-gray-500">HT</span></p>
-                        <p class="text-sm text-gray-500">prix fixe &middot; livré en 7 jours ouvrés</p>
-                    </div>
-                    <p class="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 mb-6">
-                        <i class="fas fa-flag mr-1"></i>
-                        <strong>Tarif de lancement :</strong> les 3 premiers audits à 1 200 € HT, en échange d'une étude de cas anonymisée.
-                    </p>
-                    <h3 class="font-bold text-gray-900 mb-3">Ce que vous recevez</h3>
-                    <ul class="space-y-2.5 text-gray-600 text-sm mb-6">
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Le rapport chiffré poste par poste</strong> : EC2, RDS, transferts de données et NAT, S3, EKS. Pas seulement ce que Compute Optimizer affiche.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Les corrections prêtes à appliquer</strong> : scripts et pull requests Terraform pour les gains rapides.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Une vidéo de restitution</strong> et une visio de 30 minutes en fin d'après-midi.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Une comparaison à 60 jours</strong> de votre nouvelle facture avec les estimations, sans frais.</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-gray-400 mr-3 mt-1 text-xs"></i><span><strong>Option :</strong> nous appliquons les corrections nous-mêmes, à prix fixe annoncé dans le rapport.</span></li>
-                    </ul>
-                    <div class="bg-green-50 border border-green-100 rounded-xl p-4 text-sm text-gray-700">
-                        <p class="font-semibold text-gray-900 mb-1"><i class="fas fa-shield-halved text-green-600 mr-2"></i>Garantie</p>
-                        Si les économies annuelles chiffrées dans le rapport sont inférieures à 5 fois le prix de l'audit, il est intégralement remboursé.
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 space-y-4">
-                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
-                        <h3 class="font-bold text-gray-900 mb-3"><i class="fas fa-lock text-blue-600 mr-2"></i>Sécurité de votre compte</h3>
-                        <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Aucun accès pour le pré-diagnostic.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>NDA signé avant tout accès.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Rôle créé par vous, avec un identifiant externe, révocable à tout moment.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Facturation et métadonnées uniquement : aucune lecture de vos données S3 ni de vos secrets.</span></li>
-                        </ul>
-                        <a href="politique-acces-aws.html" class="inline-flex items-center mt-4 text-sm font-semibold text-blue-600 hover:text-blue-800">Lire la politique IAM complète <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
-                    </div>
-                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
-                        <h3 class="font-bold text-gray-900 mb-2"><i class="fas fa-user-check text-blue-600 mr-2"></i>Pour qui ?</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Startups et PME avec plus de 10 000 € par mois de facture AWS : fin des crédits Activate, facture qui a bondi, équipe sans le temps de faire le ménage. En dessous de ce seuil, le pré-diagnostic vous dira honnêtement si l'audit vaut le coup.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Formulaire pré-diagnostic -->
-    <section id="pre-diagnostic" class="py-16 sm:py-24 bg-slate-50">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Gratuit, sans accès</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Demandez votre pré-diagnostic</h2>
-                <p class="text-lg text-gray-500">
-                    Répondez à ces quelques questions. Je vous renvoie sous 24 h ouvrées la marche à suivre pour l'export Cost Explorer (5 minutes de votre côté), puis une estimation chiffrée des gains possibles.
-                </p>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
-                <form id="prediag-form" class="space-y-5" novalidate>
-                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                    <input type="hidden" name="project_type" value="finops-prediagnostic">
-                    <input type="hidden" name="_subject" value="Demande de pré-diagnostic FinOps AWS">
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <div>
-                            <label for="pd-name" class="block text-sm font-medium text-gray-700 mb-1">Nom</label>
-                            <input type="text" id="pd-name" name="name" required autocomplete="name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                        </div>
-                        <div>
-                            <label for="pd-email" class="block text-sm font-medium text-gray-700 mb-1">Email professionnel</label>
-                            <input type="email" id="pd-email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                        </div>
-                    </div>
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <div>
-                            <label for="pd-company" class="block text-sm font-medium text-gray-700 mb-1">Entreprise</label>
-                            <input type="text" id="pd-company" name="company" required autocomplete="organization" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                        </div>
-                        <div>
-                            <label for="pd-bill" class="block text-sm font-medium text-gray-700 mb-1">Facture AWS mensuelle</label>
-                            <select id="pd-bill" name="aws_monthly_bill" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                                <option value="">Sélectionnez...</option>
-                                <option value="<5k">Moins de 5 000 €</option>
-                                <option value="5-10k">5 000 à 10 000 €</option>
-                                <option value="10-20k">10 000 à 20 000 €</option>
-                                <option value="20-40k">20 000 à 40 000 €</option>
-                                <option value=">40k">Plus de 40 000 €</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="block text-sm font-medium text-gray-700 mb-2">Crédits AWS Activate en cours ?</span>
-                        <div class="flex flex-wrap gap-4 text-sm text-gray-600">
-                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="non" class="mr-2" checked>Non</label>
-                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="fin < 3 mois" class="mr-2">Oui, ils finissent dans moins de 3 mois</label>
-                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="oui" class="mr-2">Oui, plus longtemps</label>
-                        </div>
-                    </div>
-                    <div>
-                        <label for="pd-services" class="block text-sm font-medium text-gray-700 mb-1">Principaux services utilisés <span class="text-gray-400 font-normal">(facultatif)</span></label>
-                        <input type="text" id="pd-services" name="main_services" placeholder="EC2, RDS, EKS, S3..." class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                    </div>
-                    <div>
-                        <label for="pd-message" class="block text-sm font-medium text-gray-700 mb-1">Contexte <span class="text-gray-400 font-normal">(facultatif)</span></label>
-                        <textarea id="pd-message" name="message" rows="3" placeholder="La facture a bondi récemment ? Votre équipe a déjà fait des optimisations ?" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm resize-none"></textarea>
-                    </div>
-                    <p class="text-xs text-gray-500">N'envoyez aucun identifiant ni clé d'accès. Vos informations servent uniquement à répondre à votre demande (<a href="politique-confidentialite.html" class="underline">politique de confidentialité</a>).</p>
-                    <p id="prediag-error" class="hidden text-sm text-red-600" role="alert"></p>
-                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm flex items-center justify-center">
-                        <i class="fas fa-paper-plane mr-2"></i>
-                        Demander mon pré-diagnostic gratuit
-                    </button>
-                </form>
-                <div class="mt-6 pt-6 border-t border-gray-100 text-center text-sm text-gray-500">
-                    Vous préférez en parler d'abord ?
-                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="font-semibold text-blue-600 hover:text-blue-800 cursor-pointer">Réserver un appel de 20 minutes</button>
-                </div>
             </div>
         </div>
     </section>

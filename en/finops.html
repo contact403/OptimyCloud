@@ -87,7 +87,7 @@
 
     <!-- Fonts -->
     <link rel="preload" href="/assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="stylesheet" href="/assets/style.css?v=20261119">
+    <link rel="stylesheet" href="/assets/style.css?v=20261119b">
     <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
 
@@ -348,8 +348,181 @@
         </div>
     </section>
 
+    <!-- AWS FinOps Sprint offer -->
+    <section id="sprint-finops" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">The offer</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The AWS FinOps Sprint</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    A fixed price, a fixed timeline, named deliverables. For companies spending more than €10,000 per month on AWS.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-3 bg-white border-2 border-blue-500 rounded-2xl p-6 sm:p-8 shadow-lg">
+                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+                        <p class="text-4xl font-extrabold text-gray-900">€2,400 <span class="text-lg font-semibold text-gray-500">excl. VAT</span></p>
+                        <p class="text-sm text-gray-500">fixed price &middot; delivered in 7 business days</p>
+                    </div>
+                    <p class="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 mb-6">
+                        <i class="fas fa-flag mr-1"></i>
+                        <strong>Launch pricing:</strong> the first 3 audits at €1,200 excl. VAT, in exchange for an anonymized case study.
+                    </p>
+                    <h3 class="font-bold text-gray-900 mb-3">What you receive</h3>
+                    <ul class="space-y-2.5 text-gray-600 text-sm mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>The report costed line by line</strong>: EC2, RDS, data transfer and NAT, S3, EKS. Not just what Compute Optimizer shows.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Fixes ready to apply</strong>: scripts and Terraform pull requests for the quick wins.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>A walkthrough video</strong> and a 30-minute video call in the late afternoon.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>A 60-day check</strong> comparing your new bill with the estimates, at no extra cost.</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-gray-400 mr-3 mt-1 text-xs"></i><span><strong>Option:</strong> we apply the fixes ourselves, at a fixed price stated in the report.</span></li>
+                    </ul>
+                    <div class="bg-green-50 border border-green-100 rounded-xl p-4 text-sm text-gray-700">
+                        <p class="font-semibold text-gray-900 mb-1"><i class="fas fa-shield-halved text-green-600 mr-2"></i>Guarantee</p>
+                        If the annual savings costed in the report are less than 5 times the price of the audit, it is refunded in full.
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-3"><i class="fas fa-lock text-blue-600 mr-2"></i>Your account stays secure</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>No access needed for the pre-diagnostic.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>NDA signed before any access.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>A role you create yourself, with an external ID, revocable at any time.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Billing and metadata only: no reading of your S3 data or your secrets.</span></li>
+                        </ul>
+                        <a href="/en/aws-access-policy.html" class="inline-flex items-center mt-4 text-sm font-semibold text-blue-600 hover:text-blue-800">Read the full IAM policy <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-2"><i class="fas fa-user-check text-blue-600 mr-2"></i>Who is it for?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Startups and SMEs with an AWS bill above €10,000 per month: Activate credits running out, a bill that has jumped, a team with no time to clean things up. Below that threshold, the pre-diagnostic will tell you honestly whether the audit is worth it.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Process</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How the FinOps audit unfolds</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    Three steps, and you see an estimate on your own bill before you pay anything.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">1</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Free pre-diagnostic, no access needed</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">You send a simple Cost Explorer export. You get a costed estimate of the possible savings and an honest opinion on whether an audit is worth it. A 20-minute call if you want one, in the late afternoon.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">2</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit in 7 business days</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">NDA signed, then you create the IAM role yourself from <a href="/en/aws-access-policy.html" class="text-blue-600 underline">our published policy</a> (billing and metadata only). Analysis of the bill, the inventory and the CloudWatch metrics.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
+                        <span class="text-blue-700 text-2xl font-extrabold">3</span>
+                    </div>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Fixes ready to apply</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">A report costed line by line, scripts and Terraform pull requests, a walkthrough video and a 30-minute video call. No team to apply them? Optional implementation at a fixed price, stated in the report.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Pre-diagnostic form -->
+    <section id="pre-diagnostic" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Free, no access needed</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Request your pre-diagnostic</h2>
+                <p class="text-lg text-gray-500">
+                    Answer these few questions. Within 1 business day I send you the steps for the Cost Explorer export (5 minutes on your side), then a costed estimate of the possible savings.
+                </p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                <form id="prediag-form" class="space-y-5" novalidate>
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="project_type" value="finops-prediagnostic">
+                    <input type="hidden" name="_subject" value="FinOps AWS pre-diagnostic request">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="pd-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="pd-name" name="name" required autocomplete="name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label for="pd-email" class="block text-sm font-medium text-gray-700 mb-1">Work email</label>
+                            <input type="email" id="pd-email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="pd-company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                            <input type="text" id="pd-company" name="company" required autocomplete="organization" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label for="pd-bill" class="block text-sm font-medium text-gray-700 mb-1">Monthly AWS bill</label>
+                            <select id="pd-bill" name="aws_monthly_bill" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                                <option value="">Select...</option>
+                                <option value="<5k">Less than €5,000</option>
+                                <option value="5-10k">€5,000 to €10,000</option>
+                                <option value="10-20k">€10,000 to €20,000</option>
+                                <option value="20-40k">€20,000 to €40,000</option>
+                                <option value=">40k">More than €40,000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="block text-sm font-medium text-gray-700 mb-2">AWS Activate credits in progress?</span>
+                        <div class="flex flex-col sm:flex-row sm:flex-wrap gap-2 sm:gap-4 text-sm text-gray-600">
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="non" class="mr-2" checked>No</label>
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="fin < 3 mois" class="mr-2">Yes, they run out in less than 3 months</label>
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="oui" class="mr-2">Yes, for longer</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="pd-services" class="block text-sm font-medium text-gray-700 mb-1">Main services used <span class="text-gray-400 font-normal">(optional)</span></label>
+                        <input type="text" id="pd-services" name="main_services" placeholder="EC2, RDS, EKS, S3..." class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                    </div>
+                    <div>
+                        <label for="pd-message" class="block text-sm font-medium text-gray-700 mb-1">Context <span class="text-gray-400 font-normal">(optional)</span></label>
+                        <textarea id="pd-message" name="message" rows="3" placeholder="Has the bill jumped recently? Has your team already done some optimization?" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm resize-none"></textarea>
+                    </div>
+                    <p class="text-xs text-gray-500">Do not send any credentials or access keys. Your information is used only to answer your request (<a href="/en/politique-confidentialite.html" class="underline">privacy policy</a>).</p>
+                    <p id="prediag-error" class="hidden text-sm text-red-600" role="alert"></p>
+                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Request my free pre-diagnostic
+                    </button>
+                </form>
+                <div class="mt-6 pt-6 border-t border-gray-100 text-center text-sm text-gray-500">
+                    Would you rather talk first?
+                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="font-semibold text-blue-600 hover:text-blue-800 cursor-pointer">Book a 20-minute call</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- What the audit covers -->
-    <section id="ce-que-laudit-couvre" class="py-16 sm:py-24 bg-white">
+    <section id="ce-que-laudit-couvre" class="py-16 sm:py-24 bg-slate-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">A complete FinOps audit</p>
@@ -415,179 +588,6 @@
                     <p class="text-gray-500 text-sm leading-relaxed">Migration to Graviton (ARM), Spot Instances for fault-tolerant workloads, Lambda or Fargate for intermittent loads. A case-by-case analysis with an estimate of the gains and the risks.</p>
                 </div>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- How it works -->
-    <section class="py-16 sm:py-24 bg-slate-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Process</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How the FinOps audit unfolds</h2>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    Three steps, and you see an estimate on your own bill before you pay anything.
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-
-                <!-- Step 1 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                        <span class="text-blue-700 text-2xl font-extrabold">1</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Free pre-diagnostic, no access needed</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">You send a simple Cost Explorer export. You get a costed estimate of the possible savings and an honest opinion on whether an audit is worth it. A 20-minute call if you want one, in the late afternoon.</p>
-                </div>
-
-                <!-- Step 2 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                        <span class="text-blue-700 text-2xl font-extrabold">2</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit in 7 business days</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">NDA signed, then you create the IAM role yourself from <a href="/en/aws-access-policy.html" class="text-blue-600 underline">our published policy</a> (billing and metadata only). Analysis of the bill, the inventory and the CloudWatch metrics.</p>
-                </div>
-
-                <!-- Step 3 -->
-                <div class="text-center">
-                    <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
-                        <span class="text-blue-700 text-2xl font-extrabold">3</span>
-                    </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Fixes ready to apply</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">A report costed line by line, scripts and Terraform pull requests, a walkthrough video and a 30-minute video call. No team to apply them? Optional implementation at a fixed price, stated in the report.</p>
-                </div>
-
-            </div>
-
-        </div>
-    </section>
-
-    <!-- AWS FinOps Sprint offer -->
-    <section id="sprint-finops" class="py-16 sm:py-24 bg-white">
-        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">The offer</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The AWS FinOps Sprint</h2>
-                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    A fixed price, a fixed timeline, named deliverables. For companies spending more than €10,000 per month on AWS.
-                </p>
-            </div>
-
-            <div class="grid lg:grid-cols-5 gap-8">
-                <div class="lg:col-span-3 bg-white border-2 border-blue-500 rounded-2xl p-6 sm:p-8 shadow-lg">
-                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
-                        <p class="text-4xl font-extrabold text-gray-900">€2,400 <span class="text-lg font-semibold text-gray-500">excl. VAT</span></p>
-                        <p class="text-sm text-gray-500">fixed price &middot; delivered in 7 business days</p>
-                    </div>
-                    <p class="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 mb-6">
-                        <i class="fas fa-flag mr-1"></i>
-                        <strong>Launch pricing:</strong> the first 3 audits at €1,200 excl. VAT, in exchange for an anonymized case study.
-                    </p>
-                    <h3 class="font-bold text-gray-900 mb-3">What you receive</h3>
-                    <ul class="space-y-2.5 text-gray-600 text-sm mb-6">
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>The report costed line by line</strong>: EC2, RDS, data transfer and NAT, S3, EKS. Not just what Compute Optimizer shows.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Fixes ready to apply</strong>: scripts and Terraform pull requests for the quick wins.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>A walkthrough video</strong> and a 30-minute video call in the late afternoon.</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>A 60-day check</strong> comparing your new bill with the estimates, at no extra cost.</span></li>
-                        <li class="flex items-start"><i class="fas fa-plus text-gray-400 mr-3 mt-1 text-xs"></i><span><strong>Option:</strong> we apply the fixes ourselves, at a fixed price stated in the report.</span></li>
-                    </ul>
-                    <div class="bg-green-50 border border-green-100 rounded-xl p-4 text-sm text-gray-700">
-                        <p class="font-semibold text-gray-900 mb-1"><i class="fas fa-shield-halved text-green-600 mr-2"></i>Guarantee</p>
-                        If the annual savings costed in the report are less than 5 times the price of the audit, it is refunded in full.
-                    </div>
-                </div>
-
-                <div class="lg:col-span-2 space-y-4">
-                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
-                        <h3 class="font-bold text-gray-900 mb-3"><i class="fas fa-lock text-blue-600 mr-2"></i>Your account stays secure</h3>
-                        <ul class="space-y-2 text-gray-600 text-sm">
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>No access needed for the pre-diagnostic.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>NDA signed before any access.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>A role you create yourself, with an external ID, revocable at any time.</span></li>
-                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Billing and metadata only: no reading of your S3 data or your secrets.</span></li>
-                        </ul>
-                        <a href="/en/aws-access-policy.html" class="inline-flex items-center mt-4 text-sm font-semibold text-blue-600 hover:text-blue-800">Read the full IAM policy <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
-                    </div>
-                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
-                        <h3 class="font-bold text-gray-900 mb-2"><i class="fas fa-user-check text-blue-600 mr-2"></i>Who is it for?</h3>
-                        <p class="text-gray-600 text-sm leading-relaxed">Startups and SMEs with an AWS bill above €10,000 per month: Activate credits running out, a bill that has jumped, a team with no time to clean things up. Below that threshold, the pre-diagnostic will tell you honestly whether the audit is worth it.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pre-diagnostic form -->
-    <section id="pre-diagnostic" class="py-16 sm:py-24 bg-slate-50">
-        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-10">
-                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Free, no access needed</p>
-                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Request your pre-diagnostic</h2>
-                <p class="text-lg text-gray-500">
-                    Answer these few questions. Within 1 business day I send you the steps for the Cost Explorer export (5 minutes on your side), then a costed estimate of the possible savings.
-                </p>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
-                <form id="prediag-form" class="space-y-5" novalidate>
-                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
-                    <input type="hidden" name="project_type" value="finops-prediagnostic">
-                    <input type="hidden" name="_subject" value="FinOps AWS pre-diagnostic request">
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <div>
-                            <label for="pd-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                            <input type="text" id="pd-name" name="name" required autocomplete="name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                        </div>
-                        <div>
-                            <label for="pd-email" class="block text-sm font-medium text-gray-700 mb-1">Work email</label>
-                            <input type="email" id="pd-email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                        </div>
-                    </div>
-                    <div class="grid sm:grid-cols-2 gap-5">
-                        <div>
-                            <label for="pd-company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
-                            <input type="text" id="pd-company" name="company" required autocomplete="organization" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                        </div>
-                        <div>
-                            <label for="pd-bill" class="block text-sm font-medium text-gray-700 mb-1">Monthly AWS bill</label>
-                            <select id="pd-bill" name="aws_monthly_bill" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                                <option value="">Select...</option>
-                                <option value="<5k">Less than €5,000</option>
-                                <option value="5-10k">€5,000 to €10,000</option>
-                                <option value="10-20k">€10,000 to €20,000</option>
-                                <option value="20-40k">€20,000 to €40,000</option>
-                                <option value=">40k">More than €40,000</option>
-                            </select>
-                        </div>
-                    </div>
-                    <div>
-                        <span class="block text-sm font-medium text-gray-700 mb-2">AWS Activate credits in progress?</span>
-                        <div class="flex flex-wrap gap-4 text-sm text-gray-600">
-                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="non" class="mr-2" checked>No</label>
-                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="fin < 3 mois" class="mr-2">Yes, they run out in less than 3 months</label>
-                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="oui" class="mr-2">Yes, for longer</label>
-                        </div>
-                    </div>
-                    <div>
-                        <label for="pd-services" class="block text-sm font-medium text-gray-700 mb-1">Main services used <span class="text-gray-400 font-normal">(optional)</span></label>
-                        <input type="text" id="pd-services" name="main_services" placeholder="EC2, RDS, EKS, S3..." class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
-                    </div>
-                    <div>
-                        <label for="pd-message" class="block text-sm font-medium text-gray-700 mb-1">Context <span class="text-gray-400 font-normal">(optional)</span></label>
-                        <textarea id="pd-message" name="message" rows="3" placeholder="Has the bill jumped recently? Has your team already done some optimization?" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm resize-none"></textarea>
-                    </div>
-                    <p class="text-xs text-gray-500">Do not send any credentials or access keys. Your information is used only to answer your request (<a href="/en/politique-confidentialite.html" class="underline">privacy policy</a>).</p>
-                    <p id="prediag-error" class="hidden text-sm text-red-600" role="alert"></p>
-                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm flex items-center justify-center">
-                        <i class="fas fa-paper-plane mr-2"></i>
-                        Request my free pre-diagnostic
-                    </button>
-                </form>
-                <div class="mt-6 pt-6 border-t border-gray-100 text-center text-sm text-gray-500">
-                    Would you rather talk first?
-                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="font-semibold text-blue-600 hover:text-blue-800 cursor-pointer">Book a 20-minute call</button>
-                </div>
             </div>
         </div>
     </section>
