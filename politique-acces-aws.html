@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <title>Politique d'accès AWS du Sprint FinOps | OptimyCloud</title>
+    <meta name="description" content="La politique IAM exacte demandée pour l'audit FinOps AWS : facturation et métadonnées uniquement, aucune lecture de vos données S3 ni de vos secrets, révocable à tout moment.">
+    <meta name="facebook-domain-verification" content="sliau7t9ilkk0j7rijo6bnnxb3qrha" />
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://optimycloud.com/politique-acces-aws.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/politique-acces-aws.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/aws-access-policy.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/politique-acces-aws.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Politique d'accès AWS du Sprint FinOps | OptimyCloud">
+    <meta property="og:description" content="La politique IAM exacte demandée pour l'audit FinOps AWS : facturation et métadonnées uniquement, aucune lecture de vos données S3 ni de vos secrets, révocable à tout moment.">
+    <meta property="og:url" content="https://optimycloud.com/politique-acces-aws.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Politique d'accès AWS du Sprint FinOps | OptimyCloud">
+    <meta name="twitter:description" content="La politique IAM exacte demandée pour l'audit FinOps AWS : facturation et métadonnées uniquement, aucune lecture de vos données S3 ni de vos secrets, révocable à tout moment.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
+    <link rel="preconnect" href="https://images.credly.com" crossorigin>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                        <img src="./assets/optimycloud-logo.webp"
+                             alt="OptimyCloud"
+                             width="200" height="64"
+                             fetchpriority="high"
+                             class="h-20 w-auto"
+                             style="mix-blend-mode: multiply;">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Accueil</a>
+                    <a href="index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
+                    <a href="index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/en/aws-access-policy.html" hreflang="en" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="English version"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">EN</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <a href="/en/aws-access-policy.html" hreflang="en" class="mobile-lang-flag md:hidden ml-auto mr-3 inline-flex items-center" aria-label="View the English version"><img src="/assets/flags/gb.svg" alt="" width="24" height="17" style="display:inline-block;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.15)"></a>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/en/aws-access-policy.html" hreflang="en" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">English version</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="py-16 sm:py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="mb-6 text-sm text-gray-500" aria-label="Fil d'Ariane">
+                <a href="index.html" class="hover:text-blue-600">Accueil</a><span class="mx-2">/</span><a href="finops.html" class="hover:text-blue-600">Sprint FinOps AWS</a><span class="mx-2">/</span><span class="text-gray-900">Politique d'accès AWS</span>
+            </nav>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-4">Politique d'accès AWS du Sprint FinOps</h1>
+            <p class="text-lg text-gray-600 mb-8">Voici exactement ce que nous demandons pour auditer votre facture AWS. Lisez-la, faites-la valider par votre équipe sécurité, et retirez ce qui vous gêne : c'est vous qui créez le rôle.</p>
+
+            <div class="grid sm:grid-cols-2 gap-4 mb-10">
+                <div class="bg-white border border-gray-200 rounded-xl p-5"><p class="font-semibold text-gray-900 mb-1"><i class="fas fa-check text-green-600 mr-2"></i>Ce que le rôle permet</p><p class="text-sm text-gray-600">Lire la facturation (Cost Explorer, Savings Plans, budgets, recommandations AWS), lister les ressources (instances, volumes, bases, clusters, NAT, load balancers, buckets) et lire leurs métriques CloudWatch.</p></div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5"><p class="font-semibold text-gray-900 mb-1"><i class="fas fa-ban text-red-600 mr-2"></i>Ce qu'il interdit</p><p class="text-sm text-gray-600">Lire le contenu de vos buckets S3, vos secrets, vos paramètres SSM, vos logs, vos tables DynamoDB, le code et les variables d'environnement Lambda, les user-data EC2. Aucune action d'écriture n'est accordée.</p></div>
+            </div>
+
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Avant l'audit : aucun accès</h2>
+            <p class="text-gray-600 mb-8">Le pré-diagnostic gratuit se fait uniquement à partir d'un export Cost Explorer (CSV) que vous nous envoyez. Le rôle ci-dessous n'est créé qu'une fois l'audit commandé et le NDA signé.</p>
+
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">1. Politique d'autorisations</h2>
+            <p class="text-gray-600 mb-4">Lecture seule, actions listées une par une (pas de <code>ec2:Describe*</code> générique, qui donnerait accès aux user-data). Un bloc <strong>Deny</strong> explicite ferme en plus l'accès aux données et aux secrets, même si une autre politique attachée au rôle les autorisait.</p>
+            <pre class="bg-slate-900 text-slate-100 text-xs sm:text-sm rounded-xl p-4 sm:p-6 overflow-x-auto leading-relaxed"><code>{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Sid&quot;: &quot;FacturationEtRecommandations&quot;,
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;ce:Get*&quot;,
+        &quot;ce:Describe*&quot;,
+        &quot;ce:List*&quot;,
+        &quot;cur:DescribeReportDefinitions&quot;,
+        &quot;budgets:ViewBudget&quot;,
+        &quot;savingsplans:DescribeSavingsPlans&quot;,
+        &quot;compute-optimizer:Get*&quot;,
+        &quot;compute-optimizer:Describe*&quot;,
+        &quot;cost-optimization-hub:ListRecommendations&quot;,
+        &quot;cost-optimization-hub:GetRecommendation&quot;,
+        &quot;cost-optimization-hub:ListRecommendationSummaries&quot;,
+        &quot;pricing:GetProducts&quot;,
+        &quot;pricing:DescribeServices&quot;
+      ],
+      &quot;Resource&quot;: &quot;*&quot;
+    },
+    {
+      &quot;Sid&quot;: &quot;MetadonneesDesRessources&quot;,
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Action&quot;: [
+        &quot;ec2:DescribeRegions&quot;,
+        &quot;ec2:DescribeInstances&quot;,
+        &quot;ec2:DescribeInstanceTypes&quot;,
+        &quot;ec2:DescribeReservedInstances&quot;,
+        &quot;ec2:DescribeVolumes&quot;,
+        &quot;ec2:DescribeSnapshots&quot;,
+        &quot;ec2:DescribeAddresses&quot;,
+        &quot;ec2:DescribeNatGateways&quot;,
+        &quot;ec2:DescribeVpcs&quot;,
+        &quot;ec2:DescribeSubnets&quot;,
+        &quot;ec2:DescribeVpcEndpoints&quot;,
+        &quot;ec2:DescribeTransitGateways&quot;,
+        &quot;elasticloadbalancing:DescribeLoadBalancers&quot;,
+        &quot;elasticloadbalancing:DescribeTargetGroups&quot;,
+        &quot;elasticloadbalancing:DescribeTargetHealth&quot;,
+        &quot;autoscaling:DescribeAutoScalingGroups&quot;,
+        &quot;rds:DescribeDBInstances&quot;,
+        &quot;rds:DescribeDBClusters&quot;,
+        &quot;rds:DescribeDBSnapshots&quot;,
+        &quot;rds:DescribeDBClusterSnapshots&quot;,
+        &quot;rds:DescribeReservedDBInstances&quot;,
+        &quot;elasticache:DescribeCacheClusters&quot;,
+        &quot;elasticache:DescribeReservedCacheNodes&quot;,
+        &quot;eks:ListClusters&quot;,
+        &quot;eks:DescribeCluster&quot;,
+        &quot;eks:ListNodegroups&quot;,
+        &quot;eks:DescribeNodegroup&quot;,
+        &quot;s3:ListAllMyBuckets&quot;,
+        &quot;s3:GetBucketLocation&quot;,
+        &quot;s3:GetLifecycleConfiguration&quot;,
+        &quot;s3:GetBucketVersioning&quot;,
+        &quot;s3:GetIntelligentTieringConfiguration&quot;,
+        &quot;logs:DescribeLogGroups&quot;,
+        &quot;cloudwatch:GetMetricData&quot;,
+        &quot;cloudwatch:GetMetricStatistics&quot;,
+        &quot;cloudwatch:ListMetrics&quot;
+      ],
+      &quot;Resource&quot;: &quot;*&quot;
+    },
+    {
+      &quot;Sid&quot;: &quot;AucunAccesAuxDonneesNiAuxSecrets&quot;,
+      &quot;Effect&quot;: &quot;Deny&quot;,
+      &quot;Action&quot;: [
+        &quot;s3:GetObject&quot;,
+        &quot;s3:GetObjectVersion&quot;,
+        &quot;s3:ListBucket&quot;,
+        &quot;secretsmanager:GetSecretValue&quot;,
+        &quot;ssm:GetParameter&quot;,
+        &quot;ssm:GetParameters&quot;,
+        &quot;ssm:GetParametersByPath&quot;,
+        &quot;kms:Decrypt&quot;,
+        &quot;logs:GetLogEvents&quot;,
+        &quot;logs:FilterLogEvents&quot;,
+        &quot;dynamodb:GetItem&quot;,
+        &quot;dynamodb:Query&quot;,
+        &quot;dynamodb:Scan&quot;,
+        &quot;lambda:GetFunction&quot;,
+        &quot;lambda:GetFunctionConfiguration&quot;,
+        &quot;ec2:DescribeInstanceAttribute&quot;,
+        &quot;ec2:DescribeLaunchTemplateVersions&quot;,
+        &quot;ec2:GetPasswordData&quot;,
+        &quot;rds:DownloadDBLogFilePortion&quot;,
+        &quot;ssm:GetParameterHistory&quot;,
+        &quot;secretsmanager:BatchGetSecretValue&quot;,
+        &quot;dynamodb:BatchGetItem&quot;,
+        &quot;athena:GetQueryResults&quot;,
+        &quot;rds-data:ExecuteStatement&quot;,
+        &quot;ec2:GetConsoleOutput&quot;
+      ],
+      &quot;Resource&quot;: &quot;*&quot;
+    }
+  ]
+}</code></pre>
+
+            <p class="text-sm text-gray-500 mt-4">La facture est analysée via Cost Explorer (y compris la granularité par ressource si vous l'avez activée). Le rôle ne lit pas les fichiers du Cost and Usage Report stockés dans S3 : si vous utilisez le CUR et souhaitez une analyse plus fine, vous pouvez nous transmettre un export vous-même.</p>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-3">2. Relation d'approbation (trust policy)</h2>
+            <p class="text-gray-600 mb-4">Seul le compte AWS d'OptimyCloud peut endosser le rôle, et uniquement avec l'identifiant externe (ExternalId) unique que nous vous communiquons au démarrage. Cela protège contre le « confused deputy ».</p>
+            <pre class="bg-slate-900 text-slate-100 text-xs sm:text-sm rounded-xl p-4 sm:p-6 overflow-x-auto leading-relaxed"><code>{
+  &quot;Version&quot;: &quot;2012-10-17&quot;,
+  &quot;Statement&quot;: [
+    {
+      &quot;Effect&quot;: &quot;Allow&quot;,
+      &quot;Principal&quot;: { &quot;AWS&quot;: &quot;arn:aws:iam::ID_COMPTE_OPTIMYCLOUD:root&quot; },
+      &quot;Action&quot;: &quot;sts:AssumeRole&quot;,
+      &quot;Condition&quot;: {
+        &quot;StringEquals&quot;: { &quot;sts:ExternalId&quot;: &quot;VOTRE_EXTERNAL_ID_UNIQUE&quot; }
+      }
+    }
+  ]
+}</code></pre>
+
+            <h2 class="text-2xl font-bold text-gray-900 mt-10 mb-3">3. Créer et révoquer le rôle</h2>
+            <ol class="list-decimal pl-6 space-y-2 text-gray-600 mb-8">
+                <li>Console IAM &rarr; Rôles &rarr; Créer un rôle &rarr; « Autre compte AWS », avec l'ID de compte et l'ExternalId que nous vous transmettons.</li>
+                <li>Créez une politique personnalisée avec le JSON du point 1 et attachez-la au rôle (nom suggéré : <code>OptimyCloudFinOpsAudit</code>).</li>
+                <li>Envoyez-nous l'ARN du rôle. L'audit démarre, 7 jours ouvrés.</li>
+                <li>À la fin de l'audit, supprimez le rôle. Vous pouvez aussi le supprimer à tout moment : l'accès s'arrête immédiatement.</li>
+            </ol>
+            <p class="text-sm text-gray-500 mb-10">Vous avez un doute sur une ligne, ou vous voyez une permission en trop ? Écrivez-nous à <a href="mailto:alexandre@optimycloud.com" class="underline">alexandre@optimycloud.com</a> : nous corrigeons la politique publiée.</p>
+
+            <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
+                <p class="font-semibold text-gray-900 mb-2">Commencer sans donner d'accès</p>
+                <p class="text-sm text-gray-600 mb-4">Pré-diagnostic gratuit sur un simple export Cost Explorer.</p>
+                <a href="finops.html#pre-diagnostic" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 font-semibold text-sm"><i class="fas fa-file-invoice-dollar mr-2"></i>Demander mon pré-diagnostic</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <div class="md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed text-sm">
+                        Expert IA, Automatisation &amp; SEO pour PME et startups. Sites vitrines, chatbots IA, infrastructure Cloud AWS.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Offres</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Site Vitrine</a></li>
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Chatbot Métier IA</a></li>
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Site + Chatbot</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Agents IA &amp; LLM</a></li>
+                        <li><a href="index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Automatisation IA</a></li>
+                        <li><a href="finops.html" class="hover:text-indigo-400 transition-colors text-sm">Audit FinOps Cloud</a></li>
+                        <li><a href="audit-seo.html" class="hover:text-indigo-400 transition-colors text-sm">Audit SEO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-500 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Expert IA &amp; Cloud - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-600">
+                    <a href="mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Légales</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('hidden');
+        });
+        menu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                menu.classList.add('hidden');
+            });
+        });
+    });
+    </script>
+</body>
+</html>

@@ -8,14 +8,14 @@ French version: https://optimycloud.com/llms.txt
 
 ## About
 
-OptimyCloud is the AI & Cloud consultancy founded by Alexandre Gillon, an engineer who graduated from ESIEA with over 10 years of experience in infrastructure and digital transformation. Certified AWS Solutions Architect Associate, Kubernetes CKA and ITIL Foundation v3, Alexandre helps SMEs and startups integrate artificial intelligence into their business processes and optimize their Cloud infrastructure. Based in France (Épinay-sur-Seine), he works remotely with clients across France and internationally.
+OptimyCloud is the AI & Cloud consultancy founded by Alexandre Gillon, an engineer who graduated from ESIEA with over 10 years of experience in infrastructure and digital transformation. Certified AWS Solutions Architect Associate, Kubernetes CKA and ITIL Foundation v3, Alexandre helps SMEs and startups integrate artificial intelligence into their business processes and optimize their Cloud infrastructure. Based in France, he works remotely with clients across France and internationally.
 
 ## Why choose OptimyCloud?
 
 - Single point of contact: a certified expert, not an IT services firm with a salesperson plus a junior
 - Transparent pricing: showcase website from €500, AI chatbot from €200 + €29/month, WordPress troubleshooting from €250
 - Responsiveness: reply within 24h, intervention within 24-48h
-- Measurable ROI: 30 to 60% reduction in Cloud costs achieved, 50+ WordPress fixes completed
+- Measurable ROI: savings costed line by line before any commitment, 50+ WordPress fixes completed
 - Verifiable certifications: AWS Solutions Architect, Kubernetes CKA (Credly links below)
 - No subcontracting: Alexandre Gillon works personally on every project
 
@@ -45,7 +45,7 @@ Dedicated page: https://optimycloud.com/en/offres.html
 
 - **AWS Cloud Infrastructure**: Secure migration of on-premise infrastructures to AWS. Kubernetes (EKS) with Auto Mode and Karpenter. GitOps CI/CD with Helm, ArgoCD or FluxCD. Infrastructure as Code (Terraform, Ansible, CloudFormation). References: on-premise cluster migration to EKS (Culligan), CI/CD runners on EKS (Arkema), infrastructure as code (Valeo), SRE on Kubernetes (Ubisoft). Dedicated page: https://optimycloud.com/en/infrastructure-cloud-devops.html
 
-- **FinOps & Cost Optimization**: Free audit of your Cloud bill with analysis of unused or oversized resources. Implementation of Savings Plans, Reserved Instances, Spot Instances and right-sizing. 30 to 60% reduction in AWS costs achieved.
+- **FinOps & Cost Optimization**: AWS FinOps Sprint: fixed-price audit (€2,400 excl. VAT, 7 business days) for companies spending over €10,000/month on AWS. Free pre-diagnostic from a Cost Explorer export, no account access. Deliverables: costed report (EC2, RDS, NAT and data transfer, S3, EKS), fixes as Terraform pull requests, video walkthrough. Refunded if the annual savings identified are below 5 times the price. Published IAM policy: https://optimycloud.com/en/aws-access-policy.html
 
 - **WordPress Troubleshooting**: Diagnosis and correction of 500 and 400 errors, white screen, Elementor crashes, crashed WordPress sites. Intervention within 24h with a detailed report. From €250. Over 50 interventions completed. Dedicated page: https://optimycloud.com/en/depannage-wordpress.html
 
@@ -106,6 +106,6 @@ AI: LLM, AI agents, RAG, conversational chatbots, workflow automation. Cloud: AW
 - Site: https://optimycloud.com/en/
 - Email: alexandre@optimycloud.com
 - LinkedIn: https://www.linkedin.com/in/alexandre-gillon
-- Location: France (Épinay-sur-Seine)
+- Location: France
 - Founder: Alexandre Gillon
-- Reply within 24h. Free audit available.
+- Reply within 1 business day. Free FinOps pre-diagnostic, no account access.

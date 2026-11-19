@@ -58,9 +58,9 @@
     <link rel="shortcut icon" href="/assets/favicon.ico" />
     <link rel="apple-touch-icon" sizes="180x180" href="/assets/apple-touch-icon.png" />
     <link rel="manifest" href="/assets/site.webmanifest" />
-    <title>FinOps Audit for SMEs: AWS, GCP, Azure | OptimyCloud</title>
-    <meta name="description" content="FinOps audit for AWS, GCP or Azure SMEs: in 3 to 7 days, from €1,500, a costed action plan to cut your cloud bill by 30 to 50%. Free 30-min diagnostic.">
-    <meta name="service-cta" data-label="Book my free FinOps diagnostic" data-service="finops">
+    <title>AWS FinOps Sprint: fixed-price audit in 7 days | OptimyCloud</title>
+    <meta name="description" content="AWS FinOps Sprint: fixed-price audit (€2,400 excl. VAT) in 7 business days, fixes delivered as Terraform pull requests. Free pre-diagnostic, no access needed.">
+    <meta name="service-cta" data-label="Request my free FinOps pre-diagnostic" data-href="#pre-diagnostic" data-service="finops">
     <meta name="facebook-domain-verification" content="sliau7t9ilkk0j7rijo6bnnxb3qrha" />
     <meta name="author" content="Alexandre Gillon">
     <meta name="robots" content="index, follow">
@@ -71,8 +71,8 @@
     <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/finops.html" />
 
     <!-- Open Graph -->
-    <meta property="og:title" content="FinOps Audit for SMEs: AWS, GCP, Azure | OptimyCloud">
-    <meta property="og:description" content="FinOps audit for AWS, GCP or Azure SMEs: in 3 to 7 days, from €1,500, a costed action plan to cut your cloud bill by 30 to 50%. Free 30-min diagnostic.">
+    <meta property="og:title" content="AWS FinOps Sprint: fixed-price audit in 7 days | OptimyCloud">
+    <meta property="og:description" content="AWS FinOps Sprint: fixed-price audit (€2,400 excl. VAT) in 7 business days, fixes delivered as Terraform pull requests. Free pre-diagnostic, no access needed.">
     <meta property="og:url" content="https://optimycloud.com/en/finops.html">
     <meta property="og:type" content="website">
     <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
@@ -81,8 +81,8 @@
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="FinOps Audit for SMEs: AWS, GCP, Azure | OptimyCloud">
-    <meta name="twitter:description" content="FinOps audit for AWS, GCP or Azure SMEs: in 3 to 7 days, from €1,500, a costed action plan to cut your cloud bill by 30 to 50%. Free 30-min diagnostic.">
+    <meta name="twitter:title" content="AWS FinOps Sprint: fixed-price audit in 7 days | OptimyCloud">
+    <meta name="twitter:description" content="AWS FinOps Sprint: fixed-price audit (€2,400 excl. VAT) in 7 business days, fixes delivered as Terraform pull requests. Free pre-diagnostic, no access needed.">
     <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
 
     <!-- Fonts -->
@@ -109,8 +109,8 @@
         },
         {
           "@type": "WebPage",
-          "name": "Cloud FinOps Audit: cut your AWS bill by 30 to 50%",
-          "description": "FinOps audit for AWS, GCP and Azure, built for SMEs. Find and eliminate cloud waste, apply Savings Plans and right-sizing, and cut your bill by 30 to 50%.",
+          "name": "AWS FinOps Sprint: fixed-price audit in 7 business days",
+          "description": "Fixed-price AWS FinOps audit for startups and SMEs whose bill is above €10,000 per month: savings costed line by line, fixes delivered as Terraform pull requests, money-back guarantee.",
           "url": "https://optimycloud.com/en/finops.html",
           "isPartOf": { "@id": "https://optimycloud.com/#website" },
           "about": { "@id": "https://optimycloud.com/#organization" },
@@ -119,15 +119,17 @@
         {
           "@type": "Service",
           "@id": "https://optimycloud.com/finops.html#audit-finops",
-          "name": "Cloud FinOps Audit",
-          "description": "A full audit of your AWS, GCP or Azure cloud costs: right-sizing, Savings Plans, orphaned resources, storage and data transfer. A costed report with a prioritized action plan and an estimate of the savings.",
+          "name": "AWS FinOps Sprint",
+          "description": "An audit of your AWS costs in 7 business days: EC2, RDS, data transfer and NAT, S3, EKS. A report costed line by line, scripts and Terraform pull requests ready to apply, a walkthrough video and a 30-minute video call.",
           "provider": { "@id": "https://optimycloud.com/#organization" },
           "serviceType": "Cloud FinOps Audit",
           "areaServed": { "@type": "Country", "name": "France" },
           "offers": {
             "@type": "Offer",
+            "price": "2400",
             "priceCurrency": "EUR",
-            "description": "On quote - every audit is tailored to your cloud infrastructure",
+            "priceSpecification": { "@type": "UnitPriceSpecification", "price": "2400", "priceCurrency": "EUR", "valueAddedTaxIncluded": false },
+            "description": "Fixed price excluding VAT, for an AWS bill above €10,000 per month. Free pre-diagnostic before any commitment.",
             "availability": "https://schema.org/InStock"
           }
         },
@@ -139,7 +141,7 @@
               "name": "What is FinOps and why does it matter for an SME running on the cloud?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "FinOps (Financial Operations) is the practice of optimizing cloud costs while keeping performance and reliability intact. For an SME it matters because cloud bills swell fast without anyone noticing: oversized instances, forgotten resources, no Savings Plans in place. On average, a FinOps audit uncovers 30 to 50% of potential savings on the monthly bill."
+                "text": "FinOps (Financial Operations) is the practice of optimizing cloud costs while keeping performance and reliability intact. For an SME it matters because cloud bills swell fast without anyone noticing: oversized instances, forgotten resources, no Savings Plans in place. A FinOps audit puts a number on these losses, line by line, and fixes them."
               }
             },
             {
@@ -147,7 +149,7 @@
               "name": "What realistic savings can I expect from a FinOps audit?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The savings depend on how mature your cloud infrastructure is. On an AWS setup that has never been optimized, the gains are often 30 to 50% of the monthly bill. On an infrastructure that has already been worked on, we aim for 10 to 20%. The quick wins (forgotten snapshots, unattached EBS volumes, unused Elastic IPs) take a few hours to put in place and pay for themselves immediately."
+                "text": "It depends on your infrastructure: a bill that has never been optimized and one that has already been worked on do not have the same potential. That is why everything starts with a free pre-diagnostic on your Cost Explorer export: you see a costed estimate on your own bill before you pay anything. And if the annual savings identified by the audit are less than 5 times its price, you get your money back."
               }
             },
             {
@@ -155,7 +157,7 @@
               "name": "How much does a FinOps audit cost?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A FinOps audit for an SME costs between 1,500 and 5,000 euros depending on the size and complexity of the infrastructure. The return on investment is immediate: the monthly savings cover the cost of the audit within 1 to 3 months. Every engagement is quoted upfront with an estimate of the potential savings before you commit."
+                "text": "The AWS FinOps Sprint costs €2,400 excl. VAT, fixed price, for companies whose AWS bill is above €10,000 per month. The first 3 audits are offered at €1,200 excl. VAT in exchange for an anonymized case study. Having us implement the fixes is an option, at a fixed price stated in the report."
               }
             },
             {
@@ -171,7 +173,7 @@
               "name": "How long does a full FinOps audit take?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "A full FinOps audit takes between 3 and 7 business days depending on the size of your infrastructure. That covers analyzing the detailed bill, inventorying your resources, identifying waste, modeling Savings Plans and writing the report with a costed action plan."
+                "text": "The AWS FinOps Sprint is delivered within 7 business days of the access role being created. That covers analyzing the detailed bill, inventorying your resources, identifying waste, modeling Savings Plans and writing the report with a costed action plan."
               }
             },
             {
@@ -179,7 +181,23 @@
               "name": "What does the final FinOps audit report contain?",
               "acceptedAnswer": {
                 "@type": "Answer",
-                "text": "The FinOps report contains: an overview of your current cloud spend, a detailed list of the waste identified, right-sizing recommendations instance by instance, modeling of the optimal Savings Plans or Reserved Instances, a prioritized action plan (quick wins / medium term / long term), and a quantified estimate of the expected monthly savings for each recommendation."
+                "text": "You receive: the report costed line by line (EC2, RDS, data transfer and NAT, S3, EKS), fixes ready to apply (scripts and Terraform pull requests for the quick wins), a walkthrough video and a 30-minute video call. 60 days later, we compare your new bill with the estimates together, at no extra cost."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What level of access do you need to my cloud account?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "None for the pre-diagnostic: a Cost Explorer export is enough. For the AWS audit, you create an IAM role yourself from our published policy: billing and metadata only, no reading of your S3 data or your secrets, revocable at any time. An NDA is signed before any access. On GCP or Azure, the read-only equivalent (Billing Account Viewer, Cost Management Reader)."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How does the guarantee work?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "If the annual savings costed in the report are less than 5 times the price of the audit, the audit is refunded in full. The free pre-diagnostic is there precisely to check, before we start, that the potential is there."
               }
             }
           ]
@@ -250,29 +268,29 @@
             <div class="max-w-3xl">
                 <div class="inline-flex items-center rounded-full px-4 py-1.5 mb-6" style="background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);">
                     <i class="fab fa-aws text-orange-500 mr-2"></i>
-                    <span class="text-white text-xs font-semibold uppercase tracking-wide">AWS Certified &middot; GCP &middot; Azure</span>
+                    <span class="text-white text-xs font-semibold uppercase tracking-wide">AWS FinOps Sprint &middot; fixed price</span>
                 </div>
                 <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white mb-6 leading-tight">
-                    Cloud FinOps Audit: cut your AWS bill by 30 to 50%
+                    AWS FinOps Sprint: your bill reviewed line by line in 7 days, fixes delivered as pull requests
                 </h1>
                 <p class="text-lg max-w-2xl mb-4" style="color: #e2e8f0;">
-                    Are your cloud costs exploding without you understanding why? A FinOps audit pinpoints where every euro goes, eliminates waste and hands you a costed action plan to cut your bill without hurting performance. For an SME, the full audit takes <strong class="text-white">3 to 7 days</strong>, costs <strong class="text-white">between €1,500 and €5,000</strong> and pays for itself in 1 to 3 months.
+                    Your AWS bill just jumped (credits ran out, growth, a CFO asking questions) and your team has no time to clean it up? The AWS FinOps Sprint puts a number on every line, including what Compute Optimizer does not look at (NAT, inter-AZ transfer, EKS), and delivers fixes ready to apply. <strong class="text-white">€2,400 excl. VAT, fixed price</strong>, for companies spending more than <strong class="text-white">€10,000 per month</strong> on AWS.
                 </p>
                 <p class="text-sm mb-8" style="color: #cbd5e1;">
-                    AWS Certified Cloud Consultant &middot; 10+ years in cloud engineering &middot; AWS, GCP and Azure engagements.
+                    AWS Solutions Architect and Kubernetes CKA certified consultant &middot; 10+ years in cloud engineering.
                 </p>
                 <div class="flex flex-col sm:flex-row gap-4">
-                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="inline-flex items-center justify-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm cursor-pointer">
-                        <i class="fas fa-calendar-check mr-2"></i>
-                        Free diagnostic (30 min)
-                    </button>
-                    <a href="#ce-que-laudit-couvre" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg transition-colors font-semibold text-sm text-white" style="border: 2px solid rgba(255,255,255,0.4);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
-                        See what the audit covers
+                    <a href="#pre-diagnostic" class="inline-flex items-center justify-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm">
+                        <i class="fas fa-file-invoice-dollar mr-2"></i>
+                        Free pre-diagnostic, no access needed
+                    </a>
+                    <a href="#sprint-finops" class="inline-flex items-center justify-center px-8 py-3.5 rounded-lg transition-colors font-semibold text-sm text-white" style="border: 2px solid rgba(255,255,255,0.4);" onmouseover="this.style.background='rgba(255,255,255,0.1)'" onmouseout="this.style.background='transparent'">
+                        See the offer and price
                     </a>
                 </div>
                 <p class="text-xs mt-4" style="color: #94a3b8;">
                     <i class="fas fa-circle-info mr-1"></i>
-                    No commitment &middot; no sales pitch &middot; a quantified savings estimate
+                    No access to your account for the pre-diagnostic &middot; published IAM policy &middot; refunded if savings are less than 5&times; the price
                 </p>
 
                 <!-- Certifications Credly -->
@@ -311,20 +329,20 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
                 <div>
-                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">30-50%</p>
-                    <p class="text-gray-500 text-sm">average savings</p>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">€2,400</p>
+                    <p class="text-gray-500 text-sm">excl. VAT, fixed price</p>
                 </div>
                 <div>
-                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">3-7 days</p>
-                    <p class="text-gray-500 text-sm">for the full audit</p>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">7 days</p>
+                    <p class="text-gray-500 text-sm">business days, delivered</p>
                 </div>
                 <div>
-                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">1-3 months</p>
-                    <p class="text-gray-500 text-sm">to pay for itself</p>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">5&times;</p>
+                    <p class="text-gray-500 text-sm">the price, or refunded</p>
                 </div>
                 <div>
-                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">AWS</p>
-                    <p class="text-gray-500 text-sm">Certified + GCP &amp; Azure</p>
+                    <p class="text-3xl sm:text-4xl font-extrabold text-blue-700 mb-1">0 access</p>
+                    <p class="text-gray-500 text-sm">for the pre-diagnostic</p>
                 </div>
             </div>
         </div>
@@ -408,7 +426,7 @@
                 <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Process</p>
                 <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">How the FinOps audit unfolds</h2>
                 <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    Three clear steps to go from a cloud bill you don't understand to a costed action plan.
+                    Three steps, and you see an estimate on your own bill before you pay anything.
                 </p>
             </div>
 
@@ -419,8 +437,8 @@
                     <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
                         <span class="text-blue-700 text-2xl font-extrabold">1</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Analyzing your bill and your resources</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">Read-only access to your cloud account. Analysis of Cost Explorer, CUR, CloudWatch and your full inventory. We pinpoint the 20% of services that drive 80% of the bill.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Free pre-diagnostic, no access needed</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">You send a simple Cost Explorer export. You get a costed estimate of the possible savings and an honest opinion on whether an audit is worth it. A 20-minute call if you want one, in the late afternoon.</p>
                 </div>
 
                 <!-- Step 2 -->
@@ -428,8 +446,8 @@
                     <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
                         <span class="text-blue-700 text-2xl font-extrabold">2</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">A costed report with quick wins</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">A detailed report with each recommendation, the expected monthly saving and the risk level. The quick wins (zero risk) are kept separate from the structural optimizations (medium term).</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Audit in 7 business days</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">NDA signed, then you create the IAM role yourself from <a href="/en/aws-access-policy.html" class="text-blue-600 underline">our published policy</a> (billing and metadata only). Analysis of the bill, the inventory and the CloudWatch metrics.</p>
                 </div>
 
                 <!-- Step 3 -->
@@ -437,44 +455,139 @@
                     <div class="w-16 h-16 bg-blue-100 rounded-2xl flex items-center justify-center mx-auto mb-5">
                         <span class="text-blue-700 text-2xl font-extrabold">3</span>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Implementation (optional)</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">You apply the recommendations yourself using the detailed guide, or you hand the implementation to me. Savings Plans and quick wins can be switched on within a few hours.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Fixes ready to apply</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">A report costed line by line, scripts and Terraform pull requests, a walkthrough video and a 30-minute video call. No team to apply them? Optional implementation at a fixed price, stated in the report.</p>
                 </div>
 
             </div>
 
-            <!-- Free diagnostic offer -->
-            <div class="max-w-3xl mx-auto mt-16">
-                <div class="bg-white border-2 border-blue-500 rounded-2xl p-8 shadow-lg relative overflow-hidden">
-                    <div class="absolute top-0 right-0 bg-blue-600 text-white text-xs font-bold uppercase tracking-wide px-4 py-1.5 rounded-bl-xl">
-                        100% free
+        </div>
+    </section>
+
+    <!-- AWS FinOps Sprint offer -->
+    <section id="sprint-finops" class="py-16 sm:py-24 bg-white">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">The offer</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">The AWS FinOps Sprint</h2>
+                <p class="text-lg text-gray-500 max-w-2xl mx-auto">
+                    A fixed price, a fixed timeline, named deliverables. For companies spending more than €10,000 per month on AWS.
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-5 gap-8">
+                <div class="lg:col-span-3 bg-white border-2 border-blue-500 rounded-2xl p-6 sm:p-8 shadow-lg">
+                    <div class="flex flex-wrap items-baseline gap-x-3 gap-y-1 mb-2">
+                        <p class="text-4xl font-extrabold text-gray-900">€2,400 <span class="text-lg font-semibold text-gray-500">excl. VAT</span></p>
+                        <p class="text-sm text-gray-500">fixed price &middot; delivered in 7 business days</p>
                     </div>
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mr-4 flex-shrink-0">
-                            <i class="fas fa-magnifying-glass-chart text-blue-600 text-xl"></i>
-                        </div>
-                        <h3 class="text-xl sm:text-2xl font-bold text-gray-900">Start with a free diagnostic</h3>
-                    </div>
-                    <p class="text-gray-600 leading-relaxed mb-5">
-                        Before you commit to a full audit, we spend <strong>30 minutes together over video</strong> reviewing your current situation. You walk away with a <strong>first quantified estimate of the savings within reach</strong> on your cloud bill, and an honest opinion on whether a full audit makes sense for you.
+                    <p class="text-sm text-blue-700 bg-blue-50 border border-blue-100 rounded-lg px-4 py-3 mb-6">
+                        <i class="fas fa-flag mr-1"></i>
+                        <strong>Launch pricing:</strong> the first 3 audits at €1,200 excl. VAT, in exchange for an anonymized case study.
                     </p>
-                    <ul class="space-y-2 text-gray-600 text-sm mb-6">
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>A quick look</strong> at your 3 biggest cloud cost drivers</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>An estimate of the potential savings</strong> as an order of magnitude</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>An honest recommendation</strong>: whether a full audit is worth it for you or not</span></li>
-                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>No commitment</strong>, no sales pitch, no pushy follow-up</span></li>
+                    <h3 class="font-bold text-gray-900 mb-3">What you receive</h3>
+                    <ul class="space-y-2.5 text-gray-600 text-sm mb-6">
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>The report costed line by line</strong>: EC2, RDS, data transfer and NAT, S3, EKS. Not just what Compute Optimizer shows.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>Fixes ready to apply</strong>: scripts and Terraform pull requests for the quick wins.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>A walkthrough video</strong> and a 30-minute video call in the late afternoon.</span></li>
+                        <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-3 mt-1 text-xs"></i><span><strong>A 60-day check</strong> comparing your new bill with the estimates, at no extra cost.</span></li>
+                        <li class="flex items-start"><i class="fas fa-plus text-gray-400 mr-3 mt-1 text-xs"></i><span><strong>Option:</strong> we apply the fixes ourselves, at a fixed price stated in the report.</span></li>
                     </ul>
-                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="inline-flex items-center justify-center w-full sm:w-auto bg-blue-600 text-white px-8 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm cursor-pointer">
-                        <i class="fas fa-calendar-check mr-2"></i>
-                        Book my free diagnostic
-                    </button>
+                    <div class="bg-green-50 border border-green-100 rounded-xl p-4 text-sm text-gray-700">
+                        <p class="font-semibold text-gray-900 mb-1"><i class="fas fa-shield-halved text-green-600 mr-2"></i>Guarantee</p>
+                        If the annual savings costed in the report are less than 5 times the price of the audit, it is refunded in full.
+                    </div>
+                </div>
+
+                <div class="lg:col-span-2 space-y-4">
+                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-3"><i class="fas fa-lock text-blue-600 mr-2"></i>Your account stays secure</h3>
+                        <ul class="space-y-2 text-gray-600 text-sm">
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>No access needed for the pre-diagnostic.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>NDA signed before any access.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>A role you create yourself, with an external ID, revocable at any time.</span></li>
+                            <li class="flex items-start"><i class="fas fa-check text-blue-600 mr-2 mt-1 text-xs"></i><span>Billing and metadata only: no reading of your S3 data or your secrets.</span></li>
+                        </ul>
+                        <a href="/en/aws-access-policy.html" class="inline-flex items-center mt-4 text-sm font-semibold text-blue-600 hover:text-blue-800">Read the full IAM policy <i class="fas fa-arrow-right ml-2 text-xs"></i></a>
+                    </div>
+                    <div class="bg-slate-50 border border-gray-200 rounded-2xl p-6">
+                        <h3 class="font-bold text-gray-900 mb-2"><i class="fas fa-user-check text-blue-600 mr-2"></i>Who is it for?</h3>
+                        <p class="text-gray-600 text-sm leading-relaxed">Startups and SMEs with an AWS bill above €10,000 per month: Activate credits running out, a bill that has jumped, a team with no time to clean things up. Below that threshold, the pre-diagnostic will tell you honestly whether the audit is worth it.</p>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <div class="text-center mt-10">
-                <p class="text-gray-500 text-sm mb-2">If you'd rather go straight to the full audit</p>
-                <p class="text-xl font-bold text-gray-900 mb-1">From €1,500</p>
-                <p class="text-gray-400 text-sm">On quote, depending on the size of your infrastructure. Typical ROI within 1 to 3 months.</p>
+    <!-- Pre-diagnostic form -->
+    <section id="pre-diagnostic" class="py-16 sm:py-24 bg-slate-50">
+        <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-10">
+                <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Free, no access needed</p>
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Request your pre-diagnostic</h2>
+                <p class="text-lg text-gray-500">
+                    Answer these few questions. Within 1 business day I send you the steps for the Cost Explorer export (5 minutes on your side), then a costed estimate of the possible savings.
+                </p>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-2xl p-6 sm:p-8 shadow-sm">
+                <form id="prediag-form" class="space-y-5" novalidate>
+                    <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
+                    <input type="hidden" name="project_type" value="finops-prediagnostic">
+                    <input type="hidden" name="_subject" value="FinOps AWS pre-diagnostic request">
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="pd-name" class="block text-sm font-medium text-gray-700 mb-1">Name</label>
+                            <input type="text" id="pd-name" name="name" required autocomplete="name" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label for="pd-email" class="block text-sm font-medium text-gray-700 mb-1">Work email</label>
+                            <input type="email" id="pd-email" name="email" required autocomplete="email" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                    </div>
+                    <div class="grid sm:grid-cols-2 gap-5">
+                        <div>
+                            <label for="pd-company" class="block text-sm font-medium text-gray-700 mb-1">Company</label>
+                            <input type="text" id="pd-company" name="company" required autocomplete="organization" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                        </div>
+                        <div>
+                            <label for="pd-bill" class="block text-sm font-medium text-gray-700 mb-1">Monthly AWS bill</label>
+                            <select id="pd-bill" name="aws_monthly_bill" required class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                                <option value="">Select...</option>
+                                <option value="<5k">Less than €5,000</option>
+                                <option value="5-10k">€5,000 to €10,000</option>
+                                <option value="10-20k">€10,000 to €20,000</option>
+                                <option value="20-40k">€20,000 to €40,000</option>
+                                <option value=">40k">More than €40,000</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div>
+                        <span class="block text-sm font-medium text-gray-700 mb-2">AWS Activate credits in progress?</span>
+                        <div class="flex flex-wrap gap-4 text-sm text-gray-600">
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="non" class="mr-2" checked>No</label>
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="fin < 3 mois" class="mr-2">Yes, they run out in less than 3 months</label>
+                            <label class="inline-flex items-center"><input type="radio" name="aws_credits" value="oui" class="mr-2">Yes, for longer</label>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="pd-services" class="block text-sm font-medium text-gray-700 mb-1">Main services used <span class="text-gray-400 font-normal">(optional)</span></label>
+                        <input type="text" id="pd-services" name="main_services" placeholder="EC2, RDS, EKS, S3..." class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm">
+                    </div>
+                    <div>
+                        <label for="pd-message" class="block text-sm font-medium text-gray-700 mb-1">Context <span class="text-gray-400 font-normal">(optional)</span></label>
+                        <textarea id="pd-message" name="message" rows="3" placeholder="Has the bill jumped recently? Has your team already done some optimization?" class="w-full px-4 py-3 border border-gray-200 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-sm resize-none"></textarea>
+                    </div>
+                    <p class="text-xs text-gray-500">Do not send any credentials or access keys. Your information is used only to answer your request (<a href="/en/politique-confidentialite.html" class="underline">privacy policy</a>).</p>
+                    <p id="prediag-error" class="hidden text-sm text-red-600" role="alert"></p>
+                    <button type="submit" class="w-full bg-blue-600 text-white px-6 py-3.5 rounded-lg hover:bg-blue-700 transition-colors font-semibold text-sm flex items-center justify-center">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Request my free pre-diagnostic
+                    </button>
+                </form>
+                <div class="mt-6 pt-6 border-t border-gray-100 text-center text-sm text-gray-500">
+                    Would you rather talk first?
+                    <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="font-semibold text-blue-600 hover:text-blue-800 cursor-pointer">Book a 20-minute call</button>
+                </div>
             </div>
         </div>
     </section>
@@ -486,7 +599,7 @@
                 <p class="text-red-600 font-semibold text-sm uppercase tracking-wide mb-2">Common waste</p>
                 <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">Where the money leaks on AWS without anyone noticing</h2>
                 <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    Here are the 6 kinds of waste we find in 9 out of 10 FinOps audits. If any of this sounds familiar, you're overpaying for your cloud.
+                    Here are 6 common kinds of waste on AWS. If any of this sounds familiar, the pre-diagnostic will tell you how much they weigh on your bill.
                 </p>
             </div>
 
@@ -563,7 +676,7 @@
                 <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Cloud providers</p>
                 <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">AWS, GCP, Azure: a cloud-agnostic methodology</h2>
                 <p class="text-lg text-gray-500 max-w-2xl mx-auto">
-                    FinOps principles are universal. The core expertise is AWS, but audits are also possible on GCP and Azure.
+                    The fixed-price FinOps Sprint is for AWS only. On GCP and Azure an audit is still possible with the same method, on quote.
                 </p>
             </div>
 
@@ -662,8 +775,8 @@
                     <div class="w-12 h-12 bg-blue-50 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-shield-halved text-blue-600 text-xl"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 mb-2">Read-only access only</h3>
-                    <p class="text-gray-500 text-sm leading-relaxed">The audit runs through an IAM role with ReadOnlyAccess. No change is ever made without your explicit approval. Your infrastructure stays untouched throughout the analysis.</p>
+                    <h3 class="text-lg font-bold text-gray-900 mb-2">Access you control</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed">You create the role yourself from <a href="/en/aws-access-policy.html" class="text-blue-600 underline">our published IAM policy</a>: billing and metadata only, no reading of your S3 data or your secrets, revocable at any time. No change without your approval.</p>
                 </div>
 
                 <div class="bg-white border border-gray-200 rounded-xl p-6">
@@ -716,7 +829,7 @@
                         <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
                     </summary>
                     <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                        FinOps (Financial Operations) is the practice of optimizing cloud costs while keeping performance and reliability intact. For an SME it matters because cloud bills swell fast without anyone noticing: oversized instances, forgotten resources, no Savings Plans in place. On average, a FinOps audit uncovers 30 to 50% of potential savings on the monthly bill.
+                        FinOps (Financial Operations) is the practice of optimizing cloud costs while keeping performance and reliability intact. For an SME it matters because cloud bills swell fast without anyone noticing: oversized instances, forgotten resources, no Savings Plans in place. A FinOps audit puts a number on these losses, line by line, and fixes them.
                     </p>
                 </details>
 
@@ -726,7 +839,7 @@
                         <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
                     </summary>
                     <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                        The savings depend on how mature your cloud infrastructure is. On an AWS setup that has never been optimized, the gains are often 30 to 50% of the monthly bill. On an infrastructure that has already been worked on, we aim for 10 to 20%. The quick wins (forgotten snapshots, unattached EBS volumes, unused Elastic IPs) take a few hours to put in place and pay for themselves immediately.
+                        It depends on your infrastructure: a bill that has never been optimized and one that has already been worked on do not have the same potential. That is why everything starts with a free pre-diagnostic on your Cost Explorer export: you see a costed estimate on your own bill before you pay anything. And if the annual savings identified by the audit are less than 5 times its price, you get your money back.
                     </p>
                 </details>
 
@@ -736,7 +849,7 @@
                         <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
                     </summary>
                     <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                        A FinOps audit for an SME costs between 1,500 and 5,000 euros depending on the size and complexity of the infrastructure. The return on investment is immediate: the monthly savings cover the cost of the audit within 1 to 3 months. Every engagement is quoted upfront with an estimate of the potential savings before you commit.
+                        The AWS FinOps Sprint costs €2,400 excl. VAT, fixed price, for companies whose AWS bill is above €10,000 per month. The first 3 audits are offered at €1,200 excl. VAT in exchange for an anonymized case study. Having us implement the fixes is an option, at a fixed price stated in the report.
                     </p>
                 </details>
 
@@ -756,7 +869,7 @@
                         <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
                     </summary>
                     <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                        A full FinOps audit takes between 3 and 7 business days depending on the size of your infrastructure. That covers analyzing the detailed bill, inventorying your resources, identifying waste, modeling Savings Plans and writing the report with a costed action plan.
+                        The AWS FinOps Sprint is delivered within 7 business days of the access role being created. That covers analyzing the detailed bill, inventorying your resources, identifying waste, modeling Savings Plans and writing the report with a costed action plan.
                     </p>
                 </details>
 
@@ -766,7 +879,7 @@
                         <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
                     </summary>
                     <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                        The FinOps report contains: an overview of your current cloud spend, a detailed list of the waste identified, right-sizing recommendations instance by instance, modeling of the optimal Savings Plans or Reserved Instances, a prioritized action plan (quick wins / medium term / long term), and a quantified estimate of the expected monthly savings for each recommendation.
+                        You receive: the report costed line by line (EC2, RDS, data transfer and NAT, S3, EKS), fixes ready to apply (scripts and Terraform pull requests for the quick wins), a walkthrough video and a 30-minute video call. 60 days later, we compare your new bill with the estimates together, at no extra cost.
                     </p>
                 </details>
 
@@ -776,7 +889,17 @@
                         <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
                     </summary>
                     <p class="mt-4 text-gray-500 text-sm leading-relaxed">
-                        On AWS, an IAM role with the ReadOnlyAccess and Billing policies is enough. On GCP, a service account with the Viewer and Billing Account Viewer roles. On Azure, a user with the Reader and Cost Management Reader roles. No change is ever made without your explicit approval. You keep full control of your infrastructure for the entire duration of the audit.
+                        None for the pre-diagnostic: a Cost Explorer export is enough. For the AWS audit, you create an IAM role yourself from <a href="/en/aws-access-policy.html" class="text-blue-600 underline">our published policy</a>: billing and metadata only, no reading of your S3 data or your secrets, revocable at any time. An NDA is signed before any access. On GCP or Azure, the read-only equivalent (Billing Account Viewer, Cost Management Reader).
+                    </p>
+                </details>
+
+                <details class="bg-white border border-gray-200 rounded-xl p-6 group">
+                    <summary class="flex justify-between items-center cursor-pointer text-gray-900 font-semibold">
+                        How does the guarantee work?
+                        <i class="fas fa-chevron-down text-gray-400 group-open:rotate-180 transition-transform"></i>
+                    </summary>
+                    <p class="mt-4 text-gray-500 text-sm leading-relaxed">
+                        If the annual savings costed in the report are less than 5 times the price of the audit, the audit is refunded in full. The free pre-diagnostic is there precisely to check, before we start, that the potential is there.
                     </p>
                 </details>
             </div>
@@ -788,17 +911,17 @@
         <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <h2 class="text-3xl sm:text-4xl font-bold text-white mb-6">Stop overpaying for your cloud</h2>
             <p class="text-lg mb-4" style="color: #e2e8f0;">
-                Book 30 minutes over video. We look together at your current cloud bill (AWS, GCP or Azure) and I give you an <strong>honest estimate of the savings within reach</strong>. No commitment, no sales pitch, no pushy follow-up.
+                Send a Cost Explorer export, with no access to your account. You get a <strong>costed estimate of the possible savings</strong> and an honest opinion on whether the audit is worth it. No commitment, no pushy follow-up.
             </p>
             <p class="text-sm mb-8" style="color: #cbd5e1;">
                 You can also browse <a href="offres.html" class="text-white underline hover:opacity-80 transition-opacity">all our offerings</a> or <a href="audit-seo.html" class="text-white underline hover:opacity-80 transition-opacity">our SEO audit</a>.
             </p>
-            <button data-cal-link="optimycloud/diagnostic-finops" data-cal-namespace="diagnostic-finops" class="inline-flex items-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm cursor-pointer">
-                <i class="fas fa-calendar-check mr-2"></i>
-                Book my free diagnostic
-            </button>
+            <a href="#pre-diagnostic" class="inline-flex items-center bg-white text-blue-900 px-8 py-3.5 rounded-lg hover:bg-blue-50 transition-colors font-semibold text-sm">
+                <i class="fas fa-file-invoice-dollar mr-2"></i>
+                Request my free pre-diagnostic
+            </a>
             <p class="text-xs mt-4" style="color: #94a3b8;">
-                100% free &middot; 30 minutes &middot; a quantified estimate
+                Free &middot; no access to your account &middot; reply within 1 business day
             </p>
         </div>
     </section>
@@ -882,6 +1005,46 @@
         });
     });
     </script>
+    <!-- Pre-diagnostic form -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var form = document.getElementById('prediag-form');
+        if (!form) return;
+        var err = document.getElementById('prediag-error');
+        var btn = form.querySelector('button[type="submit"]');
+        var label = btn.innerHTML;
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            err.classList.add('hidden');
+            if (!form.checkValidity()) {
+                err.textContent = 'Please fill in your name, email, company and monthly bill.';
+                err.classList.remove('hidden');
+                return;
+            }
+            var data = new FormData(form);
+            btn.disabled = true;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Sending...';
+            fetch('https://formspree.io/f/xjkoqpoe', { method: 'POST', body: data, headers: { 'Accept': 'application/json' } })
+            .then(function(r) {
+                if (!r.ok) throw new Error('http');
+                try {
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({ 'event': 'form_submit', 'form_name': 'finops_prediagnostic' });
+                if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'finops_prediagnostic', project_type: 'finops-prediagnostic', aws_monthly_bill: data.get('aws_monthly_bill') || '' }); }
+                if (typeof fbq === 'function' && localStorage.getItem('cookieConsent') === 'accepted') { fbq('track', 'Lead'); }
+                } catch (e) {}
+                window.location.href = 'merci.html';
+            })
+            .catch(function() {
+                err.textContent = 'Sending failed. Please try again, or email alexandre@optimycloud.com directly.';
+                err.classList.remove('hidden');
+                btn.disabled = false;
+                btn.innerHTML = label;
+            });
+        });
+    });
+    </script>
+
     <script src="/assets/sticky-cta.js" defer></script>
 </body>
 </html>

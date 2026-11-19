@@ -4,7 +4,7 @@
 
     var label = meta.getAttribute('data-label') || 'Me contacter';
     var service = meta.getAttribute('data-service') || '';
-    var href = 'index.html' + (service ? '?service=' + encodeURIComponent(service) : '') + '#contact';
+    var href = meta.getAttribute('data-href') || ('index.html' + (service ? '?service=' + encodeURIComponent(service) : '') + '#contact');
 
     var bar = document.createElement('div');
     bar.className = 'sticky-cta';

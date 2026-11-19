@@ -23,7 +23,7 @@ Workflows IA pour éliminer les tâches répétitives : traitement de documents,
 Migration sécurisée, Kubernetes (EKS), CI/CD et Infrastructure as Code. L'infrastructure fiable qui propulse vos projets IA.
 
 ### FinOps & Optimisation
-Audit gratuit et réduction de 30 à 60 % de vos coûts AWS. Savings Plans, Reserved Instances, right-sizing.
+Sprint FinOps AWS : audit à prix fixe, 2 400 € HT, livré en 7 jours ouvrés, pour les entreprises dont la facture AWS dépasse 10 000 €/mois. Pré-diagnostic gratuit sur export Cost Explorer, sans accès au compte. Rapport chiffré poste par poste (EC2, RDS, NAT et transferts de données, S3, EKS), corrections en scripts et pull requests Terraform, vidéo de restitution, comparaison de la facture à 60 jours. Garantie : remboursé si les économies annuelles chiffrées sont inférieures à 5 fois le prix. Accès par rôle IAM créé par le client, facturation et métadonnées uniquement : https://optimycloud.com/politique-acces-aws.html. Page : https://optimycloud.com/finops.html
 
 ### Audit de Sécurité
 Audit de sécurité de vos infrastructures Cloud et applications. Tests de pénétration, conformité, durcissement et bonnes pratiques AWS.
@@ -569,7 +569,7 @@ Projets réalisés pour (en tant que salarié ou prestataire) :
 
 - Email : alexandre@optimycloud.com
 - LinkedIn : https://www.linkedin.com/in/alexandre-gillon
-- Localisation : France (Épinay-sur-Seine, 93800)
+- Localisation : France
 - Site web : https://optimycloud.com
 
 Décrivez votre besoin, réponse sous 24h avec une première analyse.
