@@ -29,7 +29,7 @@ Sprint FinOps AWS : audit à prix fixe, 2 400 € HT, livré en 7 jours ouvrés,
 Audit de sécurité de vos infrastructures Cloud et applications. Tests de pénétration, conformité, durcissement et bonnes pratiques AWS.
 
 ### Infrastructure Cloud & DevOps
-Architecture AWS, GCP et Azure, migration on-premise vers le cloud et vers Kubernetes (EKS, GKE, AKS), infrastructure as code (Terraform, CDK), CI/CD, monitoring, gouvernance cloud et fédération d'identité. Références : Culligan (migration d'un cluster on-premise vers EKS, base de données comprise), Arkema (runners CI/CD sur EKS, fédération d'identité), Valeo (infrastructure as code avec services managés), TopTex (gouvernance cloud), Ubisoft (SRE sur Kubernetes). Sur devis, diagnostic gratuit de 30 minutes. Page dédiée : https://optimycloud.com/infrastructure-cloud-devops.html
+Architecture AWS, GCP et Azure, migration on-premise vers le cloud et vers Kubernetes (EKS, GKE, AKS), infrastructure as code (Terraform, CDK), CI/CD, monitoring, gouvernance cloud et fédération d'identité. Références : Culligan (migration d'un cluster on-premise vers EKS, base de données comprise), Arkema (runners CI/CD sur EKS, fédération d'identité), Valeo (infrastructure as code avec services managés), TopTex (gouvernance cloud), Ubisoft (SRE sur Kubernetes). 790 € HT, prix fixe, livré en 7 jours ouvrés : 40 questions testées sur 4 IA face à 3 concurrents, captures brutes fournies, corrections prêtes à intégrer, nouvelle mesure à 60 jours. Mini-test gratuit sur 3 questions. Page : https://optimycloud.com/audit-geo.html Page dédiée : https://optimycloud.com/infrastructure-cloud-devops.html
 
 ### Audit SEO & Référencement
 Audit technique complet de votre site : performance, Core Web Vitals, schema markup, contenu, indexation. Stratégie SEO sur-mesure pour améliorer votre visibilité sur Google.
@@ -469,7 +469,7 @@ Q : Le fichier llms.txt sert-il vraiment à quelque chose ?
 R : llms.txt est une convention proposée en 2024, pas un standard officiel : Google indique ne pas l'utiliser pour Search ni pour les AI Overviews. Il est en revanche lu par certains outils et agents IA qui consultent un site directement. Il coûte peu à mettre en place. Dans l'audit, c'est un point parmi d'autres, jamais la priorité si les robots IA sont bloqués ou si le site est mal indexé.
 
 Q : Combien de temps prend un audit GEO ?
-R : Le délai dépend du nombre de pages et du périmètre (GEO seul ou combiné à un audit SEO complet). Il est fixé dans le devis, après le diagnostic gratuit. Les effets sur les citations IA ne sont pas immédiats : les moteurs doivent recrawler les pages modifiées.
+R : L'audit GEO est livré en 7 jours ouvrés. Combiné à un audit SEO complet, le délai est fixé selon le nombre de pages. Les effets sur les citations IA ne sont pas immédiats : les moteurs doivent recrawler les pages modifiées.
 
 Q : De quels accès avez-vous besoin ?
 R : L'URL du site suffit pour une grande partie de l'audit. Un accès en lecture à Google Search Console (et Bing Webmaster Tools) permet de vérifier l'indexation et les requêtes réelles ; Google Analytics aide à mesurer le trafic venant des assistants IA. Un accès au CMS ou au dépôt de code n'est nécessaire que pour la mise en oeuvre.

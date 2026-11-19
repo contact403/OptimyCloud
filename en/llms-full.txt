@@ -89,7 +89,7 @@ Included:
 - AWS Cloud Infrastructure: migration, Kubernetes (EKS), CI/CD, Infrastructure as Code. On quote.
 - WordPress Troubleshooting: 500 error, 400 error, white screen, crash after an Elementor update. Diagnosis, correction and detailed report. Intervention within 24h. From €250.
 - SEO & Search Audit: technical audit, Core Web Vitals, schema markup, content, indexing. SEO strategy to be visible on Google. On quote.
-- GEO audit / AI search visibility: AI crawler access, llms.txt, Schema.org, content citability for ChatGPT, Gemini, Perplexity and Google AI Overviews. On quote, free 30-minute diagnostic.
+- GEO audit / AI search visibility: AI crawler access, llms.txt, Schema.org, content citability for ChatGPT, Gemini, Perplexity and Google AI Overviews. €790 excl. VAT, fixed price, delivered in 7 business days: 40 questions tested on 4 AI engines against 3 competitors, raw screenshots included, ready-to-apply fixes, re-measure at 60 days. Free 3-question mini-test. Page: https://optimycloud.com/en/audit-geo.html
 
 ### Why work with OptimyCloud
 
@@ -470,7 +470,7 @@ Q: Does an llms.txt file actually matter?
 A: llms.txt is a convention proposed in 2024, not an official standard: Google has said it doesn't use it for Search or AI Overviews. Some AI tools and agents that browse a site directly do read it. It's cheap to set up. In the audit it's one item among others, never the priority if AI crawlers are blocked or the site is poorly indexed.
 
 Q: How long does a GEO audit take?
-A: It depends on the number of pages and the scope (GEO only, or combined with a complete SEO audit). The timeline is set in the quote, after the free diagnostic. The effect on AI citations isn't instant: engines have to recrawl the updated pages.
+A: The GEO audit is delivered in 7 business days. Combined with a complete SEO audit, the timeline depends on the number of pages. The effect on AI citations isn't instant: engines have to recrawl the updated pages.
 
 Q: What access do you need?
 A: The site URL is enough for much of the audit. Read access to Google Search Console (and Bing Webmaster Tools) lets me check indexing and real queries; Google Analytics helps measure traffic from AI assistants. CMS or code repository access is only needed for implementation.
