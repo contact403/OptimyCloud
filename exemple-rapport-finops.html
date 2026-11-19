@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Consent Mode v2 defaults (must be BEFORE GTM/gtag) -->
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      var _cc = localStorage.getItem('cookieConsent');
+      var _granted = _cc === 'accepted';
+      gtag('consent', 'default', {
+        'ad_storage': _granted ? 'granted' : 'denied',
+        'ad_user_data': _granted ? 'granted' : 'denied',
+        'ad_personalization': _granted ? 'granted' : 'denied',
+        'analytics_storage': _granted ? 'granted' : 'denied',
+        'functionality_storage': 'granted',
+        'security_storage': 'granted',
+        'wait_for_update': 500
+      });
+      gtag('set', 'ads_data_redaction', !_granted);
+      gtag('set', 'url_passthrough', true);
+    </script>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-NXVN48XF');</script>
+    <!-- End Google Tag Manager -->
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-SGJQ4BDR8W"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-SGJQ4BDR8W');
+    </script>
+    <!-- End Google tag -->
+    <!-- Meta Pixel -->
+    <script>
+    !function(f,b,e,v,n,t,s)
+    {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+    n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+    if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+    n.queue=[];t=b.createElement(e);t.async=!0;
+    t.src=v;s=b.getElementsByTagName(e)[0];
+    s.parentNode.insertBefore(t,s)}(window, document,'script',
+    'https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init', '999479948874994');
+    fbq('track', 'PageView');
+    </script>
+    <noscript><img height="1" width="1" style="display:none"
+    src="https://www.facebook.com/tr?id=999479948874994&ev=PageView&noscript=1"/></noscript>
+    <!-- End Meta Pixel -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/favicon-96x96.png" sizes="96x96" />
+    <link rel="shortcut icon" href="./assets/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="./assets/apple-touch-icon.png" />
+    <link rel="manifest" href="./assets/site.webmanifest" />
+    <title>Exemple de rapport Sprint FinOps AWS (fictif) | OptimyCloud</title>
+    <meta name="description" content="Exemple fictif de rapport d'audit FinOps AWS : répartition de la facture, 9 recommandations chiffrées, extrait de pull request Terraform, plan d'action.">
+    <meta name="facebook-domain-verification" content="sliau7t9ilkk0j7rijo6bnnxb3qrha" />
+    <meta name="author" content="Alexandre Gillon">
+    <meta name="robots" content="noindex, follow">
+    <link rel="canonical" href="https://optimycloud.com/exemple-rapport-finops.html">
+    <!-- hreflang -->
+    <link rel="alternate" hreflang="fr" href="https://optimycloud.com/exemple-rapport-finops.html" />
+    <link rel="alternate" hreflang="en" href="https://optimycloud.com/en/finops-report-example.html" />
+    <link rel="alternate" hreflang="x-default" href="https://optimycloud.com/exemple-rapport-finops.html" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Exemple de rapport Sprint FinOps AWS (fictif) | OptimyCloud">
+    <meta property="og:description" content="Exemple fictif de rapport d'audit FinOps AWS : répartition de la facture, 9 recommandations chiffrées, extrait de pull request Terraform, plan d'action.">
+    <meta property="og:url" content="https://optimycloud.com/exemple-rapport-finops.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Exemple de rapport Sprint FinOps AWS (fictif) | OptimyCloud">
+    <meta name="twitter:description" content="Exemple fictif de rapport d'audit FinOps AWS : répartition de la facture, 9 recommandations chiffrées, extrait de pull request Terraform, plan d'action.">
+    <meta name="twitter:image" content="https://optimycloud.com/assets/optimycloud-logo.png">
+
+    <!-- Fonts -->
+    <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="stylesheet" href="./assets/style.css?v=20261119c">
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" rel="stylesheet" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" media="print" onload="this.media='all'">
+    <link rel="preconnect" href="https://app.cal.com" crossorigin>
+    <link rel="preconnect" href="https://images.credly.com" crossorigin>
+
+</head>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-lg sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <a href="index.html" class="flex items-center hover:opacity-80 transition-opacity">
+                        <img src="./assets/optimycloud-logo.webp"
+                             alt="OptimyCloud"
+                             width="200" height="64"
+                             fetchpriority="high"
+                             class="h-20 w-auto"
+                             style="mix-blend-mode: multiply;">
+                    </a>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#hero" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Accueil</a>
+                    <a href="index.html#services" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Services</a>
+                    <a href="offres.html" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">Offres</a>
+                    <a href="index.html#about" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200">À propos</a>
+                    <a href="index.html#contact" class="nav-link bg-indigo-600 text-white px-4 py-2 rounded-lg hover:bg-indigo-500 transition-colors duration-200">Contact</a>
+                    <a href="/en/finops-report-example.html" hreflang="en" class="nav-link text-gray-700 hover:text-indigo-600 transition-colors duration-200 inline-flex items-center" aria-label="English version"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">EN</a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center">
+                    <a href="/en/finops-report-example.html" hreflang="en" class="mobile-lang-flag md:hidden ml-auto mr-3 inline-flex items-center" aria-label="View the English version"><img src="/assets/flags/gb.svg" alt="" width="24" height="17" style="display:inline-block;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.15)"></a>
+                    <button id="mobile-menu-btn" class="text-gray-700 hover:text-indigo-600 p-2" aria-label="Ouvrir le menu" aria-expanded="false">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
+            <div class="px-2 pt-2 pb-3 space-y-1">
+                <a href="index.html#hero" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Accueil</a>
+                <a href="index.html#services" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Services</a>
+                <a href="offres.html" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">Offres</a>
+                <a href="index.html#about" class="block px-3 py-2 text-gray-700 hover:text-indigo-600">À propos</a>
+                <a href="index.html#contact" class="block px-3 py-2 text-indigo-600 font-medium">Contact</a>
+                <a href="/en/finops-report-example.html" hreflang="en" class="block px-3 py-2 text-gray-700 hover:text-indigo-600"><img src="/assets/flags/gb.svg" alt="" width="20" height="14" style="display:inline-block;vertical-align:-3px;margin-right:6px;border-radius:2px;box-shadow:0 0 0 1px rgba(0,0,0,.12)">English version</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <main class="py-12 sm:py-16">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <nav class="mb-6 text-sm text-gray-500" aria-label="Fil d'Ariane">
+                <a href="index.html" class="hover:text-blue-600">Accueil</a><span class="mx-2">/</span><a href="finops.html" class="hover:text-blue-600">Sprint FinOps AWS</a><span class="mx-2">/</span><span class="text-gray-900">Exemple de rapport</span>
+            </nav>
+
+            <div class="bg-amber-50 border-2 border-amber-300 rounded-xl p-4 sm:p-5 mb-8 text-sm text-amber-900">
+                <p class="font-bold mb-1"><i class="fas fa-triangle-exclamation mr-2"></i>Exemple fictif</p>
+                <p>Cette entreprise n'existe pas. Les chiffres sont des ordres de grandeur construits à partir des tarifs publics AWS (région Paris), pour montrer le format et le niveau de détail du rapport. Ce n'est pas un résultat client.</p>
+            </div>
+
+            <p class="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">Sprint FinOps AWS &middot; rapport d'audit</p>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 mb-3">« ExempleSaaS » : audit de la facture AWS</h1>
+            <p class="text-gray-600 mb-8">Startup SaaS B2B fictive, 45 personnes, série A. Production sur EKS en région Paris (eu-west-3), base PostgreSQL sur RDS, environnement de staging permanent. Crédits AWS Activate terminés il y a 2 mois. Période analysée : 3 derniers mois.</p>
+
+            <!-- Synthèse -->
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">1. Synthèse</h2>
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <div class="bg-white border border-gray-200 rounded-xl p-4"><p class="text-xs text-gray-500 mb-1">Facture mensuelle moyenne</p><p class="text-2xl font-extrabold text-gray-900">18 400 €</p></div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4"><p class="text-xs text-gray-500 mb-1">Économies identifiées</p><p class="text-2xl font-extrabold text-green-700">5 600 €<span class="text-sm font-semibold">/mois</span></p><p class="text-xs text-gray-500">soit 30 % de la facture</p></div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4"><p class="text-xs text-gray-500 mb-1">Dont gains rapides, sans engagement</p><p class="text-2xl font-extrabold text-blue-700">2 750 €<span class="text-sm font-semibold">/mois</span></p></div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4"><p class="text-xs text-gray-500 mb-1">Sur 12 mois</p><p class="text-2xl font-extrabold text-gray-900">67 200 €</p><p class="text-xs text-gray-500">garantie 5&times; le prix : atteinte</p></div>
+            </div>
+            <p class="text-gray-600 mb-10">Trois postes concentrent l'essentiel du potentiel : le trafic qui passe inutilement par les NAT Gateways, un staging qui tourne 24 h/24, et une base de calcul stable payée au tarif à la demande. Les gains rapides (recommandations 1, 2, 5, 7, 8) peuvent être appliqués en une semaine, avec les pull requests fournies, sans engagement auprès d'AWS.</p>
+
+            <!-- Répartition -->
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">2. Où part l'argent</h2>
+            <div class="overflow-x-auto mb-10">
+                <table class="w-full text-sm bg-white border border-gray-200 rounded-xl">
+                    <thead class="bg-slate-50 text-gray-700"><tr><th scope="col" class="text-left p-3">Poste</th><th scope="col" class="text-right p-3">€/mois</th><th scope="col" class="text-right p-3">Part</th><th scope="col" class="text-left p-3">Commentaire</th></tr></thead>
+                    <tbody class="text-gray-600">
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">EC2 (nœuds EKS)</th><td class="text-right p-3">6 900</td><td class="text-right p-3">37 %</td><td class="p-3">100 % à la demande, instances x86 surdimensionnées</td></tr>
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">RDS PostgreSQL</th><td class="text-right p-3">3 600</td><td class="text-right p-3">20 %</td><td class="p-3">Staging en Multi-AZ</td></tr>
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">NAT Gateway et transferts</th><td class="text-right p-3">2 700</td><td class="text-right p-3">15 %</td><td class="p-3">Trafic S3 et ECR via NAT, trafic inter-AZ</td></tr>
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">S3</th><td class="text-right p-3">1 500</td><td class="text-right p-3">8 %</td><td class="p-3">Logs applicatifs en S3 Standard depuis 2 ans</td></tr>
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">EBS et snapshots</th><td class="text-right p-3">1 200</td><td class="text-right p-3">7 %</td><td class="p-3">Volumes gp2, snapshots orphelins</td></tr>
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">CloudWatch Logs</th><td class="text-right p-3">900</td><td class="text-right p-3">5 %</td><td class="p-3">Logs de debug en production, rétention illimitée</td></tr>
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">EKS (plans de contrôle)</th><td class="text-right p-3">140</td><td class="text-right p-3">1 %</td><td class="p-3">2 clusters</td></tr>
+                        <tr class="border-t"><th scope="row" class="text-left p-3 font-medium text-gray-900">Autres</th><td class="text-right p-3">1 460</td><td class="text-right p-3">8 %</td><td class="p-3">Load balancers, Route 53, KMS, divers</td></tr>
+                        <tr class="border-t bg-slate-50 font-semibold text-gray-900"><th scope="row" class="text-left p-3">Total</th><td class="text-right p-3">18 400</td><td class="text-right p-3">100 %</td><td class="p-3"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Recommandations -->
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">3. Recommandations chiffrées</h2>
+            <p class="text-gray-600 mb-4">Classées par rapport gain / effort. « PR » signifie qu'une pull request Terraform ou un script est fourni.</p>
+            <div class="overflow-x-auto mb-4">
+                <table class="w-full text-sm bg-white border border-gray-200 rounded-xl">
+                    <thead class="bg-slate-50 text-gray-700"><tr><th scope="col" class="text-left p-3">#</th><th scope="col" class="text-left p-3">Recommandation</th><th scope="col" class="text-right p-3">€/mois</th><th scope="col" class="text-left p-3">Effort</th><th scope="col" class="text-left p-3">Risque</th><th scope="col" class="text-left p-3">Livrable</th></tr></thead>
+                    <tbody class="text-gray-600">
+                        <tr class="border-t"><td class="p-3">1</td><th scope="row" class="text-left p-3 font-medium text-gray-900">VPC endpoints S3 (gateway) et ECR (interface) : sortir ce trafic des NAT Gateways</th><td class="text-right p-3">850</td><td class="p-3">Faible</td><td class="p-3">Faible</td><td class="p-3">PR</td></tr>
+                        <tr class="border-t"><td class="p-3">2</td><th scope="row" class="text-left p-3 font-medium text-gray-900">Arrêt du staging la nuit et le week-end (EKS mis à zéro, RDS arrêté)</th><td class="text-right p-3">900</td><td class="p-3">Faible</td><td class="p-3">Faible</td><td class="p-3">PR</td></tr>
+                        <tr class="border-t"><td class="p-3">3</td><th scope="row" class="text-left p-3 font-medium text-gray-900">Compute Savings Plan 1 an, sans avance, sur 70 % de la base stable</th><td class="text-right p-3">1 300</td><td class="p-3">Faible</td><td class="p-3">Moyen (engagement)</td><td class="p-3">Fiche de calcul</td></tr>
+                        <tr class="border-t"><td class="p-3">4</td><th scope="row" class="text-left p-3 font-medium text-gray-900">Nœuds EKS : passage en Graviton et redimensionnement</th><td class="text-right p-3">700</td><td class="p-3">Moyen</td><td class="p-3">Moyen (images ARM)</td><td class="p-3">PR + plan de test</td></tr>
+                        <tr class="border-t"><td class="p-3">5</td><th scope="row" class="text-left p-3 font-medium text-gray-900">CloudWatch Logs : rétention 30 jours, niveau INFO en production</th><td class="text-right p-3">350</td><td class="p-3">Faible</td><td class="p-3">Faible</td><td class="p-3">PR</td></tr>
+                        <tr class="border-t"><td class="p-3">6</td><th scope="row" class="text-left p-3 font-medium text-gray-900">RDS staging : Single-AZ et classe inférieure</th><td class="text-right p-3">450</td><td class="p-3">Faible</td><td class="p-3">Faible</td><td class="p-3">PR</td></tr>
+                        <tr class="border-t"><td class="p-3">7</td><th scope="row" class="text-left p-3 font-medium text-gray-900">EBS gp2 vers gp3, suppression des snapshots orphelins</th><td class="text-right p-3">350</td><td class="p-3">Faible</td><td class="p-3">Faible</td><td class="p-3">Script + PR</td></tr>
+                        <tr class="border-t"><td class="p-3">8</td><th scope="row" class="text-left p-3 font-medium text-gray-900">S3 : règle de cycle de vie sur le bucket de logs (Intelligent-Tiering puis expiration)</th><td class="text-right p-3">300</td><td class="p-3">Faible</td><td class="p-3">Faible</td><td class="p-3">PR</td></tr>
+                        <tr class="border-t"><td class="p-3">9</td><th scope="row" class="text-left p-3 font-medium text-gray-900">Trafic inter-AZ : routage tenant compte de la topologie dans EKS</th><td class="text-right p-3">400</td><td class="p-3">Moyen</td><td class="p-3">Moyen</td><td class="p-3">PR + plan de test</td></tr>
+                        <tr class="border-t bg-slate-50 font-semibold text-gray-900"><td class="p-3"></td><th scope="row" class="text-left p-3">Total</th><td class="text-right p-3">5 600</td><td class="p-3" colspan="3"></td></tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-xs text-gray-500 mb-10">Le Savings Plan (n° 3) est à acheter après les recommandations 2, 4 et 6, pour ne pas s'engager sur une base qui va baisser.</p>
+
+            <!-- Détail -->
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">4. Exemple de fiche détaillée : recommandation n° 1</h2>
+            <div class="bg-white border border-gray-200 rounded-xl p-5 sm:p-6 mb-10">
+                <p class="text-sm text-gray-600 mb-3"><strong class="text-gray-900">Constat.</strong> Les pods de production téléchargent leurs images depuis ECR et écrivent leurs exports dans S3. Ce trafic sort par les NAT Gateways et paie le traitement NAT à chaque gigaoctet (environ 0,045 $/Go en région Paris), soit environ 20 To par mois.</p>
+                <p class="text-sm text-gray-600 mb-3"><strong class="text-gray-900">Action.</strong> Ajouter un VPC endpoint de type gateway pour S3 (sans frais de traitement) et des endpoints de type interface pour ECR (api et dkr). Aucun changement applicatif.</p>
+                <p class="text-sm text-gray-600 mb-4"><strong class="text-gray-900">Gain estimé.</strong> Environ 850 €/mois net, après le coût horaire des endpoints interface. <strong class="text-gray-900">Comment vérifier :</strong> ligne « NatGateway-Bytes » de Cost Explorer, 7 jours après le déploiement.</p>
+                <p class="text-sm font-semibold text-gray-900 mb-2">Extrait de la pull request fournie</p>
+                <pre class="bg-slate-900 text-slate-100 text-xs sm:text-sm rounded-xl p-4 overflow-x-auto leading-relaxed"><code>+resource "aws_vpc_endpoint" "s3" {
++  vpc_id            = module.vpc.vpc_id
++  service_name      = "com.amazonaws.eu-west-3.s3"
++  vpc_endpoint_type = "Gateway"
++  route_table_ids   = module.vpc.private_route_table_ids
++}
++
++resource "aws_vpc_endpoint" "ecr" {
++  for_each            = toset(["ecr.api", "ecr.dkr"])
++  vpc_id              = module.vpc.vpc_id
++  service_name        = "com.amazonaws.eu-west-3.${each.key}"
++  vpc_endpoint_type   = "Interface"
++  subnet_ids          = module.vpc.private_subnets
++  security_group_ids  = [aws_security_group.endpoints.id]
++  private_dns_enabled = true
++}</code></pre>
+            </div>
+
+            <!-- Plan -->
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">5. Plan d'action</h2>
+            <div class="grid md:grid-cols-3 gap-4 mb-10">
+                <div class="bg-white border border-gray-200 rounded-xl p-5"><p class="font-bold text-gray-900 mb-1">Semaine 1</p><p class="text-sm text-gray-600">Recommandations 1, 2, 5, 7, 8 : merge des PR. <strong>≈ 2 750 €/mois.</strong></p></div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5"><p class="font-bold text-gray-900 mb-1">Semaines 2 à 4</p><p class="text-sm text-gray-600">Recommandations 4, 6, 9 : tests en staging puis production. <strong>≈ 1 550 €/mois.</strong></p></div>
+                <div class="bg-white border border-gray-200 rounded-xl p-5"><p class="font-bold text-gray-900 mb-1">Mois 2</p><p class="text-sm text-gray-600">Recommandation 3 : achat du Savings Plan sur la nouvelle base. <strong>≈ 1 300 €/mois.</strong></p></div>
+            </div>
+
+            <!-- J+60 -->
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">6. Comparaison à 60 jours</h2>
+            <p class="text-gray-600 mb-10">60 jours après la livraison, on compare ensemble la facture réelle aux estimations, poste par poste, sur la base de Cost Explorer. Les écarts sont expliqués (recommandation non appliquée, hausse d'usage, etc.). Cette comparaison est incluse dans le prix.</p>
+
+            <!-- Limites -->
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">7. Méthode et limites</h2>
+            <ul class="list-disc pl-6 text-sm text-gray-600 space-y-1 mb-10">
+                <li>Sources : Cost Explorer (3 mois), inventaire des ressources, métriques CloudWatch, via le <a href="politique-acces-aws.html" class="text-blue-600 underline">rôle en lecture seule publié</a>.</li>
+                <li>Les gains sont des estimations à usage constant, aux tarifs publics à la date de l'audit.</li>
+                <li>Aucune modification n'est faite sur le compte : les changements passent par vos pull requests et votre validation.</li>
+            </ul>
+
+            <div class="bg-blue-50 border border-blue-100 rounded-2xl p-6 text-center">
+                <p class="font-semibold text-gray-900 mb-2">Et sur votre facture ?</p>
+                <p class="text-sm text-gray-600 mb-4">Le pré-diagnostic gratuit vous donne une première estimation, sans aucun accès à votre compte.</p>
+                <a href="finops.html#pre-diagnostic" class="inline-flex items-center bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 font-semibold text-sm"><i class="fas fa-file-invoice-dollar mr-2"></i>Demander mon pré-diagnostic</a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-slate-900 text-white py-16">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-3 lg:grid-cols-4 gap-10">
+                <div class="md:col-span-3 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <i class="fas fa-cloud text-indigo-400 text-2xl mr-3"></i>
+                        <h3 class="text-xl font-bold">OptimyCloud</h3>
+                    </div>
+                    <p class="text-slate-400 mb-6 max-w-md leading-relaxed text-sm">
+                        Expert IA, Automatisation &amp; SEO pour PME et startups. Sites vitrines, chatbots IA, infrastructure Cloud AWS.
+                    </p>
+                    <div class="flex space-x-3">
+                        <a href="https://www.linkedin.com/in/alexandre-gillon" target="_blank" rel="noopener noreferrer" class="w-10 h-10 bg-slate-800 rounded-lg flex items-center justify-center text-slate-400 hover:text-indigo-400 hover:bg-slate-700 transition-colors">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Offres</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Site Vitrine</a></li>
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Chatbot Métier IA</a></li>
+                        <li><a href="offres.html" class="hover:text-indigo-400 transition-colors text-sm">Site + Chatbot</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Services</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li><a href="index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Agents IA &amp; LLM</a></li>
+                        <li><a href="index.html#services" class="hover:text-indigo-400 transition-colors text-sm">Automatisation IA</a></li>
+                        <li><a href="finops.html" class="hover:text-indigo-400 transition-colors text-sm">Audit FinOps Cloud</a></li>
+                        <li><a href="audit-seo.html" class="hover:text-indigo-400 transition-colors text-sm">Audit SEO</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4 text-white">Contact</h4>
+                    <ul class="space-y-2.5 text-slate-400">
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-envelope mr-2 text-slate-500"></i>
+                            <a href="mailto:alexandre@optimycloud.com" class="hover:text-indigo-400 transition-colors">alexandre@optimycloud.com</a>
+                        </li>
+                        <li class="flex items-center text-sm">
+                            <i class="fas fa-map-marker-alt mr-2 text-slate-500"></i>
+                            France
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-slate-800 mt-10 pt-8">
+                <p class="text-center text-slate-500 text-sm mb-3">
+                    &copy; 2026 OptimyCloud - Expert IA &amp; Cloud - Alexandre Gillon
+                </p>
+                <div class="text-center space-x-4 text-xs text-slate-600">
+                    <a href="mentions-legales.html" class="hover:text-indigo-400 transition-colors">Mentions Légales</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-confidentialite.html" class="hover:text-indigo-400 transition-colors">Politique de Confidentialité</a>
+                    <span class="text-slate-700">&middot;</span>
+                    <a href="politique-cookies.html" class="hover:text-indigo-400 transition-colors">Politique des Cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mobile menu script -->
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        var btn = document.getElementById('mobile-menu-btn');
+        var menu = document.getElementById('mobile-menu');
+        btn.addEventListener('click', function() {
+            menu.classList.toggle('hidden');
+        });
+        menu.querySelectorAll('a').forEach(function(link) {
+            link.addEventListener('click', function() {
+                menu.classList.add('hidden');
+            });
+        });
+    });
+    </script>
+</body>
+</html>
